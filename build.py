@@ -22,6 +22,9 @@ SITE, DIST = ROOT / "site", ROOT / "dist"
 SITE_URL = (os.environ.get("SITE_URL") or "https://khoicai.vn").rstrip("/")
 SITE_NAME = os.environ.get("SITE_NAME") or "Khỏi Cài"
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@khoicai.vn"
+# Khi site nằm trong thư mục con (ví dụ GitHub Pages chưa có tên miền: /khoicai), mọi đường dẫn "/..." được thêm tiền tố
+BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
+BASE = BASE.rstrip("/")
 CATEGORIES = [   # order on the homepage
     ("tien-hoa-don", "Tiền & hoá đơn"),
     ("van-ban", "Văn bản"),
@@ -63,8 +66,16 @@ def head(title: str, desc: str, url: str, extra: str = "") -> str:
             + extra)
 
 
+def rebase(doc: str) -> str:
+    if not BASE:
+        return doc
+    import re
+    doc = re.sub(r'((?:href|src)=")/(?!/)', r"\1" + BASE + "/", doc)
+    return doc.replace('"/js/', '"' + BASE + '/js/')
+
+
 def page(title, desc, url, body, css, extra_head=""):
-    return ("<!doctype html>\n<html lang=\"vi\">\n<head>\n<meta charset=\"utf-8\">\n"
+    return rebase("<!doctype html>\n<html lang=\"vi\">\n<head>\n<meta charset=\"utf-8\">\n"
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
             + head(title, desc, url, extra_head) + f"<style>\n{css}</style>\n</head>\n<body>\n" + body + "\n</body>\n</html>\n")
 
