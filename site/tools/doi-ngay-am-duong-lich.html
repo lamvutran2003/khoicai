@@ -4,51 +4,54 @@ h1: Đổi ngày âm ↔ dương lịch
 description: Đổi ngày dương lịch sang âm lịch và ngược lại, có tháng nhuận, can chi. Lịch âm cả tháng đánh dấu ngày lễ, Tết, Trung thu, ngày nghỉ. Theo lịch Việt Nam (UTC+7).
 category: ngay-lich
 order: 1
-badge: Âm
 summary: Đổi ngày dương sang âm và ngược lại, lịch tháng có ngày lễ.
+intro: Đổi ngày dương lịch sang âm lịch và ngược lại, xem can chi và các ngày lễ trong tháng.
 keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn niên, ngày âm hôm nay, can chi, tết, trung thu, ngày lễ, lịch nghỉ
 -->
-<div class="tool">
-  <div class="row">
-    <span class="seg" role="group" aria-label="Chiều đổi">
-      <button type="button" data-mode="s2l" aria-pressed="true">Dương → Âm</button><button type="button" data-mode="l2s" aria-pressed="false">Âm → Dương</button>
-    </span>
-    <button class="chip" type="button" id="today">Hôm nay</button>
+<div>
+  <div class="tabs" role="group" aria-label="Chiều đổi">
+    <button type="button" data-mode="s2l" aria-pressed="true">Dương → Âm</button><button type="button" data-mode="l2s" aria-pressed="false">Âm → Dương</button>
   </div>
-  <div class="field">
-    <label class="label" for="pIn" id="pLabel">Ngày dương lịch</label>
-    <div class="dp" id="dp">
-      <div class="dp-field">
-        <input id="pIn" class="big" inputmode="numeric" autocomplete="off" placeholder="dd/mm/yyyy" aria-haspopup="dialog" aria-controls="pop">
+  <form class="calc" id="f" data-result="out">
+    <label class="l" for="pIn" id="pLabel">Ngày dương lịch</label>
+    <div class="f">
+      <div class="dp" id="dp">
+        <input id="pIn" class="in" inputmode="numeric" autocomplete="off" placeholder="dd/mm/yyyy" aria-haspopup="dialog" aria-controls="pop">
         <button type="button" class="dp-btn" id="pBtn" aria-label="Mở lịch chọn ngày">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
         </button>
+        <div class="pop" id="pop" role="dialog" aria-label="Chọn ngày" hidden data-no-stale>
+          <div class="cal-head">
+            <button type="button" id="popPrev" aria-label="Tháng trước">‹</button>
+            <b id="popTitle"></b>
+            <button type="button" id="popNext" aria-label="Tháng sau">›</button>
+          </div>
+          <div class="cal-grid small" id="popGrid"></div>
+        </div>
       </div>
       <label class="chk" id="leapWrap" hidden><input type="checkbox" id="pLeap"> Tháng nhuận</label>
-      <div class="pop" id="pop" role="dialog" aria-label="Chọn ngày" hidden>
-        <div class="cal-head">
-          <button class="btn" type="button" id="popPrev" aria-label="Tháng trước">‹</button>
-          <b id="popTitle"></b>
-          <button class="btn" type="button" id="popNext" aria-label="Tháng sau">›</button>
-        </div>
-        <div class="cal-grid small" id="popGrid"></div>
-      </div>
     </div>
-  </div>
-  <div class="out" aria-live="polite">
-    <div class="text" id="res"></div>
-    <div class="note" id="sub"></div>
-  </div>
-  <div class="cal">
-    <div class="cal-head">
-      <button class="btn" type="button" id="prev" aria-label="Tháng trước">‹</button>
-      <b id="calTitle"></b>
-      <button class="btn" type="button" id="next" aria-label="Tháng sau">›</button>
-    </div>
-    <div class="cal-grid" id="grid"></div>
-    <ul class="hols" id="hols"></ul>
-  </div>
+    <div class="btns"><button class="go" type="submit">Đổi __PLAY__</button><button class="clr" type="button" id="today">Hôm nay</button></div>
+  </form>
 </div>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<section class="calbox" aria-label="Lịch tháng">
+  <div class="cal-head">
+    <button type="button" id="prev" aria-label="Tháng trước">‹</button>
+    <b id="calTitle"></b>
+    <button type="button" id="next" aria-label="Tháng sau">›</button>
+  </div>
+  <div class="cal-grid" id="grid"></div>
+  <ul class="hols" id="hols"></ul>
+</section>
 
 <div class="article">
   <h2>Tết Nguyên đán các năm</h2>
@@ -69,7 +72,6 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
   const DOW = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"].map(d => `<span class="dow">${d}</span>`).join("");
   let mode = "s2l", sel = { ...T }, view = { month: T.month, year: T.year }, pv = null;
 
-  // One cell of a month grid, for the solar day jd. big/small: the two numbers shown.
   function cell(jd, big, small, extra){
     const d = A.jdToDate(jd), hs = A.holidays(d.day, d.month, d.year), off = hs.some(h => h.off);
     const selJd = A.jdFromDate(sel.day, sel.month, sel.year);
@@ -77,33 +79,35 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
     return `<button type="button" data-jd="${jd}" class="${cls}"${hs.length ? ` title="${hs.map(h => h.name).join(", ")}"` : ""}>${big}<small>${small}</small></button>`;
   }
 
-  // ---- input field: shows the selected date in the calendar of the current mode
-  function lunarOfSel(){ return A.toLunar(sel.day, sel.month, sel.year); }
-  function showInput(){
-    if (mode === "s2l") { $("pIn").value = `${pad(sel.day)}/${pad(sel.month)}/${sel.year}`; $("leapWrap").hidden = true; }
+  // ---- the date field (shows a date in the calendar of the current mode)
+  function setInput(s){   // s: solar date
+    if (mode === "s2l") { $("pIn").value = `${pad(s.day)}/${pad(s.month)}/${s.year}`; $("leapWrap").hidden = true; $("pLeap").checked = false; }
     else {
-      const l = lunarOfSel(); $("pIn").value = `${pad(l.day)}/${pad(l.month)}/${l.year}`;
-      $("leapWrap").hidden = !(A.leapMonthOf(l.year) === l.month); $("pLeap").checked = l.leap;
+      const l = A.toLunar(s.day, s.month, s.year); $("pIn").value = `${pad(l.day)}/${pad(l.month)}/${l.year}`;
+      $("leapWrap").hidden = A.leapMonthOf(l.year) !== l.month; $("pLeap").checked = l.leap;
     }
   }
-  function typed(){
-    let v = $("pIn").value.replace(/\D/g, "").slice(0, 8);
+  function readInput(){   // -> solar date or null
+    const m = $("pIn").value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if (!m) return null;
+    const d = +m[1], mo = +m[2], y = +m[3];
+    if (!(y >= 1900 && y <= 2199 && mo >= 1 && mo <= 12 && d >= 1)) return null;
+    if (mode === "s2l") return d <= solarLen(mo, y) ? { day: d, month: mo, year: y } : null;
+    return A.toSolar(d, mo, y, A.leapMonthOf(y) === mo && $("pLeap").checked);
+  }
+  $("pIn").addEventListener("input", () => {
+    const v = $("pIn").value.replace(/\D/g, "").slice(0, 8);
     $("pIn").value = v.length > 4 ? `${v.slice(0, 2)}/${v.slice(2, 4)}/${v.slice(4)}` : v.length > 2 ? `${v.slice(0, 2)}/${v.slice(2)}` : v;
-    if (v.length < 8) return;
-    const d = +v.slice(0, 2), m = +v.slice(2, 4), y = +v.slice(4);
-    if (!(y >= 1900 && y <= 2199 && m >= 1 && m <= 12 && d >= 1)) return;
-    if (mode === "s2l") { if (d <= solarLen(m, y)) select({ day: d, month: m, year: y }, false); }
-    else {
-      $("leapWrap").hidden = A.leapMonthOf(y) !== m;
-      const s = A.toSolar(d, m, y, !$("leapWrap").hidden && $("pLeap").checked);
-      if (s) select(s, false);
+    if (v.length === 8) {
+      if (mode === "l2s") $("leapWrap").hidden = A.leapMonthOf(+v.slice(4)) !== +v.slice(2, 4);
+      const s = readInput(); if (s && !$("pop").hidden) openPop(s);
     }
-  }
+  });
 
-  // ---- popup picker
-  function openPop(){
-    if (mode === "s2l") pv = { month: sel.month, year: sel.year };
-    else { const l = lunarOfSel(); pv = { month: l.month, year: l.year, leap: l.leap }; }
+  // ---- popup
+  function openPop(s){
+    s = s || readInput() || sel;
+    if (mode === "s2l") pv = { month: s.month, year: s.year };
+    else { const l = A.toLunar(s.day, s.month, s.year); pv = { month: l.month, year: l.year, leap: l.leap }; }
     $("pop").hidden = false; drawPop();
   }
   const closePop = () => { $("pop").hidden = true; };
@@ -134,21 +138,15 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
     $("popGrid").innerHTML = html;
   }
 
-  // ---- selection, result, month calendar
-  function select(s, refill){
-    sel = { day: s.day, month: s.month, year: s.year }; view = { month: s.month, year: s.year };
-    if (refill) showInput();
-    if (!$("pop").hidden) openPop();   // khi đang gõ: lịch popup nhảy theo ngày vừa gõ
-    render();
-  }
-  function render(){
-    const jd = A.jdFromDate(sel.day, sel.month, sel.year), l = lunarOfSel();
+  // ---- result + month calendar
+  function show(){
+    const jd = A.jdFromDate(sel.day, sel.month, sel.year), l = A.toLunar(sel.day, sel.month, sel.year);
     const lunar = `${l.day} tháng ${lunarName(l.month)}${l.leap ? " nhuận" : ""} năm ${A.canChiYear(l.year)}`;
     const solar = `${A.weekday(jd)}, ${sel.day}/${sel.month}/${sel.year}`;
     const hol = A.holidays(sel.day, sel.month, sel.year).map(h => h.name).join(", ");
-    $("res").textContent = mode === "s2l" ? "Âm lịch: " + lunar : "Dương lịch: " + solar;
+    $("res").innerHTML = mode === "s2l" ? `Âm lịch: <b>${lunar}</b>` : `Dương lịch: <b>${solar}</b>`;
     $("sub").textContent = (mode === "s2l" ? solar : "Âm lịch " + lunar) + " · Ngày " + A.canChiDay(jd) + ", tháng " + A.canChiMonth(l.month, l.year) + (hol ? " · " + hol : "");
-    drawCal();
+    view = { month: sel.month, year: sel.year }; drawCal();
   }
   function drawCal(){
     const { month, year } = view, first = A.jdFromDate(1, month, year), n = solarLen(month, year), list = [];
@@ -162,23 +160,33 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
     $("grid").innerHTML = html; $("hols").innerHTML = list.join("");
   }
 
-  // ---- events
+  const form = KC.form($("f"), { calc(){
+    closePop();
+    const s = readInput();
+    if (!s) { $("pIn").focus(); $("res").innerHTML = `<span class="err">Ngày chưa hợp lệ.</span>`; $("sub").textContent = ""; return; }
+    sel = { day: s.day, month: s.month, year: s.year }; setInput(sel); show();
+  } });
+  const pick = s => { sel = { day: s.day, month: s.month, year: s.year }; setInput(sel); form.run(false); };
+
   document.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => {
     mode = b.dataset.mode;
     document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
     $("pLabel").textContent = mode === "s2l" ? "Ngày dương lịch" : "Ngày âm lịch";
-    closePop(); showInput(); render();
+    closePop(); pick(sel);
   }));
-  $("pIn").addEventListener("input", typed);
   $("pIn").addEventListener("focus", () => { if ($("pop").hidden) openPop(); });
-  $("pIn").addEventListener("keydown", e => { if (e.key === "Escape") closePop(); if (e.key === "Enter") { closePop(); showInput(); } });
+  $("pIn").addEventListener("keydown", e => { if (e.key === "Escape") closePop(); });
   $("pBtn").addEventListener("click", () => $("pop").hidden ? openPop() : closePop());
-  $("pLeap").addEventListener("change", typed);
   $("popPrev").addEventListener("click", () => stepPop(-1)); $("popNext").addEventListener("click", () => stepPop(1));
-  $("popGrid").addEventListener("click", e => { const b = e.target.closest("button[data-jd]"); if (!b) return; select(A.jdToDate(+b.dataset.jd), true); closePop(); });
-  document.addEventListener("click", e => { if (!$("pop").hidden && !$("dp").contains(e.target)) { closePop(); showInput(); } });
-  $("today").addEventListener("click", () => { closePop(); select(T, true); });
-  $("grid").addEventListener("click", e => { const b = e.target.closest("button[data-jd]"); if (b) select(A.jdToDate(+b.dataset.jd), true); });
+  $("popGrid").addEventListener("click", e => {
+    const b = e.target.closest("button[data-jd]"); if (!b) return;
+    setInput(A.jdToDate(+b.dataset.jd)); closePop();
+    if (!$("out").hidden) $("out").classList.add("stale");
+    document.querySelector("#f .go").focus();
+  });
+  document.addEventListener("click", e => { if (!$("pop").hidden && !$("dp").contains(e.target)) closePop(); });
+  $("today").addEventListener("click", () => { closePop(); pick(T); });
+  $("grid").addEventListener("click", e => { const b = e.target.closest("button[data-jd]"); if (b) pick(A.jdToDate(+b.dataset.jd)); });
   const shift = k => { let m = view.month + k, y = view.year; if (m < 1) { m = 12; y--; } if (m > 12) { m = 1; y++; } view = { month: m, year: y }; drawCal(); };
   $("prev").addEventListener("click", () => shift(-1)); $("next").addEventListener("click", () => shift(1));
 
@@ -186,6 +194,6 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
     const s = A.toSolar(1, 1, y, false);
     return `<tr><td>${y} (${A.canChiYear(y)})</td><td>${A.weekday(s.jd)}, ${s.day}/${s.month}/${s.year}</td></tr>`;
   }).join("");
-  select(T, true);
+  pick(T);
 })();
 </script>

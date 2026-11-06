@@ -1,28 +1,25 @@
-<main>
-  <section class="hero gutter">
-    <div class="wrap">
-      <h1>Công cụ online miễn phí, <span class="hl">khỏi cài, khỏi đăng ký</span></h1>
-      <p class="lede">Mở ra là dùng. Dữ liệu không rời khỏi máy bạn.</p>
-      <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Tìm công cụ, ví dụ: font, sào, số tiền…" autocomplete="off" aria-label="Tìm công cụ"></label>
-    </div>
-  </section>
-  <section class="gutter" id="cong-cu">
-    <div class="wrap stack">
-      __SECTIONS__
-      <p class="empty" id="noResult" hidden>Chưa có công cụ phù hợp. Gửi đề xuất cho chúng tôi qua email ở cuối trang.</p>
-    </div>
-  </section>
+<main class="wrap home">
+  <h1>Công cụ tính toán online miễn phí</h1>
+  <p class="lede">Không cần cài đặt, không cần đăng ký. Dữ liệu bạn nhập được xử lý ngay trên máy bạn.</p>
+  <form class="home-search" role="search" onsubmit="return false">
+    <input id="q" type="search" placeholder="Tìm công cụ, ví dụ: lương, âm lịch, font…" autocomplete="off" aria-label="Tìm công cụ">
+    <button class="btn-blue" type="submit">Tìm</button>
+  </form>
+  <div class="cats" id="cong-cu">__SECTIONS__</div>
+  <p class="note" id="noResult" hidden>Chưa có công cụ phù hợp. Gửi đề xuất cho chúng tôi qua email ở cuối trang.</p>
 </main>
 <script>
 (function(){
   const q = document.getElementById("q"), none = document.getElementById("noResult");
   const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").toLowerCase();
-  q.addEventListener("input", () => {
+  function filter(){
     const words = fold(q.value).split(/\s+/).filter(Boolean); let shown = 0;
     document.querySelectorAll(".tc").forEach(li => { const ok = words.every(w => fold(li.dataset.q).includes(w)); li.hidden = !ok; shown += ok; });
     document.querySelectorAll(".cat").forEach(s => s.hidden = ![...s.querySelectorAll(".tc")].some(li => !li.hidden));
     none.hidden = shown > 0;
-  });
+  }
+  q.addEventListener("input", filter);
+  const p = new URLSearchParams(location.search).get("q");
+  if (p) { q.value = p; filter(); }
 })();
 </script>

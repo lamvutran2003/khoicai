@@ -4,29 +4,27 @@ h1: Quy đổi sào, mẫu, công sang m²
 description: 1 sào bao nhiêu m²? Bắc Bộ 360 m², Trung Bộ 497 m², 1 công Nam Bộ 1.000 hoặc 1.296 m². Đổi qua lại sào, mẫu, thước, công, m², ha theo từng vùng.
 category: dat-dai
 order: 1
-badge: m²
 summary: 1 sào bao nhiêu m²? Đổi sào, mẫu, công theo từng vùng.
+intro: Đổi sào, mẫu, thước, công sang mét vuông, héc-ta và ngược lại, theo cách tính của từng vùng.
 keywords: sào, mẫu, thước, công đất, mét vuông, héc ta, diện tích đất, sổ đỏ, 1 sào bao nhiêu mét
 -->
-<div class="tool">
-  <div class="row">
-    <span class="seg" role="group" aria-label="Vùng" id="regions">
-      <button type="button" data-r="bac" aria-pressed="true">Bắc Bộ</button><button type="button" data-r="trung" aria-pressed="false">Trung Bộ</button><button type="button" data-r="nam" aria-pressed="false">Nam Bộ</button>
-    </span>
-    <span class="opt" id="optNam" hidden>1 công =
-      <select id="namCong" aria-label="Một công bằng"><option value="1000">1.000 m²</option><option value="1296">1.296 m²</option></select></span>
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="region">Vùng</label>
+  <div><select id="region" class="in"><option value="bac">Bắc Bộ</option><option value="trung">Trung Bộ</option><option value="nam">Nam Bộ</option></select></div>
+  <label class="l" for="namCong" id="congL" hidden>1 công bằng</label>
+  <div id="congW" hidden><select id="namCong" class="in"><option value="1000">1.000 m² (công tầm nhỏ)</option><option value="1296">1.296 m² (công tầm lớn)</option></select></div>
+  <label class="l" for="val">Diện tích</label>
+  <div class="f"><input id="val" class="in w-m" inputmode="decimal" autocomplete="off" value="1"><select id="unit" class="in" aria-label="Đơn vị"></select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
   </div>
-  <div class="field">
-    <label class="label" for="val">Diện tích</label>
-    <div class="pair">
-      <input id="val" class="big" inputmode="decimal" autocomplete="off" value="1">
-      <select id="unit" class="big" aria-label="Đơn vị"></select>
-    </div>
-  </div>
-  <div class="out" aria-live="polite">
-    <div class="scroll"><table class="t res"><tbody id="tbl"></tbody></table></div>
-  </div>
-</div>
+</section>
 
 <div class="article">
   <h2>Bảng quy đổi</h2>
@@ -47,35 +45,28 @@ keywords: sào, mẫu, thước, công đất, mét vuông, héc ta, diện tíc
 <script>
 (function(){
   const $ = id => document.getElementById(id), F = DatDai.fmt;
-  const st = { region: "bac", unit: "sao", namCong: 1000 };
-  try { Object.assign(st, JSON.parse(localStorage.getItem("kc-dd") || "{}")); } catch (e) {}
-  const save = () => { try { localStorage.setItem("kc-dd", JSON.stringify(st)); } catch (e) {} };
-  const o = () => ({ namCong: +st.namCong });
+  const nm = u => u.name.replace(/ \(.*\)/, "");
+  try { const s = JSON.parse(localStorage.getItem("kc-dd") || "{}"); if (s.region) $("region").value = s.region; if (s.namCong) $("namCong").value = String(s.namCong); } catch (e) {}
+  const o = () => ({ namCong: +$("namCong").value });
   KCNum.attach($("val"), { decimals: 4 });
-
-  function sync(){
-    document.querySelectorAll("#regions button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.r === st.region)));
-    $("optNam").hidden = st.region !== "nam"; $("namCong").value = String(st.namCong);
-    const units = DatDai.unitsOf(st.region, o()).filter(u => u.id !== "km2");
-    if (!units.some(u => u.id === st.unit)) st.unit = units[0].id;
-    $("unit").innerHTML = units.map(u => `<option value="${u.id}">${u.name.replace(/ \(.*\)/, "")}</option>`).join("");
-    $("unit").value = st.unit;
+  function units(){
+    const r = $("region").value, keep = $("unit").value;
+    $("congL").hidden = $("congW").hidden = r !== "nam";
+    const us = DatDai.unitsOf(r, o()).filter(u => u.id !== "km2");
+    $("unit").innerHTML = us.map(u => `<option value="${u.id}">${nm(u)}</option>`).join("");
+    $("unit").value = us.some(u => u.id === keep) ? keep : (r === "nam" ? "cong" : "sao");
   }
-  function render(){
-    const v = DatDai.num($("val").value);
-    if (v == null) { $("tbl").innerHTML = ""; return; }
-    const m2 = DatDai.toM2(v, st.unit, st.region, o());
-    const units = DatDai.unitsOf(st.region, o()).filter(u => u.id !== st.unit && u.id !== "km2");
-    $("tbl").innerHTML = units.map(u => `<tr><td class="n"><b>${F(m2 / u.m2)}</b></td><td>${u.name.replace(/ \(.*\)/, "")}</td></tr>`).join("");
-  }
-  document.querySelectorAll("#regions button").forEach(b => b.addEventListener("click", () => {
-    st.region = b.dataset.r;
-    if (!["m2", "ha"].includes(st.unit)) st.unit = st.region === "nam" ? "cong" : "sao";
-    sync(); render(); save();
-  }));
-  $("namCong").addEventListener("change", () => { st.namCong = +$("namCong").value; render(); save(); });
-  $("unit").addEventListener("change", () => { st.unit = $("unit").value; render(); save(); });
-  $("val").addEventListener("input", render);
-  sync(); render();
+  $("region").addEventListener("change", units);
+  units();
+  const form = KC.form($("f"), { calc(){
+    const v = DatDai.num($("val").value), r = $("region").value, unit = $("unit").value;
+    if (v == null) { $("val").focus(); return false; }
+    try { localStorage.setItem("kc-dd", JSON.stringify({ region: r, namCong: +$("namCong").value })); } catch (e) {}
+    const us = DatDai.unitsOf(r, o()).filter(u => u.id !== "km2"), u = us.find(x => x.id === unit), m2 = DatDai.toM2(v, unit, r, o());
+    const where = ["m2", "ha"].includes(unit) ? "" : " " + DatDai.regions(o())[r].name;
+    $("res").innerHTML = unit === "m2" ? `${F(v)} m² = <b>${F(m2 / 10000, 4)} ha</b>` : `${F(v)} ${nm(u)}${where} = <b>${F(m2)} m²</b>`;
+    $("tbl").innerHTML = us.filter(x => x.id !== unit).map(x => `<tr><td>${nm(x)}${["m2", "ha"].includes(x.id) ? "" : " (" + F(x.m2, 1) + " m²)"}</td><td class="n">${F(m2 / x.m2)}</td></tr>`).join("");
+  } });
+  form.run(false);
 })();
 </script>

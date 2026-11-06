@@ -1,7 +1,7 @@
 """Build the tool site into dist/.
 
 site/tools/<slug>.html   one tool per file -> /<slug>/ ; front matter (top HTML comment, "key: value" lines):
-                         title, h1, description, category, order, badge, summary
+                         title, h1, description, category, order, summary (thẻ trang chủ), intro (một dòng dưới tiêu đề)
 site/pages/<slug>.html   plain pages (giới thiệu, chính sách) -> /<slug>/
 site/partials/           style.css, header.html, footer.html (shared)
 site/static/             copied to the site root (js/, icons)
@@ -25,11 +25,11 @@ CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@tinhgium.vn"
 # Khi site nằm trong thư mục con (ví dụ GitHub Pages chưa có tên miền: /khoicai), mọi đường dẫn "/..." được thêm tiền tố
 BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
 BASE = BASE.rstrip("/")
-CATEGORIES = [   # order on the homepage
-    ("tien-hoa-don", "Tiền, lương & hoá đơn"),
-    ("ngay-lich", "Ngày & lịch"),
-    ("van-ban", "Văn bản"),
-    ("dat-dai", "Đất đai & đo lường"),
+CATEGORIES = [   # (id, tên đầy đủ, tên ngắn trên thanh menu), theo thứ tự hiển thị
+    ("tien-hoa-don", "Tiền, lương & hoá đơn", "Tiền & lương"),
+    ("ngay-lich", "Ngày & lịch", "Ngày & lịch"),
+    ("van-ban", "Văn bản", "Văn bản"),
+    ("dat-dai", "Đất đai & đo lường", "Đo lường"),
 ]
 E = html.escape
 
@@ -60,7 +60,7 @@ def head(title: str, desc: str, url: str, extra: str = "") -> str:
             "<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n"
             "<link rel=\"icon\" href=\"/favicon-48.png\" sizes=\"48x48\" type=\"image/png\">\n"
             "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\">\n"
-            "<meta name=\"theme-color\" content=\"#0f766e\">\n"
+            "<meta name=\"theme-color\" content=\"#0b3d6e\">\n"
             f"<meta property=\"og:title\" content=\"{E(title)}\">\n<meta property=\"og:description\" content=\"{E(desc)}\">\n"
             f"<meta property=\"og:url\" content=\"{url}\">\n<meta property=\"og:type\" content=\"website\">\n"
             f"<meta property=\"og:locale\" content=\"vi_VN\">\n<meta property=\"og:site_name\" content=\"{E(SITE_NAME)}\">\n"
@@ -99,10 +99,26 @@ def fill(src: str, values: dict) -> str:
     return src
 
 
-def tool_card(t) -> str:
-    return (f'<li class="tc" data-q="{E((t["h1"] + " " + t.get("summary", "") + " " + t.get("keywords", "")).lower())}">'
-            f'<a href="/{t["slug"]}/"><span class="badge" aria-hidden="true">{E(t.get("badge", ""))}</span>'
-            f'<span class="tt"><b>{E(t["h1"])}</b><span>{E(t.get("summary", ""))}</span></span></a></li>')
+def nav(active: str | None) -> str:
+    return "".join(f'<a href="/#c-{cid}"{" class=\"on\" aria-current=\"true\"" if cid == active else ""}>{E(short)}</a>'
+                   for cid, _, short in CATEGORIES)
+
+
+def sidebar(tools, cat: str | None, current: str | None = None) -> str:
+    """Cột phải: ô tìm kiếm, danh sách công cụ cùng nhóm, các nhóm khác."""
+    out = ['<form class="side-search" action="/" method="get" role="search">'
+           '<input name="q" type="search" aria-label="Tìm công cụ" placeholder="Tìm công cụ…"><button type="submit">Tìm</button></form>']
+    for cid, name, _ in CATEGORIES:
+        if cat and cid != cat:
+            continue
+        items = [t for t in tools if t.get("category") == cid]
+        lis = "".join(f'<li><a href="/{t["slug"]}/"{" aria-current=\"page\"" if t["slug"] == current else ""}>{E(t["h1"])}</a></li>'
+                      for t in items)
+        out.append(f'<section class="box"><h2>{E(name)}</h2><ul>{lis}</ul></section>')
+    if cat:
+        others = "".join(f'<li><a href="/#c-{cid}">{E(name)}</a></li>' for cid, name, _ in CATEGORIES if cid != cat)
+        out.append(f'<section class="box"><h2>Nhóm khác</h2><ul>{others}<li><a href="/">Tất cả công cụ »</a></li></ul></section>')
+    return f'<aside class="side">{"".join(out)}</aside>'
 
 
 def build() -> None:
@@ -112,64 +128,65 @@ def build() -> None:
     header = (SITE / "partials/header.html").read_text(encoding="utf-8")
     footer = (SITE / "partials/footer.html").read_text(encoding="utf-8")
     common = {"__SITE_NAME__": E(SITE_NAME), "__CONTACT_EMAIL__": E(CONTACT_EMAIL), "__YEAR__": str(date.today().year),
-              "__TOOL_COUNT__": str(len(tools))}
+              "__TOOL_COUNT__": str(len(tools)),
+              "__PLAY__": '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/>'
+                          '<path d="M10 7.3l6.2 4.7-6.2 4.7z" fill="#4c8d2b"/></svg>'}
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(SITE / "static", DIST, dirs_exist_ok=True)
     urls = []
+    cat_name = {cid: name for cid, name, _ in CATEGORIES}
 
-    # Homepage: search + tools by category
-    sections = []
-    for cid, cname in CATEGORIES:
+    def render(main_html, active=None, url=SITE_URL + "/"):
+        return fill(header.replace("__NAV__", nav(active)) + main_html + footer, {**common, "__PAGE_URL__": url})
+
+    # Homepage: one box of links per category
+    boxes = []
+    for cid, name, _ in CATEGORIES:
         items = [t for t in tools if t.get("category") == cid]
         if items:
-            sections.append(f'<section class="cat" aria-labelledby="c-{cid}"><h2 id="c-{cid}">{E(cname)}</h2>'
-                            f'<ul class="tools">{"".join(tool_card(t) for t in items)}</ul></section>')
-    home = (SITE / "home.html").read_text(encoding="utf-8").replace("__SECTIONS__", "".join(sections))
+            lis = "".join(f'<li class="tc" data-q="{E((t["h1"] + " " + t.get("summary", "") + " " + t.get("keywords", "")).lower())}">'
+                          f'<a href="/{t["slug"]}/">{E(t["h1"])}</a><span>{E(t.get("summary", ""))}</span></li>' for t in items)
+            boxes.append(f'<section class="box cat" id="c-{cid}" aria-labelledby="h-{cid}"><h2 id="h-{cid}">{E(name)}</h2><ul>{lis}</ul></section>')
+    home = (SITE / "home.html").read_text(encoding="utf-8").replace("__SECTIONS__", "".join(boxes))
     desc = (f"{len(tools)} công cụ online miễn phí bằng tiếng Việt: " + ", ".join(t["h1"].lower() for t in tools[:4])
             + "… Không cần cài đặt, không cần đăng ký, dữ liệu không rời khỏi máy bạn.")
-    body = fill(header + home + footer, {**common, "__PAGE_URL__": SITE_URL + "/"})
     (DIST / "index.html").write_text(page(f"{SITE_NAME}: công cụ online miễn phí, khỏi cài, khỏi đăng ký", desc,
-                                          SITE_URL + "/", body, css), encoding="utf-8")
+                                          SITE_URL + "/", render(home), css), encoding="utf-8")
     urls.append("/")
 
     # Tool pages
-    cat_name = dict(CATEGORIES)
     for t in tools:
         url = f"{SITE_URL}/{t['slug']}/"
-        others = [o for o in tools if o["slug"] != t["slug"]]
+        cat = t.get("category")
         ld = json.dumps({"@context": "https://schema.org", "@type": "WebApplication", "name": t["h1"], "url": url,
                          "description": t["description"], "applicationCategory": "UtilitiesApplication",
                          "operatingSystem": "Mọi trình duyệt", "inLanguage": "vi",
                          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "VND"}},
                         ensure_ascii=False).replace("</", "<\\/")
-        main = (f'<main class="gutter"><div class="wrap">'
-                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">Trang chủ</a> › <span>{E(cat_name.get(t.get("category"), ""))}</span></nav>'
+        main = (f'<div class="wrap layout"><main class="content">'
+                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(t["h1"].lower())}</span></nav>'
                 f'<h1>{E(t["h1"])}</h1>'
-                f'{t["body"]}'
-                f'<section class="more" aria-labelledby="more-h"><h2 id="more-h">Công cụ khác</h2>'
-                f'<ul class="tools">{"".join(tool_card(o) for o in others)}</ul></section>'
-                f'</div></main><script type="application/ld+json">{ld}</script>')
+                + (f'<p class="lede">{E(t["intro"])}</p>' if t.get("intro") else "")
+                + f'{t["body"]}</main>{sidebar(tools, cat, t["slug"])}</div>'
+                f'<script type="application/ld+json">{ld}</script>')
         out = DIST / t["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(t["title"], t["description"], url,
-                                             fill(header + main + footer, {**common, "__PAGE_URL__": url}), css), encoding="utf-8")
+        (out / "index.html").write_text(page(t["title"], t["description"], url, render(main, cat, url), css), encoding="utf-8")
         urls.append(f"/{t['slug']}/")
 
     # Plain pages
     for pg in pages:
         url = f"{SITE_URL}/{pg['slug']}/"
-        main = f'<main class="gutter"><div class="wrap article">{pg["body"]}</div></main>'
+        main = f'<div class="wrap layout"><main class="content article">{pg["body"]}</main>{sidebar(tools, None)}</div>'
         out = DIST / pg["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(pg["title"], pg.get("description", ""), url,
-                                             fill(header + main + footer, {**common, "__PAGE_URL__": url}), css), encoding="utf-8")
+        (out / "index.html").write_text(page(pg["title"], pg.get("description", ""), url, render(main, None, url), css), encoding="utf-8")
         urls.append(f"/{pg['slug']}/")
 
-    nf = '<main class="gutter"><div class="wrap article"><h1>Không tìm thấy trang</h1><p><a href="/">Về trang chủ</a> để xem các công cụ.</p></div></main>'
-    (DIST / "404.html").write_text(page(f"Không tìm thấy trang | {SITE_NAME}", "", SITE_URL + "/404.html",
-                                        fill(header + nf + footer, {**common, "__PAGE_URL__": SITE_URL + "/"}), css), encoding="utf-8")
+    nf = '<div class="wrap layout"><main class="content article"><h1>Không tìm thấy trang</h1><p><a href="/">Về trang chủ</a> để xem các công cụ.</p></main></div>'
+    (DIST / "404.html").write_text(page(f"Không tìm thấy trang | {SITE_NAME}", "", SITE_URL + "/404.html", render(nf), css), encoding="utf-8")
     today = date.today().isoformat()
     (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                                       + "".join(f"<url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)

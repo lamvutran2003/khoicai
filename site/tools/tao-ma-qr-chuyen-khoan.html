@@ -4,39 +4,32 @@ h1: Tạo mã QR chuyển khoản
 description: Tạo mã VietQR nhận tiền cho mọi ngân hàng: điền sẵn số tiền và nội dung, quét bằng app ngân hàng nào cũng được. Tải ảnh in ra quầy. Miễn phí, không cần đăng ký.
 category: tien-hoa-don
 order: 3
-badge: QR
 summary: Mã VietQR nhận tiền, điền sẵn số tiền và nội dung.
+intro: Tạo mã VietQR nhận tiền, quét được bằng app của mọi ngân hàng. Tải ảnh về để in hoặc gửi cho khách.
 keywords: tạo mã qr chuyển khoản, vietqr, qr ngân hàng, mã qr nhận tiền, qr thanh toán, napas
 -->
-<div class="tool qr-tool">
-  <div class="qr-form">
-    <div class="field">
-      <label class="label" for="bank">Ngân hàng</label>
-      <select id="bank" class="big sel-big"></select>
-    </div>
-    <div class="field">
-      <label class="label" for="acc">Số tài khoản</label>
-      <input id="acc" class="big" inputmode="numeric" autocomplete="off" placeholder="0123456789">
-    </div>
-    <div class="field">
-      <label class="label" for="name">Tên chủ tài khoản <span class="muted">(in dưới mã)</span></label>
-      <input id="name" class="big" autocomplete="off" placeholder="NGUYEN VAN A">
-    </div>
-    <div class="field">
-      <label class="label" for="amt">Số tiền <span class="muted">(để trống: người chuyển tự nhập)</span></label>
-      <input id="amt" class="big" inputmode="numeric" autocomplete="off">
-    </div>
-    <div class="field">
-      <label class="label" for="note">Nội dung</label>
-      <input id="note" class="big" autocomplete="off" maxlength="50" placeholder="Thanh toan don hang">
-    </div>
-  </div>
-  <div class="qr-out">
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="bank">Ngân hàng</label>
+  <div><select id="bank" class="in"></select></div>
+  <label class="l" for="acc">Số tài khoản</label>
+  <div><input id="acc" class="in w-l" inputmode="numeric" autocomplete="off"></div>
+  <label class="l" for="name">Tên chủ tài khoản</label>
+  <div class="f"><input id="name" class="in w-l" autocomplete="off"><span class="hint">tuỳ chọn, in dưới mã</span></div>
+  <label class="l" for="amt">Số tiền</label>
+  <div class="f"><input id="amt" class="in w-m" inputmode="numeric" autocomplete="off"><span class="u">đồng</span><span class="hint">để trống: người chuyển tự nhập</span></div>
+  <label class="l" for="note">Nội dung</label>
+  <div class="f"><input id="note" class="in w-l" autocomplete="off" maxlength="50"><span class="hint">tuỳ chọn</span></div>
+  <div class="btns"><button class="go" type="submit">Tạo mã __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Mã QR</h2>
+  <div class="body qr">
+    <p class="err" id="err" hidden></p>
     <canvas id="cv" width="600" height="760" aria-label="Mã QR chuyển khoản"></canvas>
-    <p class="note" id="hint">Chọn ngân hàng và nhập số tài khoản.</p>
-    <div class="actions"><button class="btn primary" type="button" id="dl" disabled>Tải ảnh PNG</button></div>
+    <div class="actions" id="acts"><button class="btn solid" type="button" id="dl">Tải ảnh PNG</button></div>
   </div>
-</div>
+</section>
 
 <div class="article">
   <h2>Lưu ý</h2>
@@ -53,41 +46,34 @@ keywords: tạo mã qr chuyển khoản, vietqr, qr ngân hàng, mã qr nhận t
 <script>
 (function(){
   const $ = id => document.getElementById(id), cv = $("cv"), ctx = cv.getContext("2d");
-  $("bank").innerHTML = '<option value="">Chọn ngân hàng…</option>' + VietQR.BANKS.map(b => `<option value="${b[0]}">${b[1]}</option>`).join("");
+  $("bank").innerHTML = '<option value="">– Chọn ngân hàng –</option>' + VietQR.BANKS.map(b => `<option value="${b[0]}">${b[1]}</option>`).join("");
   KCNum.attach($("amt"), { decimals: 0 });
   try { const s = JSON.parse(localStorage.getItem("kc-qr") || "{}"); $("bank").value = s.bank || ""; $("acc").value = s.acc || ""; $("name").value = s.name || ""; } catch (e) {}
-  const save = () => { try { localStorage.setItem("kc-qr", JSON.stringify({ bank: $("bank").value, acc: $("acc").value, name: $("name").value })); } catch (e) {} };
+  const FONT = "Arial, Helvetica, sans-serif";
 
   function draw(){
-    const bin = $("bank").value, bank = VietQR.BANKS.find(b => b[0] === bin);
-    const amount = +$("amt").value.replace(/\D/g, "") || 0;
+    const bin = $("bank").value, bank = VietQR.BANKS.find(b => b[0] === bin), amount = +$("amt").value.replace(/\D/g, "") || 0;
     const p = VietQR.payload({ bin: bin, account: $("acc").value, amount: amount, note: $("note").value });
-    const W = cv.width, H = cv.height;
-    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
-    $("dl").disabled = !p;
-    if (!p) {
-      ctx.strokeStyle = "#d2d6db"; ctx.setLineDash([10, 8]); ctx.lineWidth = 3; ctx.strokeRect(90, 90, W - 180, W - 180); ctx.setLineDash([]);
-      $("hint").hidden = false; return;
-    }
-    $("hint").hidden = true;
-    const qr = qrcode(0, "M"); qr.addData(p); qr.make();
-    const n = qr.getModuleCount(), size = W - 140, cell = Math.floor(size / (n + 2)), q = cell * (n + 2), x0 = (W - q) / 2 + cell, y0 = 70 + cell;
-    ctx.font = "700 30px -apple-system, Segoe UI, Roboto, Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillStyle = "#0f766e";
-    ctx.fillText(bank ? bank[1] : "", W / 2, 48);
-    ctx.fillStyle = "#15181c";
+    $("err").hidden = !!p; cv.hidden = !p; $("acts").hidden = !p;
+    if (!p) { $("err").textContent = !bin ? "Chọn ngân hàng." : "Nhập số tài khoản."; return; }
+    try { localStorage.setItem("kc-qr", JSON.stringify({ bank: bin, acc: $("acc").value, name: $("name").value })); } catch (e) {}
+    const W = cv.width, qr = qrcode(0, "M"); qr.addData(p); qr.make();
+    const n = qr.getModuleCount(), cell = Math.floor((W - 140) / (n + 2)), q = cell * (n + 2), x0 = (W - q) / 2 + cell, y0 = 70 + cell;
+    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, cv.height);
+    ctx.textAlign = "center"; ctx.font = `700 30px ${FONT}`; ctx.fillStyle = "#0b3d6e"; ctx.fillText(bank ? bank[1] : "", W / 2, 48);
+    ctx.fillStyle = "#111";
     for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.isDark(r, c)) ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
     let y = 70 + q + 46;
     const line = (t, font, color) => { if (!t) return; ctx.font = font; ctx.fillStyle = color; ctx.fillText(t, W / 2, y, W - 40); y += 40; };
-    line($("name").value.trim().toUpperCase(), "700 28px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#15181c");
-    line(VietQR.cleanAccount($("acc").value), "500 26px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#15181c");
-    if (amount) line(amount.toLocaleString("vi-VN") + " đ", "700 28px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#0f766e");
-    line(VietQR.cleanNote($("note").value), "400 22px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#646b75");
+    line($("name").value.trim().toUpperCase(), `700 28px ${FONT}`, "#111");
+    line(VietQR.cleanAccount($("acc").value), `26px ${FONT}`, "#111");
+    if (amount) line(amount.toLocaleString("vi-VN") + " đ", `700 28px ${FONT}`, "#3f7623");
+    line(VietQR.cleanNote($("note").value), `22px ${FONT}`, "#555");
   }
-  ["bank", "acc", "name", "amt", "note"].forEach(id => $(id).addEventListener("input", () => { draw(); save(); }));
-  $("bank").addEventListener("change", () => { draw(); save(); });
-  $("dl").addEventListener("click", () => {
-    cv.toBlob(b => { const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "ma-qr-chuyen-khoan.png"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); });
-  });
-  draw();
+  KC.form($("f"), { calc: draw });
+  $("dl").addEventListener("click", () => cv.toBlob(b => {
+    const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "ma-qr-chuyen-khoan.png";
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }));
 })();
 </script>

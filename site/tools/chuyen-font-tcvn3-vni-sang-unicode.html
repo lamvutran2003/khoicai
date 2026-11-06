@@ -4,37 +4,40 @@ h1: Chuyển font TCVN3, VNI sang Unicode
 description: Sửa chữ lỗi font kiểu "Hµ Néi", "Haø Noäi" thành tiếng Việt Unicode. Tự nhận TCVN3 (.VnTime) hay VNI-Times, chuyển cả file Word .docx giữ nguyên định dạng. Không cần Unikey.
 category: van-ban
 order: 1
-badge: Aa
 summary: Sửa chữ lỗi font .VnTime, VNI-Times sang Unicode, cả file Word.
+intro: Sửa chữ bị lỗi font (Hµ Néi, Haø Noäi) thành tiếng Việt Unicode. Không cần Unikey, file không tải lên mạng.
 keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn3, unicode, file word, docx
 -->
-<div class="tool">
-  <div class="field">
-    <label class="label" for="src">Văn bản lỗi font</label>
-    <textarea class="area" id="src" spellcheck="false" placeholder="Dán chữ vào đây"></textarea>
+<form class="calc" id="f" data-result="out">
+  <label class="l top-l" for="src">Văn bản lỗi font</label>
+  <textarea class="in" id="src" spellcheck="false" placeholder="Dán chữ vào đây"></textarea>
+  <label class="l" for="enc">Bảng mã</label>
+  <div><select id="enc" class="in"><option value="auto">Tự nhận</option><option value="TCVN3">TCVN3 (.VnTime, .VnArial)</option><option value="VNI">VNI (VNI-Times)</option></select></div>
+  <div class="btns"><button class="go" type="submit">Chuyển __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả Unicode</h2>
+  <div class="body">
+    <p id="det"></p>
+    <textarea class="in" id="dst" readonly aria-label="Kết quả Unicode"></textarea>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="dst">Sao chép</button></div>
   </div>
-  <div class="row">
-    <span class="opt">Bảng mã
-      <select id="enc" aria-label="Bảng mã nguồn">
-        <option value="auto">Tự nhận</option><option value="TCVN3">TCVN3 (.VnTime)</option><option value="VNI">VNI (VNI-Times)</option>
-      </select></span>
-    <span class="pill" id="det" aria-live="polite" hidden></span>
-  </div>
-  <div class="field">
-    <label class="label" for="dst">Unicode</label>
-    <textarea class="area" id="dst" readonly></textarea>
-    <div class="actions"><button class="btn primary" type="button" data-copy-from="dst">Sao chép</button></div>
-  </div>
+</section>
+
+<h2>Chuyển cả file Word</h2>
+<form class="calc" id="fw" onsubmit="return false">
+  <label class="l top-l" for="file">File .docx</label>
   <label class="drop" id="drop">
     <input type="file" id="file" accept=".docx">
-    <b>Hoặc thả file Word (.docx) vào đây</b>
-    <span class="note">Nhận lại file đã chuyển, giữ nguyên định dạng.</span>
+    <b>Kéo thả file vào đây hoặc bấm để chọn</b>
+    <span class="hint">Nhận lại file đã chuyển, giữ nguyên định dạng, bảng, ảnh.</span>
   </label>
-  <div class="out" id="fileOut" hidden aria-live="polite">
-    <div class="text" id="fileMsg"></div>
-    <div class="actions" id="fileActions"></div>
-  </div>
-</div>
+</form>
+<section class="result" id="fileOut" hidden aria-live="polite">
+  <h2>File đã chuyển</h2>
+  <div class="body"><p id="fileMsg"></p><div class="actions" id="fileActions"></div></div>
+</section>
 
 <div class="article">
   <h2>Chữ lỗi font trông như thế nào?</h2>
@@ -45,7 +48,7 @@ keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn
       <tr><td>VNI (VNI-Times)</td><td>Haø Noäi</td><td>Hà Nội</td></tr>
     </tbody>
   </table></div>
-  <p class="note">File .doc cũ: mở bằng Word, lưu thành .docx rồi thả vào. File được xử lý ngay trên máy bạn, không tải lên mạng.</p>
+  <p class="note">File .doc cũ: mở bằng Word, lưu thành .docx rồi thả vào. Văn bản và file được xử lý ngay trên máy bạn.</p>
 </div>
 
 <script src="/js/font-tables.js"></script>
@@ -54,21 +57,18 @@ keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn
 (function(){
   const $ = id => document.getElementById(id);
   const NAMES = { TCVN3: "TCVN3", VNI: "VNI", NFC: "Unicode tổ hợp" };
-
-  function render(){
-    const s = $("src").value, det = $("det");
-    let enc = $("enc").value;
-    det.hidden = true;
+  KC.form($("f"), { calc(){
+    const s = $("src").value;
+    if (!s.trim()) { $("src").focus(); return false; }
+    let enc = $("enc").value, pill = "";
     if (enc === "auto") {
       const d = FontViet.detect(s); enc = d.enc;
-      if (s.trim()) {
-        det.hidden = false; det.className = "pill" + (d.enc || d.reason === "unicode" ? "" : " warn");
-        det.textContent = d.enc ? "Nhận ra: " + NAMES[d.enc] : d.reason === "unicode" ? "Đã là Unicode" : "Chưa nhận ra, chọn bảng mã";
-      }
+      pill = d.enc ? `<span class="pill">Nhận ra bảng mã: ${NAMES[d.enc]}</span>`
+        : d.reason === "unicode" ? `<span class="pill">Văn bản đã là Unicode</span>` : `<span class="pill warn">Chưa nhận ra bảng mã, hãy chọn TCVN3 hoặc VNI</span>`;
     }
+    $("det").innerHTML = pill; $("det").hidden = !pill;
     $("dst").value = enc ? FontViet.convert(s, enc) : s;
-  }
-  $("src").addEventListener("input", render); $("enc").addEventListener("change", render);
+  } });
 
   function save(blob, name){
     const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
@@ -78,8 +78,7 @@ keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn
   const loadZip = () => zipLib || (zipLib = new Promise((ok, no) => {
     const s = document.createElement("script"); s.src = "/js/jszip.min.js"; s.onload = () => ok(window.JSZip); s.onerror = no; document.head.appendChild(s);
   }));
-  function msg(text, err){ $("fileOut").hidden = false; $("fileMsg").textContent = text; $("fileMsg").className = "text" + (err ? " err" : ""); $("fileActions").innerHTML = ""; }
-
+  function msg(text, err){ $("fileOut").hidden = false; $("fileMsg").textContent = text; $("fileMsg").className = err ? "err" : "big"; $("fileActions").innerHTML = ""; }
   async function handle(file){
     if (!file) return;
     if (!/\.docx$/i.test(file.name)) { msg(/\.doc$/i.test(file.name) ? "File .doc: mở bằng Word, lưu thành .docx rồi thả lại." : "Chỉ nhận file .docx.", true); return; }
@@ -95,7 +94,7 @@ keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn
       const blob = await zip.generateAsync({ type: "blob", compression: "DEFLATE", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
       const name = file.name.replace(/\.docx$/i, "") + " (Unicode).docx";
       msg("Xong: " + name);
-      const b = document.createElement("button"); b.className = "btn primary"; b.type = "button"; b.textContent = "Tải lại file";
+      const b = document.createElement("button"); b.className = "btn solid"; b.type = "button"; b.textContent = "Tải lại file";
       b.addEventListener("click", () => save(blob, name)); $("fileActions").appendChild(b); save(blob, name);
     } catch (e) { msg("Không mở được file này (file hỏng hoặc có mật khẩu).", true); }
   }
@@ -104,6 +103,5 @@ keywords: lỗi font, chuyển mã, unikey toolkit, vntime, vni times, abc, tcvn
   ["dragenter", "dragover"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add("over"); }));
   ["dragleave", "drop"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove("over"); }));
   drop.addEventListener("drop", e => handle(e.dataTransfer.files[0]));
-  render();
 })();
 </script>

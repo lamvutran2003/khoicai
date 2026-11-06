@@ -1,28 +1,32 @@
 <!--
 title: Đọc số tiền thành chữ online (viết số tiền bằng chữ) | Tính Giùm
 h1: Đọc số tiền thành chữ
-description: Gõ số tiền, có ngay dòng bằng chữ để ghi hoá đơn, phiếu thu chi, hợp đồng: 1.250.000 → Một triệu hai trăm năm mươi nghìn đồng. Miễn phí, khỏi cài.
+description: Viết số tiền bằng chữ để ghi hoá đơn, phiếu thu chi, hợp đồng: 1.250.000 → Một triệu hai trăm năm mươi nghìn đồng. Chọn linh/lẻ, nghìn/ngàn, thêm "chẵn". Miễn phí.
 category: tien-hoa-don
 order: 1
-badge: 123
 summary: Viết số tiền bằng chữ cho hoá đơn, phiếu thu chi.
+intro: Nhập số tiền để có dòng "bằng chữ" ghi trên hoá đơn, phiếu thu, phiếu chi, hợp đồng.
 keywords: viết số tiền bằng chữ, chuyển số thành chữ, đổi số sang chữ, hoá đơn, phiếu thu, phiếu chi, kế toán
 -->
-<div class="tool">
-  <div class="field">
-    <label class="label" for="num">Số tiền</label>
-    <input id="num" class="big" inputmode="decimal" autocomplete="off" value="1250000">
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="num">Số tiền</label>
+  <div class="f"><input id="num" class="in w-l" inputmode="decimal" autocomplete="off" value="1250000"><span class="u">đồng</span></div>
+  <label class="l" for="linh">Số 0 hàng chục</label>
+  <div><select id="linh" class="in"><option value="linh">linh (105 = một trăm linh năm)</option><option value="lẻ">lẻ (105 = một trăm lẻ năm)</option></select></div>
+  <label class="l" for="nghin">Hàng nghìn</label>
+  <div><select id="nghin" class="in"><option value="nghìn">nghìn</option><option value="ngàn">ngàn</option></select></div>
+  <span></span>
+  <label class="chk"><input type="checkbox" id="chan"> Thêm "chẵn" ở cuối</label>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="res">Sao chép</button></div>
   </div>
-  <div class="row">
-    <span class="seg" role="group" aria-label="Đọc số 0 ở hàng chục"><button type="button" data-k="linh" data-v="linh" aria-pressed="true">linh</button><button type="button" data-k="linh" data-v="lẻ" aria-pressed="false">lẻ</button></span>
-    <span class="seg" role="group" aria-label="Hàng nghìn"><button type="button" data-k="nghin" data-v="nghìn" aria-pressed="true">nghìn</button><button type="button" data-k="nghin" data-v="ngàn" aria-pressed="false">ngàn</button></span>
-    <label class="chk"><input type="checkbox" id="chan"> Thêm "chẵn"</label>
-  </div>
-  <div class="out" aria-live="polite">
-    <div class="text" id="res"></div>
-    <div class="actions"><button class="btn primary" type="button" data-copy-from="res">Sao chép</button></div>
-  </div>
-</div>
+</section>
 
 <div class="article">
   <h2>Quy tắc đọc</h2>
@@ -39,23 +43,16 @@ keywords: viết số tiền bằng chữ, chuyển số thành chữ, đổi s�
 <script>
 (function(){
   const $ = id => document.getElementById(id);
-  const opts = { linh: "linh", nghin: "nghìn", chan: false };
-  try { Object.assign(opts, JSON.parse(localStorage.getItem("kc-stc") || "{}")); } catch (e) {}
-  const save = () => { try { localStorage.setItem("kc-stc", JSON.stringify(opts)); } catch (e) {} };
+  try { const s = JSON.parse(localStorage.getItem("kc-stc") || "{}"); if (s.linh) $("linh").value = s.linh; if (s.nghin) $("nghin").value = s.nghin; $("chan").checked = !!s.chan; } catch (e) {}
   KCNum.attach($("num"), { decimals: 2, allowNeg: true });
-
-  function render(){
-    const v = $("num").value.trim(), p = SoThanhChu.parse(v), res = $("res");
-    res.className = "text" + (v && !p ? " err" : "");
-    res.textContent = !v ? "" : p ? SoThanhChu.read(p, opts) : "Số chưa hợp lệ";
-  }
-  function sync(){
-    document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", String(opts[b.dataset.k] === b.dataset.v)));
-    $("chan").checked = !!opts.chan;
-  }
-  document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => { opts[b.dataset.k] = b.dataset.v; sync(); render(); save(); }));
-  $("chan").addEventListener("change", () => { opts.chan = $("chan").checked; render(); save(); });
-  $("num").addEventListener("input", render);
-  sync(); render();
+  const form = KC.form($("f"), { calc(){
+    const opts = { linh: $("linh").value, nghin: $("nghin").value, chan: $("chan").checked };
+    try { localStorage.setItem("kc-stc", JSON.stringify(opts)); } catch (e) {}
+    const v = $("num").value.trim(), p = SoThanhChu.parse(v);
+    if (!v) { $("num").focus(); return false; }
+    $("res").className = p ? "big" : "big err";
+    $("res").textContent = p ? SoThanhChu.read(p, opts) : "Số chưa hợp lệ. Kiểm tra lại dấu chấm, dấu phẩy.";
+  } });
+  form.run(false);
 })();
 </script>

@@ -1,4 +1,4 @@
-<footer class="gutter">
+<footer>
   <div class="wrap">
     <nav class="foot-links" aria-label="Liên kết cuối trang">
       <a href="/">Tất cả công cụ</a>
@@ -6,22 +6,7 @@
       <a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a>
       <span>Góp ý: <span class="sel">__CONTACT_EMAIL__</span></span>
     </nav>
-    <p class="muted">© __YEAR__ __SITE_NAME__. Kết quả mang tính tham khảo.</p>
+    <p>© __YEAR__ __SITE_NAME__. Kết quả mang tính tham khảo. Dữ liệu bạn nhập được xử lý ngay trên máy bạn.</p>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" hidden></div>
-<script>
-(function(){
-  // Shared: every [data-copy-from] button copies the text of the element it names.
-  const toast = msg => { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 2000); };
-  window.KC_TOAST = toast;
-  document.addEventListener("click", async e => {
-    const b = e.target.closest("[data-copy-from]"); if (!b) return;
-    const el = document.getElementById(b.dataset.copyFrom); if (!el) return;
-    const text = "value" in el ? el.value : el.textContent;
-    if (!text.trim()) return;
-    try { await navigator.clipboard.writeText(text); toast("Đã sao chép"); }
-    catch (err) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Đã chọn, bấm Ctrl+C để sao chép"); }
-  });
-})();
-</script>
