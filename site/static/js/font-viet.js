@@ -36,10 +36,44 @@
     }
     return out;
   }
+  // TCVN3 ghi chữ "ư" bằng dấu gạch mềm (U+00AD); nhiều phần mềm đổi nó thành "-" khi sao chép.
+  // Một dấu "-" đứng ngay sau phụ âm đầu của từ (đ-ợc, nh-, m-êng) vì thế là chữ ư.
+  var ONSET = /^(?:ngh|ng|nh|ch|gh|gi|kh|ph|qu|th|tr|[bcdghklmnpqrstvx\u00ae\u00a7])$/i;
+  function hyphenU(word) {
+    return word.replace(/^([^-]{1,3})-(?=[^\s\d-]|$)/, function (m, onset) { return ONSET.test(onset) ? onset + "\u00ad" : m; });
+  }
+
+  // Văn bản lẫn lộn: một phần đã là Unicode, một phần còn font cũ. Mỗi từ được xếp loại:
+  //   "u": có chữ ngoài bảng Latin-1 (ế, ệ, ỉ…), chắc chắn đã là Unicode → giữ nguyên
+  //   "l": có ký tự lạ không phải chữ Việt (µ, ®, ¸, Ó…) hoặc dấu gạch mềm → chắc chắn là font cũ
+  //   còn lại (chỉ có chữ thường như "và", "chính") theo loại của từ gần nhất trên cùng dòng
+  var ODD1 = new RegExp(ODD.source);
+  function kind(w) {
+    if (/[^\u0000-\u00ff]/.test(w.replace(/[^\p{L}]/gu, ""))) return "u";
+    if (ODD1.test(w) || w.indexOf("\u00ad") >= 0) return "l";
+    return "";
+  }
+  function convertMixed(s, enc, one) {
+    return s.split(/(\n)/).map(function (line) {
+      var parts = line.split(/(\s+)/), words = [], i;
+      for (i = 0; i < parts.length; i += 2) { if (enc === "TCVN3") parts[i] = hyphenU(parts[i]); words.push(kind(parts[i])); }
+      for (i = 0; i < words.length; i++) {
+        if (words[i]) continue;
+        var k = "", j;
+        for (j = i - 1; j >= 0 && !k; j--) k = words[j];
+        for (j = i + 1; j < words.length && !k; j++) k = words[j];
+        words[i] = k || "l";
+      }
+      for (i = 0; i < parts.length; i += 2) if (words[i / 2] === "l") parts[i] = one(parts[i]);
+      return parts.join("");
+    }).join("");
+  }
+
   function convert(text, enc, opts) {
     opts = opts || {};
-    var s = String(text);
-    var r = enc === "TCVN3" ? convertTCVN3(s) : enc === "VNI" ? convertVNI(s) : s;
+    var s = String(text), one = enc === "TCVN3" ? convertTCVN3 : enc === "VNI" ? convertVNI : null;
+    // opts.whole: cả đoạn chắc chắn là font cũ (ví dụ chữ trong file Word đặt font .VnTime) → đổi hết
+    var r = !one ? s : opts.whole ? one(s) : convertMixed(s, enc, one);
     if (enc === "NFC" || enc === "TCVN3" || enc === "VNI") r = r.normalize("NFC");
     if (opts.upper) r = r.toLocaleUpperCase("vi");   // font .VnTimeH/.VnArialH: chữ thường hiển thị thành chữ hoa
     return r;
@@ -122,7 +156,7 @@
         stats.runs++;
         return run.replace(/(<w:t\b[^>]*>)([\s\S]*?)(<\/w:t>)/g, function (all, a, text, b) {
           var t = unesc(text); stats.chars += t.length;
-          return a + esc(convert(t, e.enc, { upper: e.upper })) + b;
+          return a + esc(convert(t, e.enc, { upper: e.upper, whole: true })) + b;
         });
       });
     }));

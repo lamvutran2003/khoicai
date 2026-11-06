@@ -60,3 +60,15 @@ test("TCVN3 letters that share a code with their capital stay lowercase (ý, đ�
   assert.strictEqual(F.convert(src, "TCVN3"), "Căn cứ đề nghị của phòng Kế hoạch – Tài chính, đồng ý thanh toán số tiền nêu trên.");
   assert.strictEqual(F.detect(src).enc, "TCVN3");
 });
+
+test("user sample: '-' as ư, and words that are already Unicode stay untouched", () => {
+  const F = require("../site/static/js/font-viet.js");
+  const src = "§©y lµ ®o¹n v¨n mÉu ®-îc m· hãa b»ng ph«ng ch÷ .VnTime. Khi b¹n d¸n ®o¹n v¨n nµy vµo c¸c phÇn mÒm nh- Microsoft Word, c¸c ký tù sÏ hiÓn thÞ thµnh tiếng Việt hoàn chỉnh và chính xác.\nNÕu b¹n thÊy th× còng ®óng nh- mong ®îi, v× hÖ thèng cña b¹n ®ang sö dông b¶ng m· Unicode chuẩn.";
+  const want = "Đây là đoạn văn mẫu được mã hóa bằng phông chữ .VnTime. Khi bạn dán đoạn văn này vào các phần mềm như Microsoft Word, các ký tự sẽ hiển thị thành tiếng Việt hoàn chỉnh và chính xác.\nNếu bạn thấy thì cũng đúng như mong đợi, vì hệ thống của bạn đang sử dụng bảng mã Unicode chuẩn.";
+  assert.strictEqual(F.detect(src).enc, "TCVN3");
+  assert.strictEqual(F.convert(src, "TCVN3"), want);
+  // real hyphens are kept
+  assert.strictEqual(F.convert("e-mail, COVID-19, Wi-Fi, Hµ Néi", "TCVN3"), "e-mail, COVID-19, Wi-Fi, Hà Nội");
+  // the soft hyphen itself still works
+  assert.strictEqual(F.convert("®­îc", "TCVN3"), "được");
+});
