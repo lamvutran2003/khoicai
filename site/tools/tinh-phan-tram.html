@@ -1,0 +1,84 @@
+<!--
+title: Tính phần trăm (%) online: x% của một số, tăng giảm bao nhiêu % | Tính Giùm
+h1: Tính phần trăm
+description: Tính phần trăm nhanh: 15% của 2.000.000 là bao nhiêu, 30 là bao nhiêu phần trăm của 120, giá tăng hay giảm bao nhiêu % từ số cũ sang số mới. Có giá sau khi giảm giá, tăng lương.
+category: dat-dai
+order: 2
+summary: x% của một số, tỉ lệ phần trăm, tăng giảm bao nhiêu %.
+intro: Tính x% của một số, một số bằng bao nhiêu phần trăm số khác, và mức tăng giảm theo phần trăm.
+keywords: tính phần trăm, cách tính phần trăm, phần trăm tăng giảm, tính % giảm giá, tăng lương bao nhiêu phần trăm, tỉ lệ phần trăm
+-->
+<div>
+  <div class="tabs" role="group" aria-label="Kiểu tính">
+    <button type="button" data-mode="of" aria-pressed="true">x% của một số</button><button type="button" data-mode="ratio" aria-pressed="false">Bao nhiêu %</button><button type="button" data-mode="change" aria-pressed="false">Tăng / giảm %</button>
+  </div>
+  <form class="calc" id="f" data-result="out">
+    <label class="l" for="a" id="aL">Phần trăm</label>
+    <div class="f"><input id="a" class="in w-m" inputmode="decimal" autocomplete="off" value="15"><span class="u" id="aU">%</span></div>
+    <label class="l" for="b" id="bL">Của số</label>
+    <div class="f"><input id="b" class="in w-m" inputmode="decimal" autocomplete="off" value="2000000"><span class="u" id="bU"></span></div>
+    <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+  </form>
+</div>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <p id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Công thức</h2>
+  <ul>
+    <li><b>x% của y</b> = y × x ÷ 100. Ví dụ 15% của 2.000.000 = 300.000.</li>
+    <li><b>a là bao nhiêu % của b</b> = a ÷ b × 100. Ví dụ 30 là 25% của 120.</li>
+    <li><b>Tăng/giảm bao nhiêu %</b> từ số cũ sang số mới = (mới − cũ) ÷ cũ × 100. Ví dụ lương từ 12 triệu lên 13,5 triệu là tăng 12,5%.</li>
+  </ul>
+  <p class="note">Giảm 20% rồi tăng 20% không về giá cũ: 100 → 80 → 96. Phần trăm luôn tính trên con số đứng trước.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const val = id => { const s = $(id).value.trim(); if (!s) return NaN; return parseFloat(s.replace(/\./g, "").replace(",", ".")); };
+  const f = (v, d = 4) => v.toLocaleString("vi-VN", { maximumFractionDigits: d });
+  const MODES = {
+    of: { a: ["Phần trăm", "%", "15"], b: ["Của số", "", "2.000.000"] },
+    ratio: { a: ["Số", "", "30"], b: ["Là bao nhiêu % của", "", "120"] },
+    change: { a: ["Số cũ", "", "12.000.000"], b: ["Số mới", "", "13.500.000"] }
+  };
+  let mode = "of";
+  KCNum.attach($("a"), { decimals: 4, allowNeg: true }); KCNum.attach($("b"), { decimals: 4, allowNeg: true });
+  const form = KC.form($("f"), { calc(){
+    const a = val("a"), b = val("b");
+    if (isNaN(a)) { $("a").focus(); return false; }
+    if (isNaN(b)) { $("b").focus(); return false; }
+    $("sub").textContent = "";
+    if (mode === "of") {
+      const r = b * a / 100;
+      $("res").innerHTML = `${f(a)}% của ${f(b)} là <b>${f(r)}</b>`;
+      $("sub").textContent = `${f(b)} tăng ${f(a)}% thành ${f(b + r)}; giảm ${f(a)}% còn ${f(b - r)}.`;
+    } else if (mode === "ratio") {
+      if (!b) { $("res").innerHTML = `<span class="err">Số thứ hai phải khác 0.</span>`; return; }
+      $("res").innerHTML = `${f(a)} bằng <b>${f(a / b * 100, 2)}%</b> của ${f(b)}`;
+    } else {
+      if (!a) { $("res").innerHTML = `<span class="err">Số cũ phải khác 0.</span>`; return; }
+      const p = (b - a) / Math.abs(a) * 100;
+      $("res").innerHTML = p === 0 ? "Không đổi" : `${p > 0 ? "Tăng" : "Giảm"} <b>${f(Math.abs(p), 2)}%</b>`;
+      $("sub").textContent = `Từ ${f(a)} đến ${f(b)}: chênh lệch ${f(b - a)}.`;
+    }
+  } });
+  document.querySelectorAll("[data-mode]").forEach(btn => btn.addEventListener("click", () => {
+    mode = btn.dataset.mode;
+    document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === btn)));
+    const M = MODES[mode];
+    $("aL").textContent = M.a[0]; $("aU").textContent = M.a[1]; $("a").value = M.a[2];
+    $("bL").textContent = M.b[0]; $("bU").textContent = M.b[1]; $("b").value = M.b[2];
+    form.run(false);
+  }));
+  form.run(false);
+})();
+</script>

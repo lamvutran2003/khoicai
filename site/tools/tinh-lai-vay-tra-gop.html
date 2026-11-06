@@ -1,0 +1,72 @@
+<!--
+title: Tính lãi vay trả góp hàng tháng, lịch trả nợ chi tiết | Tính Giùm
+h1: Tính lãi vay trả góp
+description: Tính số tiền trả góp mỗi tháng, tổng lãi và lịch trả nợ từng tháng khi vay ngân hàng hoặc mua trả góp: dư nợ giảm dần, trả đều hàng tháng, lãi phẳng. Quy đổi lãi phẳng ra lãi suất thực.
+category: tien-hoa-don
+order: 6
+summary: Tiền trả mỗi tháng, tổng lãi, lịch trả nợ; so lãi phẳng với lãi thực.
+intro: Tính tiền phải trả mỗi tháng, tổng tiền lãi và lịch trả nợ chi tiết của khoản vay hoặc mua trả góp.
+keywords: tính lãi vay, trả góp, lãi suất vay, dư nợ giảm dần, lãi phẳng, vay mua nhà, vay mua xe, vay tiêu dùng, lịch trả nợ
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="amt">Số tiền vay</label>
+  <div class="f"><input id="amt" class="in w-l" inputmode="numeric" autocomplete="off" value="500000000"><span class="u">đồng</span></div>
+  <label class="l" for="rate">Lãi suất</label>
+  <div class="f"><input id="rate" class="in w-s" inputmode="decimal" autocomplete="off" value="9"><span class="u">%/năm</span></div>
+  <label class="l" for="n">Thời hạn</label>
+  <div class="f"><input id="n" class="in w-s" inputmode="numeric" autocomplete="off" value="5"><select id="nUnit" class="in" aria-label="Đơn vị thời hạn"><option value="12">năm</option><option value="1">tháng</option></select></div>
+  <label class="l" for="method">Cách tính lãi</label>
+  <div><select id="method" class="in">
+    <option value="declining">Dư nợ giảm dần, trả gốc đều (ngân hàng)</option>
+    <option value="annuity">Trả đều mỗi tháng (gốc + lãi bằng nhau)</option>
+    <option value="flat">Lãi phẳng (công ty tài chính, trả góp mua hàng)</option>
+  </select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="sum"></tbody></table></div>
+    <p id="eq"></p>
+    <h3>Lịch trả nợ</h3>
+    <div class="scroll sched"><table class="t"><thead><tr><th>Tháng</th><th class="n">Gốc</th><th class="n">Lãi</th><th class="n">Tổng trả</th><th class="n">Dư nợ còn lại</th></tr></thead><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Ba cách tính lãi trả góp</h2>
+  <ul>
+    <li><b>Dư nợ giảm dần, trả gốc đều</b>: mỗi tháng trả một phần gốc bằng nhau, lãi tính trên số tiền còn nợ. Tháng đầu trả nhiều nhất, các tháng sau giảm dần. Đa số khoản vay ngân hàng (mua nhà, mua xe) tính theo cách này.</li>
+    <li><b>Trả đều mỗi tháng</b>: tổng tiền trả mỗi tháng như nhau; đầu kỳ phần lớn là lãi, cuối kỳ phần lớn là gốc. Tổng lãi nhỉnh hơn cách trên một chút.</li>
+    <li><b>Lãi phẳng</b>: lãi mỗi tháng tính trên toàn bộ số tiền vay ban đầu, dù đã trả bớt gốc. Lãi phẳng 12%/năm tương đương khoảng 21,5%/năm tính trên dư nợ giảm dần (kỳ hạn 12 tháng), nên luôn quy đổi trước khi so sánh.</li>
+  </ul>
+  <h2>Ví dụ</h2>
+  <p>Vay 120 triệu, lãi 12%/năm (1%/tháng), 12 tháng, dư nợ giảm dần: mỗi tháng trả 10 triệu gốc; lãi tháng đầu 1,2 triệu, tháng cuối 100.000 đồng; tổng lãi 7,8 triệu.</p>
+  <p class="note">Kết quả dùng lãi suất cố định cả kỳ. Khoản vay thả nổi (lãi điều chỉnh sau thời gian ưu đãi), phí bảo hiểm khoản vay và phí trả nợ trước hạn không được tính. Có tiền nhàn rỗi muốn gửi? Xem <a href="https://tietkiemdau.vn/">lãi suất tiết kiệm các ngân hàng</a>.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/tra-gop.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  KCNum.attach($("amt"), { decimals: 0 });
+  $("n").addEventListener("input", () => { $("n").value = $("n").value.replace(/\D/g, "").slice(0, 3); });
+  const form = KC.form($("f"), { calc(){
+    const P = +$("amt").value.replace(/\D/g, ""), rate = parseFloat($("rate").value.replace(",", ".")), months = (+$("n").value || 0) * +$("nUnit").value, m = $("method").value;
+    if (!P) { $("amt").focus(); return false; }
+    if (!(rate >= 0 && rate < 100)) { $("rate").focus(); return false; }
+    if (!(months >= 1 && months <= 600)) { $("n").focus(); return false; }
+    const s = TraGop.schedule(P, rate, months, m);
+    $("res").innerHTML = m === "declining" ? `Tháng đầu trả: <b>${money(s.first)} đ</b>, giảm dần đến ${money(s.last)} đ ở tháng cuối`
+      : `Mỗi tháng trả: <b>${money(s.first)} đ</b>`;
+    $("sum").innerHTML = `<tr><td>Số tiền vay</td><td class="n">${money(P)}</td></tr><tr><td>Tổng tiền lãi</td><td class="n">${money(s.totalInterest)}</td></tr>`
+      + `<tr class="tot"><td>Tổng phải trả (${months} tháng)</td><td class="n">${money(s.total)}</td></tr>`;
+    $("eq").textContent = m === "flat" ? `Lãi phẳng ${rate.toLocaleString("vi-VN")}%/năm tương đương khoảng ${TraGop.equivalentRate(P, s.first, months).toLocaleString("vi-VN", { maximumFractionDigits: 1 })}%/năm tính trên dư nợ giảm dần.` : "";
+    $("tbl").innerHTML = s.rows.map(r => `<tr><td>${r.month}</td><td class="n">${money(r.principal)}</td><td class="n">${money(r.interest)}</td><td class="n">${money(r.payment)}</td><td class="n">${money(r.balance)}</td></tr>`).join("");
+  } });
+  form.run(false);
+})();
+</script>

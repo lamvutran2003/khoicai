@@ -1,0 +1,62 @@
+<!--
+title: Tính tuổi: sinh năm bao nhiêu tuổi, tuổi con gì, mệnh gì | Tính Giùm
+h1: Tính tuổi
+description: Nhập ngày sinh để biết tuổi chính xác (năm, tháng, ngày), tuổi mụ, năm sinh âm lịch, can chi, tuổi con gì, mệnh gì và còn bao nhiêu ngày đến sinh nhật.
+category: ngay-lich
+order: 3
+summary: Tuổi chính xác, tuổi mụ, tuổi con gì, mệnh gì.
+intro: Tính tuổi chính xác theo ngày sinh, tuổi mụ, năm sinh âm lịch, con giáp và mệnh theo ngũ hành nạp âm.
+keywords: tính tuổi, sinh năm bao nhiêu tuổi, tuổi con gì, mệnh gì, tuổi mụ, can chi năm sinh, con giáp, năm sinh âm lịch
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="dob">Ngày sinh</label>
+  <div><input id="dob" value="15/03/1998"></div>
+  <label class="l" for="at">Tính đến ngày</label>
+  <div><input id="at"></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Tuổi mụ và năm âm lịch</h2>
+  <ul>
+    <li><b>Tuổi mụ</b> (tuổi ta) tính theo năm âm lịch: lúc sinh ra đã 1 tuổi, mỗi lần qua Tết thêm 1 tuổi.</li>
+    <li>Người sinh trước Tết thuộc năm âm lịch trước: sinh ngày 20/1/1998 (trước Tết Mậu Dần) là tuổi Đinh Sửu, không phải Mậu Dần. Công cụ tự xét ngày Tết của năm sinh.</li>
+    <li><b>Mệnh</b> theo ngũ hành nạp âm: 60 năm can chi chia thành 30 cặp, mỗi cặp hai năm liền nhau cùng một mệnh, ví dụ 1998 và 1999 là Thành Đầu Thổ.</li>
+  </ul>
+  <p class="note">Tuổi con giáp và mệnh là thông tin văn hoá truyền thống, để tham khảo.</p>
+</div>
+
+<script src="/js/am-lich.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/tuoi.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  KCDate.attach($("dob")); KCDate.attach($("at")); KCDate.set($("at"), KCDate.today);
+  const n = v => v.toLocaleString("vi-VN"), mName = m => m === 1 ? "giêng" : m === 12 ? "chạp" : m;
+  const form = KC.form($("f"), { calc(){
+    const jb = KCDate.get($("dob")), ja = KCDate.get($("at"));
+    if (jb == null) { $("dob").focus(); $("res").innerHTML = `<span class="err">Ngày sinh chưa hợp lệ (dd/mm/yyyy).</span>`; $("tbl").innerHTML = ""; return; }
+    if (ja == null || ja < jb) { $("at").focus(); $("res").innerHTML = `<span class="err">Ngày tính phải sau ngày sinh.</span>`; $("tbl").innerHTML = ""; return; }
+    const r = Tuoi.age(AmLich.jdToDate(jb), AmLich.jdToDate(ja)), i = r.info, lb = r.lunarBirth;
+    $("res").innerHTML = `<b>${r.years} tuổi</b>${r.months || r.days ? ` ${r.months} tháng ${r.days} ngày` : ""}`;
+    $("tbl").innerHTML = [
+      ["Tuổi mụ (tuổi ta)", r.nominal + " tuổi"],
+      ["Năm sinh âm lịch", `${i.canChi} (${i.year}) · ngày ${lb.day} tháng ${mName(lb.month)}${lb.leap ? " nhuận" : ""}`],
+      ["Tuổi con gì", `Tuổi ${i.chi} (con ${i.animal.toLowerCase()})`],
+      ["Mệnh", `${i.element} (${i.napAm})`],
+      ["Đã sống", `${n(r.totalDays)} ngày (${n(r.weeks)} tuần)`],
+      ["Sinh nhật tới", r.nextBirthdayIn === 0 ? "Hôm nay!" : `còn ${n(r.nextBirthdayIn)} ngày`]
+    ].map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join("");
+  } });
+  form.run(false);
+})();
+</script>

@@ -205,3 +205,4 @@ table.days td{white-space:nowrap}
 .qa summary{font-weight:700;cursor:pointer;color:var(--navy)}
 .qa p{margin-top:6px}
 .qa+.qa{margin-top:-4px}
+.sched{max-height:440px;overflow:auto;border:1px solid var(--line)}.sched thead th{position:sticky;top:0}.result h3{margin:6px 0 0;font-size:17px;color:var(--navy)}
