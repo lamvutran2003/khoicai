@@ -1,0 +1,63 @@
+<!--
+title: Tính tiền điện sinh hoạt theo giá điện 5 bậc mới nhất | Tính Giùm
+h1: Tính tiền điện
+description: Tính tiền điện sinh hoạt theo biểu giá 5 bậc của EVN áp dụng từ 01/11/2026: nhập số kWh, ra tiền từng bậc, thuế GTGT và tổng tiền. Có tính cho nhiều hộ dùng chung công tơ.
+category: tien-hoa-don
+order: 4
+summary: Tiền điện sinh hoạt theo giá bậc thang mới nhất.
+intro: Nhập số điện (kWh) trong tháng để tính tiền điện sinh hoạt theo biểu giá bậc thang hiện hành.
+keywords: tính tiền điện, giá điện, giá điện bậc thang, evn, kwh, hoá đơn tiền điện, tiền điện nhà trọ
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="kwh">Số điện tiêu thụ</label>
+  <div class="f"><input id="kwh" class="in w-m" inputmode="numeric" autocomplete="off" value="250"><span class="u">kWh</span></div>
+  <label class="l" for="old">Hoặc chỉ số công tơ</label>
+  <div class="f"><input id="old" class="in w-s" inputmode="numeric" autocomplete="off" placeholder="cũ" aria-label="Chỉ số cũ"><span class="u">→</span><input id="new" class="in w-s" inputmode="numeric" autocomplete="off" placeholder="mới" aria-label="Chỉ số mới"></div>
+  <label class="l" for="hh">Số hộ dùng chung</label>
+  <div class="f"><input id="hh" class="in w-s" inputmode="numeric" autocomplete="off" value="1"><span class="hint">nhiều hộ chung một công tơ thì định mức mỗi bậc nhân theo số hộ</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><thead><tr><th>Bậc</th><th>kWh</th><th class="n">Đơn giá</th><th class="n">Thành tiền</th></tr></thead><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Biểu giá điện sinh hoạt</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Bậc</th><th>Mức sử dụng trong tháng</th><th class="n">Giá (đồng/kWh)</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>0 – 100 kWh</td><td class="n">1.901</td></tr>
+      <tr><td>2</td><td>101 – 200 kWh</td><td class="n">2.289</td></tr>
+      <tr><td>3</td><td>201 – 400 kWh</td><td class="n">2.894</td></tr>
+      <tr><td>4</td><td>401 – 700 kWh</td><td class="n">3.456</td></tr>
+      <tr><td>5</td><td>Từ 701 kWh</td><td class="n">3.844</td></tr>
+    </tbody></table></div>
+  <p class="note">Giá chưa gồm thuế GTGT, theo Quyết định 2892/QĐ-BCT áp dụng từ 01/11/2026. Thuế GTGT 8% đến hết 31/12/2026, sau đó 10%. Kỳ hoá đơn kéo dài qua ngày đổi giá được ngành điện chia theo số ngày, nên tiền thực tế có thể lệch đôi chút.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/tien-dien.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const num = id => +$(id).value.replace(/\D/g, "") || 0;
+  ["kwh", "old", "new"].forEach(id => KCNum.attach($(id), { decimals: 0 }));
+  const meter = () => { if ($("old").value && $("new").value && num("new") >= num("old")) $("kwh").value = KCNum.format(String(num("new") - num("old"))); };
+  $("old").addEventListener("input", meter); $("new").addEventListener("input", meter);
+  $("hh").addEventListener("input", () => { $("hh").value = $("hh").value.replace(/\D/g, "").slice(0, 2); });
+  const form = KC.form($("f"), { calc(){
+    if (!$("kwh").value.trim()) { $("kwh").focus(); return false; }
+    const b = TienDien.bill(num("kwh"), num("hh") || 1), pct = Math.round(b.vat * 100);
+    $("res").innerHTML = `Tổng tiền điện: <b>${money(b.total)} đ</b>`;
+    $("tbl").innerHTML = b.rows.map(r => `<tr><td>${r.tier}</td><td>${money(r.kwh)}</td><td class="n">${money(r.price)}</td><td class="n">${money(r.amount)}</td></tr>`).join("")
+      + `<tr><td colspan="3">Cộng (chưa thuế)</td><td class="n">${money(b.net)}</td></tr>`
+      + `<tr><td colspan="3">Thuế GTGT ${pct}%</td><td class="n">${money(b.tax)}</td></tr>`
+      + `<tr class="tot"><td colspan="3">Tổng cộng</td><td class="n">${money(b.total)}</td></tr>`;
+  }, clear(){ $("hh").value = "1"; } });
+  form.run(false);
+})();
+</script>

@@ -1,0 +1,62 @@
+<!--
+title: Tính TDEE, BMR: cơ thể đốt bao nhiêu calo mỗi ngày | Tính Giùm
+h1: Tính TDEE
+description: Tính TDEE (tổng năng lượng tiêu hao mỗi ngày) và BMR theo công thức Mifflin–St Jeor từ giới tính, tuổi, chiều cao, cân nặng và mức vận động.
+category: suc-khoe
+order: 2
+summary: Cơ thể đốt bao nhiêu calo mỗi ngày (TDEE, BMR).
+intro: Ước tính số calo cơ thể tiêu hao mỗi ngày (TDEE) và lúc nghỉ ngơi (BMR), cho người từ 18 tuổi.
+keywords: tính tdee, tdee là gì, bmr, calo tiêu hao, năng lượng mỗi ngày, mifflin st jeor
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="sex">Giới tính</label>
+  <div><select id="sex" class="in"><option value="male">Nam</option><option value="female">Nữ</option></select></div>
+  <label class="l" for="age">Tuổi</label>
+  <div><input id="age" class="in w-s" inputmode="numeric" autocomplete="off" value="25"></div>
+  <label class="l" for="h">Chiều cao</label>
+  <div class="f"><input id="h" class="in w-s" inputmode="decimal" autocomplete="off" value="170"><span class="u">cm</span></div>
+  <label class="l" for="w">Cân nặng</label>
+  <div class="f"><input id="w" class="in w-s" inputmode="decimal" autocomplete="off" value="65"><span class="u">kg</span></div>
+  <label class="l" for="act">Mức vận động</label>
+  <div><select id="act" class="in"></select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><thead><tr><th>Mức vận động</th><th class="n">Calo/ngày</th></tr></thead><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>TDEE và BMR là gì?</h2>
+  <ul>
+    <li><b>BMR</b>: năng lượng cơ thể cần khi nghỉ ngơi hoàn toàn (thở, tim đập, giữ thân nhiệt).</li>
+    <li><b>TDEE</b> = BMR × hệ số vận động: tổng calo đốt trong một ngày. Ăn đúng bằng TDEE thì cân nặng gần như giữ nguyên.</li>
+    <li>Công thức Mifflin–St Jeor: BMR = 10 × cân nặng (kg) + 6,25 × chiều cao (cm) − 5 × tuổi + 5 (nam) hoặc − 161 (nữ).</li>
+  </ul>
+  <p class="note">Kết quả là ước tính; mỗi người có thể chênh 10% hoặc hơn. Không dùng cho trẻ em, phụ nữ mang thai hoặc người đang điều trị bệnh. Muốn biết nên ăn bao nhiêu để giảm hay tăng cân, dùng công cụ <a href="/tinh-calo/">Tính calo mỗi ngày</a>.</p>
+</div>
+
+<script src="/js/suc-khoe.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), num = id => parseFloat($(id).value.replace(",", ".")), k = v => Math.round(v).toLocaleString("vi-VN");
+  $("act").innerHTML = SucKhoe.ACTIVITY.map(a => `<option value="${a.id}">${a.name} (${a.desc})</option>`).join("");
+  try { const s = JSON.parse(localStorage.getItem("kc-body") || "{}"); ["sex", "age", "h", "w", "act"].forEach(id => { if (s[id]) $(id).value = s[id]; }); } catch (e) {}
+  const err = (id, msg) => { $(id).focus(); $("res").innerHTML = `<span class="err">${msg}</span>`; $("tbl").innerHTML = ""; };
+  const form = KC.form($("f"), { calc(){
+    const sex = $("sex").value, age = num("age"), h = num("h"), w = num("w"), act = $("act").value;
+    if (!(age >= 18 && age <= 90)) return err("age", "Công thức dành cho người từ 18 đến 90 tuổi.");
+    if (!(h >= 120 && h <= 230)) return err("h", "Nhập chiều cao từ 120 đến 230 cm.");
+    if (!(w >= 30 && w <= 250)) return err("w", "Nhập cân nặng từ 30 đến 250 kg.");
+    try { localStorage.setItem("kc-body", JSON.stringify({ sex, age: $("age").value, h: $("h").value, w: $("w").value, act })); } catch (e) {}
+    const bmr = SucKhoe.bmr(sex, age, h, w);
+    $("res").innerHTML = `TDEE: <b>${k(SucKhoe.tdee(sex, age, h, w, act))} calo/ngày</b> · BMR ${k(bmr)} calo`;
+    $("tbl").innerHTML = SucKhoe.ACTIVITY.map(a => `<tr${a.id === act ? ' class="tot"' : ""}><td>${a.name} (${a.desc})</td><td class="n">${k(bmr * a.f)}</td></tr>`).join("");
+  } });
+  form.run(false);
+})();
+</script>

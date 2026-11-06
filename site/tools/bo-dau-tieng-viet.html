@@ -1,0 +1,53 @@
+<!--
+title: Bỏ dấu tiếng Việt online, chuyển chữ có dấu thành không dấu | Tính Giùm
+h1: Bỏ dấu tiếng Việt
+description: Chuyển chữ tiếng Việt có dấu thành không dấu: "Hà Nội" → "Ha Noi". Tạo đường dẫn (ha-noi), tên file (Ha_Noi). Dùng cho email, Excel, tên file, mã khách hàng.
+category: van-ban
+order: 2
+summary: Chuyển chữ có dấu thành không dấu, tạo tên file, đường dẫn.
+intro: Chuyển chữ tiếng Việt có dấu thành không dấu, hoặc thành tên file, đường dẫn web.
+keywords: bỏ dấu tiếng việt, chuyển có dấu thành không dấu, xoá dấu, tiếng việt không dấu, slug, tên file
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l top-l" for="src">Văn bản</label>
+  <textarea class="in" id="src">Nguyễn Thị Hoà – Phòng Kế toán, Hà Nội</textarea>
+  <label class="l" for="mode">Kiểu</label>
+  <div><select id="mode" class="in">
+    <option value="plain">Bỏ dấu (Ha Noi)</option>
+    <option value="file">Tên file (Ha_Noi)</option>
+    <option value="slug">Đường dẫn web (ha-noi)</option>
+    <option value="upper">Bỏ dấu, viết hoa (HA NOI)</option>
+  </select></div>
+  <div class="btns"><button class="go" type="submit">Chuyển __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <textarea class="in" id="dst" readonly aria-label="Kết quả"></textarea>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="dst">Sao chép</button></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Khi nào cần bỏ dấu?</h2>
+  <ul>
+    <li>Tên người nhận khi chuyển khoản, nội dung chuyển tiền, tên trên vé máy bay.</li>
+    <li>Tên file gửi qua email hoặc tải lên hệ thống không nhận chữ có dấu.</li>
+    <li>Cột mã, tên đăng nhập, địa chỉ email trong Excel.</li>
+  </ul>
+</div>
+
+<script src="/js/van-ban.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const form = KC.form($("f"), { calc(){
+    const s = $("src").value, m = $("mode").value;
+    if (!s.trim()) { $("src").focus(); return false; }
+    $("dst").value = m === "file" ? VanBan.fileName(s) : m === "slug" ? s.split(/\r?\n/).map(l => VanBan.slug(l)).join("\n")
+      : m === "upper" ? VanBan.unaccent(s).toUpperCase() : VanBan.unaccent(s);
+  } });
+  form.run(false);
+})();
+</script>

@@ -1,0 +1,53 @@
+<!--
+title: Tính chỉ số BMI online, theo chuẩn người châu Á | Tính Giùm
+h1: Tính chỉ số BMI
+description: Tính chỉ số khối cơ thể BMI từ chiều cao và cân nặng, phân loại theo ngưỡng cho người châu Á (gầy, bình thường, thừa cân, béo phì) và cân nặng hợp lý cho chiều cao của bạn.
+category: suc-khoe
+order: 1
+summary: BMI và cân nặng hợp lý theo chiều cao, chuẩn người châu Á.
+intro: Tính chỉ số khối cơ thể (BMI) cho người trưởng thành và khoảng cân nặng hợp lý theo chiều cao.
+keywords: tính bmi, chỉ số bmi, chỉ số khối cơ thể, cân nặng chuẩn, béo phì, thừa cân, chiều cao cân nặng
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="h">Chiều cao</label>
+  <div class="f"><input id="h" class="in w-s" inputmode="decimal" autocomplete="off" value="165"><span class="u">cm</span></div>
+  <label class="l" for="w">Cân nặng</label>
+  <div class="f"><input id="w" class="in w-s" inputmode="decimal" autocomplete="off" value="60"><span class="u">kg</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <p id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Phân loại BMI cho người châu Á</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>BMI</th><th>Phân loại</th></tr></thead><tbody>
+    <tr><td>Dưới 18,5</td><td>Thiếu cân</td></tr>
+    <tr><td>18,5 – 22,9</td><td>Bình thường</td></tr>
+    <tr><td>23 – 24,9</td><td>Thừa cân</td></tr>
+    <tr><td>25 – 29,9</td><td>Béo phì độ I</td></tr>
+    <tr><td>Từ 30</td><td>Béo phì độ II</td></tr>
+  </tbody></table></div>
+  <p class="note">BMI = cân nặng (kg) ÷ chiều cao (m)². Ngưỡng theo Tổ chức Y tế Thế giới khu vực Tây Thái Bình Dương cho người châu Á, thấp hơn ngưỡng quốc tế (thừa cân từ 25). BMI không phân biệt cơ và mỡ, không dùng cho trẻ em, phụ nữ mang thai; chỉ để tham khảo.</p>
+</div>
+
+<script src="/js/suc-khoe.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), num = id => parseFloat($(id).value.replace(",", ".")), f1 = v => v.toLocaleString("vi-VN", { maximumFractionDigits: 1 });
+  const form = KC.form($("f"), { calc(){
+    const h = num("h"), w = num("w");
+    if (!(h >= 100 && h <= 250)) { $("h").focus(); $("res").innerHTML = `<span class="err">Nhập chiều cao từ 100 đến 250 cm.</span>`; $("sub").textContent = ""; return; }
+    if (!(w >= 25 && w <= 300)) { $("w").focus(); $("res").innerHTML = `<span class="err">Nhập cân nặng từ 25 đến 300 kg.</span>`; $("sub").textContent = ""; return; }
+    const b = SucKhoe.bmi(w, h), [lo, hi] = SucKhoe.healthyRange(h);
+    $("res").innerHTML = `BMI: <b>${f1(b)}</b> · ${SucKhoe.bmiClass(b)}`;
+    $("sub").textContent = `Cân nặng trong khoảng bình thường với chiều cao ${f1(h)} cm: ${f1(lo)} – ${f1(hi)} kg.`;
+  } });
+  form.run(false);
+})();
+</script>

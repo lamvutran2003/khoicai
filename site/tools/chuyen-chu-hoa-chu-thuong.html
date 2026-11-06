@@ -1,0 +1,56 @@
+<!--
+title: Chuyển chữ hoa thành chữ thường và ngược lại, viết hoa chữ cái đầu | Tính Giùm
+h1: Chuyển chữ hoa, chữ thường
+description: Đổi văn bản tiếng Việt sang CHỮ IN HOA, chữ thường, Viết Hoa Chữ Cái Đầu hoặc viết hoa đầu câu. Đếm số ký tự, số từ. Không cần Word hay Unikey.
+category: van-ban
+order: 3
+summary: CHỮ HOA, chữ thường, Viết Hoa Đầu Từ; đếm ký tự, số từ.
+intro: Đổi văn bản tiếng Việt sang chữ in hoa, chữ thường hoặc viết hoa chữ cái đầu, kèm đếm số ký tự và số từ.
+keywords: chuyển chữ hoa thành chữ thường, chữ in hoa, viết hoa chữ cái đầu, đổi chữ hoa, đếm ký tự, đếm số từ
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l top-l" for="src">Văn bản</label>
+  <textarea class="in" id="src">CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN PHÁT</textarea>
+  <label class="l" for="mode">Đổi thành</label>
+  <div><select id="mode" class="in">
+    <option value="title">Viết Hoa Chữ Cái Đầu</option>
+    <option value="sentence">Viết hoa đầu câu</option>
+    <option value="upper">CHỮ IN HOA</option>
+    <option value="lower">chữ thường</option>
+    <option value="swap">đẢO hOA tHƯỜNG</option>
+  </select></div>
+  <div class="btns"><button class="go" type="submit">Chuyển __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <textarea class="in" id="dst" readonly aria-label="Kết quả"></textarea>
+    <p class="note" id="stats"></p>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="dst">Sao chép</button></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Mẹo</h2>
+  <ul>
+    <li>Văn bản lỡ gõ khi bật Caps Lock: chọn "Viết hoa đầu câu".</li>
+    <li>Tên người, tên công ty trong danh sách: chọn "Viết Hoa Chữ Cái Đầu".</li>
+    <li>Viết hoa đầu câu không biết đâu là tên riêng; kiểm tra lại tên người, địa danh sau khi đổi.</li>
+  </ul>
+</div>
+
+<script src="/js/van-ban.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), n = v => v.toLocaleString("vi-VN");
+  const form = KC.form($("f"), { calc(){
+    const s = $("src").value;
+    if (!s.trim()) { $("src").focus(); return false; }
+    $("dst").value = VanBan.toCase(s, $("mode").value);
+    const st = VanBan.stats(s);
+    $("stats").textContent = `${n(st.chars)} ký tự (${n(st.noSpace)} không tính khoảng trắng) · ${n(st.words)} từ · ${n(st.lines)} dòng`;
+  } });
+  form.run(false);
+})();
+</script>

@@ -99,7 +99,7 @@ keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn ni�
     $("pIn").value = v.length > 4 ? `${v.slice(0, 2)}/${v.slice(2, 4)}/${v.slice(4)}` : v.length > 2 ? `${v.slice(0, 2)}/${v.slice(2)}` : v;
     if (v.length === 8) {
       if (mode === "l2s") $("leapWrap").hidden = A.leapMonthOf(+v.slice(4)) !== +v.slice(2, 4);
-      const s = readInput(); if (s && !$("pop").hidden) openPop(s);
+      closePop();   // gõ đủ ngày thì đóng lịch, khỏi che nút bên dưới
     }
   });
 

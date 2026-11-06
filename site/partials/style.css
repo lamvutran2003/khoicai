@@ -164,8 +164,8 @@ footer .wrap{display:grid;gap:8px;padding-block:18px}
   .logo{font-size:28px;padding:12px 0 8px}
   .top .wrap{padding-inline:0}
   .logo{padding-inline:16px}
-  .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
-  .nav a{font-size:13.5px;padding:11px 9px;white-space:nowrap}
+  .nav{width:100%}
+  .nav a{font-size:13.5px;padding:10px 9px;white-space:nowrap}
   h1{font-size:25px}
   form.calc{grid-template-columns:minmax(0,1fr);gap:6px;padding:12px}
   form.calc>.l{margin-top:6px}

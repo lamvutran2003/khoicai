@@ -1,0 +1,65 @@
+<!--
+title: Tính thuế VAT 8%, 10%: cộng thuế và tách thuế GTGT | Tính Giùm
+h1: Tính thuế VAT
+description: Tính thuế giá trị gia tăng (GTGT, VAT): từ giá chưa thuế ra giá có thuế, hoặc tách VAT từ giá đã có thuế. Thuế suất 8%, 10%, 5%; có dòng số tiền bằng chữ để ghi hoá đơn.
+category: tien-hoa-don
+order: 5
+summary: Cộng VAT vào giá, hoặc tách VAT từ giá đã có thuế.
+intro: Tính tiền thuế GTGT, giá chưa thuế và giá thanh toán, kèm số tiền bằng chữ để ghi hoá đơn.
+keywords: tính vat, thuế gtgt, thuế giá trị gia tăng, tách vat, giá chưa thuế, vat 8%, vat 10%, hoá đơn
+-->
+<div>
+  <div class="tabs" role="group" aria-label="Chiều tính">
+    <button type="button" data-mode="add" aria-pressed="true">Giá chưa thuế → có thuế</button><button type="button" data-mode="split" aria-pressed="false">Tách VAT từ giá có thuế</button>
+  </div>
+  <form class="calc" id="f" data-result="out">
+    <label class="l" for="amt" id="amtL">Giá chưa thuế</label>
+    <div class="f"><input id="amt" class="in w-l" inputmode="numeric" autocomplete="off" value="10000000"><span class="u">đồng</span></div>
+    <label class="l" for="rate">Thuế suất</label>
+    <div class="f"><select id="rate" class="in"><option value="8">8% (giảm thuế đến 31/12/2026)</option><option value="10">10%</option><option value="5">5%</option></select></div>
+    <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+  </form>
+</div>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p id="words"></p>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="words">Sao chép số tiền bằng chữ</button></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính</h2>
+  <ul>
+    <li>Tiền thuế = giá chưa thuế × thuế suất. Giá thanh toán = giá chưa thuế + tiền thuế.</li>
+    <li>Tách VAT: giá chưa thuế = giá có thuế ÷ (1 + thuế suất), làm tròn đến đồng; tiền thuế là phần còn lại.</li>
+    <li>Thuế suất 8% áp dụng từ 01/07/2025 đến 31/12/2026 cho phần lớn hàng hoá, dịch vụ đang chịu 10% (Nghị quyết 204/2025/QH15), trừ viễn thông, tài chính, ngân hàng, chứng khoán, bảo hiểm, bất động sản, kim loại, khai khoáng và hàng chịu thuế tiêu thụ đặc biệt.</li>
+  </ul>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/so-thanh-chu.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  let mode = "add";
+  KCNum.attach($("amt"), { decimals: 0 });
+  const form = KC.form($("f"), { calc(){
+    const a = +$("amt").value.replace(/\D/g, "") || 0, r = +$("rate").value / 100;
+    if (!a) { $("amt").focus(); return false; }
+    const net = mode === "add" ? a : Math.round(a / (1 + r)), tax = mode === "add" ? Math.round(a * r) : a - Math.round(a / (1 + r)), total = net + tax;
+    $("tbl").innerHTML = `<tr><td>Giá chưa thuế</td><td class="n">${money(net)}</td></tr><tr><td>Thuế GTGT ${$("rate").value}%</td><td class="n">${money(tax)}</td></tr>`
+      + `<tr class="tot"><td>Tổng tiền thanh toán</td><td class="n">${money(total)}</td></tr>`;
+    $("words").textContent = "Bằng chữ: " + SoThanhChu.read(String(total)) + ".";
+  } });
+  document.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => {
+    mode = b.dataset.mode;
+    document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    $("amtL").textContent = mode === "add" ? "Giá chưa thuế" : "Giá đã có thuế";
+    form.run(false);
+  }));
+  form.run(false);
+})();
+</script>

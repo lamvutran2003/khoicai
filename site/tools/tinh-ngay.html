@@ -1,0 +1,100 @@
+<!--
+title: Tính ngày: đếm số ngày giữa hai ngày, cộng trừ ngày, ngày làm việc | Tính Giùm
+h1: Tính ngày
+description: Đếm số ngày giữa hai ngày, cộng trừ ngày tháng, đếm ngày làm việc trừ thứ Bảy, Chủ nhật và ngày nghỉ lễ Việt Nam. Tính hạn hợp đồng, hạn nộp hồ sơ, ngày công.
+category: ngay-lich
+order: 2
+summary: Số ngày giữa hai ngày, cộng trừ ngày, đếm ngày làm việc.
+intro: Đếm số ngày giữa hai ngày, tính ngày sau một số ngày hoặc ngày làm việc, đã trừ ngày nghỉ lễ Việt Nam.
+keywords: tính ngày, đếm ngày, số ngày giữa hai ngày, cộng ngày, ngày làm việc, ngày công, hạn hợp đồng, ngày nghỉ lễ
+-->
+<div>
+  <div class="tabs" role="group" aria-label="Kiểu tính">
+    <button type="button" data-mode="diff" aria-pressed="true">Khoảng cách</button><button type="button" data-mode="add" aria-pressed="false">Cộng / trừ ngày</button><button type="button" data-mode="work" aria-pressed="false">Ngày làm việc</button>
+  </div>
+  <form class="calc" id="f" data-result="out">
+    <label class="l" for="d1" id="d1L">Từ ngày</label>
+    <div><input id="d1"></div>
+    <label class="l m-diff m-work" for="d2">Đến ngày</label>
+    <div class="m-diff m-work"><input id="d2"></div>
+    <label class="l m-add" for="n" hidden>Cộng thêm</label>
+    <div class="f m-add" hidden>
+      <select id="sign" class="in" aria-label="Cộng hay trừ"><option value="1">+</option><option value="-1">−</option></select>
+      <input id="n" class="in w-s" inputmode="numeric" autocomplete="off" value="30" aria-label="Số lượng">
+      <select id="unit" class="in" aria-label="Đơn vị"><option value="d">ngày</option><option value="wd">ngày làm việc</option><option value="w">tuần</option><option value="m">tháng</option><option value="y">năm</option></select>
+    </div>
+    <span class="m-diff"></span>
+    <label class="chk m-diff"><input type="checkbox" id="incl"> Tính cả ngày cuối</label>
+    <span class="m-work m-add" hidden></span>
+    <div class="f m-work m-add" hidden>
+      <label class="chk"><input type="checkbox" id="sat"> Làm cả thứ Bảy</label>
+      <label class="chk"><input type="checkbox" id="hol" checked> Trừ ngày nghỉ lễ</label>
+    </div>
+    <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" id="todayBtn">Hôm nay</button></div>
+  </form>
+</div>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <p class="note" id="sub"></p>
+    <ul class="hols" id="list"></ul>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Ngày nghỉ lễ được trừ</h2>
+  <p>Theo Bộ luật Lao động: Tết Dương lịch 1/1; Tết Âm lịch 5 ngày (ngày cuối năm cũ và mùng 1–4); Giỗ Tổ Hùng Vương 10/3 âm lịch; 30/4; 1/5; Quốc khánh 2/9 và một ngày liền kề; Ngày Văn hóa Việt Nam 24/11 (từ 2026). Ngày lễ trùng ngày nghỉ hằng tuần được nghỉ bù vào ngày làm việc kế tiếp.</p>
+  <p class="note">Lịch hoán đổi ngày làm việc do Chính phủ công bố từng năm (làm bù thứ Bảy) không được tính.</p>
+</div>
+
+<script src="/js/am-lich.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/ngay.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  let mode = "diff";
+  KCDate.attach($("d1")); KCDate.attach($("d2"));
+  KCDate.set($("d1"), KCDate.today); KCDate.set($("d2"), Ngay.jd(31, 12, Ngay.toDate(KCDate.today).year));
+  $("n").addEventListener("input", () => { $("n").value = $("n").value.replace(/\D/g, "").slice(0, 5); });
+  const fmt = j => { const d = Ngay.toDate(j); return `${AmLich.weekday(j)}, ${d.day}/${d.month}/${d.year}`; };
+  const short = j => { const d = Ngay.toDate(j); return `${d.day}/${d.month}/${d.year}`; };
+  const n0 = v => v.toLocaleString("vi-VN");
+
+  const form = KC.form($("f"), { calc(){
+    const a = KCDate.get($("d1")), b = KCDate.get($("d2")), o = { satWork: $("sat").checked, holidays: $("hol").checked };
+    $("list").innerHTML = ""; $("sub").textContent = "";
+    if (a == null) { $("d1").focus(); $("res").innerHTML = `<span class="err">Ngày chưa hợp lệ.</span>`; return; }
+    if (mode !== "add" && b == null) { $("d2").focus(); $("res").innerHTML = `<span class="err">Ngày chưa hợp lệ.</span>`; return; }
+    if (mode === "diff") {
+      const days = Math.abs(b - a) + ($("incl").checked ? 1 : 0), y = Ngay.ymd(Math.min(a, b), Math.max(a, b) + ($("incl").checked ? 1 : 0));
+      $("res").innerHTML = `<b>${n0(days)} ngày</b>`;
+      const parts = [y.years && y.years + " năm", y.months && y.months + " tháng", y.days && y.days + " ngày"].filter(Boolean).join(" ");
+      $("sub").textContent = `= ${parts || "0 ngày"} · = ${Math.floor(days / 7)} tuần ${days % 7} ngày · từ ${fmt(Math.min(a, b))} đến ${fmt(Math.max(a, b))}`;
+    } else if (mode === "add") {
+      const n = (+$("n").value || 0) * +$("sign").value, u = $("unit").value;
+      const r = u === "d" ? a + n : u === "w" ? a + 7 * n : u === "m" ? Ngay.addMonths(a, n) : u === "y" ? Ngay.addMonths(a, 12 * n) : Ngay.addWorkdays(a, n, o);
+      $("res").innerHTML = `<b>${fmt(r)}</b>`;
+      const lunar = AmLich.toLunar(Ngay.toDate(r).day, Ngay.toDate(r).month, Ngay.toDate(r).year);
+      $("sub").textContent = `${short(a)} ${n < 0 ? "−" : "+"} ${Math.abs(n)} ${$("unit").selectedOptions[0].textContent} · âm lịch ${lunar.day}/${lunar.month}${lunar.leap ? " nhuận" : ""}/${lunar.year}`;
+    } else {
+      const w = Ngay.workdays(a, b, o);
+      $("res").innerHTML = `<b>${n0(w.count)} ngày làm việc</b>`;
+      $("sub").textContent = `Từ ${fmt(Math.min(a, b))} đến ${fmt(Math.max(a, b))}, tính cả hai ngày; đã trừ ${o.satWork ? "Chủ nhật" : "thứ Bảy, Chủ nhật"}${o.holidays ? ` và ${w.holidays.length} ngày nghỉ lễ` : ""}.`;
+      $("list").innerHTML = w.holidays.map(h => `<li class="off"><b>${short(h.jd)}</b> ${h.name}</li>`).join("");
+    }
+  } });
+
+  document.querySelectorAll("[data-mode]").forEach(btn => btn.addEventListener("click", () => {
+    mode = btn.dataset.mode;
+    document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === btn)));
+    document.querySelectorAll(".m-diff,.m-add,.m-work").forEach(el => { el.hidden = !el.classList.contains("m-" + mode); });
+    $("d1L").textContent = mode === "add" ? "Ngày bắt đầu" : "Từ ngày";
+    form.run(false);
+  }));
+  $("todayBtn").addEventListener("click", () => { KCDate.set($("d1"), KCDate.today); form.run(false); });
+  form.run(false);
+})();
+</script>
