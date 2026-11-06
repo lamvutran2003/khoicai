@@ -6,7 +6,7 @@ site/pages/<slug>.html   plain pages (giới thiệu, chính sách) -> /<slug>/
 site/partials/           style.css, header.html, footer.html (shared)
 site/static/             copied to the site root (js/, icons)
 
-    SITE_URL=https://khoicai.vn python build.py
+    SITE_URL=https://tinhgium.vn python build.py
 """
 from __future__ import annotations
 
@@ -19,9 +19,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SITE, DIST = ROOT / "site", ROOT / "dist"
-SITE_URL = (os.environ.get("SITE_URL") or "https://khoicai.vn").rstrip("/")
-SITE_NAME = os.environ.get("SITE_NAME") or "Khỏi Cài"
-CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@khoicai.vn"
+SITE_URL = (os.environ.get("SITE_URL") or "https://tinhgium.vn").rstrip("/")
+SITE_NAME = os.environ.get("SITE_NAME") or "Tính Giùm"
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@tinhgium.vn"
 # Khi site nằm trong thư mục con (ví dụ GitHub Pages chưa có tên miền: /khoicai), mọi đường dẫn "/..." được thêm tiền tố
 BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
 BASE = BASE.rstrip("/")
@@ -128,7 +128,7 @@ def build() -> None:
                             f'<ul class="tools">{"".join(tool_card(t) for t in items)}</ul></section>')
     home = (SITE / "home.html").read_text(encoding="utf-8").replace("__SECTIONS__", "".join(sections))
     desc = (f"{len(tools)} công cụ online miễn phí bằng tiếng Việt: " + ", ".join(t["h1"].lower() for t in tools[:4])
-            + "… Khỏi cài đặt, khỏi đăng ký, dữ liệu không rời khỏi máy bạn.")
+            + "… Không cần cài đặt, không cần đăng ký, dữ liệu không rời khỏi máy bạn.")
     body = fill(header + home + footer, {**common, "__PAGE_URL__": SITE_URL + "/"})
     (DIST / "index.html").write_text(page(f"{SITE_NAME}: công cụ online miễn phí, khỏi cài, khỏi đăng ký", desc,
                                           SITE_URL + "/", body, css), encoding="utf-8")
