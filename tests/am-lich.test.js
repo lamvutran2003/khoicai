@@ -46,3 +46,19 @@ test("can chi and weekday", () => {
   assert.strictEqual(A.weekday(A.jdFromDate(6, 11, 2026)), "Thứ sáu");
   assert.strictEqual(A.monthLength(12, 2025, false) + 0 >= 29, true);
 });
+
+test("holidays", () => {
+  const names = (d, m, y) => A.holidays(d, m, y).map(h => h.name + (h.off ? "*" : ""));
+  assert.deepStrictEqual(names(17, 2, 2026), ["Tết Nguyên đán*"]);
+  assert.deepStrictEqual(names(16, 2, 2026), ["Giao thừa*"]);          // 29 tháng Chạp Ất Tỵ (tháng thiếu)
+  assert.deepStrictEqual(names(2, 9, 2026), ["Quốc khánh*"]);
+  assert.deepStrictEqual(names(24, 11, 2026), ["Ngày Văn hóa Việt Nam*"]);
+  assert.deepStrictEqual(names(24, 11, 2025), []);
+  const tt = A.toSolar(15, 8, 2026, false);
+  assert.deepStrictEqual(names(tt.day, tt.month, tt.year), ["Tết Trung thu"]);
+  const gt = A.toSolar(10, 3, 2026, false);
+  assert.deepStrictEqual(names(gt.day, gt.month, gt.year), ["Giỗ Tổ Hùng Vương*"]);
+  // leap month days are not festival days
+  const leap = A.toSolar(15, 6, 2025, true);
+  assert.deepStrictEqual(names(leap.day, leap.month, leap.year), []);
+});

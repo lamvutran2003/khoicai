@@ -117,7 +117,32 @@
   var WEEKDAY = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
   var weekday = function (jd) { return WEEKDAY[(jd + 1) % 7]; };
 
-  var API = { toLunar: toLunar, toSolar: toSolar, jdFromDate: jdFromDate, jdToDate: jdToDate, monthLength: monthLength,
+  // Ngày lễ. off: ngày nghỉ hưởng lương theo Bộ luật Lao động (Điều 112) và Ngày Văn hóa Việt Nam 24/11 (từ 2026).
+  // Tết âm lịch được nghỉ 5 ngày, Quốc khánh 2 ngày; ngày nghỉ cụ thể quanh các mốc này do Chính phủ công bố hằng năm.
+  var SOLAR_DAYS = [
+    [1, 1, "Tết Dương lịch", true], [3, 2, "Thành lập Đảng Cộng sản Việt Nam"], [14, 2, "Lễ Tình nhân"], [8, 3, "Quốc tế Phụ nữ"],
+    [26, 3, "Thành lập Đoàn TNCS Hồ Chí Minh"], [30, 4, "Ngày Giải phóng miền Nam", true], [1, 5, "Quốc tế Lao động", true],
+    [1, 6, "Quốc tế Thiếu nhi"], [27, 7, "Thương binh – Liệt sĩ"], [2, 9, "Quốc khánh", true], [20, 10, "Phụ nữ Việt Nam"],
+    [20, 11, "Nhà giáo Việt Nam"], [24, 11, "Ngày Văn hóa Việt Nam", true, 2026], [22, 12, "Quân đội Nhân dân Việt Nam"], [24, 12, "Giáng sinh"]
+  ];
+  var LUNAR_DAYS = [
+    [1, 1, "Tết Nguyên đán", true], [2, 1, "Mùng 2 Tết", true], [3, 1, "Mùng 3 Tết", true], [15, 1, "Rằm tháng Giêng"],
+    [10, 3, "Giỗ Tổ Hùng Vương", true], [15, 4, "Lễ Phật đản"], [5, 5, "Tết Đoan ngọ"], [15, 7, "Lễ Vu Lan"],
+    [15, 8, "Tết Trung thu"], [23, 12, "Ông Công Ông Táo"]
+  ];
+  // -> [{ name, off }] cho một ngày dương
+  function holidays(dd, mm, yy) {
+    var out = [], l = toLunar(dd, mm, yy);
+    SOLAR_DAYS.forEach(function (h) { if (h[0] === dd && h[1] === mm && (!h[4] || yy >= h[4])) out.push({ name: h[2], off: !!h[3] }); });
+    if (!l.leap) LUNAR_DAYS.forEach(function (h) { if (h[0] === l.day && h[1] === l.month) out.push({ name: h[2], off: !!h[3] }); });
+    if (!l.leap && l.month === 12) {   // Giao thừa: ngày cuối tháng Chạp (29 hoặc 30)
+      var t = jdToDate(l.jd + 1), n = toLunar(t.day, t.month, t.year);
+      if (n.month === 1 && n.day === 1) out.push({ name: "Giao thừa", off: true });
+    }
+    return out;
+  }
+
+  var API = { holidays: holidays, toLunar: toLunar, toSolar: toSolar, jdFromDate: jdFromDate, jdToDate: jdToDate, monthLength: monthLength,
               leapMonthOf: leapMonthOf, canChiYear: canChiYear, canChiMonth: canChiMonth, canChiDay: canChiDay, weekday: weekday };
   if (typeof module === "object" && module.exports) module.exports = API; else root.AmLich = API;
 })(this);
