@@ -1,0 +1,84 @@
+<!--
+title: Tính tỉ lệ mỡ cơ thể bằng thước dây (phương pháp U.S. Navy) | Tính Giùm
+h1: Tính tỉ lệ mỡ cơ thể
+description: Ước tính tỉ lệ mỡ cơ thể (% body fat) từ chiều cao, vòng cổ, vòng eo, vòng mông bằng phương pháp của Hải quân Hoa Kỳ. Biết khối lượng mỡ, khối lượng nạc và mức phân loại.
+category: suc-khoe
+order: 2
+summary: % mỡ cơ thể từ số đo vòng cổ, eo, mông bằng thước dây.
+intro: Ước tính tỉ lệ mỡ cơ thể chỉ với thước dây, theo phương pháp đo vòng của Hải quân Hoa Kỳ (U.S. Navy).
+keywords: tính tỉ lệ mỡ, body fat, phần trăm mỡ cơ thể, tỷ lệ mỡ, đo mỡ bằng thước dây, us navy, khối lượng nạc
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="sex">Giới tính</label>
+  <div><select id="sex" class="in"><option value="male">Nam</option><option value="female">Nữ</option></select></div>
+  <label class="l" for="age">Tuổi</label>
+  <div><input id="age" class="in w-s" inputmode="numeric" autocomplete="off" value="25"></div>
+  <label class="l" for="w">Cân nặng</label>
+  <div class="f"><input id="w" class="in w-s" inputmode="decimal" autocomplete="off" value="70"><span class="u">kg</span></div>
+  <label class="l" for="h">Chiều cao</label>
+  <div class="f"><input id="h" class="in w-s" inputmode="decimal" autocomplete="off" value="175"><span class="u">cm</span></div>
+  <label class="l" for="neck">Vòng cổ</label>
+  <div class="f"><input id="neck" class="in w-s" inputmode="decimal" autocomplete="off" value="38"><span class="u">cm</span><span class="hint">ngay dưới yết hầu</span></div>
+  <label class="l" for="waist">Vòng eo</label>
+  <div class="f"><input id="waist" class="in w-s" inputmode="decimal" autocomplete="off" value="84"><span class="u">cm</span><span class="hint" id="waistHint">ngang rốn</span></div>
+  <label class="l" for="hip" id="hipL" hidden>Vòng mông</label>
+  <div class="f" id="hipW" hidden><input id="hip" class="in w-s" inputmode="decimal" autocomplete="off" value="95"><span class="u">cm</span><span class="hint">chỗ to nhất</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="use"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách đo</h2>
+  <ul>
+    <li>Đo buổi sáng, trước khi ăn, đứng thẳng, thả lỏng bụng; thước dây sát da nhưng không siết.</li>
+    <li><b>Vòng cổ</b>: ngay dưới yết hầu, thước hơi chếch xuống phía trước.</li>
+    <li><b>Vòng eo</b>: nam đo ngang rốn; nữ đo chỗ eo nhỏ nhất.</li>
+    <li><b>Vòng mông</b> (nữ): chỗ mông to nhất.</li>
+  </ul>
+  <h2>Phân loại tỉ lệ mỡ</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Mức</th><th>Nữ</th><th>Nam</th></tr></thead><tbody>
+    <tr><td>Mỡ thiết yếu</td><td>10–13%</td><td>2–5%</td></tr>
+    <tr><td>Vận động viên</td><td>14–20%</td><td>6–13%</td></tr>
+    <tr><td>Cân đối</td><td>21–24%</td><td>14–17%</td></tr>
+    <tr><td>Trung bình</td><td>25–31%</td><td>18–24%</td></tr>
+    <tr><td>Béo phì</td><td>từ 32%</td><td>từ 25%</td></tr>
+  </tbody></table></div>
+  <p class="note">Phân loại của Hội đồng Thể dục Hoa Kỳ (ACE). Phương pháp đo vòng sai số khoảng 3–4%; để biết chính xác cần đo bằng máy (DEXA, cân điện trở) tại cơ sở y tế. Dùng tỉ lệ mỡ vừa tính trong <a href="/tinh-tdee/">Tính TDEE</a> để ra lượng calo sát hơn.</p>
+</div>
+
+<script src="/js/suc-khoe.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), num = id => parseFloat($(id).value.replace(",", "."));
+  const f1 = v => v.toLocaleString("vi-VN", { maximumFractionDigits: 1 });
+  try { const s = JSON.parse(localStorage.getItem("kc-body") || "{}"); ["sex", "age", "h", "w"].forEach(id => { if (s[id]) $(id).value = s[id]; }); } catch (e) {}
+  const sexUI = () => { const fem = $("sex").value === "female"; $("hipL").hidden = $("hipW").hidden = !fem; $("waistHint").textContent = fem ? "chỗ nhỏ nhất" : "ngang rốn"; };
+  $("sex").addEventListener("change", sexUI); sexUI();
+  const err = (id, msg) => { $(id).focus(); $("res").innerHTML = `<span class="err">${msg}</span>`; $("tbl").innerHTML = ""; $("use").textContent = ""; };
+  const form = KC.form($("f"), { calc(){
+    const sex = $("sex").value, age = num("age"), w = num("w"), h = num("h"), neck = num("neck"), waist = num("waist"), hip = num("hip");
+    if (!(age >= 18 && age <= 90)) return err("age", "Công thức dành cho người từ 18 tuổi.");
+    if (!(w >= 30 && w <= 250)) return err("w", "Nhập cân nặng từ 30 đến 250 kg.");
+    if (!(h >= 120 && h <= 230)) return err("h", "Nhập chiều cao từ 120 đến 230 cm.");
+    if (!(neck >= 20 && neck <= 70)) return err("neck", "Nhập vòng cổ (cm).");
+    if (!(waist >= 40 && waist <= 200)) return err("waist", "Nhập vòng eo (cm).");
+    if (sex === "female" && !(hip >= 50 && hip <= 200)) return err("hip", "Nhập vòng mông (cm).");
+    const p = SucKhoe.fatNavy(sex, h, waist, neck, hip);
+    if (p == null) return err("waist", "Số đo chưa hợp lý; kiểm tra lại vòng eo và vòng cổ.");
+    const fatKg = w * p / 100, bmiP = SucKhoe.fatFromBmi(sex, SucKhoe.bmi(w, h), age);
+    $("res").innerHTML = `Tỉ lệ mỡ: <b>${f1(p)}%</b> · ${SucKhoe.fatClass(sex, p)}`;
+    $("tbl").innerHTML = [["Khối lượng mỡ", f1(fatKg) + " kg"], ["Khối lượng nạc (cơ, xương, nước…)", f1(w - fatKg) + " kg"],
+      ["Ước tính theo BMI (để so sánh)", f1(bmiP) + "%"]].map(([a, b]) => `<tr><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+    $("use").innerHTML = `Nhập ${f1(p)}% vào ô "Tỉ lệ mỡ" của <a href="/tinh-tdee/">Tính TDEE</a> hoặc <a href="/tinh-calo/">Tính calo</a> để tính theo khối lượng nạc.`;
+  } });
+  form.run(false);
+})();
+</script>

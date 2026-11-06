@@ -3,7 +3,7 @@ title: Tính calo mỗi ngày để giảm cân, giữ cân, tăng cân | Tính 
 h1: Tính calo mỗi ngày
 description: Nên ăn bao nhiêu calo mỗi ngày để giảm cân, giữ cân hoặc tăng cân? Tính từ TDEE theo giới tính, tuổi, chiều cao, cân nặng, mức vận động và tốc độ mong muốn.
 category: suc-khoe
-order: 3
+order: 4
 summary: Nên ăn bao nhiêu calo để giảm, giữ hay tăng cân.
 intro: Ước tính lượng calo nên ăn mỗi ngày để giữ cân, giảm cân hoặc tăng cân từ từ, cho người từ 18 tuổi.
 keywords: tính calo, calo giảm cân, nên ăn bao nhiêu calo, calo mỗi ngày, tăng cân, thâm hụt calo
@@ -17,6 +17,8 @@ keywords: tính calo, calo giảm cân, nên ăn bao nhiêu calo, calo mỗi ng�
   <div class="f"><input id="h" class="in w-s" inputmode="decimal" autocomplete="off" value="170"><span class="u">cm</span></div>
   <label class="l" for="w">Cân nặng</label>
   <div class="f"><input id="w" class="in w-s" inputmode="decimal" autocomplete="off" value="65"><span class="u">kg</span></div>
+  <label class="l" for="fat">Tỉ lệ mỡ cơ thể</label>
+  <div class="f"><input id="fat" class="in w-s" inputmode="decimal" autocomplete="off"><span class="u">%</span><span class="hint">nếu biết · <a href="/tinh-ti-le-mo/">chưa biết?</a></span></div>
   <label class="l" for="act">Mức vận động</label>
   <div><select id="act" class="in"></select></div>
   <label class="l" for="goal">Mục tiêu</label>
@@ -41,7 +43,7 @@ keywords: tính calo, calo giảm cân, nên ăn bao nhiêu calo, calo mỗi ng�
 <div class="article">
   <h2>Cách tính</h2>
   <ul>
-    <li>Lấy TDEE (calo cơ thể đốt mỗi ngày) rồi bớt hoặc thêm theo mục tiêu. 1 kg mỡ tương đương khoảng 7.700 calo, nên giảm 0,5 kg/tuần cần ăn ít hơn khoảng 550 calo/ngày.</li>
+    <li>Lấy TDEE (calo cơ thể đốt mỗi ngày; công thức Mifflin–St Jeor, hoặc Katch–McArdle khi nhập tỉ lệ mỡ) rồi bớt hoặc thêm theo mục tiêu. 1 kg mỡ tương đương khoảng 7.700 calo, nên giảm 0,5 kg/tuần cần ăn ít hơn khoảng 550 calo/ngày.</li>
     <li>Giảm hoặc tăng từ từ (0,25–0,5 kg/tuần) dễ duy trì hơn và ít mất cơ hơn.</li>
     <li>Không nên tự ăn dưới khoảng 1.200 calo/ngày (nữ) hoặc 1.500 calo/ngày (nam) nếu không có bác sĩ theo dõi.</li>
   </ul>
@@ -53,15 +55,16 @@ keywords: tính calo, calo giảm cân, nên ăn bao nhiêu calo, calo mỗi ng�
 (function(){
   const $ = id => document.getElementById(id), num = id => parseFloat($(id).value.replace(",", ".")), k = v => Math.round(v).toLocaleString("vi-VN");
   $("act").innerHTML = SucKhoe.ACTIVITY.map(a => `<option value="${a.id}">${a.name} (${a.desc})</option>`).join("");
-  try { const s = JSON.parse(localStorage.getItem("kc-body") || "{}"); ["sex", "age", "h", "w", "act"].forEach(id => { if (s[id]) $(id).value = s[id]; }); } catch (e) {}
+  try { const s = JSON.parse(localStorage.getItem("kc-body") || "{}"); ["sex", "age", "h", "w", "act", "fat"].forEach(id => { if (s[id]) $(id).value = s[id]; }); } catch (e) {}
   const err = (id, msg) => { $(id).focus(); $("res").innerHTML = `<span class="err">${msg}</span>`; $("sub").textContent = ""; };
   const form = KC.form($("f"), { calc(){
-    const sex = $("sex").value, age = num("age"), h = num("h"), w = num("w"), act = $("act").value, g = +$("goal").value;
+    const sex = $("sex").value, age = num("age"), h = num("h"), w = num("w"), act = $("act").value, g = +$("goal").value, fat = $("fat").value.trim() ? num("fat") : 0;
     if (!(age >= 18 && age <= 90)) return err("age", "Công thức dành cho người từ 18 đến 90 tuổi.");
     if (!(h >= 120 && h <= 230)) return err("h", "Nhập chiều cao từ 120 đến 230 cm.");
     if (!(w >= 30 && w <= 250)) return err("w", "Nhập cân nặng từ 30 đến 250 kg.");
-    try { localStorage.setItem("kc-body", JSON.stringify({ sex, age: $("age").value, h: $("h").value, w: $("w").value, act })); } catch (e) {}
-    const r = SucKhoe.goal(sex, age, h, w, act, g);
+    if ($("fat").value.trim() && !(fat >= 3 && fat <= 60)) return err("fat", "Tỉ lệ mỡ thường từ 3% đến 60%; để trống nếu không biết.");
+    try { localStorage.setItem("kc-body", JSON.stringify({ sex, age: $("age").value, h: $("h").value, w: $("w").value, act, fat: $("fat").value })); } catch (e) {}
+    const r = SucKhoe.goal(sex, age, h, w, act, g, fat);
     if (r.belowFloor) {
       $("res").innerHTML = `Khoảng <b>${k(r.floor)} calo/ngày</b>`;
       $("sub").textContent = `Mức tính ra (${k(r.target)} calo) thấp hơn mức tối thiểu nên tự áp dụng (${k(r.floor)} calo). Hãy chọn tốc độ chậm hơn hoặc tăng vận động; muốn giảm nhanh hơn nên có bác sĩ theo dõi. TDEE của bạn khoảng ${k(r.tdee)} calo.`;

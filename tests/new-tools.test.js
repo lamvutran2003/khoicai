@@ -64,3 +64,17 @@ test("title case keeps vowel-less acronyms", () => {
   assert.strictEqual(V.toCase("CÔNG TY TNHH MTV THƯƠNG MẠI AN PHÁT", "title"), "Công Ty TNHH MTV Thương Mại An Phát");
   assert.strictEqual(V.toCase("nguyễn văn an", "title"), "Nguyễn Văn An");
 });
+
+test("health: Harris–Benedict, Katch–McArdle, U.S. Navy body fat", () => {
+  assert.strictEqual(Math.round(S.bmrHarris("male", 25, 180, 70)), Math.round(13.397 * 70 + 4.799 * 180 - 5.677 * 25 + 88.362));
+  assert.strictEqual(S.bmrKatch(70, 20), 370 + 21.6 * 56);
+  assert.strictEqual(S.bmr("male", 25, 180, 70, 20), S.bmrKatch(70, 20));       // body fat given -> Katch
+  assert.strictEqual(S.bmr("male", 25, 180, 70), S.bmrMifflin("male", 25, 180, 70));
+  // U.S. Navy, worked by hand: man 178/85/38 -> 495/1.06123-450 = 16.4%; woman 165/75/33/95 -> 495/1.03791-450 = 26.9%
+  assert.strictEqual(Math.round(S.fatNavy("male", 178, 85, 38) * 10) / 10, 16.4);
+  assert.strictEqual(Math.round(S.fatNavy("female", 165, 75, 33, 95) * 10) / 10, 26.9);
+  assert.strictEqual(S.fatNavy("male", 178, 30, 38), null);
+  assert.strictEqual(S.fatClass("male", 16.4), "Cân đối");
+  assert.strictEqual(S.fatClass("female", 26.9), "Trung bình");
+  assert.strictEqual(S.ACTIVITY.map(a => a.f).join(), "1.2,1.375,1.465,1.55,1.725,1.9");
+});
