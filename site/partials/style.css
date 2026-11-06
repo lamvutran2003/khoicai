@@ -157,3 +157,13 @@ table.t.sal tr:last-child td{border-bottom:0}
 .hols li b{color:var(--ink);font-weight:600;display:inline-block;min-width:44px}
 .hols li.off{color:#b4232c}
 .hols li.off b{color:#b4232c}
+.dp{position:relative;display:grid;gap:8px;max-width:360px}
+.dp-field{position:relative}
+.dp-field .big{padding-right:56px}
+.dp-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);appearance:none;border:0;background:none;color:var(--brand);width:44px;height:44px;border-radius:10px;cursor:pointer;display:grid;place-items:center}
+.dp-btn:hover{background:var(--brand-soft)}
+.pop{position:absolute;top:calc(100% + 6px);left:0;z-index:30;width:min(340px,calc(100vw - 32px));background:#fff;border:1px solid var(--line-strong);border-radius:14px;box-shadow:0 12px 32px rgba(16,24,40,.16);padding:10px;display:grid;gap:6px}
+.pop .cal-head b{font-size:14.5px;text-align:center}
+.cal-grid.small{gap:2px}
+.cal-grid.small button{font-size:15px;padding:5px 0 3px}
+.cal-grid.small button small{font-size:10px}

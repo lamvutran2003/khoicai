@@ -67,7 +67,19 @@ def head(title: str, desc: str, url: str, extra: str = "") -> str:
             + extra)
 
 
+def bust(doc: str) -> str:
+    """Thêm ?v=<mã băm nội dung> vào đường dẫn /js/*.js để trình duyệt không dùng bản cũ trong cache sau mỗi lần cập nhật."""
+    import hashlib
+    import re
+
+    def ver(m):
+        f = SITE / "static" / "js" / m.group(2)
+        return m.group(0) if not f.exists() else f'{m.group(1)}{m.group(2)}?v={hashlib.sha1(f.read_bytes()).hexdigest()[:8]}"'
+    return re.sub(r'("/js/)([\w.-]+\.js)"', ver, doc)
+
+
 def rebase(doc: str) -> str:
+    doc = bust(doc)
     if not BASE:
         return doc
     import re
