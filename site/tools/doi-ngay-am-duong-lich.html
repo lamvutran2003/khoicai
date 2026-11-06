@@ -1,0 +1,127 @@
+<!--
+title: Đổi ngày âm dương lịch, xem lịch âm hôm nay | Khỏi Cài
+h1: Đổi ngày âm ↔ dương lịch
+description: Đổi ngày dương lịch sang âm lịch và ngược lại, có tháng nhuận, can chi ngày tháng năm. Xem lịch âm cả tháng. Theo lịch Việt Nam (múi giờ UTC+7).
+category: ngay-lich
+order: 1
+badge: Âm
+summary: Đổi ngày dương sang âm và ngược lại, xem lịch âm cả tháng.
+keywords: lịch âm, âm lịch, dương lịch, đổi ngày, lịch vạn niên, ngày âm hôm nay, can chi, tết
+-->
+<div class="tool">
+  <span class="seg" role="group" aria-label="Chiều đổi">
+    <button type="button" data-mode="s2l" aria-pressed="true">Dương → Âm</button><button type="button" data-mode="l2s" aria-pressed="false">Âm → Dương</button>
+  </span>
+  <div class="field" id="solarIn">
+    <label class="label" for="sDate">Ngày dương lịch</label>
+    <input id="sDate" class="big" type="date" min="1900-01-01" max="2199-12-31">
+  </div>
+  <div class="field" id="lunarIn" hidden>
+    <span class="label">Ngày âm lịch</span>
+    <div class="row">
+      <span class="opt">Ngày <select id="lD" aria-label="Ngày âm"></select></span>
+      <span class="opt">Tháng <select id="lM" aria-label="Tháng âm"></select></span>
+      <span class="opt">Năm <input id="lY" class="num" inputmode="numeric" maxlength="4" aria-label="Năm âm"></span>
+      <label class="chk" id="leapWrap" hidden><input type="checkbox" id="lLeap"> Tháng nhuận</label>
+    </div>
+  </div>
+  <div class="out" aria-live="polite">
+    <div class="text" id="res"></div>
+    <div class="note" id="sub"></div>
+  </div>
+  <div class="cal" id="cal" aria-label="Lịch tháng">
+    <div class="cal-head">
+      <button class="btn" type="button" id="prev" aria-label="Tháng trước">‹</button>
+      <b id="calTitle"></b>
+      <button class="btn" type="button" id="next" aria-label="Tháng sau">›</button>
+    </div>
+    <div class="cal-grid" id="grid"></div>
+  </div>
+</div>
+
+<div class="article">
+  <h2>Tết Nguyên đán các năm</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Năm</th><th>Mùng 1 Tết</th></tr></thead><tbody id="tet"></tbody></table></div>
+  <p class="note">Lịch âm Việt Nam tính theo giờ Hà Nội (UTC+7) nên đôi khi lệch một ngày so với lịch Trung Quốc.</p>
+</div>
+
+<script src="/js/am-lich.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), A = AmLich;
+  const pad = n => String(n).padStart(2, "0");
+  const now = new Date();
+  let mode = "s2l", sel = { day: now.getDate(), month: now.getMonth() + 1, year: now.getFullYear() }, view = { month: sel.month, year: sel.year };
+  const todayJd = A.jdFromDate(sel.day, sel.month, sel.year);
+
+  for (let m = 1; m <= 12; m++) $("lM").insertAdjacentHTML("beforeend", `<option value="${m}">${m === 1 ? "Giêng" : m === 12 ? "Chạp" : m}</option>`);
+  function fillDays(n, keep){ $("lD").innerHTML = Array.from({ length: n }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join(""); $("lD").value = String(Math.min(keep, n)); }
+
+  function setSolar(d, opts){
+    sel = { day: d.day, month: d.month, year: d.year };
+    if (!opts || !opts.keepView) view = { month: d.month, year: d.year };
+    $("sDate").value = `${d.year}-${pad(d.month)}-${pad(d.day)}`;
+    const l = A.toLunar(d.day, d.month, d.year);
+    if (!opts || !opts.fromLunar) {
+      $("lY").value = l.year; $("lM").value = String(l.month); $("lLeap").checked = l.leap;
+      fillDays(A.monthLength(l.month, l.year, l.leap), l.day);
+    }
+    syncLeap(); render();
+  }
+  function syncLeap(){
+    const y = +$("lY").value, lm = A.leapMonthOf(y);
+    $("leapWrap").hidden = !(lm && +$("lM").value === lm);
+    if ($("leapWrap").hidden) $("lLeap").checked = false;
+  }
+  function render(){
+    const jd = A.jdFromDate(sel.day, sel.month, sel.year), l = A.toLunar(sel.day, sel.month, sel.year);
+    const lunarText = `${l.day} tháng ${l.month}${l.leap ? " nhuận" : ""} năm ${A.canChiYear(l.year)}`;
+    const solarText = `${A.weekday(jd)}, ${sel.day}/${sel.month}/${sel.year}`;
+    $("res").textContent = mode === "s2l" ? "Âm lịch: " + lunarText : "Dương lịch: " + solarText;
+    $("sub").textContent = (mode === "s2l" ? solarText : "Âm lịch " + l.day + "/" + l.month + (l.leap ? " nhuận" : "") + "/" + l.year)
+      + " · Ngày " + A.canChiDay(jd) + ", tháng " + A.canChiMonth(l.month, l.year) + ", năm " + A.canChiYear(l.year);
+    drawCal();
+  }
+  function drawCal(){
+    const { month, year } = view;
+    $("calTitle").textContent = `Tháng ${month}/${year}`;
+    const first = A.jdFromDate(1, month, year), days = A.jdFromDate(1, month === 12 ? 1 : month + 1, month === 12 ? year + 1 : year) - first;
+    const lead = (first + 1) % 7 === 0 ? 6 : (first + 1) % 7 - 1;   // tuần bắt đầu từ thứ hai
+    const selJd = A.jdFromDate(sel.day, sel.month, sel.year);
+    let html = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"].map(d => `<span class="dow">${d}</span>`).join("") + "<span></span>".repeat(lead);
+    for (let i = 0; i < days; i++) {
+      const jd = first + i, l = A.toLunar(i + 1, month, year);
+      const lt = l.day === 1 ? `${l.day}/${l.month}${l.leap ? "N" : ""}` : l.day;
+      html += `<button type="button" data-d="${i + 1}" class="${(lead + i) % 7 === 6 ? "sun " : ""}${jd === selJd ? "sel " : ""}${jd === todayJd ? "today " : ""}${l.day === 1 || l.day === 15 ? "mark" : ""}">${i + 1}<small>${lt}</small></button>`;
+    }
+    $("grid").innerHTML = html;
+  }
+
+  document.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => {
+    mode = b.dataset.mode;
+    document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    $("solarIn").hidden = mode !== "s2l"; $("lunarIn").hidden = mode !== "l2s"; render();
+  }));
+  $("sDate").addEventListener("change", () => { const m = $("sDate").value.match(/^(\d{4})-(\d\d)-(\d\d)$/); if (m) setSolar({ day: +m[3], month: +m[2], year: +m[1] }); });
+  function fromLunar(){
+    const y = +$("lY").value, m = +$("lM").value; syncLeap();
+    if (!(y >= 1900 && y <= 2199)) return;
+    const leap = $("lLeap").checked;
+    fillDays(A.monthLength(m, y, leap), +$("lD").value || 1);
+    const s = A.toSolar(+$("lD").value, m, y, leap);
+    if (s) setSolar(s, { fromLunar: true });
+  }
+  ["lD", "lM", "lLeap"].forEach(id => $(id).addEventListener("change", fromLunar));
+  $("lY").addEventListener("input", () => { $("lY").value = $("lY").value.replace(/\D/g, "").slice(0, 4); if ($("lY").value.length === 4) fromLunar(); });
+  $("grid").addEventListener("click", e => { const b = e.target.closest("button[data-d]"); if (b) setSolar({ day: +b.dataset.d, month: view.month, year: view.year }, { keepView: true }); });
+  const shift = k => { let m = view.month + k, y = view.year; if (m < 1) { m = 12; y--; } if (m > 12) { m = 1; y++; } view = { month: m, year: y }; drawCal(); };
+  $("prev").addEventListener("click", () => shift(-1)); $("next").addEventListener("click", () => shift(1));
+
+  const y0 = now.getFullYear();
+  $("tet").innerHTML = Array.from({ length: 6 }, (_, i) => y0 + i - 1).map(y => {
+    const s = A.toSolar(1, 1, y, false), jd = A.jdFromDate(s.day, s.month, s.year);
+    return `<tr><td>${y} (${A.canChiYear(y)})</td><td>${A.weekday(jd)}, ${s.day}/${s.month}/${s.year}</td></tr>`;
+  }).join("");
+  setSolar(sel);
+})();
+</script>

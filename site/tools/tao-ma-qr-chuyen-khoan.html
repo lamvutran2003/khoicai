@@ -1,0 +1,93 @@
+<!--
+title: Tạo mã QR chuyển khoản ngân hàng (VietQR) miễn phí | Khỏi Cài
+h1: Tạo mã QR chuyển khoản
+description: Tạo mã VietQR nhận tiền cho mọi ngân hàng: điền sẵn số tiền và nội dung, quét bằng app ngân hàng nào cũng được. Tải ảnh in ra quầy. Miễn phí, không cần đăng ký.
+category: tien-hoa-don
+order: 3
+badge: QR
+summary: Mã VietQR nhận tiền, điền sẵn số tiền và nội dung.
+keywords: tạo mã qr chuyển khoản, vietqr, qr ngân hàng, mã qr nhận tiền, qr thanh toán, napas
+-->
+<div class="tool qr-tool">
+  <div class="qr-form">
+    <div class="field">
+      <label class="label" for="bank">Ngân hàng</label>
+      <select id="bank" class="big sel-big"></select>
+    </div>
+    <div class="field">
+      <label class="label" for="acc">Số tài khoản</label>
+      <input id="acc" class="big" inputmode="numeric" autocomplete="off" placeholder="0123456789">
+    </div>
+    <div class="field">
+      <label class="label" for="name">Tên chủ tài khoản <span class="muted">(in dưới mã)</span></label>
+      <input id="name" class="big" autocomplete="off" placeholder="NGUYEN VAN A">
+    </div>
+    <div class="field">
+      <label class="label" for="amt">Số tiền <span class="muted">(để trống: người chuyển tự nhập)</span></label>
+      <input id="amt" class="big" inputmode="numeric" autocomplete="off">
+    </div>
+    <div class="field">
+      <label class="label" for="note">Nội dung</label>
+      <input id="note" class="big" autocomplete="off" maxlength="50" placeholder="Thanh toan don hang">
+    </div>
+  </div>
+  <div class="qr-out">
+    <canvas id="cv" width="600" height="760" aria-label="Mã QR chuyển khoản"></canvas>
+    <p class="note" id="hint">Chọn ngân hàng và nhập số tài khoản.</p>
+    <div class="actions"><button class="btn primary" type="button" id="dl" disabled>Tải ảnh PNG</button></div>
+  </div>
+</div>
+
+<div class="article">
+  <h2>Lưu ý</h2>
+  <ul>
+    <li>Mã chỉ chứa ngân hàng, số tài khoản, số tiền và nội dung; người khác không thể rút tiền từ mã này.</li>
+    <li>Nội dung được bỏ dấu tự động vì nhiều app ngân hàng không nhận chữ có dấu.</li>
+    <li>Quét thử bằng app ngân hàng của bạn trước khi in: app sẽ hiện đúng tên chủ tài khoản.</li>
+  </ul>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/qrcode.js"></script>
+<script src="/js/vietqr.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), cv = $("cv"), ctx = cv.getContext("2d");
+  $("bank").innerHTML = '<option value="">Chọn ngân hàng…</option>' + VietQR.BANKS.map(b => `<option value="${b[0]}">${b[1]}</option>`).join("");
+  KCNum.attach($("amt"), { decimals: 0 });
+  try { const s = JSON.parse(localStorage.getItem("kc-qr") || "{}"); $("bank").value = s.bank || ""; $("acc").value = s.acc || ""; $("name").value = s.name || ""; } catch (e) {}
+  const save = () => { try { localStorage.setItem("kc-qr", JSON.stringify({ bank: $("bank").value, acc: $("acc").value, name: $("name").value })); } catch (e) {} };
+
+  function draw(){
+    const bin = $("bank").value, bank = VietQR.BANKS.find(b => b[0] === bin);
+    const amount = +$("amt").value.replace(/\D/g, "") || 0;
+    const p = VietQR.payload({ bin: bin, account: $("acc").value, amount: amount, note: $("note").value });
+    const W = cv.width, H = cv.height;
+    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
+    $("dl").disabled = !p;
+    if (!p) {
+      ctx.strokeStyle = "#d2d6db"; ctx.setLineDash([10, 8]); ctx.lineWidth = 3; ctx.strokeRect(90, 90, W - 180, W - 180); ctx.setLineDash([]);
+      $("hint").hidden = false; return;
+    }
+    $("hint").hidden = true;
+    const qr = qrcode(0, "M"); qr.addData(p); qr.make();
+    const n = qr.getModuleCount(), size = W - 140, cell = Math.floor(size / (n + 2)), q = cell * (n + 2), x0 = (W - q) / 2 + cell, y0 = 70 + cell;
+    ctx.font = "700 30px -apple-system, Segoe UI, Roboto, Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillStyle = "#0f766e";
+    ctx.fillText(bank ? bank[1] : "", W / 2, 48);
+    ctx.fillStyle = "#15181c";
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.isDark(r, c)) ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
+    let y = 70 + q + 46;
+    const line = (t, font, color) => { if (!t) return; ctx.font = font; ctx.fillStyle = color; ctx.fillText(t, W / 2, y, W - 40); y += 40; };
+    line($("name").value.trim().toUpperCase(), "700 28px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#15181c");
+    line(VietQR.cleanAccount($("acc").value), "500 26px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#15181c");
+    if (amount) line(amount.toLocaleString("vi-VN") + " đ", "700 28px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#0f766e");
+    line(VietQR.cleanNote($("note").value), "400 22px -apple-system, Segoe UI, Roboto, Arial, sans-serif", "#646b75");
+  }
+  ["bank", "acc", "name", "amt", "note"].forEach(id => $(id).addEventListener("input", () => { draw(); save(); }));
+  $("bank").addEventListener("change", () => { draw(); save(); });
+  $("dl").addEventListener("click", () => {
+    cv.toBlob(b => { const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "ma-qr-chuyen-khoan.png"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); });
+  });
+  draw();
+})();
+</script>

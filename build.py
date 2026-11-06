@@ -26,7 +26,8 @@ CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@khoicai.vn"
 BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
 BASE = BASE.rstrip("/")
 CATEGORIES = [   # order on the homepage
-    ("tien-hoa-don", "Tiền & hoá đơn"),
+    ("tien-hoa-don", "Tiền, lương & hoá đơn"),
+    ("ngay-lich", "Ngày & lịch"),
     ("van-ban", "Văn bản"),
     ("dat-dai", "Đất đai & đo lường"),
 ]
@@ -114,8 +115,8 @@ def build() -> None:
             sections.append(f'<section class="cat" aria-labelledby="c-{cid}"><h2 id="c-{cid}">{E(cname)}</h2>'
                             f'<ul class="tools">{"".join(tool_card(t) for t in items)}</ul></section>')
     home = (SITE / "home.html").read_text(encoding="utf-8").replace("__SECTIONS__", "".join(sections))
-    desc = (f"{len(tools)} công cụ online miễn phí bằng tiếng Việt: đọc số tiền thành chữ, chuyển font TCVN3/VNI sang Unicode, "
-            "quy đổi sào, mẫu, công đất sang m². Khỏi cài đặt, khỏi đăng ký, dữ liệu không rời khỏi máy bạn.")
+    desc = (f"{len(tools)} công cụ online miễn phí bằng tiếng Việt: " + ", ".join(t["h1"].lower() for t in tools[:4])
+            + "… Khỏi cài đặt, khỏi đăng ký, dữ liệu không rời khỏi máy bạn.")
     body = fill(header + home + footer, {**common, "__PAGE_URL__": SITE_URL + "/"})
     (DIST / "index.html").write_text(page(f"{SITE_NAME}: công cụ online miễn phí, khỏi cài, khỏi đăng ký", desc,
                                           SITE_URL + "/", body, css), encoding="utf-8")

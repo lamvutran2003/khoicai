@@ -1,0 +1,96 @@
+<!--
+title: Tính lương Gross sang Net, Net sang Gross 2026 | Khỏi Cài
+h1: Tính lương Gross ↔ Net
+description: Tính lương thực nhận (Net) từ lương Gross và ngược lại theo quy định 2026: giảm trừ gia cảnh 15,5 triệu, người phụ thuộc 6,2 triệu, biểu thuế TNCN 5 bậc, BHXH, BHYT, BHTN.
+category: tien-hoa-don
+order: 2
+badge: ₫
+summary: Lương thực nhận sau bảo hiểm và thuế TNCN, theo quy định 2026.
+keywords: lương gross net, tính lương net, thuế thu nhập cá nhân, thuế tncn, bảo hiểm xã hội, giảm trừ gia cảnh, người phụ thuộc
+-->
+<div class="tool">
+  <span class="seg" role="group" aria-label="Chiều tính">
+    <button type="button" data-mode="g2n" aria-pressed="true">Gross → Net</button><button type="button" data-mode="n2g" aria-pressed="false">Net → Gross</button>
+  </span>
+  <div class="field">
+    <label class="label" for="amt" id="amtLabel">Lương Gross (đồng/tháng)</label>
+    <input id="amt" class="big" inputmode="numeric" autocomplete="off" value="30000000">
+  </div>
+  <div class="row">
+    <span class="opt">Người phụ thuộc
+      <span class="step"><button type="button" class="btn" id="depMinus" aria-label="Bớt">−</button><b id="dep">0</b><button type="button" class="btn" id="depPlus" aria-label="Thêm">+</button></span></span>
+    <span class="opt">Vùng
+      <select id="region" aria-label="Vùng lương tối thiểu"><option value="1">I</option><option value="2">II</option><option value="3">III</option><option value="4">IV</option></select></span>
+    <label class="chk"><input type="checkbox" id="baseOn"> Đóng bảo hiểm trên mức khác</label>
+  </div>
+  <div class="field" id="baseWrap" hidden>
+    <label class="label" for="base">Lương đóng bảo hiểm (đồng/tháng)</label>
+    <input id="base" class="big" inputmode="numeric" autocomplete="off">
+  </div>
+  <div class="out" aria-live="polite">
+    <div class="text" id="res"></div>
+    <div class="scroll"><table class="t sal"><tbody id="tbl"></tbody></table></div>
+  </div>
+</div>
+
+<div class="article">
+  <h2>Cách tính</h2>
+  <ul>
+    <li>Bảo hiểm người lao động đóng: BHXH 8%, BHYT 1,5%, BHTN 1%. BHXH và BHYT tính tối đa trên 50,6 triệu/tháng (20 lần lương cơ sở 2,53 triệu); BHTN tối đa 20 lần lương tối thiểu vùng.</li>
+    <li>Thu nhập tính thuế = lương − bảo hiểm − 15,5 triệu (bản thân) − 6,2 triệu × số người phụ thuộc.</li>
+    <li>Thuế TNCN luỹ tiến: đến 10 triệu 5%; 10–30 triệu 10%; 30–60 triệu 20%; 60–100 triệu 30%; trên 100 triệu 35%.</li>
+  </ul>
+  <p class="note">Theo Luật Thuế TNCN 109/2025/QH15 (áp dụng cho thu nhập từ tiền lương từ kỳ tính thuế 2026), lương cơ sở từ 1/7/2026 và lương tối thiểu vùng theo Nghị định 293/2025/NĐ-CP. Áp dụng cho người lao động cư trú, hợp đồng từ 3 tháng. Chưa tính phụ cấp miễn thuế (ăn trưa, đồng phục…) và đoàn phí.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/luong.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const st = { mode: "g2n", dep: 0, region: 1 };
+  try { Object.assign(st, JSON.parse(localStorage.getItem("kc-luong") || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem("kc-luong", JSON.stringify({ dep: st.dep, region: st.region })); } catch (e) {} };
+  st.mode = "g2n";
+  const money = v => Math.round(v).toLocaleString("vi-VN") + " đ";
+  const val = id => +$(id).value.replace(/\./g, "").replace(",", ".") || 0;
+  KCNum.attach($("amt"), { decimals: 0 }); KCNum.attach($("base"), { decimals: 0 });
+
+  function render(){
+    $("dep").textContent = st.dep; $("region").value = String(st.region);
+    const amt = val("amt"), o = { dependents: st.dep, region: st.region };
+    if ($("baseOn").checked && val("base") > 0) o.insuranceBase = val("base");
+    if (!amt) { $("res").textContent = ""; $("tbl").innerHTML = ""; return; }
+    const r = st.mode === "g2n" ? Luong.fromGross(amt, o) : Luong.fromNet(amt, o);
+    $("res").innerHTML = st.mode === "g2n" ? `Lương Net: <b>${money(r.net)}</b>` : `Lương Gross: <b>${money(r.gross)}</b>`;
+    const rows = [
+      ["Lương Gross", money(r.gross)],
+      ["BHXH (8%)", "− " + money(r.insurance.bhxh)],
+      ["BHYT (1,5%)", "− " + money(r.insurance.bhyt)],
+      ["BHTN (1%)", "− " + money(r.insurance.bhtn)],
+      ["Giảm trừ gia cảnh", money(r.selfDeduction + r.dependentDeduction)],
+      ["Thu nhập tính thuế", money(r.taxable)],
+      ["Thuế TNCN", "− " + money(r.tax)],
+      ["<b>Lương Net</b>", "<b>" + money(r.net) + "</b>"],
+      ["Công ty đóng bảo hiểm (21,5%)", money(r.company.total)],
+      ["Tổng chi phí của công ty", money(r.cost)]
+    ];
+    $("tbl").innerHTML = rows.map(([a, b]) => `<tr><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+  }
+  document.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => {
+    if (st.mode === b.dataset.mode) return;
+    const amt = val("amt"), o = { dependents: st.dep, region: st.region };
+    if (amt) { const r = st.mode === "g2n" ? Luong.fromGross(amt, o) : Luong.fromNet(amt, o); $("amt").value = KCNum.format(String(st.mode === "g2n" ? r.net : r.gross)); }
+    st.mode = b.dataset.mode;
+    document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    $("amtLabel").textContent = st.mode === "g2n" ? "Lương Gross (đồng/tháng)" : "Lương Net mong muốn (đồng/tháng)";
+    render();
+  }));
+  $("depMinus").addEventListener("click", () => { st.dep = Math.max(0, st.dep - 1); render(); save(); });
+  $("depPlus").addEventListener("click", () => { st.dep = Math.min(20, st.dep + 1); render(); save(); });
+  $("region").addEventListener("change", () => { st.region = +$("region").value; render(); save(); });
+  $("baseOn").addEventListener("change", () => { $("baseWrap").hidden = !$("baseOn").checked; render(); });
+  $("amt").addEventListener("input", render); $("base").addEventListener("input", render);
+  render();
+})();
+</script>
