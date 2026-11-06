@@ -133,7 +133,7 @@ def build() -> None:
                         ensure_ascii=False).replace("</", "<\\/")
         main = (f'<main class="gutter"><div class="wrap">'
                 f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">Trang chủ</a> › <span>{E(cat_name.get(t.get("category"), ""))}</span></nav>'
-                f'<h1>{E(t["h1"])}</h1><p class="lede">{E(t.get("summary", ""))}</p>'
+                f'<h1>{E(t["h1"])}</h1>'
                 f'{t["body"]}'
                 f'<section class="more" aria-labelledby="more-h"><h2 id="more-h">Công cụ khác</h2>'
                 f'<ul class="tools">{"".join(tool_card(o) for o in others)}</ul></section>'
