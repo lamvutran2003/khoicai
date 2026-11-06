@@ -1,0 +1,76 @@
+<!--
+title: Lịch âm hôm nay: hôm nay ngày bao nhiêu âm lịch? | Tính Giùm
+h1: Lịch âm hôm nay
+description: Hôm nay ngày bao nhiêu âm lịch? Xem ngày âm hôm nay, can chi, còn bao nhiêu ngày nữa đến Tết, rằm, mùng một và các ngày lễ sắp tới. Theo lịch Việt Nam.
+category: ngay-lich
+order: 0
+summary: Hôm nay ngày bao nhiêu âm, còn mấy ngày đến Tết, rằm, lễ.
+keywords: lịch âm hôm nay, hôm nay ngày bao nhiêu âm, ngày âm hôm nay, âm lịch hôm nay, còn bao nhiêu ngày nữa đến tết, rằm tháng này
+-->
+<section class="today-box" aria-live="polite">
+  <h2 id="tdTitle">Hôm nay</h2>
+  <div class="body">
+    <p class="big" id="tdLunar">Đang tính…</p>
+    <p id="tdSolar"></p>
+    <p class="note" id="tdCanChi"></p>
+    <p id="tdTet"></p>
+  </div>
+</section>
+<noscript><p class="note">Bật JavaScript để xem ngày âm hôm nay, hoặc xem <a href="/doi-ngay-am-duong-lich/">công cụ đổi ngày</a>.</p></noscript>
+
+<h2>Sắp tới</h2>
+<ul class="upcoming" id="up"></ul>
+
+<section class="calbox" aria-label="Lịch tháng này">
+  <div class="cal-head"><span></span><b id="calTitle"></b><a class="btn" id="monthLink" href="/lich-am-thang-M-Y/">Xem cả tháng ›</a></div>
+  <div class="cal-grid" id="grid"></div>
+</section>
+
+<div class="article">
+  <p class="note">Ngày âm tính theo lịch Việt Nam (giờ Hà Nội, UTC+7) và theo ngày trên thiết bị của bạn. Cần đổi một ngày khác: <a href="/doi-ngay-am-duong-lich/">Đổi ngày âm ↔ dương lịch</a>.</p>
+</div>
+
+<script src="/js/am-lich.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), A = AmLich;
+  const now = new Date(), T = { day: now.getDate(), month: now.getMonth() + 1, year: now.getFullYear() };
+  const jd0 = A.jdFromDate(T.day, T.month, T.year), l = A.toLunar(T.day, T.month, T.year);
+  const mName = m => m === 1 ? "giêng" : m === 12 ? "chạp" : String(m);
+  $("tdTitle").textContent = `Hôm nay, ${A.weekday(jd0).toLowerCase()} ${T.day}/${T.month}/${T.year}`;
+  $("tdLunar").innerHTML = `Âm lịch: <b>ngày ${l.day} tháng ${mName(l.month)}${l.leap ? " nhuận" : ""}</b> năm ${A.canChiYear(l.year)}`;
+  const hs = A.holidays(T.day, T.month, T.year).map(h => h.name);
+  $("tdSolar").textContent = hs.length ? "Hôm nay là: " + hs.join(", ") + "." : "";
+  $("tdCanChi").textContent = `Ngày ${A.canChiDay(jd0)}, tháng ${A.canChiMonth(l.month, l.year)}, năm ${A.canChiYear(l.year)}.`;
+
+  // Countdown to the next Tết
+  let tet = A.toSolar(1, 1, T.year, false); if (tet.jd < jd0) tet = A.toSolar(1, 1, T.year + 1, false);
+  $("tdTet").innerHTML = tet.jd === jd0 ? "<b>Hôm nay là mùng 1 Tết Nguyên đán.</b>"
+    : `Còn <b>${tet.jd - jd0} ngày</b> nữa đến Tết Nguyên đán ${A.canChiYear(tet.year)} (${A.weekday(tet.jd).toLowerCase()}, ${tet.day}/${tet.month}/${tet.year}).`;
+
+  // Upcoming: next mùng 1, rằm, Tết and the next few holidays
+  const items = [], seen = new Set();
+  for (let j = jd0 + 1; j < jd0 + 400 && items.length < 9; j++) {
+    const d = A.jdToDate(j), x = A.toLunar(d.day, d.month, d.year);
+    const add = name => { if (!seen.has(name)) { seen.add(name); items.push({ j, d, x, name }); } };
+    if (x.day === 1 && !seen.has("m1")) { seen.add("m1"); items.push({ j, d, x, name: `Mùng 1 tháng ${mName(x.month)}${x.leap ? " nhuận" : ""}` }); }
+    if (x.day === 15 && !seen.has("r")) { seen.add("r"); items.push({ j, d, x, name: `Rằm tháng ${mName(x.month)}${x.leap ? " nhuận" : ""}` }); }
+    A.holidays(d.day, d.month, d.year).forEach(h => { if (!/Mùng [23]/.test(h.name)) add(h.name); });
+  }
+  items.sort((a, b) => a.j - b.j);
+  $("up").innerHTML = items.slice(0, 8).map(it => `<li><b>${it.d.day}/${it.d.month}/${it.d.year}</b> ${it.name} <span class="cd">· âm lịch ${it.x.day}/${it.x.month} · còn ${it.j - jd0} ngày</span></li>`).join("");
+
+  // This month's calendar
+  const first = A.jdFromDate(1, T.month, T.year), n = A.jdFromDate(1, T.month === 12 ? 1 : T.month + 1, T.month === 12 ? T.year + 1 : T.year) - first;
+  const lead = ((first + 1) % 7 + 6) % 7;
+  let html = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"].map(d => `<span class="dow">${d}</span>`).join("") + "<span></span>".repeat(lead);
+  for (let i = 0; i < n; i++) {
+    const x = A.toLunar(i + 1, T.month, T.year), h = A.holidays(i + 1, T.month, T.year), off = h.some(v => v.off);
+    const cls = [(lead + i) % 7 === 6 && "sun", first + i === jd0 && "sel", off && "off", h.length && !off && "ev", (x.day === 1 || x.day === 15) && "mark"].filter(Boolean).join(" ");
+    html += `<span class="d ${cls}"${h.length ? ` title="${h.map(v => v.name).join(", ")}"` : ""}>${i + 1}<small>${x.day === 1 ? x.day + "/" + x.month : x.day}</small></span>`;
+  }
+  $("grid").innerHTML = html;
+  $("calTitle").textContent = `Tháng ${T.month}/${T.year}`;
+  $("monthLink").setAttribute("href", $("monthLink").getAttribute("href").replace("M-Y", `${T.month}-${T.year}`));
+})();
+</script>

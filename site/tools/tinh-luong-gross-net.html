@@ -35,13 +35,33 @@ keywords: lương gross net, tính lương net, thuế thu nhập cá nhân, thu
 </section>
 
 <div class="article">
-  <h2>Cách tính</h2>
-  <ul>
-    <li>Bảo hiểm người lao động đóng: BHXH 8%, BHYT 1,5%, BHTN 1%. BHXH và BHYT tính tối đa trên 50,6 triệu/tháng (20 lần lương cơ sở 2,53 triệu); BHTN tối đa 20 lần lương tối thiểu vùng.</li>
-    <li>Thu nhập tính thuế = lương − bảo hiểm − 15,5 triệu (bản thân) − 6,2 triệu × số người phụ thuộc.</li>
-    <li>Thuế TNCN luỹ tiến: đến 10 triệu 5%; 10–30 triệu 10%; 30–60 triệu 20%; 60–100 triệu 30%; trên 100 triệu 35%.</li>
-  </ul>
-  <p class="note">Theo Luật Thuế TNCN 109/2025/QH15 (thu nhập từ tiền lương từ kỳ tính thuế 2026), lương cơ sở từ 1/7/2026 và lương tối thiểu vùng theo Nghị định 293/2025/NĐ-CP. Áp dụng cho người lao động cư trú, hợp đồng từ 3 tháng. Chưa tính phụ cấp miễn thuế (ăn trưa, đồng phục…) và đoàn phí.</p>
+<h2>Cách tính lương Net từ lương Gross</h2>
+  <ol>
+    <li><b>Trừ bảo hiểm bắt buộc</b> (người lao động đóng 10,5%): BHXH 8%, BHYT 1,5%, BHTN 1%. BHXH và BHYT tính tối đa trên 50,6 triệu/tháng (20 lần lương cơ sở 2,53 triệu); BHTN tối đa 20 lần lương tối thiểu vùng.</li>
+    <li><b>Trừ giảm trừ gia cảnh</b>: 15,5 triệu cho bản thân và 6,2 triệu cho mỗi người phụ thuộc đã đăng ký.</li>
+    <li><b>Tính thuế TNCN luỹ tiến</b> trên phần còn lại (thu nhập tính thuế): đến 10 triệu 5%; 10–30 triệu 10%; 30–60 triệu 20%; 60–100 triệu 30%; trên 100 triệu 35%.</li>
+    <li><b>Lương Net</b> = lương Gross − bảo hiểm − thuế TNCN.</li>
+  </ol>
+  <h2>Ví dụ</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th></th><th class="n">Gross 20 triệu, 1 người phụ thuộc</th><th class="n">Gross 50 triệu, không người phụ thuộc</th></tr></thead>
+    <tbody>
+      <tr><td>Bảo hiểm (10,5%)</td><td class="n">2.100.000</td><td class="n">5.250.000</td></tr>
+      <tr><td>Giảm trừ gia cảnh</td><td class="n">21.700.000</td><td class="n">15.500.000</td></tr>
+      <tr><td>Thu nhập tính thuế</td><td class="n">0</td><td class="n">29.250.000</td></tr>
+      <tr><td>Thuế TNCN</td><td class="n">0</td><td class="n">2.425.000</td></tr>
+      <tr class="tot"><td>Lương Net</td><td class="n">17.900.000</td><td class="n">42.325.000</td></tr>
+    </tbody>
+  </table></div>
+  <p>Ví dụ thứ hai: thuế = 10 triệu × 5% + 19,25 triệu × 10% = 500.000 + 1.925.000 = 2.425.000 đồng.</p>
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Lương bao nhiêu thì bắt đầu phải đóng thuế TNCN?</summary>
+    <p>Không có người phụ thuộc: lương Gross trên khoảng 17,3 triệu/tháng (đóng bảo hiểm trên toàn bộ lương). Có 1 người phụ thuộc: trên khoảng 24,2 triệu/tháng.</p></details>
+  <details class="qa"><summary>Thoả thuận lương Net 25 triệu thì Gross là bao nhiêu?</summary>
+    <p>Khoảng 28,5 triệu (không người phụ thuộc, vùng I, đóng bảo hiểm trên toàn bộ lương). Chọn tab "Net → Gross" để tính với số liệu của bạn.</p></details>
+  <details class="qa"><summary>Công ty đóng bảo hiểm trên mức lương thấp hơn lương thật?</summary>
+    <p>Chọn "Lương đóng BH: Mức khác" và nhập mức đóng. Bảo hiểm khi đó ít hơn, nên thu nhập tính thuế và thuế có thể cao hơn.</p></details>
+  <p class="note">Theo Luật Thuế TNCN 109/2025/QH15 (thu nhập từ tiền lương từ kỳ tính thuế 2026), lương cơ sở từ 1/7/2026 và lương tối thiểu vùng theo Nghị định 293/2025/NĐ-CP. Áp dụng cho người lao động cư trú, hợp đồng từ 3 tháng. Chưa tính các khoản phụ cấp miễn thuế (ăn trưa, đồng phục…) và đoàn phí.</p>
 </div>
 
 <script src="/js/so-nhap.js"></script>

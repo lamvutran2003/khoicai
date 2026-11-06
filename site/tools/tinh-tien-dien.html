@@ -27,7 +27,7 @@ keywords: tính tiền điện, giá điện, giá điện bậc thang, evn, kwh
 </section>
 
 <div class="article">
-  <h2>Biểu giá điện sinh hoạt</h2>
+<h2>Biểu giá điện sinh hoạt</h2>
   <div class="scroll"><table class="t"><thead><tr><th>Bậc</th><th>Mức sử dụng trong tháng</th><th class="n">Giá (đồng/kWh)</th></tr></thead>
     <tbody>
       <tr><td>1</td><td>0 – 100 kWh</td><td class="n">1.901</td></tr>
@@ -36,7 +36,18 @@ keywords: tính tiền điện, giá điện, giá điện bậc thang, evn, kwh
       <tr><td>4</td><td>401 – 700 kWh</td><td class="n">3.456</td></tr>
       <tr><td>5</td><td>Từ 701 kWh</td><td class="n">3.844</td></tr>
     </tbody></table></div>
-  <p class="note">Giá chưa gồm thuế GTGT, theo Quyết định 2892/QĐ-BCT áp dụng từ 01/11/2026. Thuế GTGT 8% đến hết 31/12/2026, sau đó 10%. Kỳ hoá đơn kéo dài qua ngày đổi giá được ngành điện chia theo số ngày, nên tiền thực tế có thể lệch đôi chút.</p>
+  <h2>Ví dụ</h2>
+  <ul>
+    <li><b>150 kWh</b>: 100 × 1.901 + 50 × 2.289 = 304.550 đ; thuế GTGT 8% là 24.364 đ; tổng <b>328.914 đ</b>.</li>
+    <li><b>300 kWh</b>: 100 × 1.901 + 100 × 2.289 + 100 × 2.894 = 708.400 đ; thuế 56.672 đ; tổng <b>765.072 đ</b>.</li>
+  </ul>
+  <p>Giá bậc thang tính luỹ tiến: chỉ phần vượt mỗi mốc mới tính giá cao hơn, không phải toàn bộ số điện.</p>
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Nhà trọ nhiều người dùng chung một công tơ tính thế nào?</summary>
+    <p>Nếu chủ nhà đăng ký định mức cho nhiều hộ, mỗi bậc được nhân theo số hộ: 2 hộ thì bậc 1 là 200 kWh đầu tiên. Nhập số hộ ở ô "Số hộ dùng chung". Chủ nhà trọ thu tiền điện của người thuê không được vượt giá ngành điện bán.</p></details>
+  <details class="qa"><summary>Vì sao hoá đơn thực tế lệch với kết quả?</summary>
+    <p>Kỳ hoá đơn thường không trùng đúng một tháng dương lịch, và kỳ nào kéo dài qua ngày đổi giá thì ngành điện chia theo số ngày. Kết quả ở đây dùng giá hiện hành cho toàn bộ số điện.</p></details>
+  <p class="note">Giá chưa gồm thuế GTGT, theo Quyết định 2892/QĐ-BCT áp dụng từ 01/11/2026. Thuế GTGT 8% đến hết 31/12/2026 (Nghị quyết 204/2025/QH15), sau đó 10%.</p>
 </div>
 
 <script src="/js/so-nhap.js"></script>

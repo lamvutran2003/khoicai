@@ -24,6 +24,8 @@ jobs:
         # Đổi SITE_URL thành https://<tên miền> khi đã mua tên miền
         env:
           SITE_URL: ${{ vars.SITE_URL || 'https://lamvutran2003.github.io/khoicai' }}
+          # Mã Cloudflare Web Analytics (Settings > Secrets and variables > Actions > Variables > CF_BEACON_TOKEN)
+          CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
         run: python3 build.py
       - uses: actions/upload-pages-artifact@v3
         with:

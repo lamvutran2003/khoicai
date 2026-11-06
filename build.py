@@ -17,11 +17,15 @@ import shutil
 from datetime import date
 from pathlib import Path
 
+import lunar_pages
+
 ROOT = Path(__file__).resolve().parent
 SITE, DIST = ROOT / "site", ROOT / "dist"
 SITE_URL = (os.environ.get("SITE_URL") or "https://tinhgium.vn").rstrip("/")
 SITE_NAME = os.environ.get("SITE_NAME") or "Tính Giùm"
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@tinhgium.vn"
+# Thống kê lượt xem Cloudflare Web Analytics (không cookie). Mã lấy trong Cloudflare > Web Analytics; để trống thì không gắn.
+CF_BEACON_TOKEN = (os.environ.get("CF_BEACON_TOKEN") or "").strip()
 # Khi site nằm trong thư mục con (ví dụ GitHub Pages chưa có tên miền: /khoicai), mọi đường dẫn "/..." được thêm tiền tố
 BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
 BASE = BASE.rstrip("/")
@@ -91,7 +95,14 @@ def rebase(doc: str) -> str:
 def page(title, desc, url, body, css, extra_head=""):
     return rebase("<!doctype html>\n<html lang=\"vi\">\n<head>\n<meta charset=\"utf-8\">\n"
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
-            + head(title, desc, url, extra_head) + f"<style>\n{css}</style>\n</head>\n<body>\n" + body + "\n</body>\n</html>\n")
+            + head(title, desc, url, extra_head) + f"<style>\n{css}</style>\n</head>\n<body>\n" + body + beacon() + "\n</body>\n</html>\n")
+
+
+def beacon() -> str:
+    if not CF_BEACON_TOKEN:
+        return ""
+    return ('\n<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+            f"data-cf-beacon='{json.dumps({'token': CF_BEACON_TOKEN})}'></script>")
 
 
 def fill(src: str, values: dict) -> str:
@@ -125,6 +136,13 @@ def sidebar(tools, cat: str | None, current: str | None = None) -> str:
 def build() -> None:
     tools = sorted(load("tools"), key=lambda t: (t.get("order", "99"), t["slug"]))
     pages = load("pages")
+    this_year = date.today().year
+    years = list(range(this_year - 1, this_year + 3))
+    # Trang lịch âm năm hiện tại xuất hiện như một công cụ trong danh sách (trang chủ, cột phải)
+    listing = sorted(tools + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
+                               "order": "4", "summary": "Lịch vạn niên cả năm: ngày rằm, mùng một, ngày lễ, Tết.",
+                               "keywords": "lịch âm, lịch vạn niên, lịch âm năm, ngày rằm, mùng một, lịch tết"}],
+                     key=lambda t: (t.get("order", "99"), t["slug"]))
     css = (SITE / "partials/style.css").read_text(encoding="utf-8")
     header = (SITE / "partials/header.html").read_text(encoding="utf-8")
     footer = (SITE / "partials/footer.html").read_text(encoding="utf-8")
@@ -145,7 +163,7 @@ def build() -> None:
     # Homepage: one box of links per category
     boxes = []
     for cid, name, _ in CATEGORIES:
-        items = [t for t in tools if t.get("category") == cid]
+        items = [t for t in listing if t.get("category") == cid]
         if items:
             lis = "".join(f'<li class="tc" data-q="{E((t["h1"] + " " + t.get("summary", "") + " " + t.get("keywords", "")).lower())}">'
                           f'<a href="/{t["slug"]}/">{E(t["h1"])}</a><span>{E(t.get("summary", ""))}</span></li>' for t in items)
@@ -170,17 +188,31 @@ def build() -> None:
                 f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(t["h1"].lower())}</span></nav>'
                 f'<h1>{E(t["h1"])}</h1>'
                 + (f'<p class="lede">{E(t["intro"])}</p>' if t.get("intro") else "")
-                + f'{t["body"]}</main>{sidebar(tools, cat, t["slug"])}</div>'
+                + f'{t["body"]}</main>{sidebar(listing, cat, t["slug"])}</div>'
                 f'<script type="application/ld+json">{ld}</script>')
         out = DIST / t["slug"]
         out.mkdir()
         (out / "index.html").write_text(page(t["title"], t["description"], url, render(main, cat, url), css), encoding="utf-8")
         urls.append(f"/{t['slug']}/")
 
+    # Lịch âm: trang từng năm, từng tháng
+    data = lunar_pages.load(years[0], years[-1])
+    gen = [lunar_pages.year_page(data, y, years) for y in years]
+    gen += [lunar_pages.month_page(data, y, m, years) for y in years for m in range(1, 13)]
+    for meta, body in gen:
+        url = f"{SITE_URL}/{meta['slug']}/"
+        main = (f'<div class="wrap layout"><main class="content lunar">'
+                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-ngay-lich">ngày &amp; lịch</a> / <span>{E(meta["h1"].lower())}</span></nav>'
+                f'<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, "ngay-lich", meta["slug"])}</div>')
+        out = DIST / meta["slug"]
+        out.mkdir()
+        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, "ngay-lich", url), css), encoding="utf-8")
+        urls.append(f"/{meta['slug']}/")
+
     # Plain pages
     for pg in pages:
         url = f"{SITE_URL}/{pg['slug']}/"
-        main = f'<div class="wrap layout"><main class="content article">{pg["body"]}</main>{sidebar(tools, None)}</div>'
+        main = f'<div class="wrap layout"><main class="content article">{pg["body"]}</main>{sidebar(listing, None)}</div>'
         out = DIST / pg["slug"]
         out.mkdir()
         (out / "index.html").write_text(page(pg["title"], pg.get("description", ""), url, render(main, None, url), css), encoding="utf-8")
