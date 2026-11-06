@@ -1,0 +1,130 @@
+<!--
+title: Quy đổi sào, mẫu, công đất sang m² (Bắc, Trung, Nam Bộ) | Khỏi Cài
+h1: Quy đổi sào, mẫu, công sang m²
+description: 1 sào bao nhiêu m²? Bắc Bộ 360 m², Trung Bộ 497 m², 1 công Nam Bộ 1.000 hoặc 1.296 m². Đổi qua lại sào, mẫu, thước, công, m², ha theo từng vùng, tính diện tích từ chiều dài × chiều rộng.
+category: dat-dai
+order: 1
+badge: m²
+summary: 1 sào bao nhiêu m²? Đổi sào, mẫu, thước, công sang m² và ha theo đúng vùng Bắc, Trung, Nam; tính diện tích từ dài × rộng.
+keywords: sào, mẫu, thước, công đất, mét vuông, héc ta, diện tích đất, sổ đỏ, 1 sào bao nhiêu mét
+-->
+<div class="tool" id="tool">
+  <div class="row">
+    <span class="seg" role="group" aria-label="Vùng" id="regions">
+      <button type="button" data-r="bac" aria-pressed="true">Bắc Bộ</button><button type="button" data-r="trung" aria-pressed="false">Trung Bộ</button><button type="button" data-r="nam" aria-pressed="false">Nam Bộ</button>
+    </span>
+    <span class="opt" id="optTrung" hidden>1 sào =
+      <select id="trungSao" aria-label="Một sào Trung Bộ bằng"><option value="497">497 m²</option><option value="500">500 m² (làm tròn)</option></select></span>
+    <span class="opt" id="optNam" hidden>1 công =
+      <select id="namCong" aria-label="Một công Nam Bộ bằng"><option value="1000">1.000 m² (công tầm nhỏ)</option><option value="1296">1.296 m² (công tầm lớn)</option></select></span>
+  </div>
+  <div class="field">
+    <label class="label" for="val">Diện tích</label>
+    <div class="pair">
+      <input id="val" class="big" inputmode="decimal" autocomplete="off" value="1">
+      <select id="unit" class="big" aria-label="Đơn vị"></select>
+    </div>
+  </div>
+  <div class="out" aria-live="polite">
+    <div class="text" id="res"></div>
+    <div class="note" id="mix"></div>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <div class="actions"><button class="btn" type="button" data-copy-from="res">Sao chép kết quả</button></div>
+  </div>
+  <details class="box" id="lwBox">
+    <summary>Tính diện tích từ chiều dài × chiều rộng</summary>
+    <div class="row">
+      <span class="opt">Dài <input id="len" class="num" inputmode="decimal" placeholder="20" aria-label="Chiều dài (m)"> m</span>
+      <span class="opt">× rộng <input id="wid" class="num" inputmode="decimal" placeholder="18" aria-label="Chiều rộng (m)"> m</span>
+      <span class="note" id="lwRes"></span>
+    </div>
+  </details>
+</div>
+
+<div class="article">
+  <h2>1 sào, 1 mẫu, 1 công bằng bao nhiêu m²?</h2>
+  <p>Sào, mẫu, thước, công là đơn vị đo ruộng đất truyền thống, và <b>mỗi vùng dùng một giá trị khác nhau</b>. Vì thế "một sào" ở Thái Bình và "một sào" ở Quảng Nam không bằng nhau. Bảng dưới là các giá trị dùng phổ biến:</p>
+  <div class="scroll"><table class="t">
+    <thead><tr><th>Đơn vị</th><th>Bắc Bộ</th><th>Trung Bộ</th><th>Nam Bộ</th></tr></thead>
+    <tbody>
+      <tr><td>1 thước</td><td class="n">24 m²</td><td class="n">≈ 33 m²</td><td>–</td></tr>
+      <tr><td>1 sào (15 thước)</td><td class="n">360 m²</td><td class="n">497 m² (hay làm tròn 500)</td><td>–</td></tr>
+      <tr><td>1 mẫu (10 sào)</td><td class="n">3.600 m²</td><td class="n">4.970 m²</td><td>–</td></tr>
+      <tr><td>1 công</td><td>–</td><td>–</td><td class="n">1.000 m² hoặc 1.296 m²</td></tr>
+      <tr><td>1 héc-ta (ha)</td><td class="n" colspan="3" style="text-align:center">10.000 m² ở mọi nơi</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><b>Công đất Nam Bộ</b> có hai loại: <i>công tầm nhỏ</i> 1.000 m² (hay gặp khi mua bán) và <i>công tầm lớn</i> 1.296 m² (12 × 12 tầm, mỗi tầm 3,6 m), dùng nhiều ở ruộng lúa miền Tây. Khi mua bán, hỏi rõ "công tầm nào".</li>
+    <li><b>Trung Bộ</b>: nhiều nơi dùng 1 sào = 500 m² cho dễ tính; công cụ cho bạn chọn 497 hoặc 500.</li>
+    <li>Ngay trong một vùng, vài địa phương vẫn có cách tính riêng. Với giao dịch thật, hãy chốt diện tích bằng m².</li>
+  </ul>
+
+  <h2>Sổ đỏ ghi diện tích bằng gì?</h2>
+  <p>Giấy chứng nhận quyền sử dụng đất (sổ đỏ, sổ hồng) ghi diện tích bằng <b>mét vuông (m²)</b>, không ghi sào hay công (quy định hiện hành tại Thông tư 10/2024/TT-BTNMT). Khi đặt cọc hay làm hợp đồng, nên ghi diện tích bằng m² theo sổ, kèm số thửa, số tờ bản đồ, thay vì chỉ ghi "2 sào".</p>
+
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>1 sào Bắc Bộ bằng bao nhiêu mét vuông?</summary>
+    <p>360 m². Một sào có 15 thước, mỗi thước 24 m². Ví dụ mảnh 20 m × 18 m = 360 m² đúng bằng 1 sào Bắc Bộ.</p></details>
+  <details class="qa"><summary>1 mẫu bằng bao nhiêu héc-ta?</summary>
+    <p>Bắc Bộ: 1 mẫu = 3.600 m² = 0,36 ha. Trung Bộ: 1 mẫu = 4.970 m² ≈ 0,5 ha. 1 ha bằng khoảng 2,78 mẫu Bắc Bộ.</p></details>
+  <details class="qa"><summary>1 công đất bằng bao nhiêu m²?</summary>
+    <p>Ở Nam Bộ, 1 công thường là 1.000 m² (công tầm nhỏ) hoặc 1.296 m² (công tầm lớn). 10 công tầm nhỏ = 1 ha.</p></details>
+</div>
+
+<script src="/js/dat-dai.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), F = DatDai.fmt;
+  const st = { region: "bac", unit: "sao", trungSao: 497, namCong: 1000 };
+  try { Object.assign(st, JSON.parse(localStorage.getItem("kc-dd") || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem("kc-dd", JSON.stringify(st)); } catch (e) {} };
+  const o = () => ({ trungSao: +st.trungSao, namCong: +st.namCong });
+
+  function fillUnits(){
+    const units = DatDai.unitsOf(st.region, o());
+    if (!units.some(u => u.id === st.unit)) st.unit = units[0].id;
+    $("unit").innerHTML = units.map(u => `<option value="${u.id}">${u.name}</option>`).join("");
+    $("unit").value = st.unit;
+  }
+  function sync(){
+    document.querySelectorAll("#regions button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.r === st.region)));
+    $("optTrung").hidden = st.region !== "trung"; $("optNam").hidden = st.region !== "nam";
+    $("trungSao").value = String(st.trungSao); $("namCong").value = String(st.namCong);
+    fillUnits();
+  }
+  function render(){
+    const v = DatDai.num($("val").value), res = $("res");
+    if (v == null) { res.textContent = $("val").value.trim() ? "Chưa đọc được số này." : ""; res.className = "text" + ($("val").value.trim() ? " err" : ""); $("mix").textContent = ""; $("tbl").innerHTML = ""; return; }
+    const u = DatDai.unitsOf(st.region, o()).find(x => x.id === st.unit), m2 = DatDai.toM2(v, st.unit, st.region, o());
+    const regionName = DatDai.regions(o())[st.region].name;
+    res.className = "text";
+    res.textContent = st.unit === "m2" ? `${F(v)} m² = ${F(m2 / 10000, 4)} ha`
+      : `${F(v)} ${u.name.replace(/ \(.*\)/, "")}${u.id === "ha" || u.id === "km2" ? "" : " " + regionName} = ${F(m2)} m²`;
+    $("mix").textContent = st.region === "nam" && m2 < 1000 ? "" : "Tức là " + DatDai.mixed(m2, st.region, o()).map(p => F(p.n, 2) + " " + p.name).join(" ") + " (" + regionName + ")";
+    const R = DatDai.regions(o()), rows = [];
+    rows.push(["Mét vuông", F(m2) + " m²"], ["Héc-ta", F(m2 / 10000, 4) + " ha"]);
+    ["bac", "trung", "nam"].forEach(r => R[r].units.forEach(x => {
+      if (x.id === "thuoc" && r !== st.region) return;
+      rows.push([`${x.name[0].toUpperCase() + x.name.slice(1)} ${R[r].name} (${F(x.m2, 1)} m²)`, F(m2 / x.m2) + " " + x.name]);
+    }));
+    $("tbl").innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join("");
+  }
+  function lw(){
+    const a = DatDai.num($("len").value), b = DatDai.num($("wid").value);
+    if (a == null || b == null) { $("lwRes").textContent = ""; return; }
+    const m2 = a * b; $("lwRes").textContent = "= " + F(m2) + " m²";
+    st.unit = "m2"; $("unit").value = "m2"; $("val").value = F(m2, 2); render(); save();
+  }
+  document.querySelectorAll("#regions button").forEach(b => b.addEventListener("click", () => {
+    st.region = b.dataset.r; if (st.unit !== "m2" && st.unit !== "ha" && st.unit !== "km2") st.unit = DatDai.unitsOf(st.region, o()).find(x => x.id === "sao") ? "sao" : "cong";
+    sync(); render(); save();
+  }));
+  $("trungSao").addEventListener("change", () => { st.trungSao = +$("trungSao").value; render(); save(); });
+  $("namCong").addEventListener("change", () => { st.namCong = +$("namCong").value; render(); save(); });
+  $("unit").addEventListener("change", () => { st.unit = $("unit").value; render(); save(); });
+  $("val").addEventListener("input", render);
+  $("len").addEventListener("input", lw); $("wid").addEventListener("input", lw);
+  sync(); render();
+})();
+</script>

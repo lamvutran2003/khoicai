@@ -1,0 +1,133 @@
+<!--
+title: Đọc số tiền thành chữ online (viết số tiền bằng chữ trên hoá đơn) | Khỏi Cài
+h1: Đọc số tiền thành chữ
+description: Đổi số tiền sang chữ tiếng Việt ngay khi gõ: 1.250.000 → Một triệu hai trăm năm mươi nghìn đồng. Chọn linh/lẻ, nghìn/ngàn, thêm "chẵn", USD, đọc nhiều số cùng lúc. Miễn phí, khỏi cài.
+category: tien-hoa-don
+order: 1
+badge: 123
+summary: Gõ số, có ngay dòng "bằng chữ" để ghi hoá đơn, phiếu thu chi, hợp đồng. Đọc được cả danh sách số.
+keywords: viết số tiền bằng chữ, chuyển số thành chữ, đổi số sang chữ, hoá đơn, phiếu thu, phiếu chi, kế toán
+-->
+<div class="tool" id="tool">
+  <div class="field">
+    <label class="label" for="num">Số tiền</label>
+    <input id="num" class="big" inputmode="decimal" autocomplete="off" value="1.250.000" aria-describedby="numHelp">
+    <span class="note" id="numHelp">Gõ 1250000, 1.250.000 hay 1,250,000 đều được. Dấu phẩy hoặc chấm cuối cùng có 1–2 chữ số được hiểu là phần thập phân.</span>
+  </div>
+  <div class="row">
+    <span class="opt">Đơn vị
+      <select id="unit" aria-label="Đơn vị tiền">
+        <option value="dong">đồng</option><option value="usd">đô la Mỹ (USD)</option><option value="eur">euro (EUR)</option><option value="none">không ghi đơn vị</option>
+      </select></span>
+    <span class="seg" role="group" aria-label="Đọc số 0 ở hàng chục"><button type="button" data-k="linh" data-v="linh" aria-pressed="true">linh</button><button type="button" data-k="linh" data-v="lẻ" aria-pressed="false">lẻ</button></span>
+    <span class="seg" role="group" aria-label="Hàng nghìn"><button type="button" data-k="nghin" data-v="nghìn" aria-pressed="true">nghìn</button><button type="button" data-k="nghin" data-v="ngàn" aria-pressed="false">ngàn</button></span>
+    <span class="seg" role="group" aria-label="Số 4 ở hàng đơn vị"><button type="button" data-k="tu" data-v="1" aria-pressed="true">24 = hai mươi tư</button><button type="button" data-k="tu" data-v="" aria-pressed="false">bốn</button></span>
+    <label class="chk"><input type="checkbox" id="chan"> Thêm "chẵn"</label>
+  </div>
+  <div class="out" aria-live="polite">
+    <div class="text" id="res"></div>
+    <div class="actions">
+      <button class="btn primary" type="button" data-copy-from="res">Sao chép</button>
+      <button class="btn" type="button" data-copy-from="resLine">Sao chép kèm "Bằng chữ:"</button>
+      <button class="btn" type="button" data-copy-from="resUpper">Sao chép CHỮ IN HOA</button>
+      <button class="btn" type="button" id="speak" hidden>🔊 Đọc to</button>
+    </div>
+    <span id="resLine" hidden></span><span id="resUpper" hidden></span>
+    <div class="note" id="echo"></div>
+  </div>
+  <details class="box" id="batchBox">
+    <summary>Đọc nhiều số cùng lúc</summary>
+    <div class="field">
+      <label class="label" for="batchIn">Dán một cột số (mỗi dòng một số, có thể dán thẳng từ Excel)</label>
+      <textarea class="area" id="batchIn" placeholder="1250000&#10;3.500.000&#10;12,5"></textarea>
+    </div>
+    <div class="field" style="margin-top:10px">
+      <label class="label" for="batchOut">Kết quả (mỗi dòng tương ứng, dán ngược lại vào Excel được)</label>
+      <textarea class="area" id="batchOut" readonly></textarea>
+    </div>
+    <div class="actions" style="margin-top:10px"><button class="btn primary" type="button" data-copy-from="batchOut">Sao chép tất cả</button></div>
+  </details>
+</div>
+
+<div class="article">
+  <h2>Cách viết số tiền bằng chữ cho đúng</h2>
+  <p>Hoá đơn, phiếu thu, phiếu chi, uỷ nhiệm chi và hợp đồng thường ghi số tiền cả bằng số và bằng chữ, để không ai sửa được con số. Công cụ trên đọc theo cách viết phổ biến trong kế toán; các điểm dễ nhầm:</p>
+  <ul>
+    <li><b>Số 0 ở hàng chục:</b> đọc "linh" (miền Bắc) hoặc "lẻ" (miền Nam): 105 = <i>một trăm linh năm</i> / <i>một trăm lẻ năm</i>. Cả hai đều đúng; chọn theo thói quen của đơn vị bạn.</li>
+    <li><b>Hàng trăm bằng 0 ở giữa số:</b> vẫn đọc "không trăm": 1.005.000 = <i>một triệu không trăm linh năm nghìn</i>.</li>
+    <li><b>Số 1 sau "mươi":</b> đọc "mốt": 21 = <i>hai mươi mốt</i>. Sau "mười" vẫn là "một": 11 = <i>mười một</i>.</li>
+    <li><b>Số 5 sau "mười"/"mươi":</b> đọc "lăm": 15 = <i>mười lăm</i>, 25 = <i>hai mươi lăm</i>. Nhưng 105 là <i>một trăm linh năm</i>.</li>
+    <li><b>Số 4 sau "mươi":</b> thường đọc "tư": 24 = <i>hai mươi tư</i>; "bốn" cũng đúng. Sau "mười" luôn là "bốn": 14 = <i>mười bốn</i>.</li>
+    <li><b>Hàng lớn:</b> 1.000.000.000 = <i>một tỷ</i>; 1.000.000.000.000 = <i>một nghìn tỷ</i>.</li>
+    <li><b>Viết hoa chữ cái đầu</b> và thường kết thúc bằng đơn vị tiền ("đồng"). Một số đơn vị thêm "chẵn" khi số tiền không có phần lẻ, ví dụ <i>Năm triệu đồng chẵn</i>.</li>
+  </ul>
+
+  <h2>Ví dụ</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th>Bằng số</th><th>Bằng chữ</th></tr></thead>
+    <tbody id="examples"></tbody>
+  </table></div>
+
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Có cần cài phần mềm hay add-in Excel không?</summary>
+    <p>Không. Công cụ chạy ngay trên trình duyệt, trên cả điện thoại. Muốn đọc cả cột số trong Excel, bạn dán cột đó vào mục "Đọc nhiều số cùng lúc" rồi sao chép kết quả dán ngược lại.</p></details>
+  <details class="qa"><summary>Số tiền tôi nhập có bị gửi đi đâu không?</summary>
+    <p>Không. Mọi phép tính diễn ra trên máy bạn; trang không gửi số bạn nhập lên máy chủ nào.</p></details>
+  <details class="qa"><summary>Đọc số tiền đô la Mỹ có xu thế nào?</summary>
+    <p>Chọn đơn vị USD: 12,50 đọc là <i>Mười hai đô la Mỹ và năm mươi xu</i>. Với euro, phần lẻ đọc là cent.</p></details>
+  <details class="qa"><summary>Viết "nghìn" hay "ngàn"?</summary>
+    <p>Cả hai đều đúng. Văn bản hành chính và kế toán thường dùng "nghìn"; miền Nam hay nói "ngàn".</p></details>
+</div>
+
+<script src="/js/so-thanh-chu.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const opts = { linh: "linh", nghin: "nghìn", tu: true, unit: "dong", chan: false };
+  try { Object.assign(opts, JSON.parse(localStorage.getItem("kc-stc") || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem("kc-stc", JSON.stringify(opts)); } catch (e) {} };
+
+  function render(){
+    const p = SoThanhChu.parse($("num").value), res = $("res");
+    if (!$("num").value.trim()) { res.textContent = ""; res.className = "text"; $("echo").textContent = ""; return; }
+    if (!p) { res.textContent = "Chưa đọc được số này. Kiểm tra lại dấu chấm, dấu phẩy."; res.className = "text err"; $("echo").textContent = ""; return; }
+    const text = SoThanhChu.read(p, opts);
+    res.textContent = text; res.className = "text";
+    $("resLine").textContent = "Bằng chữ: " + text + ".";
+    $("resUpper").textContent = SoThanhChu.read(p, Object.assign({}, opts, { caps: "upper" }));
+    $("echo").textContent = "Bằng số: " + SoThanhChu.format(p) + (opts.unit === "dong" ? " ₫" : opts.unit === "usd" ? " USD" : opts.unit === "eur" ? " EUR" : "");
+    renderBatch();
+  }
+  function renderBatch(){
+    const lines = $("batchIn").value.split(/\r?\n/);
+    $("batchOut").value = lines.map(l => { if (!l.trim()) return ""; const p = SoThanhChu.parse(l); return p ? SoThanhChu.read(p, opts) : "(không đọc được: " + l.trim() + ")"; }).join("\n");
+  }
+  function syncControls(){
+    document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", String(String(opts[b.dataset.k] === true ? "1" : opts[b.dataset.k] === false ? "" : opts[b.dataset.k]) === b.dataset.v)));
+    $("unit").value = opts.unit; $("chan").checked = !!opts.chan;
+  }
+  document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+    opts[b.dataset.k] = b.dataset.k === "tu" ? !!b.dataset.v : b.dataset.v; syncControls(); render(); save();
+  }));
+  $("unit").addEventListener("change", () => { opts.unit = $("unit").value; render(); save(); });
+  $("chan").addEventListener("change", () => { opts.chan = $("chan").checked; render(); save(); });
+  $("num").addEventListener("input", render);
+  $("batchIn").addEventListener("input", renderBatch);
+
+  // Read aloud with the browser's Vietnamese voice, when there is one
+  if ("speechSynthesis" in window) {
+    const ready = () => { $("speak").hidden = !speechSynthesis.getVoices().some(v => /^vi/i.test(v.lang)); };
+    ready(); speechSynthesis.onvoiceschanged = ready;
+    $("speak").addEventListener("click", () => {
+      const u = new SpeechSynthesisUtterance($("res").textContent); u.lang = "vi-VN";
+      u.voice = speechSynthesis.getVoices().find(v => /^vi/i.test(v.lang)) || null;
+      speechSynthesis.cancel(); speechSynthesis.speak(u);
+    });
+  }
+
+  // Example table, generated with the same engine
+  $("examples").innerHTML = ["105", "1.005.000", "21.000.000", "24.500.000", "115.000.000", "1.250.000.000"]
+    .map(n => `<tr><td class="n">${n}</td><td>${SoThanhChu.read(n)}</td></tr>`).join("");
+  syncControls(); render();
+})();
+</script>
