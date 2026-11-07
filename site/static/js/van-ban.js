@@ -37,6 +37,20 @@
              lines: s ? s.split(/\r?\n/).length : 0 };
   }
 
-  var API = { unaccent: unaccent, slug: slug, fileName: fileName, toCase: toCase, stats: stats };
+  // Thống kê chi tiết cho công cụ đếm từ: câu, đoạn, thời gian đọc (~200 từ/phút), từ hay gặp nhất
+  function analyze(s) {
+    s = String(s);
+    var base = stats(s), t = s.trim();
+    var sentences = t ? (t.match(/[^.!?…]+(?:[.!?…]+|$)/g) || []).filter(function (x) { return /\p{L}|\d/u.test(x); }).length : 0;
+    var paragraphs = t ? t.split(/\n\s*\n/).filter(function (x) { return x.trim(); }).length : 0;
+    var freq = {};
+    (t.toLocaleLowerCase("vi").match(/[\p{L}\d]+/gu) || []).forEach(function (w) { if (w.length > 1) freq[w] = (freq[w] || 0) + 1; });
+    var top = Object.keys(freq).map(function (w) { return [w, freq[w]]; }).filter(function (x) { return x[1] > 1; })
+      .sort(function (a, b) { return b[1] - a[1] || (a[0] < b[0] ? -1 : 1); }).slice(0, 10);
+    return { chars: base.chars, noSpace: base.noSpace, words: base.words, lines: base.lines, sentences: sentences,
+             paragraphs: paragraphs, readMinutes: base.words / 200, top: top };
+  }
+
+  var API = { analyze: analyze, unaccent: unaccent, slug: slug, fileName: fileName, toCase: toCase, stats: stats };
   if (typeof module === "object" && module.exports) module.exports = API; else root.VanBan = API;
 })(this);

@@ -35,6 +35,7 @@ CATEGORIES = [   # (id, tên đầy đủ, tên ngắn trên thanh menu), theo t
     ("van-ban", "Văn bản", "Văn bản"),
     ("dat-dai", "Đo lường & tính toán", "Đo lường"),
     ("suc-khoe", "Sức khoẻ", "Sức khoẻ"),
+    ("khac", "Tiện ích khác", "Khác"),
 ]
 E = html.escape
 

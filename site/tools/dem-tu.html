@@ -1,0 +1,54 @@
+<!--
+title: Đếm từ, đếm ký tự online trong văn bản tiếng Việt | Tính Giùm
+h1: Đếm từ, đếm ký tự
+description: Đếm số từ, số ký tự (có và không có khoảng trắng), số câu, số đoạn, thời gian đọc và các từ lặp lại nhiều nhất trong văn bản tiếng Việt. Dán là đếm, không cần cài Word.
+category: van-ban
+order: 4
+summary: Số từ, ký tự, câu, đoạn, thời gian đọc, từ lặp nhiều.
+intro: Đếm số từ, số ký tự, số câu và đoạn của văn bản, kèm thời gian đọc và những từ lặp lại nhiều nhất.
+keywords: đếm từ, đếm ký tự, đếm số từ, đếm chữ, word count, số ký tự, giới hạn ký tự, đếm từ online
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l top-l" for="src">Văn bản</label>
+  <textarea class="in" id="src" placeholder="Dán văn bản vào đây"></textarea>
+  <div class="btns"><button class="go" type="submit">Đếm __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <h3 id="topH">Từ lặp lại nhiều nhất</h3>
+    <p id="top"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Giới hạn ký tự thường gặp</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Nơi dùng</th><th>Giới hạn</th></tr></thead><tbody>
+    <tr><td>Tiêu đề trang hiển thị trên Google</td><td>khoảng 60 ký tự</td></tr>
+    <tr><td>Mô tả trang trên Google</td><td>khoảng 155 ký tự</td></tr>
+    <tr><td>Tin nhắn SMS không dấu</td><td>160 ký tự/tin (có dấu: 70)</td></tr>
+    <tr><td>Bài đăng X (Twitter)</td><td>280 ký tự</td></tr>
+  </tbody></table></div>
+  <p class="note">"Từ" được đếm theo khoảng trắng như Word, nên mỗi tiếng (âm tiết) tiếng Việt là một từ: "Hà Nội" là 2 từ. Thời gian đọc tính theo khoảng 200 từ mỗi phút. Văn bản được đếm ngay trên máy bạn.</p>
+</div>
+
+<script src="/js/van-ban.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), n = v => v.toLocaleString("vi-VN");
+  KC.form($("f"), { calc(){
+    const s = $("src").value;
+    if (!s.trim()) { $("src").focus(); return false; }
+    const r = VanBan.analyze(s), mins = r.readMinutes;
+    $("res").innerHTML = `<b>${n(r.words)} từ</b> · ${n(r.chars)} ký tự`;
+    $("tbl").innerHTML = [["Số từ", n(r.words)], ["Số ký tự (kể cả khoảng trắng)", n(r.chars)], ["Số ký tự (không tính khoảng trắng)", n(r.noSpace)],
+      ["Số câu", n(r.sentences)], ["Số đoạn", n(r.paragraphs)], ["Số dòng", n(r.lines)],
+      ["Thời gian đọc", mins < 1 ? "dưới 1 phút" : `khoảng ${n(Math.round(mins))} phút`]].map(([a, b]) => `<tr><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+    $("topH").hidden = $("top").hidden = !r.top.length;
+    $("top").textContent = r.top.map(([w, c]) => `${w} (${c})`).join(", ");
+  } });
+})();
+</script>

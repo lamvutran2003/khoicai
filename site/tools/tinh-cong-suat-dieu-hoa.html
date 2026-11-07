@@ -1,0 +1,73 @@
+<!--
+title: Tính công suất điều hoà, máy lạnh theo diện tích phòng (BTU, HP) | Tính Giùm
+h1: Tính công suất điều hoà
+description: Phòng bao nhiêu m² thì dùng điều hoà bao nhiêu BTU, mấy ngựa (HP)? Tính theo diện tích, chiều cao trần, loại phòng, số người, phòng nắng nhiều, rồi gợi ý máy 9.000, 12.000, 18.000 hay 24.000 BTU.
+category: dat-dai
+order: 4
+summary: Phòng bao nhiêu m² dùng điều hoà bao nhiêu BTU, mấy HP.
+intro: Ước tính công suất điều hoà (máy lạnh) cần cho phòng của bạn và gợi ý loại máy 9.000, 12.000, 18.000 hay 24.000 BTU.
+keywords: tính công suất điều hoà, btu điều hoà, điều hoà bao nhiêu btu, máy lạnh mấy ngựa, 9000 btu bao nhiêu m2, 12000 btu, chọn điều hoà
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="area">Diện tích phòng</label>
+  <div class="f"><input id="area" class="in w-s" inputmode="decimal" autocomplete="off" value="20"><span class="u">m²</span></div>
+  <label class="l" for="h">Chiều cao trần</label>
+  <div class="f"><input id="h" class="in w-s" inputmode="decimal" autocomplete="off" value="3"><span class="u">m</span></div>
+  <label class="l" for="room">Loại phòng</label>
+  <div><select id="room" class="in"><option value="home">Phòng ngủ, phòng khách</option><option value="office">Văn phòng</option><option value="shop">Quán cà phê, nhà hàng, cửa hàng</option></select></div>
+  <label class="l" for="people">Số người thường xuyên</label>
+  <div><input id="people" class="in w-s" inputmode="numeric" autocomplete="off" value="2"></div>
+  <span></span>
+  <div class="f">
+    <label class="chk"><input type="checkbox" id="sunny"> Nắng nhiều (hướng Tây, tầng thượng, nhiều kính)</label>
+    <label class="chk"><input type="checkbox" id="kitchen"> Có bếp hoặc nhiều máy toả nhiệt</label>
+  </div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Bảng chọn nhanh (phòng gia đình, trần 3 m)</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Diện tích phòng</th><th>Công suất nên chọn</th></tr></thead><tbody>
+    <tr><td>Dưới 15 m²</td><td>9.000 BTU (1 HP)</td></tr>
+    <tr><td>15 – 20 m²</td><td>12.000 BTU (1,5 HP)</td></tr>
+    <tr><td>20 – 30 m²</td><td>18.000 BTU (2 HP)</td></tr>
+    <tr><td>30 – 40 m²</td><td>24.000 BTU (2,5 HP)</td></tr>
+    <tr><td>Trên 40 m²</td><td>Máy âm trần, tủ đứng, hoặc 2 máy</td></tr>
+  </tbody></table></div>
+  <h2>Cách tính</h2>
+  <ul>
+    <li>Khoảng 600 BTU cho mỗi m² phòng trần cao 3 m, hay 200 BTU cho mỗi m³ nếu trần cao hơn.</li>
+    <li>Văn phòng cần khoảng 750 BTU/m², quán cà phê, nhà hàng khoảng 950 BTU/m² vì đông người và mở cửa nhiều.</li>
+    <li>Phòng nắng nhiều thêm 10%; mỗi người thường xuyên ở phòng từ người thứ ba thêm 600 BTU; có bếp thêm khoảng 0,5 HP.</li>
+    <li>1 HP (1 ngựa) ≈ 9.000 BTU. Máy gia đình thường có 9.000, 12.000, 18.000 và 24.000 BTU.</li>
+  </ul>
+  <p class="note">Mức cộng thêm cho phòng nắng và số người theo hướng dẫn chọn máy phổ biến (Energy Star, Mỹ); hệ số theo diện tích theo cách tính của các nhà bán lẻ điện máy trong nước. Máy thiếu công suất chạy hết sức liên tục, tốn điện mà không đủ mát; máy dư nhiều thì đắt hơn và hay bật tắt. Muốn ước tính tiền điện, dùng <a href="/tinh-tien-dien/">Tính tiền điện</a>.</p>
+</div>
+
+<script src="/js/dieu-hoa.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), n = v => Math.round(v).toLocaleString("vi-VN"), num = id => parseFloat($(id).value.replace(",", "."));
+  const form = KC.form($("f"), { calc(){
+    const area = num("area"), h = num("h") || 3;
+    if (!(area > 0 && area <= 1000)) { $("area").focus(); return false; }
+    if (!(h >= 2 && h <= 10)) { $("h").focus(); return false; }
+    const r = DieuHoa.need({ area, height: h, room: $("room").value, people: +$("people").value || 0, sunny: $("sunny").checked, kitchen: $("kitchen").checked });
+    $("res").innerHTML = r.size ? `Nên chọn máy <b>${n(r.size)} BTU (${r.hp})</b>` : `Cần khoảng <b>${n(r.btu)} BTU</b>: nên dùng ${r.splitInto} máy 24.000 BTU hoặc máy âm trần, tủ đứng công suất lớn`;
+    $("tbl").innerHTML = [["Theo thể tích phòng (" + n(area * h) + " m³)", n(r.base)], ...(r.sun ? [["Nắng nhiều (+10%)", "+ " + n(r.sun)]] : []),
+      ...(r.people ? [["Người thứ 3 trở đi", "+ " + n(r.people)]] : []), ...(r.kitchen ? [["Bếp, máy toả nhiệt", "+ " + n(r.kitchen)]] : []),
+      ["Công suất cần", n(r.btu) + " BTU", "tot"]].map(([a, b, c]) => `<tr${c ? ` class="${c}"` : ""}><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+    $("sub").textContent = r.size && r.size - r.btu < 1000 ? "Công suất cần sát mức máy; nếu phòng hay đông người hoặc nắng gắt, cân nhắc chọn cỡ lớn hơn." : "";
+  } });
+  form.run(false);
+})();
+</script>

@@ -38,7 +38,7 @@ p{color:#333;font-size:34px;line-height:1.35;max-width:1040px}
 }
 
 (async () => {
-  const CAT = { "tien-hoa-don": "Tiền & lương", "ngay-lich": "Ngày & lịch", "van-ban": "Văn bản", "dat-dai": "Đo lường", "suc-khoe": "Sức khoẻ" };
+  const CAT = { "tien-hoa-don": "Tiền & lương", "ngay-lich": "Ngày & lịch", "van-ban": "Văn bản", "dat-dai": "Đo lường", "suc-khoe": "Sức khoẻ", "khac": "Tiện ích khác" };
   const jobs = [{ slug: "default", title: "Công cụ tính toán online miễn phí", sub: "Tính lương, tiền điện, VAT, đổi ngày âm dương lịch, chuyển font, tính TDEE… ngay trên trình duyệt.", label: "" },
                 { slug: "lich-am", title: "Lịch âm, lịch vạn niên", sub: "Ngày âm từng ngày, mùng một, ngày rằm, ngày lễ và Tết, theo lịch Việt Nam.", label: "Ngày & lịch" }];
   for (const f of fs.readdirSync(path.join(ROOT, "site/tools")).filter(f => f.endsWith(".html"))) {

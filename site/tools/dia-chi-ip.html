@@ -1,0 +1,60 @@
+<!--
+title: Địa chỉ IP của tôi là gì? Xem IP public, IPv4, IPv6 | Tính Giùm
+h1: Địa chỉ IP của tôi
+description: Xem nhanh địa chỉ IP public (IPv4, IPv6) mà mạng của bạn đang dùng để ra Internet, cùng trình duyệt, hệ điều hành và kích thước màn hình. Giải thích IP public và IP nội bộ.
+category: khac
+order: 1
+summary: Xem IP public (IPv4, IPv6), trình duyệt, màn hình.
+intro: Địa chỉ IP public mà các trang web nhìn thấy khi bạn truy cập, cùng thông tin trình duyệt và thiết bị.
+keywords: địa chỉ ip của tôi, ip của tôi, xem ip, kiểm tra ip, ip public, my ip, ipv4, ipv6
+-->
+<section class="result" aria-live="polite">
+  <h2>Địa chỉ IP của bạn</h2>
+  <div class="body">
+    <p class="big" id="v4">Đang lấy địa chỉ IP…</p>
+    <p id="v6"></p>
+    <div class="actions"><button class="btn solid" type="button" data-copy-from="ipText" id="copyBtn" hidden>Sao chép IP</button><button class="btn" type="button" id="again">Kiểm tra lại</button></div>
+    <span id="ipText" hidden></span>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>IP public và IP nội bộ</h2>
+  <ul>
+    <li><b>IP public</b> (hiện ở trên) là địa chỉ của mạng nhà bạn hoặc của nhà mạng khi ra Internet. Mọi thiết bị dùng chung một wifi thường có cùng một IP public.</li>
+    <li><b>IP nội bộ</b> (thường dạng 192.168.x.x hoặc 10.x.x.x) là địa chỉ router cấp cho từng máy trong nhà; xem trong phần cài đặt wifi hoặc mạng của máy.</li>
+    <li>Dùng 4G hay mạng nhà mạng, IP public có thể đổi sau mỗi lần kết nối lại. Dùng VPN thì trang sẽ thấy IP của máy chủ VPN.</li>
+  </ul>
+  <p class="note">Trình duyệt không tự biết IP public của mình, nên trang gửi một yêu cầu tới dịch vụ công khai ipify.org để lấy địa chỉ, và không gửi kèm dữ liệu nào khác. Thông tin trình duyệt, màn hình được đọc ngay trên máy bạn.</p>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const get = url => fetch(url, { cache: "no-store" }).then(r => r.ok ? r.json() : Promise.reject()).then(d => d.ip);
+  function device(){
+    const ua = navigator.userAgent;
+    const browser = /Edg\//.test(ua) ? "Microsoft Edge" : /OPR\/|Opera/.test(ua) ? "Opera" : /CocCoc/.test(ua) ? "Cốc Cốc" : /Firefox\//.test(ua) ? "Firefox"
+      : /Chrome\//.test(ua) ? "Chrome" : /Safari\//.test(ua) ? "Safari" : "Không rõ";
+    const os = /Windows NT 10/.test(ua) ? "Windows 10/11" : /Windows/.test(ua) ? "Windows" : /iPhone|iPad|iPod/.test(ua) ? "iOS / iPadOS" : /Android/.test(ua) ? "Android"
+      : /Mac OS X/.test(ua) ? "macOS" : /Linux/.test(ua) ? "Linux" : "Không rõ";
+    return [["Trình duyệt", browser], ["Hệ điều hành", os], ["Màn hình", `${screen.width} × ${screen.height} px`],
+            ["Ngôn ngữ", navigator.language || ""], ["Múi giờ", Intl.DateTimeFormat().resolvedOptions().timeZone || ""]];
+  }
+  function run(){
+    $("v4").textContent = "Đang lấy địa chỉ IP…"; $("v6").textContent = ""; $("copyBtn").hidden = true;
+    Promise.allSettled([get("https://api.ipify.org?format=json"), get("https://api64.ipify.org?format=json")]).then(([a, b]) => {
+      const v4 = a.status === "fulfilled" ? a.value : null, any = b.status === "fulfilled" ? b.value : null, v6 = any && any.includes(":") ? any : null;
+      if (!v4 && !any) { $("v4").innerHTML = `<span class="err">Chưa lấy được địa chỉ IP (mạng chặn hoặc đang ngoại tuyến). Bấm "Kiểm tra lại".</span>`; return; }
+      const main = v4 || any;
+      $("v4").innerHTML = `${main.includes(":") ? "IPv6" : "IPv4"}: <b>${main}</b>`;
+      $("v6").textContent = v4 && v6 ? `IPv6: ${v6}` : v4 ? "Mạng của bạn chưa có IPv6." : "";
+      $("ipText").textContent = main; $("copyBtn").hidden = false;
+    });
+    $("tbl").innerHTML = device().map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join("");
+  }
+  $("again").addEventListener("click", run);
+  run();
+})();
+</script>

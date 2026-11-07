@@ -41,3 +41,25 @@ test("age, lunar year, can chi, con giáp, mệnh", () => {
   const leap = T.age({ day: 29, month: 2, year: 2000 }, { day: 1, month: 3, year: 2026 });
   assert.strictEqual(leap.nextBirthdayIn, 364);
 });
+
+test("air conditioner capacity", () => {
+  const D = require("../site/static/js/dieu-hoa.js");
+  const a = D.need({ area: 15, height: 3, room: "home" });
+  assert.deepStrictEqual([a.btu, a.size, a.hp], [9000, 9000, "1 HP"]);
+  assert.strictEqual(D.need({ area: 20, room: "home" }).size, 12000);
+  const b = D.need({ area: 20, room: "home", sunny: true, people: 4 });          // 12000 + 1200 + 1200 = 14400
+  assert.deepStrictEqual([b.btu, b.size, b.hp], [14400, 18000, "2 HP"]);
+  assert.strictEqual(D.need({ area: 20, height: 4, room: "home" }).btu, 16000);
+  assert.strictEqual(D.need({ area: 20, room: "office" }).btu, 15000);
+  assert.strictEqual(D.need({ area: 15, room: "home", kitchen: true }).btu, 13500);
+  const c = D.need({ area: 100, room: "shop" });
+  assert.deepStrictEqual([c.size, c.splitInto], [null, 4]);
+});
+
+test("word count analysis", () => {
+  const V = require("../site/static/js/van-ban.js");
+  const r = V.analyze("Xin chào. Tôi là An, tôi ở Hà Nội!\n\nHà Nội mùa thu đẹp lắm.");
+  assert.deepStrictEqual([r.words, r.sentences, r.paragraphs], [15, 3, 2]);
+  assert.deepStrictEqual(r.top.slice(0, 3), [["hà", 2], ["nội", 2], ["tôi", 2]]);
+  assert.strictEqual(V.analyze("").words, 0);
+});
