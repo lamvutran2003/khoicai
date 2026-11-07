@@ -105,7 +105,10 @@ table.t tr.tot td{font-weight:700;border-bottom:0}
 .home .lede{max-width:70ch}
 .home-search{display:flex;gap:6px;max-width:560px}
 .home-search input{flex:1;min-width:0;font:18px var(--font);padding:9px 10px;border:1px solid var(--input-line)}
-.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:18px;align-items:start}
+.cats{column-count:3;column-gap:20px}
+.cats>.cat{break-inside:avoid;display:block;margin:0 0 20px}
+@media (max-width:980px){.cats{column-count:2}}
+@media (max-width:620px){.cats{column-count:1}}
 .cat ul{gap:9px}
 .cat li{display:grid;gap:1px}
 .cat li a{font-size:17px}
