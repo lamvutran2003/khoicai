@@ -22,3 +22,8 @@ Phong cách "cổ điển" kiểu calculator.net: nền trắng, đầu trang xa
 - Không cập nhật kết quả ngay khi gõ (người dùng bấm Tính); sửa số liệu sau khi đã tính thì kết quả mờ đi và nhắc bấm lại.
 - Không giao diện tối, không bo tròn lớn, không biểu tượng cảm xúc.
 - Không thêm tính năng phụ (đọc to, xử lý hàng loạt…) trừ khi thật cần.
+
+## Khi thêm hoặc đổi tên công cụ
+
+- Chạy `node tools/make_images.js` (cần Playwright) để tạo ảnh xem trước khi chia sẻ `site/static/og/<slug>.png`, rồi commit ảnh.
+- Công cụ phụ thuộc quy định (thuế, giá, ngày lễ) thêm `rules:` và `updated:` vào front matter để hiện dòng "Áp dụng … · Cập nhật …".

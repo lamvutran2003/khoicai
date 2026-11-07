@@ -59,7 +59,14 @@ def load(folder: str) -> list[dict]:
     return out
 
 
-def head(title: str, desc: str, url: str, extra: str = "") -> str:
+def og_image(slug: str) -> str:
+    """Ảnh xem trước khi chia sẻ link (tạo bằng tools/make_images.js); không có thì dùng ảnh chung."""
+    name = slug if (SITE / "static/og" / f"{slug}.png").exists() else "default"
+    return f"{SITE_URL}/og/{name}.png"
+
+
+def head(title: str, desc: str, url: str, extra: str = "", image: str = "") -> str:
+    image = image or og_image("default")
     return (f"<title>{E(title)}</title>\n<meta name=\"description\" content=\"{E(desc)}\">\n"
             f"<link rel=\"canonical\" href=\"{url}\">\n"
             "<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n"
@@ -69,6 +76,8 @@ def head(title: str, desc: str, url: str, extra: str = "") -> str:
             f"<meta property=\"og:title\" content=\"{E(title)}\">\n<meta property=\"og:description\" content=\"{E(desc)}\">\n"
             f"<meta property=\"og:url\" content=\"{url}\">\n<meta property=\"og:type\" content=\"website\">\n"
             f"<meta property=\"og:locale\" content=\"vi_VN\">\n<meta property=\"og:site_name\" content=\"{E(SITE_NAME)}\">\n"
+            f"<meta property=\"og:image\" content=\"{image}\">\n<meta property=\"og:image:width\" content=\"1200\">\n"
+            "<meta property=\"og:image:height\" content=\"630\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n"
             + extra)
 
 
@@ -92,10 +101,10 @@ def rebase(doc: str) -> str:
     return doc.replace('"/js/', '"' + BASE + '/js/')
 
 
-def page(title, desc, url, body, css, extra_head=""):
+def page(title, desc, url, body, css, extra_head="", image=""):
     return rebase("<!doctype html>\n<html lang=\"vi\">\n<head>\n<meta charset=\"utf-8\">\n"
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
-            + head(title, desc, url, extra_head) + f"<style>\n{css}</style>\n</head>\n<body>\n" + body + beacon() + "\n</body>\n</html>\n")
+            + head(title, desc, url, extra_head, image) + f"<style>\n{css}</style>\n</head>\n<body>\n" + body + beacon() + "\n</body>\n</html>\n")
 
 
 def beacon() -> str:
@@ -188,11 +197,12 @@ def build() -> None:
                 f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(t["h1"].lower())}</span></nav>'
                 f'<h1>{E(t["h1"])}</h1>'
                 + (f'<p class="lede">{E(t["intro"])}</p>' if t.get("intro") else "")
+                + (f'<p class="stamp">Áp dụng: {E(t["rules"])} · Cập nhật {E(t.get("updated", ""))}</p>' if t.get("rules") else "")
                 + f'{t["body"]}</main>{sidebar(listing, cat, t["slug"])}</div>'
                 f'<script type="application/ld+json">{ld}</script>')
         out = DIST / t["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(t["title"], t["description"], url, render(main, cat, url), css), encoding="utf-8")
+        (out / "index.html").write_text(page(t["title"], t["description"], url, render(main, cat, url), css, image=og_image(t["slug"])), encoding="utf-8")
         urls.append(f"/{t['slug']}/")
 
     # Lịch âm: trang từng năm, từng tháng
@@ -206,7 +216,7 @@ def build() -> None:
                 f'<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, "ngay-lich", meta["slug"])}</div>')
         out = DIST / meta["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, "ngay-lich", url), css), encoding="utf-8")
+        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, "ngay-lich", url), css, image=og_image("lich-am")), encoding="utf-8")
         urls.append(f"/{meta['slug']}/")
 
     # Plain pages
