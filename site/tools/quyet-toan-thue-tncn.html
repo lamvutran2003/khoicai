@@ -1,0 +1,71 @@
+<!--
+title: Tính quyết toán thuế TNCN năm 2026: được hoàn hay phải nộp thêm | Tính Giùm
+h1: Quyết toán thuế TNCN
+description: Tự tính quyết toán thuế thu nhập cá nhân từ tiền lương năm 2026: thuế phải nộp cả năm theo biểu 5 bậc, giảm trừ gia cảnh 186 triệu, người phụ thuộc, so với thuế đã khấu trừ để biết được hoàn hay nộp thêm.
+category: tien-hoa-don
+order: 9
+summary: Quyết toán thuế năm 2026: được hoàn hay phải nộp thêm bao nhiêu.
+intro: Tính số thuế thu nhập cá nhân phải nộp cả năm từ tiền lương, so với số đã bị khấu trừ để biết được hoàn hay phải nộp thêm.
+keywords: quyết toán thuế tncn, hoàn thuế tncn, tính thuế thu nhập cá nhân năm, quyết toán thuế 2026, thuế tncn phải nộp thêm, người phụ thuộc
+rules: Luật Thuế TNCN 109/2025/QH15, kỳ tính thuế 2026 (quyết toán đầu năm 2027)
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="inc">Tổng thu nhập chịu thuế</label>
+  <div class="f"><input id="inc" class="in w-l" inputmode="numeric" autocomplete="off" value="360000000"><span class="u">đồng/năm</span><span class="hint">lương, thưởng trước thuế, trừ các khoản miễn thuế</span></div>
+  <label class="l" for="ins">Bảo hiểm bắt buộc đã đóng</label>
+  <div class="f"><input id="ins" class="in w-l" inputmode="numeric" autocomplete="off" value="37800000"><span class="u">đồng/năm</span><span class="hint">BHXH, BHYT, BHTN phần người lao động</span></div>
+  <label class="l" for="dep">Người phụ thuộc</label>
+  <div class="f"><input id="dep" class="in w-s" inputmode="numeric" autocomplete="off" value="1"><span class="u">người</span><span class="hint">đã đăng ký, tính đủ 12 tháng</span></div>
+  <label class="l" for="oth">Giảm trừ khác</label>
+  <div class="f"><input id="oth" class="in w-m" inputmode="numeric" autocomplete="off" value="0"><span class="u">đồng/năm</span><span class="hint">từ thiện, quỹ hưu trí tự nguyện…</span></div>
+  <label class="l" for="wh">Thuế đã bị khấu trừ</label>
+  <div class="f"><input id="wh" class="in w-l" inputmode="numeric" autocomplete="off" value="7620000"><span class="u">đồng</span><span class="hint">xem trên chứng từ khấu trừ thuế</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính</h2>
+  <ol>
+    <li>Thu nhập tính thuế = tổng thu nhập chịu thuế − bảo hiểm bắt buộc − 186 triệu (bản thân) − 74,4 triệu × số người phụ thuộc − các khoản giảm trừ khác.</li>
+    <li>Thuế cả năm theo biểu luỹ tiến: đến 120 triệu 5%; 120–360 triệu 10%; 360–720 triệu 20%; 720 triệu – 1,2 tỷ 30%; trên 1,2 tỷ 35%.</li>
+    <li>So với số thuế đã bị khấu trừ trong năm: khấu trừ nhiều hơn thì được hoàn, ít hơn thì nộp thêm.</li>
+  </ol>
+  <h2>Khi nào hay được hoàn thuế?</h2>
+  <ul>
+    <li>Thu nhập không đều giữa các tháng (thưởng Tết dồn vào một tháng bị khấu trừ ở bậc cao).</li>
+    <li>Đăng ký người phụ thuộc muộn, nên những tháng đầu năm chưa được giảm trừ.</li>
+    <li>Làm ở nơi bị khấu trừ 10% (hợp đồng dưới 3 tháng, cộng tác viên) nhưng tổng thu nhập năm thấp.</li>
+  </ul>
+  <p class="note">Áp dụng cho cá nhân cư trú có thu nhập từ tiền lương, tiền công, kỳ tính thuế 2026 (quyết toán vào đầu năm 2027). Giảm trừ người phụ thuộc tính theo số tháng thực tế đã đăng ký; công cụ giả định đủ 12 tháng. Chưa tính các khoản giảm trừ chi phí y tế, giáo dục mới theo luật 2025 (cần đủ điều kiện theo nghị định hướng dẫn). Kết quả để tham khảo; số chính thức theo tờ khai quyết toán.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/bao-hiem.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN"), num = id => +$(id).value.replace(/\D/g, "") || 0;
+  ["inc", "ins", "oth", "wh"].forEach(id => KCNum.attach($(id), { decimals: 0 }));
+  $("dep").addEventListener("input", () => { $("dep").value = $("dep").value.replace(/\D/g, "").slice(0, 2); });
+  const form = KC.form($("f"), { calc(){
+    if (!num("inc")) { $("inc").focus(); return false; }
+    const r = BaoHiem.settlement({ income: num("inc"), insurance: num("ins"), dependentMonths: 12 * num("dep"), other: num("oth"), withheld: num("wh") });
+    $("res").innerHTML = r.refund ? `Được hoàn: <b>${money(r.refund)} đ</b>` : r.due ? `Phải nộp thêm: <b>${money(r.due)} đ</b>` : `Không phải nộp thêm, không được hoàn`;
+    $("tbl").innerHTML = [
+      ["Tổng thu nhập chịu thuế", money(num("inc"))], ["Bảo hiểm bắt buộc", "− " + money(num("ins"))],
+      ["Giảm trừ bản thân", "− " + money(r.selfDeduction)], ["Giảm trừ người phụ thuộc", "− " + money(r.dependentDeduction)],
+      ...(num("oth") ? [["Giảm trừ khác", "− " + money(num("oth"))]] : []),
+      ["Thu nhập tính thuế", money(r.taxable)], ["Thuế phải nộp cả năm", money(r.tax), "tot"], ["Thuế đã bị khấu trừ", money(num("wh"))]
+    ].map(([a, b, c]) => `<tr${c ? ` class="${c}"` : ""}><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+  }, clear(){ $("dep").value = "0"; } });
+  form.run(false);
+})();
+</script>

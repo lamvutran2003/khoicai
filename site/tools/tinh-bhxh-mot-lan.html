@@ -1,0 +1,97 @@
+<!--
+title: Tính BHXH một lần 2026: rút bảo hiểm xã hội một lần được bao nhiêu | Tính Giùm
+h1: Tính BHXH một lần
+description: Tính số tiền rút bảo hiểm xã hội một lần theo Luật BHXH 2024: nhập các giai đoạn đóng và mức lương, có hệ số trượt giá năm 2026, cách làm tròn tháng lẻ, trước và sau năm 2014.
+category: tien-hoa-don
+order: 8
+summary: Rút BHXH một lần được bao nhiêu, có hệ số trượt giá 2026.
+intro: Ước tính số tiền nhận khi rút bảo hiểm xã hội bắt buộc một lần, từ quá trình đóng và mức lương của bạn.
+keywords: bhxh một lần, rút bảo hiểm xã hội một lần, tính tiền bhxh 1 lần, hệ số trượt giá, bảo hiểm xã hội, rút bhxh
+rules: Luật BHXH 2024 (từ 01/07/2025), hệ số điều chỉnh tiền lương năm 2026 theo Công văn 340/BHXH-CSXH
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <span class="l top-l">Quá trình đóng</span>
+  <div class="periods">
+    <div class="scroll"><table class="t ptable"><thead><tr><th>Từ tháng</th><th>Đến tháng</th><th>Mức lương đóng BHXH (đồng)</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <button class="btn" type="button" id="add">+ Thêm giai đoạn</button>
+    <span class="hint">Mỗi lần đổi mức lương hoặc đổi công ty là một giai đoạn. Tháng ghi dạng mm/yyyy, ví dụ 01/2018.</span>
+  </div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" id="reset">Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính</h2>
+  <ul>
+    <li><b>Mức hưởng</b> = (1,5 × số năm đóng trước 2014 + 2 × số năm đóng từ 2014) × mức bình quân tiền lương tháng đóng BHXH.</li>
+    <li><b>Tháng lẻ</b>: 1–6 tháng tính là nửa năm, 7–11 tháng tính là một năm; tháng lẻ trước năm 2014 được cộng sang giai đoạn từ 2014.</li>
+    <li><b>Lương bình quân</b>: tiền lương mỗi năm được nhân hệ số điều chỉnh (trượt giá) trước khi tính bình quân, để tiền lương những năm trước theo kịp giá cả hiện nay.</li>
+    <li><b>Đóng dưới 1 năm</b>: nhận bằng số tiền đã đóng (22% tiền lương) nhưng không quá 2 tháng lương bình quân.</li>
+  </ul>
+  <h2>Ai được rút BHXH một lần?</h2>
+  <p>Theo Luật BHXH 2024: người đủ tuổi nghỉ hưu nhưng chưa đủ 15 năm đóng; người ra nước ngoài định cư; người mắc một số bệnh hiểm nghèo; và người bắt đầu đóng trước 01/07/2025, sau 12 tháng không đóng BHXH, có dưới 20 năm đóng và có yêu cầu. Người bắt đầu đóng từ 01/07/2025 trở đi không được rút một lần chỉ vì nghỉ việc.</p>
+  <p class="note">Áp dụng cho người lao động khu vực ngoài nhà nước (lương do công ty trả). Hệ số điều chỉnh theo bảng BHXH Việt Nam công bố cho năm 2026; người nhận vào năm khác sẽ dùng bảng của năm đó. Kết quả để tham khảo; số tiền chính thức do cơ quan BHXH tính.</p>
+  <details class="qa"><summary>Bảng hệ số điều chỉnh tiền lương năm 2026</summary><div class="scroll"><table class="t" id="coef"></table></div></details>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/bao-hiem.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const f1 = v => v.toLocaleString("vi-VN", { maximumFractionDigits: 1 });
+  function monthInput(v){ const i = document.createElement("input"); i.className = "in w-s mm"; i.inputMode = "numeric"; i.placeholder = "mm/yyyy"; i.value = v || "";
+    i.addEventListener("input", () => { const d = i.value.replace(/\D/g, "").slice(0, 6); i.value = d.length > 2 ? d.slice(0, 2) + "/" + d.slice(2) : d; }); return i; }
+  function addRow(a, b, s){
+    const tr = document.createElement("tr"), td = () => tr.appendChild(document.createElement("td"));
+    td().appendChild(monthInput(a)); td().appendChild(monthInput(b));
+    const sal = document.createElement("input"); sal.className = "in w-m"; sal.inputMode = "numeric"; sal.value = s || ""; sal.setAttribute("aria-label", "Mức lương");
+    td().appendChild(sal); KCNum.attach(sal, { decimals: 0 });
+    const x = document.createElement("button"); x.type = "button"; x.className = "btn"; x.textContent = "×"; x.setAttribute("aria-label", "Xoá giai đoạn");
+    x.addEventListener("click", () => { tr.remove(); if (!$("rows").children.length) addRow(); });
+    td().appendChild(x); $("rows").appendChild(tr);
+  }
+  const parseM = s => { const m = String(s).match(/^(\d{1,2})\/(\d{4})$/); return m && +m[1] >= 1 && +m[1] <= 12 && +m[2] >= 1975 && +m[2] <= 2030 ? { m: +m[1], y: +m[2] } : null; };
+  addRow("01/2012", "12/2016", "6.000.000"); addRow("01/2017", "06/2025", "12.000.000");
+  $("add").addEventListener("click", () => { addRow(); $("rows").lastChild.querySelector("input").focus(); });
+  $("reset").addEventListener("click", () => { $("rows").innerHTML = ""; addRow(); $("out").hidden = true; });
+
+  const form = KC.form($("f"), { calc(){
+    const periods = [];
+    for (const tr of $("rows").children) {
+      const [a, b, s] = tr.querySelectorAll("input"), from = parseM(a.value), to = parseM(b.value), sal = +s.value.replace(/\D/g, "");
+      if (!a.value && !b.value && !s.value) continue;
+      if (!from) { a.focus(); $("res").innerHTML = `<span class="err">Tháng bắt đầu chưa đúng dạng mm/yyyy.</span>`; $("tbl").innerHTML = ""; return; }
+      if (!to || to.y * 12 + to.m < from.y * 12 + from.m) { b.focus(); $("res").innerHTML = `<span class="err">Tháng kết thúc chưa đúng hoặc trước tháng bắt đầu.</span>`; $("tbl").innerHTML = ""; return; }
+      if (!sal) { s.focus(); $("res").innerHTML = `<span class="err">Nhập mức lương đóng BHXH.</span>`; $("tbl").innerHTML = ""; return; }
+      periods.push({ from, to, salary: sal });
+    }
+    const r = BaoHiem.lumpSum(periods);
+    if (!r) { $("res").innerHTML = `<span class="err">Nhập ít nhất một giai đoạn đóng.</span>`; $("tbl").innerHTML = ""; return; }
+    $("res").innerHTML = `Số tiền nhận khoảng: <b>${money(r.amount)} đ</b>`;
+    const y = Math.floor(r.months / 12), m = r.months % 12;
+    $("tbl").innerHTML = [
+      ["Tổng thời gian đóng", `${y ? y + " năm " : ""}${m ? m + " tháng" : ""} (${r.months} tháng)`],
+      ["Lương bình quân đã điều chỉnh", money(r.avg) + " đ"],
+      ...(r.under1y ? [["Cách tính", "Đóng dưới 1 năm: 22% tiền lương đã đóng, tối đa 2 tháng lương bình quân"]]
+        : [["Số năm tính trước 2014 (× 1,5 tháng)", f1(r.yearsBefore)], ["Số năm tính từ 2014 (× 2 tháng)", f1(r.yearsAfter)],
+           ["Số tháng lương được nhận", f1(1.5 * r.yearsBefore + 2 * r.yearsAfter)]]),
+      ["Số tiền nhận", money(r.amount) + " đ", "tot"]
+    ].map(([a, b, c]) => `<tr${c ? ` class="${c}"` : ""}><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+  } });
+  $("coef").innerHTML = "<thead><tr><th>Năm</th><th>Hệ số</th><th>Năm</th><th>Hệ số</th></tr></thead><tbody>" + (() => {
+    const ys = Object.keys(BaoHiem.COEF_2026).map(Number), half = Math.ceil(ys.length / 2), lab = y => y === 1994 ? "Trước 1995" : y;
+    let h = ""; for (let i = 0; i < half; i++) { const a = ys[i], b = ys[i + half];
+      h += `<tr><td>${lab(a)}</td><td>${BaoHiem.COEF_2026[a].toLocaleString("vi-VN")}</td><td>${b ? lab(b) : ""}</td><td>${b ? BaoHiem.COEF_2026[b].toLocaleString("vi-VN") : ""}</td></tr>`; }
+    return h; })() + "</tbody>";
+  form.run(false);
+})();
+</script>

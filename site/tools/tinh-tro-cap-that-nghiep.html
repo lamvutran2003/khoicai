@@ -1,0 +1,73 @@
+<!--
+title: Tính tiền trợ cấp thất nghiệp 2026: được bao nhiêu, mấy tháng | Tính Giùm
+h1: Tính trợ cấp thất nghiệp
+description: Tính tiền trợ cấp thất nghiệp hằng tháng (60% lương đóng BHTN), số tháng được hưởng và tổng tiền theo Luật Việc làm 2025 áp dụng từ 01/01/2026, có mức trần theo lương tối thiểu vùng.
+category: tien-hoa-don
+order: 7
+summary: Trợ cấp thất nghiệp mỗi tháng, được hưởng mấy tháng, tổng bao nhiêu.
+intro: Tính tiền trợ cấp thất nghiệp mỗi tháng, số tháng được hưởng và số tháng đóng được bảo lưu.
+keywords: trợ cấp thất nghiệp, bảo hiểm thất nghiệp, tính tiền thất nghiệp, bhtn, được hưởng bao nhiêu tháng, mức hưởng thất nghiệp
+rules: Luật Việc làm 74/2025/QH15 (từ 01/01/2026), lương tối thiểu vùng theo Nghị định 293/2025/NĐ-CP
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="avg">Lương đóng BHTN</label>
+  <div class="f"><input id="avg" class="in w-m" inputmode="numeric" autocomplete="off" value="12000000"><span class="u">đồng/tháng</span><span class="hint">bình quân 6 tháng gần nhất</span></div>
+  <label class="l" for="n">Thời gian đóng</label>
+  <div class="f"><input id="y" class="in w-s" inputmode="numeric" autocomplete="off" value="5" aria-label="Số năm"><span class="u">năm</span><input id="n" class="in w-s" inputmode="numeric" autocomplete="off" value="2" aria-label="Số tháng"><span class="u">tháng</span><span class="hint">chưa hưởng trợ cấp</span></div>
+  <label class="l" for="region">Vùng nơi làm việc</label>
+  <div><select id="region" class="in"><option value="1">Vùng I (Hà Nội, TP.HCM…)</option><option value="2">Vùng II</option><option value="3">Vùng III</option><option value="4">Vùng IV</option></select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính</h2>
+  <ul>
+    <li><b>Mức hưởng mỗi tháng</b> = 60% × bình quân tiền lương đóng bảo hiểm thất nghiệp của 6 tháng gần nhất, tối đa 5 lần lương tối thiểu vùng (vùng I: 26.550.000 đ/tháng).</li>
+    <li><b>Số tháng được hưởng</b>: đóng đủ 12 đến đủ 36 tháng được 3 tháng; sau đó cứ đóng đủ thêm 12 tháng được thêm 1 tháng; tối đa 12 tháng (từ đủ 144 tháng đóng).</li>
+    <li>Số tháng đóng lẻ chưa dùng hết được bảo lưu cho lần hưởng sau.</li>
+  </ul>
+  <div class="scroll"><table class="t"><thead><tr><th>Thời gian đóng BHTN</th><th>Số tháng hưởng</th></tr></thead><tbody>
+    <tr><td>Dưới 12 tháng</td><td>Chưa được hưởng</td></tr>
+    <tr><td>12 – 36 tháng</td><td>3 tháng</td></tr>
+    <tr><td>48 tháng (4 năm)</td><td>4 tháng</td></tr>
+    <tr><td>60 tháng (5 năm)</td><td>5 tháng</td></tr>
+    <tr><td>120 tháng (10 năm)</td><td>10 tháng</td></tr>
+    <tr><td>Từ 144 tháng (12 năm)</td><td>12 tháng</td></tr>
+  </tbody></table></div>
+  <h2>Ví dụ</h2>
+  <p>Lương đóng BHTN bình quân 12 triệu, đóng 5 năm 2 tháng: mỗi tháng nhận 60% × 12 triệu = 7,2 triệu, trong 5 tháng, tổng 36 triệu; 2 tháng lẻ được bảo lưu.</p>
+  <p class="note">Để được hưởng cần đáp ứng điều kiện theo Luật Việc làm (chấm dứt hợp đồng đúng quy định, đã đóng đủ thời gian, nộp hồ sơ tại trung tâm dịch vụ việc làm đúng hạn…). Trợ cấp bắt đầu được tính từ ngày làm việc thứ 11 sau khi nộp đủ hồ sơ. Kết quả để tham khảo; số tiền chính thức do cơ quan bảo hiểm xã hội quyết định.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/bao-hiem.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  KCNum.attach($("avg"), { decimals: 0 });
+  ["y", "n"].forEach(id => $(id).addEventListener("input", () => { $(id).value = $(id).value.replace(/\D/g, "").slice(0, 2); }));
+  const form = KC.form($("f"), { calc(){
+    const avg = +$("avg").value.replace(/\D/g, ""), months = (+$("y").value || 0) * 12 + (+$("n").value || 0);
+    if (!avg) { $("avg").focus(); return false; }
+    if (!months) { $("y").focus(); return false; }
+    const r = BaoHiem.unemployment(avg, months, +$("region").value);
+    if (!r.months) { $("res").innerHTML = `<span class="err">Chưa đủ 12 tháng đóng bảo hiểm thất nghiệp nên chưa được hưởng trợ cấp.</span>`; $("tbl").innerHTML = ""; $("sub").textContent = ""; return; }
+    $("res").innerHTML = `Mỗi tháng nhận: <b>${money(r.monthly)} đ</b>, trong ${r.months} tháng`;
+    $("tbl").innerHTML = `<tr><td>Mức hưởng mỗi tháng</td><td class="n">${money(r.monthly)}</td></tr><tr><td>Số tháng được hưởng</td><td class="n">${r.months}</td></tr>`
+      + `<tr class="tot"><td>Tổng tiền trợ cấp</td><td class="n">${money(r.total)}</td></tr>`;
+    $("sub").textContent = (r.capped ? `Mức 60% vượt trần nên được tính bằng mức tối đa ${money(r.cap)} đ (5 lần lương tối thiểu vùng). ` : "")
+      + (r.reserved ? `Còn ${r.reserved} tháng đóng chưa dùng, được bảo lưu cho lần hưởng sau.` : "");
+  } });
+  form.run(false);
+})();
+</script>
