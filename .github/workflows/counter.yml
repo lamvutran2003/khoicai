@@ -1,0 +1,25 @@
+name: Deploy view counter
+# Đưa bộ đếm lượt xem (counter/) lên Cloudflare Workers.
+# Cần 2 secret trong Settings > Secrets and variables > Actions: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
+on:
+  push:
+    branches: [main]
+    paths: ["counter/**", ".github/workflows/counter.yml"]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip (Cloudflare secrets not set yet)
+        if: env.HAS_TOKEN != 'true'
+        run: echo "Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID secrets to deploy the counter."
+      - name: Deploy
+        if: env.HAS_TOKEN == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: counter

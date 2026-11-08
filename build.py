@@ -26,6 +26,8 @@ SITE_NAME = os.environ.get("SITE_NAME") or "Tính Giùm"
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL") or "lienhe@tinhgium.vn"
 # Thống kê lượt xem Cloudflare Web Analytics (không cookie). Mã lấy trong Cloudflare > Web Analytics; để trống thì không gắn.
 CF_BEACON_TOKEN = (os.environ.get("CF_BEACON_TOKEN") or "").strip()
+# Bộ đếm lượt xem công khai (counter/worker.js), ví dụ https://luot-xem.<tên>.workers.dev; để trống thì không hiện
+COUNTER_URL = (os.environ.get("COUNTER_URL") or "").strip().rstrip("/")
 # Khi site nằm trong thư mục con (ví dụ GitHub Pages chưa có tên miền: /khoicai), mọi đường dẫn "/..." được thêm tiền tố
 BASE = "/" + SITE_URL.split("://", 1)[-1].partition("/")[2].strip("/") if "/" in SITE_URL.split("://", 1)[-1] else ""
 BASE = BASE.rstrip("/")
@@ -156,7 +158,7 @@ def build() -> None:
     css = (SITE / "partials/style.css").read_text(encoding="utf-8")
     header = (SITE / "partials/header.html").read_text(encoding="utf-8")
     footer = (SITE / "partials/footer.html").read_text(encoding="utf-8")
-    common = {"__SITE_NAME__": E(SITE_NAME), "__CONTACT_EMAIL__": E(CONTACT_EMAIL), "__YEAR__": str(date.today().year),
+    common = {"__COUNTER_URL__": E(COUNTER_URL), "__BASE__": E(BASE), "__SITE_NAME__": E(SITE_NAME), "__CONTACT_EMAIL__": E(CONTACT_EMAIL), "__YEAR__": str(date.today().year),
               "__TOOL_COUNT__": str(len(tools)),
               "__PLAY__": '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/>'
                           '<path d="M10 7.3l6.2 4.7-6.2 4.7z" fill="#4c8d2b"/></svg>'}

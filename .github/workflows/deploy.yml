@@ -26,6 +26,8 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || 'https://lamvutran2003.github.io/khoicai' }}
           # Mã Cloudflare Web Analytics (Settings > Secrets and variables > Actions > Variables > CF_BEACON_TOKEN)
           CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
+          # Địa chỉ bộ đếm lượt xem, ví dụ https://luot-xem.<tên>.workers.dev (Variables > COUNTER_URL)
+          COUNTER_URL: ${{ vars.COUNTER_URL }}
         run: python3 build.py
       - uses: actions/upload-pages-artifact@v3
         with:

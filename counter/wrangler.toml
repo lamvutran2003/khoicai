@@ -1,0 +1,13 @@
+# Bộ đếm lượt xem (Cloudflare Workers, gói miễn phí). Triển khai tự động bằng .github/workflows/counter.yml
+name = "luot-xem"
+main = "worker.js"
+compatibility_date = "2025-04-01"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "COUNTER"
+class_name = "Counter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Counter"]
