@@ -31,7 +31,8 @@
   }
 
   function stats(s) {
-    s = String(s);
+    // Gộp chữ tổ hợp (a + dấu huyền) thành chữ dựng sẵn để "Hà" luôn là 2 ký tự như mắt thấy
+    s = String(s); if (s.normalize) s = s.normalize("NFC");
     var words = s.trim() ? s.trim().split(/\s+/).length : 0;
     return { chars: Array.from(s).length, noSpace: Array.from(s.replace(/\s/g, "")).length, words: words,
              lines: s ? s.split(/\r?\n/).length : 0 };
@@ -39,7 +40,7 @@
 
   // Thống kê chi tiết cho công cụ đếm từ: câu, đoạn, thời gian đọc (~200 từ/phút), từ hay gặp nhất
   function analyze(s) {
-    s = String(s);
+    s = String(s); if (s.normalize) s = s.normalize("NFC");
     var base = stats(s), t = s.trim();
     var sentences = t ? (t.match(/[^.!?…]+(?:[.!?…]+|$)/g) || []).filter(function (x) { return /\p{L}|\d/u.test(x); }).length : 0;
     var paragraphs = t ? t.split(/\n\s*\n/).filter(function (x) { return x.trim(); }).length : 0;
