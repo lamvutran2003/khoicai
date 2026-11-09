@@ -183,8 +183,14 @@ def build() -> None:
     home = (SITE / "home.html").read_text(encoding="utf-8").replace("__SECTIONS__", "".join(boxes))
     desc = (f"{len(tools)} công cụ online miễn phí bằng tiếng Việt: " + ", ".join(t["h1"].lower() for t in tools[:4])
             + "… Không cần cài đặt, không cần đăng ký, dữ liệu không rời khỏi máy bạn.")
+    # Tên trang web trên Google (site name) lấy từ WebSite trên trang chủ
+    site_ld = json.dumps([{"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
+                           "alternateName": ["TínhGiùm", "Tinh Gium", "tinhgium.vn"], "url": SITE_URL + "/", "inLanguage": "vi"},
+                          {"@context": "https://schema.org", "@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/",
+                           "logo": SITE_URL + "/favicon-192.png"}], ensure_ascii=False).replace("</", "<\\/")
     (DIST / "index.html").write_text(page(f"{SITE_NAME}: công cụ online miễn phí, khỏi cài, khỏi đăng ký", desc,
-                                          SITE_URL + "/", render(home), css), encoding="utf-8")
+                                          SITE_URL + "/", render(home), css,
+                                          extra_head=f'<script type="application/ld+json">{site_ld}</script>\n'), encoding="utf-8")
     urls.append("/")
 
     # Tool pages
