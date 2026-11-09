@@ -63,6 +63,14 @@ def lunar_text(v) -> str:
     return f"{ld}/{lm}{' nhuận' if leap else ''}"
 
 
+# Trang lịch nghỉ Tết đang có (cập nhật mỗi năm khi Chính phủ công bố lịch nghỉ)
+TET_PAGE = {2027: "/lich-nghi-tet/"}
+
+
+def tet_link(y: int) -> str:
+    return f'<p><b>Lịch nghỉ Tết {y}:</b> <a href="{TET_PAGE[y]}">nghỉ từ ngày nào, còn bao nhiêu ngày đến Tết</a>.</p>' if y in TET_PAGE else ""
+
+
 def month_page(data: dict, y: int, m: int, years: list[int]) -> tuple[dict, str]:
     n = calendar.monthrange(y, m)[1]
     days = [(d, data["days"][f"{y}-{m}-{d}"]) for d in range(1, n + 1)]
@@ -86,6 +94,7 @@ def month_page(data: dict, y: int, m: int, years: list[int]) -> tuple[dict, str]
     body = (f'<p class="lede">{intro}</p>'
             f'<div class="calbox"><div class="cal-head">{prev or "<span></span>"}<b>Tháng {m}/{y}</b>{nxt or "<span></span>"}</div>'
             f'{grid(data, y, m)}<p class="note">Số nhỏ là ngày âm lịch. Ô đỏ là ngày nghỉ lễ; chấm cam là ngày lễ, kỷ niệm không nghỉ.</p></div>'
+            + (tet_link(y) if m in (1, 2) else "") +
             f'<h2>Ngày lễ tháng {m}/{y}</h2><ul class="hols">{hols}</ul>'
             f'<h2>Mùng 1 và ngày rằm</h2><div class="scroll"><table class="t"><tbody>{keys}</tbody></table></div>'
             f'<h2>Lịch âm từng ngày tháng {m}/{y}</h2>'
@@ -119,6 +128,7 @@ def year_page(data: dict, y: int, years: list[int]) -> tuple[dict, str]:
     others = " · ".join(f'<a href="/{year_slug(o)}/">{o}</a>' for o in years if o != y)
     body = (f'<p class="lede">Năm {y} là năm {info["canChi"]}. Tết Nguyên đán (mùng 1 tháng Giêng) rơi vào '
             f'{WEEKDAY[calendar.weekday(ty, tm, td)].lower()}, ngày {td}/{tm}/{ty}.{leap}</p>'
+            + tet_link(y) +
             f'<div class="minis">{months}</div>'
             f'<h2>Ngày lễ, Tết năm {y}</h2><div class="scroll"><table class="t"><thead><tr><th>Ngày lễ</th><th>Dương lịch</th><th>Âm lịch</th></tr></thead>'
             f'<tbody>{hol_rows}</tbody></table></div>'
