@@ -234,8 +234,11 @@ def build() -> None:
         main = f'<div class="wrap layout"><main class="content article">{pg["body"]}</main>{sidebar(listing, None)}</div>'
         out = DIST / pg["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(pg["title"], pg.get("description", ""), url, render(main, None, url), css), encoding="utf-8")
-        urls.append(f"/{pg['slug']}/")
+        hidden = pg.get("hidden") == "yes"   # trang ẩn: không cho Google lập chỉ mục, không đưa vào sitemap
+        (out / "index.html").write_text(page(pg["title"], pg.get("description", ""), url, render(main, None, url), css,
+                                             extra_head='<meta name="robots" content="noindex, nofollow">\n' if hidden else ""), encoding="utf-8")
+        if not hidden:
+            urls.append(f"/{pg['slug']}/")
 
     nf = '<div class="wrap layout"><main class="content article"><h1>Không tìm thấy trang</h1><p><a href="/">Về trang chủ</a> để xem các công cụ.</p></main></div>'
     (DIST / "404.html").write_text(page(f"Không tìm thấy trang | {SITE_NAME}", "", SITE_URL + "/404.html", render(nf), css), encoding="utf-8")
@@ -243,7 +246,7 @@ def build() -> None:
     (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                                       + "".join(f"<url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
                                       + "</urlset>\n", encoding="utf-8")
-    (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+    (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /img/hello.jpg\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
     print(f"built {len(urls)} pages ({len(tools)} tools) -> {DIST}")
 
 
