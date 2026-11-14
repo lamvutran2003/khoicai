@@ -1,0 +1,91 @@
+<!--
+title: Tính tiền thai sản 2026: sinh con được bao nhiêu tiền, nghỉ mấy tháng | Tính Giùm
+h1: Tính tiền thai sản
+description: Tính tiền thai sản khi sinh con theo Luật BHXH 2024: số tháng nghỉ (6 tháng; 7 tháng khi sinh con thứ hai từ 01/7/2026; sinh đôi thêm tháng), tiền chế độ hằng tháng và trợ cấp một lần 5.060.000 đ mỗi con.
+category: tien-hoa-don
+order: 81
+summary: Sinh con được bao nhiêu tiền, nghỉ mấy tháng.
+intro: Tính số tháng nghỉ sinh và tổng tiền thai sản được nhận, gồm tiền chế độ hằng tháng và trợ cấp một lần.
+keywords: tính tiền thai sản, chế độ thai sản, tiền thai sản 2026, thai sản sinh con thứ 2, nghỉ thai sản 7 tháng, trợ cấp một lần khi sinh con, bảo hiểm thai sản, sinh đôi
+rules: Luật Bảo hiểm xã hội 2024; Bộ luật Lao động sửa đổi bởi Luật Dân số 2025 (từ 01/7/2026); mức tham chiếu 2.530.000 đ
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="avg">Lương đóng BHXH</label>
+  <div class="f"><input id="avg" class="in w-m" inputmode="numeric" autocomplete="off" value="10000000"><span class="u">đồng/tháng</span><span class="hint">bình quân 6 tháng trước khi nghỉ sinh</span></div>
+  <label class="l" for="kids">Số con đang có</label>
+  <div><select id="kids" class="in">
+    <option value="0">Chưa có con (sinh con đầu)</option>
+    <option value="1">Đang có 1 con (sinh con thứ hai)</option>
+    <option value="2">Đang có từ 2 con</option>
+  </select></div>
+  <label class="l" for="babies">Lần này sinh</label>
+  <div><select id="babies" class="in"><option value="1">1 con</option><option value="2">Sinh đôi</option><option value="3">Sinh ba</option></select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính tiền thai sản khi sinh con</h2>
+  <ul>
+    <li><b>Tiền chế độ thai sản</b> = 100% × bình quân tiền lương đóng BHXH của 6 tháng liền trước khi nghỉ × số tháng nghỉ. Đóng chưa đủ 6 tháng thì lấy bình quân các tháng đã đóng.</li>
+    <li><b>Trợ cấp một lần</b> = 2 lần mức tham chiếu cho mỗi con = 2 × 2.530.000 = <b>5.060.000 đ</b> mỗi con.</li>
+    <li><b>Số tháng nghỉ</b>: 6 tháng; 7 tháng nếu khi sinh mẹ đang có một con đẻ còn sống (sinh con thứ hai, áp dụng từ 01/7/2026); sinh đôi trở lên thì từ con thứ hai, mỗi con được nghỉ thêm 1 tháng. Thời gian nghỉ trước khi sinh không quá 2 tháng.</li>
+  </ul>
+  <div class="scroll"><table class="t"><thead><tr><th>Trường hợp</th><th>Số tháng nghỉ</th></tr></thead><tbody>
+    <tr><td>Sinh con đầu</td><td>6 tháng</td></tr>
+    <tr><td>Sinh con thứ hai</td><td>7 tháng</td></tr>
+    <tr><td>Sinh con thứ ba trở lên</td><td>6 tháng</td></tr>
+    <tr><td>Sinh đôi lần đầu</td><td>7 tháng</td></tr>
+    <tr><td>Sinh đôi khi đang có 1 con</td><td>8 tháng</td></tr>
+  </tbody></table></div>
+  <h2>Ví dụ</h2>
+  <p>Lương đóng BHXH bình quân 10 triệu, sinh con thứ hai: tiền chế độ 10 triệu × 7 tháng = 70 triệu, cộng trợ cấp một lần 5,06 triệu, tổng 75,06 triệu đồng.</p>
+
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Cần đóng BHXH bao lâu thì được hưởng thai sản?</summary>
+    <p>Phải đóng bảo hiểm xã hội bắt buộc từ đủ 6 tháng trở lên trong 12 tháng trước khi sinh. Nếu đã đóng đủ 12 tháng trở lên mà phải nghỉ dưỡng thai theo chỉ định của bác sĩ thì chỉ cần đủ 3 tháng trong 12 tháng trước khi sinh. Người đã đủ điều kiện nhưng nghỉ việc trước khi sinh vẫn được hưởng.</p></details>
+  <details class="qa"><summary>Thế nào là sinh con thứ hai để được nghỉ 7 tháng?</summary>
+    <p>Là khi tại thời điểm sinh, người mẹ đang có một con đẻ còn sống. Quy định áp dụng từ ngày 01/7/2026 theo Luật Dân số 2025 và Nghị định 168/2026/NĐ-CP. Sinh con thứ ba trở lên được nghỉ 6 tháng như thông thường.</p></details>
+  <details class="qa"><summary>Lương cao thì có bị giới hạn không?</summary>
+    <p>Có. Tiền lương đóng BHXH tối đa bằng 20 lần mức tham chiếu, tức 50.600.000 đ/tháng, nên tiền chế độ thai sản mỗi tháng cũng tối đa 50,6 triệu.</p></details>
+  <details class="qa"><summary>Người chồng có được nghỉ và nhận tiền khi vợ sinh không?</summary>
+    <p>Có. Chồng đang đóng BHXH bắt buộc được nghỉ từ 5 ngày làm việc, nhiều hơn khi vợ sinh mổ, sinh con dưới 32 tuần, sinh đôi hoặc sinh con thứ hai, và nghỉ trong 60 ngày kể từ ngày vợ sinh. Nếu chỉ có chồng đóng BHXH, chồng được nhận trợ cấp một lần 2 lần mức tham chiếu cho mỗi con.</p></details>
+  <details class="qa"><summary>Khi nào nhận được tiền thai sản?</summary>
+    <p>Người đang đi làm nộp hồ sơ cho công ty, công ty nộp cho cơ quan bảo hiểm xã hội; người đã nghỉ việc nộp trực tiếp cho cơ quan BHXH. Tiền được chi trả sau khi cơ quan BHXH giải quyết xong hồ sơ, qua tài khoản ngân hàng hoặc qua công ty.</p></details>
+  <p>Công cụ liên quan: <a href="/tinh-luong-gross-net/">Tính lương Gross ↔ Net</a> · <a href="/tinh-bhxh-mot-lan/">Tính BHXH một lần</a> · <a href="/tinh-tuoi-nghi-huu/">Tính tuổi nghỉ hưu</a>.</p>
+  <p class="note">Kết quả để tham khảo, tính cho lao động nữ đóng BHXH bắt buộc sinh con từ 01/7/2026. Số tiền chính thức do cơ quan bảo hiểm xã hội quyết định.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/lao-dong.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  KCNum.attach($("avg"), { decimals: 0 });
+  const form = KC.form($("f"), { calc(){
+    const avg = +$("avg").value.replace(/\D/g, "");
+    if (!avg) { $("avg").focus(); return false; }
+    const n = +$("babies").value, r = LaoDong.maternity(avg, n, +$("kids").value);
+    $("res").innerHTML = `Tổng tiền thai sản: <b>${money(r.total)} đ</b>, nghỉ ${r.months} tháng`;
+    $("tbl").innerHTML = `<tr><td>Số tháng nghỉ sinh</td><td class="n">${r.months}</td></tr>`
+      + `<tr><td>Tiền chế độ mỗi tháng</td><td class="n">${money(r.monthly)}</td></tr>`
+      + `<tr><td>Tiền chế độ ${r.months} tháng</td><td class="n">${money(r.leave)}</td></tr>`
+      + `<tr><td>Trợ cấp một lần (${n} con × ${money(2 * r.ref)})</td><td class="n">${money(r.lump)}</td></tr>`
+      + `<tr class="tot"><td>Tổng cộng</td><td class="n">${money(r.total)}</td></tr>`;
+    $("sub").textContent = (r.second ? "Được nghỉ 7 tháng vì sinh con thứ hai. " : "")
+      + (n > 1 ? `Sinh ${n === 2 ? "đôi" : "ba"} được nghỉ thêm ${n - 1} tháng. ` : "")
+      + (r.capped ? `Lương đóng BHXH tối đa ${money(r.cap)} đ nên tiền chế độ được tính theo mức này. ` : "")
+      + "Cần đóng BHXH đủ 6 tháng trong 12 tháng trước khi sinh.";
+  } });
+  form.run(false);
+})();
+</script>

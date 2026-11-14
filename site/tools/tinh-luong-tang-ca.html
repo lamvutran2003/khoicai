@@ -1,0 +1,93 @@
+<!--
+title: Tính lương tăng ca, làm thêm giờ 2026: ngày thường, cuối tuần, lễ Tết, ban đêm | Tính Giùm
+h1: Tính lương tăng ca
+description: Tính tiền lương làm thêm giờ theo Bộ luật Lao động: ngày thường 150%, cuối tuần 200%, lễ Tết 300%, ban đêm 200%–390%. Ra tiền lương giờ, tiền tăng ca từng loại và phần được miễn thuế TNCN.
+category: tien-hoa-don
+order: 21
+summary: Tiền tăng ca ngày thường, cuối tuần, lễ Tết, ban đêm.
+intro: Tính tiền lương làm thêm giờ theo từng loại ngày và ca đêm, kèm phần tiền được miễn thuế thu nhập cá nhân.
+keywords: tính lương tăng ca, lương làm thêm giờ, tiền tăng ca, tăng ca ban đêm, làm thêm ngày lễ, làm thêm chủ nhật, 150% 200% 300%, ot
+rules: Bộ luật Lao động 2019 Điều 98, Nghị định 145/2020/NĐ-CP Điều 55–57
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="sal">Lương tháng</label>
+  <div class="f"><input id="sal" class="in w-m" inputmode="numeric" autocomplete="off" value="10400000"><span class="u">đồng</span><span class="hint">lương theo hợp đồng, không gồm thưởng</span></div>
+  <label class="l" for="days">Ngày công chuẩn</label>
+  <div class="f"><select id="days" class="in" aria-label="Số ngày làm việc trong tháng"><option value="22">22 ngày</option><option value="24">24 ngày</option><option value="26" selected>26 ngày</option></select><span class="u">×</span><input id="hpd" class="in w-s" inputmode="decimal" autocomplete="off" value="8" aria-label="Số giờ mỗi ngày"><span class="u">giờ/ngày</span></div>
+  <label class="l" for="h-day">Ngày thường, ban ngày</label>
+  <div class="f"><input id="h-day" class="in w-s hrs" inputmode="decimal" autocomplete="off" value="10"><span class="u">giờ</span><span class="hint">150%</span></div>
+  <label class="l" for="h-dayNight">Ngày thường, ban đêm</label>
+  <div class="f"><input id="h-dayNight" class="in w-s hrs" inputmode="decimal" autocomplete="off" value=""><span class="u">giờ</span><span class="hint">200%</span></div>
+  <label class="l" for="h-dayNightAfter">Ban đêm, sau khi đã làm thêm ban ngày</label>
+  <div class="f"><input id="h-dayNightAfter" class="in w-s hrs" inputmode="decimal" autocomplete="off" value=""><span class="u">giờ</span><span class="hint">210%</span></div>
+  <label class="l" for="h-rest">Ngày nghỉ tuần, ban ngày</label>
+  <div class="f"><input id="h-rest" class="in w-s hrs" inputmode="decimal" autocomplete="off" value="8"><span class="u">giờ</span><span class="hint">200%</span></div>
+  <label class="l" for="h-restNight">Ngày nghỉ tuần, ban đêm</label>
+  <div class="f"><input id="h-restNight" class="in w-s hrs" inputmode="decimal" autocomplete="off" value=""><span class="u">giờ</span><span class="hint">270%</span></div>
+  <label class="l" for="h-hol">Ngày lễ, Tết, ban ngày</label>
+  <div class="f"><input id="h-hol" class="in w-s hrs" inputmode="decimal" autocomplete="off" value=""><span class="u">giờ</span><span class="hint">300%</span></div>
+  <label class="l" for="h-holNight">Ngày lễ, Tết, ban đêm</label>
+  <div class="f"><input id="h-holNight" class="in w-s hrs" inputmode="decimal" autocomplete="off" value=""><span class="u">giờ</span><span class="hint">390%</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><thead><tr><th>Loại</th><th class="n">Giờ</th><th class="n">Mức</th><th class="n">Tiền</th></tr></thead><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Mức lương làm thêm giờ</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Làm thêm vào</th><th>Ban ngày</th><th>Ban đêm (22h – 6h)</th></tr></thead><tbody>
+    <tr><td>Ngày thường</td><td>150%</td><td>200%; 210% nếu đã làm thêm ban ngày hôm đó</td></tr>
+    <tr><td>Ngày nghỉ hằng tuần</td><td>200%</td><td>270%</td></tr>
+    <tr><td>Ngày lễ, Tết, ngày nghỉ có hưởng lương</td><td>300%</td><td>390%</td></tr>
+  </tbody></table></div>
+  <p>Tiền tăng ca = tiền lương giờ × mức % × số giờ làm thêm. Tiền lương giờ = lương tháng ÷ số ngày làm việc chuẩn trong tháng ÷ số giờ làm mỗi ngày. Mức ban đêm đã gồm 30% phụ cấp làm đêm và 20% tiền lương ban ngày của ngày đó.</p>
+  <h2>Ví dụ</h2>
+  <p>Lương 10,4 triệu, làm 26 ngày × 8 giờ: lương giờ 50.000 đ. Tăng ca 10 giờ ngày thường được 10 × 50.000 × 150% = 750.000 đ; 8 giờ chủ nhật được 8 × 50.000 × 200% = 800.000 đ.</p>
+
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Tiền tăng ca có phải đóng thuế thu nhập cá nhân không?</summary>
+    <p>Phần tiền tăng ca trả cao hơn lương làm việc bình thường được miễn thuế. Ví dụ tăng ca ngày thường được 150% thì 50% được miễn thuế, 100% còn lại vẫn tính vào thu nhập chịu thuế. Công ty cần có bảng chấm công làm thêm giờ để áp dụng.</p></details>
+  <details class="qa"><summary>Được làm thêm tối đa bao nhiêu giờ?</summary>
+    <p>Không quá 50% số giờ làm việc bình thường trong một ngày (tổng không quá 12 giờ/ngày), không quá 40 giờ mỗi tháng và 200 giờ mỗi năm; một số ngành nghề được làm đến 300 giờ mỗi năm. Làm thêm phải có sự đồng ý của người lao động.</p></details>
+  <details class="qa"><summary>Đi làm ngày lễ, Tết thì nhận được bao nhiêu?</summary>
+    <p>Ít nhất 300% tiền lương của giờ làm việc đó. Người hưởng lương tháng vẫn nhận đủ lương tháng (đã gồm ngày lễ), nên thực tế được thêm 300% cho số giờ đi làm. Người hưởng lương ngày còn được trả thêm tiền lương của chính ngày lễ.</p></details>
+  <details class="qa"><summary>Lương giờ tính theo lương nào?</summary>
+    <p>Theo tiền lương thực trả của công việc đang làm theo hợp đồng, không tính tiền thưởng, tiền ăn giữa ca, tiền làm thêm giờ, phụ cấp làm đêm và các khoản hỗ trợ không gắn với công việc. Số ngày làm việc chuẩn do công ty quy định nhưng không quá 26 ngày mỗi tháng.</p></details>
+  <p>Công cụ liên quan: <a href="/tinh-luong-gross-net/">Tính lương Gross ↔ Net</a> · <a href="/tinh-ngay/">Đếm ngày làm việc</a> · <a href="/quyet-toan-thue-tncn/">Quyết toán thuế TNCN</a>.</p>
+  <p class="note">Mức trong bảng là mức tối thiểu theo luật; công ty có thể trả cao hơn theo thoả thuận. Kết quả để tham khảo.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/lao-dong.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const NAMES = {day: "Ngày thường, ban ngày", dayNight: "Ngày thường, ban đêm", dayNightAfter: "Ban đêm, sau khi đã làm thêm ban ngày", rest: "Ngày nghỉ tuần, ban ngày", restNight: "Ngày nghỉ tuần, ban đêm", hol: "Ngày lễ, Tết, ban ngày", holNight: "Ngày lễ, Tết, ban đêm"};
+  KCNum.attach($("sal"), { decimals: 0 });
+  KCNum.attach($("hpd"), { decimals: 1 });
+  document.querySelectorAll(".hrs").forEach(el => KCNum.attach(el, { decimals: 1 }));
+  const num = el => +String(el.value).replace(/\./g, "").replace(",", ".") || 0;
+  const form = KC.form($("f"), { calc(){
+    const sal = num($("sal")), hpd = num($("hpd"));
+    if (!sal) { $("sal").focus(); return false; }
+    if (!(hpd > 0 && hpd <= 12)) { $("hpd").focus(); return false; }
+    const hours = {}; Object.keys(NAMES).forEach(k => hours[k] = num($("h-" + k)));
+    const r = LaoDong.overtime(sal, +$("days").value, hpd, hours);
+    if (!r.rows.length) { $("res").innerHTML = `<span class="err">Nhập số giờ làm thêm ở ít nhất một dòng.</span>`; $("tbl").innerHTML = ""; $("sub").textContent = ""; return; }
+    $("res").innerHTML = `Tiền tăng ca: <b>${money(r.total)} đ</b> cho ${r.hours.toLocaleString("vi-VN")} giờ`;
+    $("tbl").innerHTML = r.rows.map(x => `<tr><td>${NAMES[x.key]}</td><td class="n">${x.hours.toLocaleString("vi-VN")}</td><td class="n">${Math.round(x.rate * 100)}%</td><td class="n">${money(x.pay)}</td></tr>`).join("")
+      + `<tr class="tot"><td>Tổng</td><td class="n">${r.hours.toLocaleString("vi-VN")}</td><td></td><td class="n">${money(r.total)}</td></tr>`;
+    $("sub").textContent = `Lương giờ: ${money(r.hourly)} đ. Trong đó ${money(r.exempt)} đ được miễn thuế TNCN (phần trả cao hơn lương giờ bình thường).`
+      + (r.overMonth ? " Lưu ý: quá 40 giờ làm thêm mỗi tháng là vượt giới hạn của Bộ luật Lao động." : "");
+  } });
+  form.run(false);
+})();
+</script>
