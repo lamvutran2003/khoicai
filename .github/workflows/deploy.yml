@@ -13,6 +13,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      urls: ${{ steps.indexnow.outputs.urls }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,6 +31,12 @@ jobs:
           # Địa chỉ bộ đếm lượt xem, ví dụ https://luot-xem.<tên>.workers.dev (Variables > COUNTER_URL)
           COUNTER_URL: ${{ vars.COUNTER_URL }}
         run: python3 build.py
+      - name: IndexNow (find changed pages)
+        id: indexnow
+        continue-on-error: true
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://tinhgium.vn' }}
+        run: echo "urls=$(python3 tools/indexnow.py prepare dist "$SITE_URL")" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -41,3 +49,15 @@ jobs:
     steps:
       - id: d
         uses: actions/deploy-pages@v4
+  # Báo cho Bing và các công cụ tìm kiếm dùng IndexNow những trang vừa đổi (sau khi trang đã lên mạng)
+  indexnow:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tell Bing which pages changed (IndexNow)
+        continue-on-error: true
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://tinhgium.vn' }}
+          URLS: ${{ needs.build.outputs.urls }}
+        run: python3 tools/indexnow.py submit "$SITE_URL" "$URLS" site/static
