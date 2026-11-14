@@ -1,0 +1,116 @@
+<!--
+title: Tính lương giáo viên 2026 theo hệ số, phụ cấp ưu đãi Nghị định 182, thâm niên | Tính Giùm
+h1: Tính lương giáo viên
+description: Tính lương giáo viên mầm non, tiểu học, THCS, THPT công lập từ 01/7/2026: lương cơ sở 2.530.000 đ × hệ số theo hạng, bậc; phụ cấp ưu đãi nghề 40–80% theo Nghị định 182/2026; thâm niên; trừ BHXH, ra lương thực nhận.
+category: tien-hoa-don
+order: 22
+summary: Lương thực nhận theo hạng, bậc, phụ cấp ưu đãi, thâm niên.
+intro: Tính lương thực nhận của giáo viên công lập theo hạng, bậc, phụ cấp ưu đãi nghề và thâm niên.
+keywords: tính lương giáo viên, lương giáo viên 2026, bảng lương giáo viên, lương giáo viên tiểu học, lương giáo viên mầm non, lương giáo viên thcs, lương giáo viên thpt, phụ cấp ưu đãi nghề, nghị định 182, thâm niên nhà giáo, hệ số lương giáo viên
+rules: lương cơ sở 2.530.000 đ (Nghị định 161/2026/NĐ-CP); phụ cấp ưu đãi theo Nghị định 182/2026/NĐ-CP; thâm niên theo Nghị định 77/2021/NĐ-CP
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="level">Cấp dạy</label>
+  <div><select id="level" class="in"><option value="mn">Mầm non</option><option value="th" selected>Tiểu học</option><option value="thcs">Trung học cơ sở</option><option value="thpt">Trung học phổ thông</option></select></div>
+  <label class="l" for="rank">Hạng, bậc</label>
+  <div class="f"><select id="rank" class="in" aria-label="Hạng"><option value="III">Hạng III</option><option value="II">Hạng II</option><option value="I">Hạng I</option></select><select id="bac" class="in" aria-label="Bậc lương"></select></div>
+  <label class="l" for="area">Nơi công tác</label>
+  <div><select id="area" class="in">
+    <option value="thuong">Bình thường</option>
+    <option value="kv12">Xã khu vực I, II miền núi, dân tộc; xã biên giới, đảo</option>
+    <option value="dbkk">Vùng đặc biệt khó khăn</option>
+    <option value="noitru">Trường chuyên, phổ thông dân tộc nội trú</option>
+    <option value="bantru">Trường dân tộc bán trú, trường năng khiếu</option>
+  </select></div>
+  <label class="l" for="years">Số năm đi dạy</label>
+  <div class="f"><input id="years" class="in w-s" inputmode="numeric" autocomplete="off" value="8"><span class="u">năm</span><span class="hint">có đóng BHXH, để tính thâm niên</span></div>
+  <label class="l" for="pos">Phụ cấp chức vụ</label>
+  <div class="f"><input id="pos" class="in w-s" inputmode="decimal" autocomplete="off" value="0"><span class="hint">hệ số; tổ trưởng 0,2, tổ phó 0,15</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính lương giáo viên</h2>
+  <ul>
+    <li><b>Lương theo hệ số</b> = hệ số lương × 2.530.000 đ (lương cơ sở từ 01/7/2026).</li>
+    <li><b>Phụ cấp ưu đãi nghề</b> = (hệ số lương + hệ số chức vụ) × 2.530.000 × tỷ lệ: mầm non, tiểu học 45%; THCS, THPT 40%; xã khu vực I, II vùng dân tộc thiểu số và miền núi, xã biên giới, đảo: 60% (mầm non, tiểu học) và 45% (THCS, THPT); vùng đặc biệt khó khăn, trường chuyên, trường phổ thông dân tộc nội trú: 80%.</li>
+    <li><b>Phụ cấp thâm niên</b>: đủ 5 năm được 5%, từ năm thứ 6 mỗi năm thêm 1%, tính trên (hệ số lương + hệ số chức vụ) × lương cơ sở.</li>
+    <li><b>Khấu trừ bảo hiểm</b>: 10,5% (BHXH 8%, BHYT 1,5%, BHTN 1%) trên lương hệ số, phụ cấp chức vụ và thâm niên; phụ cấp ưu đãi không phải đóng bảo hiểm.</li>
+  </ul>
+  <h2>Bảng lương giáo viên từ 01/7/2026</h2>
+  <p>Hệ số lương và mức lương theo hệ số (chưa gồm phụ cấp) theo từng nhóm ngạch.</p>
+  <div class="scroll"><table class="t">
+    <thead><tr><th></th><th class="n">A0<br><small>MN hạng III</small></th><th class="n">A1<br><small>MN hạng II; TH, THCS, THPT hạng III</small></th><th class="n">A2.2<br><small>MN hạng I; TH, THCS, THPT hạng II</small></th><th class="n">A2.1<br><small>TH, THCS, THPT hạng I</small></th></tr></thead>
+    <tbody>
+    <tr><td>Bậc 1</td><td class="n">2,10<br><small>5.313.000</small></td><td class="n">2,34<br><small>5.920.200</small></td><td class="n">4,00<br><small>10.120.000</small></td><td class="n">4,40<br><small>11.132.000</small></td></tr>
+    <tr><td>Bậc 2</td><td class="n">2,41<br><small>6.097.300</small></td><td class="n">2,67<br><small>6.755.100</small></td><td class="n">4,34<br><small>10.980.200</small></td><td class="n">4,74<br><small>11.992.200</small></td></tr>
+    <tr><td>Bậc 3</td><td class="n">2,72<br><small>6.881.600</small></td><td class="n">3,00<br><small>7.590.000</small></td><td class="n">4,68<br><small>11.840.400</small></td><td class="n">5,08<br><small>12.852.400</small></td></tr>
+    <tr><td>Bậc 4</td><td class="n">3,03<br><small>7.665.900</small></td><td class="n">3,33<br><small>8.424.900</small></td><td class="n">5,02<br><small>12.700.600</small></td><td class="n">5,42<br><small>13.712.600</small></td></tr>
+    <tr><td>Bậc 5</td><td class="n">3,34<br><small>8.450.200</small></td><td class="n">3,66<br><small>9.259.800</small></td><td class="n">5,36<br><small>13.560.800</small></td><td class="n">5,76<br><small>14.572.800</small></td></tr>
+    <tr><td>Bậc 6</td><td class="n">3,65<br><small>9.234.500</small></td><td class="n">3,99<br><small>10.094.700</small></td><td class="n">5,70<br><small>14.421.000</small></td><td class="n">6,10<br><small>15.433.000</small></td></tr>
+    <tr><td>Bậc 7</td><td class="n">3,96<br><small>10.018.800</small></td><td class="n">4,32<br><small>10.929.600</small></td><td class="n">6,04<br><small>15.281.200</small></td><td class="n">6,44<br><small>16.293.200</small></td></tr>
+    <tr><td>Bậc 8</td><td class="n">4,27<br><small>10.803.100</small></td><td class="n">4,65<br><small>11.764.500</small></td><td class="n">6,38<br><small>16.141.400</small></td><td class="n">6,78<br><small>17.153.400</small></td></tr>
+    <tr><td>Bậc 9</td><td class="n">4,58<br><small>11.587.400</small></td><td class="n">4,98<br><small>12.599.400</small></td><td></td><td></td></tr>
+    <tr><td>Bậc 10</td><td class="n">4,89<br><small>12.371.700</small></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">MN: mầm non; TH: tiểu học. Bậc lương thường được nâng sau mỗi 3 năm (hạng III mầm non: 2 năm) nếu hoàn thành nhiệm vụ.</p>
+
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Giáo viên đã được áp dụng hệ số lương đặc thù chưa?</summary>
+    <p>Chưa. Hệ số lương đặc thù (bằng 1,15 lần hệ số hiện hưởng) mới là dự thảo của Bộ Giáo dục và Đào tạo. Lương từ 01/7/2026 vẫn tính bằng hệ số hiện hưởng nhân lương cơ sở 2.530.000 đ. Công cụ sẽ cập nhật khi có quy định chính thức.</p></details>
+  <details class="qa"><summary>Nghị định 182/2026 thay đổi phụ cấp ưu đãi thế nào?</summary>
+    <p>Nghị định 182/2026/NĐ-CP có hiệu lực từ 07/7/2026, áp dụng từ 01/01/2026, nâng phụ cấp ưu đãi theo nghề: giáo viên mầm non, tiểu học từ 35% lên 45%; THCS, THPT lên 40%; mức cao nhất 80% cho vùng đặc biệt khó khăn, trường chuyên, trường dân tộc nội trú.</p></details>
+  <details class="qa"><summary>Phụ cấp thâm niên nhà giáo còn được hưởng không?</summary>
+    <p>Còn. Giáo viên tiếp tục được hưởng phụ cấp thâm niên theo Nghị định 77/2021/NĐ-CP cho đến khi thực hiện chính sách tiền lương mới.</p></details>
+  <details class="qa"><summary>Lương nghỉ hè có được nhận không?</summary>
+    <p>Có. Giáo viên vẫn nhận đủ lương và phụ cấp ưu đãi trong thời gian nghỉ hè. Phụ cấp ưu đãi không được trả trong thời gian nghỉ thai sản, nghỉ hưởng BHXH, nghỉ không lương từ một tháng trở lên hoặc bị tạm đình chỉ công tác.</p></details>
+  <details class="qa"><summary>Còn khoản nào chưa tính ở đây?</summary>
+    <p>Các phụ cấp tuỳ nơi như phụ cấp khu vực, thu hút, trách nhiệm, phụ cấp thâm niên vượt khung, tiền dạy thêm giờ và thuế thu nhập cá nhân (nếu có) chưa được tính. Công cụ tính cho giáo viên công lập; giáo viên trường tư nhận lương theo hợp đồng với trường.</p></details>
+  <p>Công cụ liên quan: <a href="/tinh-luong-gross-net/">Tính lương Gross ↔ Net</a> · <a href="/tinh-tuoi-nghi-huu/">Tính tuổi nghỉ hưu</a> · <a href="/tinh-tien-thai-san/">Tính tiền thai sản</a>.</p>
+  <p class="note">Kết quả để tham khảo; lương chính thức theo quyết định xếp lương của đơn vị.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/giao-vien.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const k2 = v => v.toLocaleString("vi-VN", { minimumFractionDigits: 2 });
+  KCNum.attach($("pos"), { decimals: 2 });
+  $("years").addEventListener("input", () => { $("years").value = $("years").value.replace(/\D/g, "").slice(0, 2); });
+  function fillBac() {
+    const keep = +$("bac").value || 3, list = GiaoVien.steps($("level").value, $("rank").value);
+    $("bac").innerHTML = list.map((c, i) => `<option value="${i + 1}">Bậc ${i + 1} (${k2(c)})</option>`).join("");
+    $("bac").value = String(Math.min(keep, list.length));
+  }
+  $("level").addEventListener("change", fillBac); $("rank").addEventListener("change", fillBac);
+  fillBac();
+  const form = KC.form($("f"), { calc(){
+    const pos = +String($("pos").value).replace(/\./g, "").replace(",", ".") || 0;
+    if (pos > 1.5) { $("pos").focus(); $("res").innerHTML = `<span class="err">Hệ số chức vụ thường từ 0 đến 1,3.</span>`; $("tbl").innerHTML = ""; $("sub").textContent = ""; return; }
+    const r = GiaoVien.salary({ level: $("level").value, rank: $("rank").value, bac: +$("bac").value, area: $("area").value, years: +$("years").value || 0, position: pos });
+    $("res").innerHTML = `Thực nhận: <b>${money(r.net)} đ/tháng</b>`;
+    $("tbl").innerHTML = `<tr><td>Lương theo hệ số (${k2(r.coef)} × ${money(r.lcs)})</td><td class="n">${money(r.basic)}</td></tr>`
+      + (r.position ? `<tr><td>Phụ cấp chức vụ</td><td class="n">${money(r.position)}</td></tr>` : "")
+      + `<tr><td>Phụ cấp ưu đãi nghề ${r.rate}%</td><td class="n">${money(r.allowance)}</td></tr>`
+      + `<tr><td>Phụ cấp thâm niên ${r.seniorityRate}%</td><td class="n">${money(r.seniority)}</td></tr>`
+      + `<tr><td>Tổng thu nhập</td><td class="n">${money(r.gross)}</td></tr>`
+      + `<tr><td>Trừ BHXH, BHYT, BHTN (10,5%)</td><td class="n">−${money(r.insurance)}</td></tr>`
+      + `<tr class="tot"><td>Thực nhận</td><td class="n">${money(r.net)}</td></tr>`;
+    $("sub").textContent = (r.seniorityRate ? "" : "Chưa đủ 5 năm nên chưa có phụ cấp thâm niên. ")
+      + "Chưa gồm phụ cấp khu vực, thu hút, trách nhiệm, tiền dạy thêm giờ và thuế TNCN (nếu có).";
+  } });
+  form.run(false);
+})();
+</script>
