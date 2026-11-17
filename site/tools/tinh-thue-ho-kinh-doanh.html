@@ -1,0 +1,110 @@
+<!--
+title: Tính thuế hộ kinh doanh 2026: GTGT, TNCN theo doanh thu, ngưỡng 1 tỷ | Tính Giùm
+h1: Tính thuế hộ kinh doanh 2026
+description: Tính thuế hộ kinh doanh, cá nhân kinh doanh năm 2026 sau khi bỏ thuế khoán: doanh thu đến 1 tỷ không nộp thuế; trên 1 tỷ nộp GTGT theo tỷ lệ và TNCN trên phần vượt 1 tỷ hoặc trên thu nhập, đã trừ giảm 30% thuế TNCN.
+category: tien-hoa-don
+order: 51
+summary: Thuế GTGT, TNCN của hộ kinh doanh theo doanh thu năm.
+intro: Nhập ngành nghề và doanh thu cả năm để biết hộ kinh doanh phải nộp bao nhiêu thuế GTGT, thuế TNCN, nên chọn cách tính nào và phải kê khai ra sao.
+keywords: thuế hộ kinh doanh, tính thuế hộ kinh doanh, thuế hộ kinh doanh 2026, bỏ thuế khoán, hộ kinh doanh doanh thu 1 tỷ, thuế tncn hộ kinh doanh, thuế gtgt hộ kinh doanh, kê khai thuế hộ kinh doanh, ngưỡng doanh thu chịu thuế
+rules: Luật Thuế TNCN 109/2025/QH15; Nghị định 68/2026/NĐ-CP sửa đổi bởi Nghị định 141/2026/NĐ-CP; Nghị định 398/2026/NĐ-CP (giảm 30% TNCN); Nghị định 174/2025/NĐ-CP (giảm GTGT đến 31/12/2026)
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="grp">Ngành nghề</label>
+  <div><select id="grp" class="in"></select></div>
+  <label class="l" for="rev">Doanh thu cả năm</label>
+  <div class="f"><input id="rev" class="in w-l" inputmode="numeric" autocomplete="off" value="2000000000"><span class="u">đồng</span></div>
+  <label class="l" for="cost">Chi phí hợp lý</label>
+  <div class="f"><input id="cost" class="in w-l" inputmode="numeric" autocomplete="off"><span class="u">đồng</span> <span class="hint">có hoá đơn, chứng từ; bắt buộc nếu doanh thu trên 3 tỷ</span></div>
+  <label class="l" for="yr">Năm tính thuế</label>
+  <div><select id="yr" class="in"><option value="2026">2026</option><option value="2027">2027</option></select></div>
+  <label class="l" for="cut">Giảm thuế GTGT</label>
+  <div><select id="cut" class="in"><option value="0">Không áp dụng</option><option value="1">Hàng hoá, dịch vụ được giảm GTGT (năm 2026)</option></select></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <div id="cmp"></div>
+    <ul id="todo"></ul>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Thuế hộ kinh doanh từ năm 2026</h2>
+  <ul>
+    <li>Từ <b>01/01/2026</b> bỏ thuế khoán và lệ phí môn bài; mọi hộ kinh doanh tự khai, tự nộp theo doanh thu thực tế.</li>
+    <li>Doanh thu cả năm <b>từ 1 tỷ đồng trở xuống</b>: không nộp thuế GTGT, thuế TNCN, nhưng vẫn phải <b>thông báo doanh thu</b> với cơ quan thuế.</li>
+    <li>Doanh thu <b>trên 1 tỷ đồng</b>: thuế GTGT = <b>toàn bộ doanh thu</b> × tỷ lệ theo ngành; thuế TNCN = <b>phần doanh thu vượt 1 tỷ</b> × tỷ lệ theo ngành, hoặc chọn tính trên thu nhập (doanh thu − chi phí) × 15%.</li>
+    <li>Doanh thu <b>trên 3 tỷ đồng</b>: thuế TNCN tính trên thu nhập × 17% (đến 50 tỷ) hoặc 20% (trên 50 tỷ), nên phải có sổ sách, chứng từ chi phí.</li>
+    <li>Năm <b>2026 và 2027</b>: hộ có doanh thu không quá 10 tỷ đồng được <b>giảm 30% số thuế TNCN</b> phải nộp.</li>
+  </ul>
+  <h2>Tỷ lệ thuế theo ngành nghề</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th>Ngành nghề</th><th class="n">Thuế GTGT</th><th class="n">Thuế TNCN</th></tr></thead>
+    <tbody>
+      <tr><td>Phân phối, cung cấp hàng hoá (bán buôn, bán lẻ)</td><td class="n">1%</td><td class="n">0,5%</td></tr>
+      <tr><td>Dịch vụ, xây dựng không bao thầu nguyên vật liệu</td><td class="n">5%</td><td class="n">2%</td></tr>
+      <tr><td>Sản xuất, vận tải, dịch vụ có gắn với hàng hoá (ăn uống…), xây dựng có bao thầu nguyên vật liệu</td><td class="n">3%</td><td class="n">1,5%</td></tr>
+      <tr><td>Hoạt động kinh doanh khác</td><td class="n">2%</td><td class="n">1%</td></tr>
+    </tbody>
+  </table></div>
+  <h2>Ví dụ</h2>
+  <ul>
+    <li>Hộ bán tạp hoá, doanh thu năm 2026 là 2 tỷ đồng: GTGT 2 tỷ × 1% = <b>20 triệu</b>; TNCN (2 tỷ − 1 tỷ) × 0,5% = 5 triệu, giảm 30% còn <b>3,5 triệu</b>.</li>
+    <li>Hộ doanh thu 5 tỷ, chi phí hợp lý 4 tỷ: TNCN (5 − 4) tỷ × 17% = 170 triệu, giảm 30% năm 2026 còn 119 triệu.</li>
+  </ul>
+  <p class="note">Cho thuê nhà, đại lý bảo hiểm, xổ số, bán hàng đa cấp có cách tính riêng; bán hàng qua sàn thương mại điện tử thì sàn khấu trừ, nộp thay một phần thuế. Xem thêm: <a href="/thue-ho-kinh-doanh-2026/">Thuế hộ kinh doanh 2026 theo từng ngành</a>, <a href="/lich-nop-thue-ho-kinh-doanh/">Lịch nộp thuế hộ kinh doanh</a>, <a href="/so-doanh-thu-ho-kinh-doanh/">Sổ ghi doanh thu (Excel)</a>. Kết quả để tham khảo; kiểm tra lại với cơ quan thuế quản lý trực tiếp.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/thue-hkd.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), T = ThueHKD;
+  const money = v => Math.round(v).toLocaleString("vi-VN") + " đ", pct = r => (Math.round(r * 10000) / 100).toLocaleString("vi-VN") + "%";
+  $("grp").innerHTML = T.GROUPS.map(g => `<option value="${g.id}">${g.short} (GTGT ${pct(g.vat)}, TNCN ${pct(g.pit)})</option>`).join("");
+  const q = new URLSearchParams(location.search);
+  if (T.byId[q.get("nganh")]) $("grp").value = q.get("nganh");
+  if (+q.get("dt") > 0) $("rev").value = q.get("dt");
+  KCNum.attach($("rev"), { decimals: 0 }); KCNum.attach($("cost"), { decimals: 0 });
+  const num = el => el.value.replace(/\D/g, "");
+  const form = KC.form($("f"), { calc(){
+    const rev = +num($("rev")); if (!rev) { $("rev").focus(); return false; }
+    const c = num($("cost")), yr = +$("yr").value;
+    const r = T.calc({ group: $("grp").value, revenue: rev, cost: c === "" ? null : +c, year: yr, vatCut: $("cut").value === "1" });
+    let rows = "", todo = [];
+    if (r.exempt) {
+      $("res").innerHTML = `Doanh thu không quá 1 tỷ đồng: <b>không phải nộp thuế GTGT, thuế TNCN</b> năm ${yr}.`;
+      rows = `<tr><td>Thuế GTGT</td><td class="n">0 đ</td></tr><tr><td>Thuế TNCN</td><td class="n">0 đ</td></tr>`;
+      todo = ["Vẫn phải <b>thông báo doanh thu</b> (mẫu 01/TKN-CNKD): hộ đang kinh doanh thông báo doanh thu cả năm chậm nhất 31/01 năm sau; hộ mới ra kinh doanh thông báo 2 lần (31/7 và 31/01 năm sau).",
+              "Không bắt buộc dùng hoá đơn điện tử; nên ghi sổ doanh thu để biết khi nào vượt 1 tỷ.",
+              "Nếu doanh thu cộng dồn trong năm vượt 1 tỷ: khai thuế theo quý từ quý vượt ngưỡng và đăng ký hoá đơn điện tử trong 30 ngày."];
+      $("cmp").innerHTML = "";
+    } else if (r.needCost) {
+      $("res").innerHTML = `Doanh thu trên 3 tỷ: thuế TNCN tính trên thu nhập, hãy nhập <b>chi phí hợp lý</b> để tính.`;
+      rows = `<tr><td>Thuế GTGT (${pct(r.vatRate)} × ${money(rev)})</td><td class="n">${money(r.vat)}</td></tr>`;
+      $("cmp").innerHTML = "";
+    } else {
+      $("res").innerHTML = `Tổng thuế năm ${yr}: <b>${money(r.total)}</b>, khoảng ${money(r.total / 4)} mỗi quý (${pct(r.total / rev)} doanh thu).`;
+      rows = `<tr><td>Thuế GTGT: ${pct(r.vatRate)} × ${money(rev)}${r.vatCutApplies ? " (đã giảm 20% tỷ lệ)" : ""}</td><td class="n">${money(r.vat)}</td></tr>`
+        + `<tr><td>Thuế TNCN: ${r.chosen.name.toLowerCase()}, ${pct(r.chosen.rate)} × ${money(r.chosen.base)}</td><td class="n">${money(r.pitBeforeCut)}</td></tr>`
+        + (r.cutApplies ? `<tr><td>Giảm 30% thuế TNCN (năm ${yr}, doanh thu không quá 10 tỷ)</td><td class="n">−${money(r.pitCut)}</td></tr>` : "")
+        + `<tr class="tot"><td>Tổng phải nộp</td><td class="n">${money(r.total)}</td></tr>`;
+      $("cmp").innerHTML = r.methods.length > 1 ? `<p><b>So sánh hai cách tính thuế TNCN</b> (trước khi giảm 30%): ` + r.methods.map(m => `${m.name.toLowerCase()} <b>${money(m.tax)}</b>`).join(" · ")
+        + `. Cách có số thuế thấp hơn đã được chọn ở trên; hộ phải chọn một cách cho cả năm.</p>`
+        : (rev <= 3e9 ? `<p class="note">Nhập chi phí hợp lý để so sánh với cách tính trên thu nhập (15%).</p>` : "");
+      todo = ["<b>Khai, nộp thuế theo quý</b> (mẫu 01/CNKD), hạn ngày cuối cùng của tháng đầu quý sau: 30/4, 31/7, 31/10, 31/01.",
+              "<b>Bắt buộc dùng hoá đơn điện tử</b> có mã của cơ quan thuế hoặc khởi tạo từ máy tính tiền.",
+              r.chosen.id === "income" ? "Tính thuế trên thu nhập: ghi sổ chi phí, giữ hoá đơn, chứng từ và <b>quyết toán thuế TNCN</b> cuối năm." : "Ghi sổ doanh thu bán hàng hoá, dịch vụ (mẫu S2a-HKD)."];
+    }
+    $("tbl").innerHTML = rows;
+    $("todo").innerHTML = todo.map(t => `<li>${t}</li>`).join("");
+  } });
+  form.run(false);
+})();
+</script>

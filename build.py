@@ -20,6 +20,7 @@ from pathlib import Path
 
 import lunar_pages
 import van_su_pages
+import thue_hkd_pages
 
 ROOT = Path(__file__).resolve().parent
 SITE, DIST = ROOT / "site", ROOT / "dist"
@@ -159,8 +160,10 @@ def build() -> None:
     years = list(range(this_year - 1, this_year + 3))
     # Lịch vạn sự: trang từng ngày, ngày tốt theo việc, tuổi xông đất, ngày lễ quanh Tết (van_su_pages.py)
     vs_pages, vs_listing, lunar_pages.DAY_LINKS, lunar_pages.GOOD_LINKS = van_su_pages.build_all(date.today(), years)
+    # Thuế hộ kinh doanh theo ngành (thue_hkd_pages.py)
+    tax_pages, tax_listing = thue_hkd_pages.build_all(2026)
     # Trang lịch âm năm hiện tại xuất hiện như một công cụ trong danh sách (trang chủ, cột phải)
-    listing = sorted(tools + vs_listing + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
+    listing = sorted(tools + vs_listing + tax_listing + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
                                "order": "4", "summary": "Lịch vạn niên cả năm: ngày rằm, mùng một, ngày lễ, Tết.",
                                "keywords": "lịch âm, lịch vạn niên, lịch âm năm, ngày rằm, mùng một, lịch tết"}],
                      key=lambda t: (t.get("order", "99"), t["slug"]))
@@ -227,15 +230,17 @@ def build() -> None:
     data = lunar_pages.load(years[0], years[-1])
     gen = [lunar_pages.year_page(data, y, years) for y in years]
     gen += [lunar_pages.month_page(data, y, m, years) for y in years for m in range(1, 13)]
-    gen += vs_pages
+    gen += vs_pages + tax_pages
     for meta, body in gen:
         url = f"{SITE_URL}/{meta['slug']}/"
-        main = (f'<div class="wrap layout"><main class="content lunar">'
-                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-ngay-lich">ngày &amp; lịch</a> / <span>{E(meta["h1"].lower())}</span></nav>'
-                f'<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, "ngay-lich", meta["slug"])}</div>')
+        cat = meta.get("category") or "ngay-lich"
+        main = (f'<div class="wrap layout"><main class="content {meta.get("cls", "lunar")}">'
+                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(meta["h1"].lower())}</span></nav>'
+                f'<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, cat, meta["slug"])}</div>')
         out = DIST / meta["slug"]
         out.mkdir()
-        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, "ngay-lich", url), css, image=og_image("lich-am")), encoding="utf-8")
+        img = og_image("lich-am") if cat == "ngay-lich" else og_image("tinh-thue-ho-kinh-doanh")
+        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, cat, url), css, image=img), encoding="utf-8")
         urls.append(f"/{meta['slug']}/")
 
     # Plain pages

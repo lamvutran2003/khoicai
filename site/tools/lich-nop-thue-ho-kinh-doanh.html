@@ -1,0 +1,72 @@
+<!--
+title: Lịch nộp thuế hộ kinh doanh 2026, 2027: hạn thông báo doanh thu, khai thuế quý | Tính Giùm
+h1: Lịch nộp thuế hộ kinh doanh
+description: Hạn thông báo doanh thu và khai, nộp thuế của hộ kinh doanh, cá nhân kinh doanh năm 2026, 2027: hộ doanh thu đến 1 tỷ thông báo doanh thu, hộ trên 1 tỷ khai thuế theo quý. Xem các hạn sắp tới và còn bao nhiêu ngày.
+category: tien-hoa-don
+order: 52
+summary: Hạn thông báo doanh thu, khai thuế quý sắp tới.
+intro: Chọn trường hợp của hộ kinh doanh để xem các hạn nộp hồ sơ thuế sắp tới và còn bao nhiêu ngày.
+keywords: lịch nộp thuế hộ kinh doanh, hạn nộp thuế hộ kinh doanh, hạn khai thuế quý hộ kinh doanh, thông báo doanh thu hộ kinh doanh, mẫu 01/tkn-cnkd, hạn nộp thuế quý 4, hộ kinh doanh dưới 1 tỷ
+rules: Nghị định 68/2026/NĐ-CP sửa đổi bởi Nghị định 141/2026/NĐ-CP; Thông tư 18/2026/TT-BTC
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="kind">Trường hợp</label>
+  <div><select id="kind" class="in">
+    <option value="notice">Doanh thu năm đến 1 tỷ, đang kinh doanh</option>
+    <option value="new">Doanh thu năm đến 1 tỷ, mới ra kinh doanh năm nay</option>
+    <option value="quarter">Doanh thu năm trên 1 tỷ (khai thuế theo quý)</option>
+  </select></div>
+  <div class="btns"><button class="go" type="submit">Xem lịch __PLAY__</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Hạn sắp tới</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><thead><tr><th>Hạn chót</th><th>Việc cần làm</th><th class="n">Còn</th></tr></thead><tbody id="tbl"></tbody></table></div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Các mốc cần nhớ</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th>Trường hợp</th><th>Phải làm</th><th>Hạn</th></tr></thead>
+    <tbody>
+      <tr><td>Doanh thu năm đến 1 tỷ, đang kinh doanh</td><td>Thông báo doanh thu thực tế cả năm (mẫu 01/TKN-CNKD)</td><td>31/01 năm sau</td></tr>
+      <tr><td>Doanh thu năm đến 1 tỷ, mới ra kinh doanh</td><td>Thông báo doanh thu 6 tháng đầu năm và 6 tháng cuối năm</td><td>31/7 và 31/01 năm sau</td></tr>
+      <tr><td>Doanh thu năm trên 1 tỷ</td><td>Khai và nộp thuế GTGT, TNCN theo quý (mẫu 01/CNKD)</td><td>30/4, 31/7, 31/10, 31/01</td></tr>
+      <tr><td>Doanh thu cộng dồn vượt 1 tỷ trong năm</td><td>Khai thuế theo quý từ quý vượt ngưỡng; đăng ký hoá đơn điện tử</td><td>Trong 30 ngày sau quý vượt ngưỡng (hoá đơn)</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li>Hạn rơi vào thứ Bảy, Chủ nhật hoặc ngày nghỉ lễ thì được lùi sang ngày làm việc tiếp theo.</li>
+    <li>Hộ tính thuế TNCN trên thu nhập (doanh thu − chi phí) phải quyết toán thuế TNCN năm theo hướng dẫn của cơ quan thuế.</li>
+    <li>Nộp hồ sơ trên Cổng dịch vụ công hoặc ứng dụng eTax Mobile; nộp chậm có thể bị phạt và tính tiền chậm nộp.</li>
+  </ul>
+  <p class="note">Tính số thuế phải nộp: <a href="/tinh-thue-ho-kinh-doanh/">Tính thuế hộ kinh doanh</a>. Ghi doanh thu hằng ngày: <a href="/so-doanh-thu-ho-kinh-doanh/">Sổ doanh thu (Excel)</a>.</p>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const DAY = 864e5, n = new Date(), today = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
+  const d = (y, m, dd) => Date.UTC(y, m - 1, dd);
+  const fmt = t => { const x = new Date(t); return `${String(x.getUTCDate()).padStart(2, "0")}/${String(x.getUTCMonth() + 1).padStart(2, "0")}/${x.getUTCFullYear()}`; };
+  function items(kind, y) {
+    if (kind === "notice") return [[d(y + 1, 1, 31), `Thông báo doanh thu cả năm ${y} (mẫu 01/TKN-CNKD)`]];
+    if (kind === "new") return [[d(y, 7, 31), `Thông báo doanh thu 6 tháng đầu năm ${y}`], [d(y + 1, 1, 31), `Thông báo doanh thu 6 tháng cuối năm ${y}`]];
+    return [[d(y, 4, 30), `Khai, nộp thuế quý 1/${y}`], [d(y, 7, 31), `Khai, nộp thuế quý 2/${y}`], [d(y, 10, 31), `Khai, nộp thuế quý 3/${y}`], [d(y + 1, 1, 31), `Khai, nộp thuế quý 4/${y}`]];
+  }
+  const form = KC.form($("f"), { calc(){
+    const kind = $("kind").value, y = n.getFullYear();
+    const list = [].concat(items(kind, y - 1), items(kind, y), items(kind, y + 1)).filter(x => x[0] >= today).sort((a, b) => a[0] - b[0]).slice(0, 4);
+    const k = Math.round((list[0][0] - today) / DAY);
+    $("res").innerHTML = `Hạn gần nhất: <b>${fmt(list[0][0])}</b>, ${k === 0 ? "là hôm nay" : "còn " + k + " ngày"}.`;
+    $("tbl").innerHTML = list.map(x => `<tr><td>${fmt(x[0])}</td><td>${x[1]}</td><td class="n">${Math.round((x[0] - today) / DAY)} ngày</td></tr>`).join("");
+    try { localStorage.setItem("hkdKind", kind); } catch (_) {}
+  } });
+  try { const s = localStorage.getItem("hkdKind"); if (s) $("kind").value = s; } catch (_) {}
+  form.run(false);
+})();
+</script>
