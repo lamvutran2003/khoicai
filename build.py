@@ -19,6 +19,7 @@ from datetime import date
 from pathlib import Path
 
 import lunar_pages
+import van_su_pages
 
 ROOT = Path(__file__).resolve().parent
 SITE, DIST = ROOT / "site", ROOT / "dist"
@@ -156,8 +157,10 @@ def build() -> None:
             rows = subprocess.check_output(["node", str(ROOT / "tools/age_table.js"), str(this_year), "1950", "2010"]).decode("utf-8")
             t["body"] = t["body"].replace("__BANG_TUOI__", rows).replace("__NAM_NAY__", str(this_year))
     years = list(range(this_year - 1, this_year + 3))
+    # Lịch vạn sự: trang từng ngày, ngày tốt theo việc, tuổi xông đất, ngày lễ quanh Tết (van_su_pages.py)
+    vs_pages, vs_listing, lunar_pages.DAY_LINKS, lunar_pages.GOOD_LINKS = van_su_pages.build_all(date.today(), years)
     # Trang lịch âm năm hiện tại xuất hiện như một công cụ trong danh sách (trang chủ, cột phải)
-    listing = sorted(tools + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
+    listing = sorted(tools + vs_listing + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
                                "order": "4", "summary": "Lịch vạn niên cả năm: ngày rằm, mùng một, ngày lễ, Tết.",
                                "keywords": "lịch âm, lịch vạn niên, lịch âm năm, ngày rằm, mùng một, lịch tết"}],
                      key=lambda t: (t.get("order", "99"), t["slug"]))
@@ -224,6 +227,7 @@ def build() -> None:
     data = lunar_pages.load(years[0], years[-1])
     gen = [lunar_pages.year_page(data, y, years) for y in years]
     gen += [lunar_pages.month_page(data, y, m, years) for y in years for m in range(1, 13)]
+    gen += vs_pages
     for meta, body in gen:
         url = f"{SITE_URL}/{meta['slug']}/"
         main = (f'<div class="wrap layout"><main class="content lunar">'

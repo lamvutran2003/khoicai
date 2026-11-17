@@ -214,3 +214,10 @@ table.days td{white-space:nowrap}
 .periods{display:grid;gap:8px;justify-items:start;min-width:0}.ptable td{padding:4px 4px}.ptable .in.mm{width:96px}.ptable .btn{padding:4px 10px}
 .periods>.scroll{width:100%}
 @media (max-width:620px){.ptable .in.mm{width:82px}.ptable .in.w-m{width:118px}.ptable th{font-size:13px}}
+.cal-grid a.d{text-decoration:none;color:var(--ink)}
+.cal-grid a.d:hover{border-color:var(--blue)}
+.today-box .good{color:var(--green-d);font-weight:700}
+.today-box .bad{color:var(--red);font-weight:700}
+table.kv th{width:150px;background:#f7f7f7}
+ul.yrs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px 12px}
+ul.yrs small{color:var(--muted)}

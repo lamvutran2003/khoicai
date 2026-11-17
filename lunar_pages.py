@@ -34,6 +34,16 @@ def load(first: int, last: int) -> dict:
     return json.loads(out)
 
 
+# Những ngày có trang riêng /lich-am-ngay-D-M-Y/ (build.py điền vào từ van_su_pages) để ô lịch và bảng liên kết tới
+DAY_LINKS: set = set()
+# (năm, tháng) -> đoạn HTML liên kết tới trang ngày tốt theo việc của tháng đó
+GOOD_LINKS: dict = {}
+
+
+def day_href(y: int, m: int, d: int) -> str | None:
+    return f"/lich-am-ngay-{d}-{m}-{y}/" if (y, m, d) in DAY_LINKS else None
+
+
 def month_slug(m: int, y: int) -> str:
     return f"lich-am-thang-{m}-{y}"
 
@@ -54,8 +64,15 @@ def grid(data: dict, y: int, m: int, small: bool = False) -> str:
             "mark" if ld in (1, 15) else ""] if c)
         sub = f"{ld}/{lm}{'N' if leap else ''}" if ld == 1 else str(ld)
         title = f' title="{E(", ".join(h[0] for h in hols))}"' if hols else ""
-        cells += f'<span class="d {cls}"{title}>{d}<small>{sub}</small></span>'
+        href = day_href(y, m, d)
+        cells += (f'<a class="d {cls}" href="{href}"{title}>{d}<small>{sub}</small></a>' if href
+                  else f'<span class="d {cls}"{title}>{d}<small>{sub}</small></span>')
     return f'<div class="cal-grid{" small" if small else ""}">{cells}</div>'
+
+
+def _dlink(y: int, m: int, d: int) -> str:
+    h = day_href(y, m, d)
+    return f'<a href="{h}">{d}/{m}</a>' if h else f"{d}/{m}"
 
 
 def lunar_text(v) -> str:
@@ -85,7 +102,7 @@ def month_page(data: dict, y: int, m: int, years: list[int]) -> tuple[dict, str]
                    f' · âm lịch {lunar_text(v)}</li>' for d, v, h in hol_rows) or "<li>Không có ngày lễ lớn.</li>"
     keys = "".join(f"<tr><td>{'Mùng 1' if v[0] == 1 else 'Rằm (15)'} tháng {lunar_month_name(v[1]).lower()}{' nhuận' if v[3] else ''}</td>"
                    f"<td>{WEEKDAY[calendar.weekday(y, m, d)]}, {d}/{m}/{y}</td></tr>" for d, v in key_rows)
-    rows = "".join(f"<tr{' class=\"offrow\"' if any(h[1] for h in v[6]) else ''}><td>{d}/{m}</td><td>{v[5]}</td>"
+    rows = "".join(f"<tr{' class=\"offrow\"' if any(h[1] for h in v[6]) else ''}><td>{_dlink(y, m, d)}</td><td>{v[5]}</td>"
                    f"<td>{lunar_text(v)}/{v[2]}</td><td>{v[4]}</td><td>{E(', '.join(h[0] for h in v[6]))}</td></tr>" for d, v in days)
     pm, py = (m - 1, y) if m > 1 else (12, y - 1)
     nm, ny = (m + 1, y) if m < 12 else (1, y + 1)
@@ -94,7 +111,7 @@ def month_page(data: dict, y: int, m: int, years: list[int]) -> tuple[dict, str]
     body = (f'<p class="lede">{intro}</p>'
             f'<div class="calbox"><div class="cal-head">{prev or "<span></span>"}<b>Tháng {m}/{y}</b>{nxt or "<span></span>"}</div>'
             f'{grid(data, y, m)}<p class="note">Số nhỏ là ngày âm lịch. Ô đỏ là ngày nghỉ lễ; chấm cam là ngày lễ, kỷ niệm không nghỉ.</p></div>'
-            + (tet_link(y) if m in (1, 2) else "") +
+            + (tet_link(y) if m in (1, 2) else "") + GOOD_LINKS.get((y, m), "") +
             f'<h2>Ngày lễ tháng {m}/{y}</h2><ul class="hols">{hols}</ul>'
             f'<h2>Mùng 1 và ngày rằm</h2><div class="scroll"><table class="t"><tbody>{keys}</tbody></table></div>'
             f'<h2>Lịch âm từng ngày tháng {m}/{y}</h2>'
