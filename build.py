@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import html
 import json
+import subprocess
 import os
 import shutil
 from datetime import date
@@ -149,6 +150,11 @@ def build() -> None:
     tools = sorted(load("tools"), key=lambda t: (t.get("order", "99"), t["slug"]))
     pages = load("pages")
     this_year = date.today().year
+    # Bảng tra tuổi theo năm sinh (trang /tinh-tuoi/), sinh từ tuoi.js để khớp với công cụ
+    for t in tools:
+        if "__BANG_TUOI__" in t["body"]:
+            rows = subprocess.check_output(["node", str(ROOT / "tools/age_table.js"), str(this_year), "1950", "2010"]).decode("utf-8")
+            t["body"] = t["body"].replace("__BANG_TUOI__", rows).replace("__NAM_NAY__", str(this_year))
     years = list(range(this_year - 1, this_year + 3))
     # Trang lịch âm năm hiện tại xuất hiện như một công cụ trong danh sách (trang chủ, cột phải)
     listing = sorted(tools + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
