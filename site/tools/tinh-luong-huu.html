@@ -1,0 +1,171 @@
+<!--
+title: Tính lương hưu 2026: nghỉ hưu được bao nhiêu tiền mỗi tháng | Tính Giùm
+h1: Tính lương hưu hằng tháng
+description: Ước tính lương hưu theo Luật BHXH 2024: nhập quá trình đóng BHXH, tự tính tỷ lệ hưởng (45% đến 75%), lương bình quân có hệ số trượt giá 2026, tuổi nghỉ hưu, trợ cấp một lần khi đóng vượt năm và mức hưu tối thiểu.
+category: tien-hoa-don
+order: 83
+summary: Nghỉ hưu được bao nhiêu tiền mỗi tháng, tỷ lệ hưởng 45%–75%.
+intro: Ước tính tiền lương hưu hằng tháng từ quá trình đóng bảo hiểm xã hội, kể cả phần đóng tiếp đến khi nghỉ hưu.
+keywords: tính lương hưu, lương hưu 2026, cách tính lương hưu, tỷ lệ hưởng lương hưu, nghỉ hưu được bao nhiêu tiền, lương hưu tối thiểu, đóng bhxh bao nhiêu năm được hưởng lương hưu
+rules: Luật BHXH 2024 (41/2024/QH15, từ 01/07/2025), hệ số điều chỉnh tiền lương năm 2026 (Công văn 340/BHXH-CSXH), mức tham chiếu 2.530.000 đ
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="sex">Giới tính</label>
+  <div><select id="sex" class="in"><option value="m">Nam</option><option value="f">Nữ</option></select></div>
+  <label class="l" for="sector">Nơi làm việc</label>
+  <div><select id="sector" class="in">
+    <option value="private">Doanh nghiệp (lương do công ty trả)</option>
+    <option value="state">Cơ quan nhà nước, trường công, bệnh viện công (hưởng lương theo hệ số)</option>
+  </select></div>
+  <span class="l top-l">Quá trình đóng</span>
+  <div class="periods">
+    <div class="scroll"><table class="t ptable"><thead><tr><th>Từ tháng</th><th>Đến tháng</th><th id="vh">Mức lương đóng BHXH (đồng)</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <button class="btn" type="button" id="add">+ Thêm giai đoạn</button>
+    <span class="hint" id="vhint">Mỗi lần đổi mức lương hoặc đổi công ty là một giai đoạn. Tháng ghi dạng mm/yyyy, ví dụ 01/2018. Xem quá trình đóng trên ứng dụng VssID.</span>
+  </div>
+  <label class="l" for="by">Tháng, năm sinh <small>(để đóng tiếp)</small></label>
+  <div class="f"><input id="by" class="in w-s mm" inputmode="numeric" autocomplete="off" placeholder="mm/yyyy" aria-label="Tháng, năm sinh">
+    <label class="chk"><input type="checkbox" id="proj" checked> Đóng tiếp với mức cuối cùng đến khi nghỉ hưu</label></div>
+  <label class="l" for="early">Nghỉ hưu sớm do suy giảm khả năng lao động</label>
+  <div class="f"><input id="early" class="in w-s" inputmode="numeric" value="0" aria-label="Số tháng nghỉ sớm"> <span>tháng trước tuổi nghỉ hưu</span></div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" id="reset">Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t"><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="sub"></p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Cách tính lương hưu</h2>
+  <p><b>Lương hưu hằng tháng = Tỷ lệ hưởng × Mức bình quân tiền lương đóng BHXH.</b></p>
+  <h3>Tỷ lệ hưởng</h3>
+  <div class="scroll"><table class="t"><thead><tr><th>Số năm đóng</th><th>Nam</th><th>Nữ</th></tr></thead><tbody>
+    <tr><td>Dưới 15 năm</td><td colspan="2">Chưa đủ điều kiện hưởng lương hưu</td></tr>
+    <tr><td>15 năm</td><td>40%</td><td>45%</td></tr>
+    <tr><td>Mỗi năm thêm</td><td>+1% (đến dưới 20 năm), từ 20 năm: 45% và +2% mỗi năm</td><td>+2%</td></tr>
+    <tr><td>Đạt tối đa 75%</td><td>35 năm</td><td>30 năm</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><b>Tháng lẻ</b>: từ 1 đến 6 tháng tính là nửa năm, từ 7 đến 11 tháng tính là một năm. Ví dụ nam đóng 18 năm 4 tháng: 40% + 3 × 1% + 0,5% = 43,5%.</li>
+    <li><b>Nghỉ hưu trước tuổi do suy giảm khả năng lao động</b>: mỗi năm nghỉ sớm giảm 2%; phần lẻ dưới 6 tháng không giảm, từ 6 tháng trở lên giảm 1%.</li>
+  </ul>
+  <h3>Mức bình quân tiền lương</h3>
+  <ul>
+    <li><b>Làm doanh nghiệp</b>: bình quân tiền lương của <b>toàn bộ</b> thời gian đóng; lương từng năm được nhân hệ số điều chỉnh (trượt giá) của năm hưởng.</li>
+    <li><b>Hưởng lương theo hệ số nhà nước</b>: bình quân số năm cuối, tùy năm bắt đầu đóng: trước 1995 là 5 năm cuối; 1995–2000: 6 năm; 2001–2006: 8 năm; 2007–2015: 10 năm; 2016–2019: 15 năm; 2020–2024: 20 năm; từ 2025: toàn bộ thời gian. Công cụ tính bằng tổng hệ số × mức tham chiếu hiện hành 2.530.000 đ.</li>
+    <li>Ai vừa làm doanh nghiệp vừa làm nhà nước thì cách tính phức tạp hơn; hãy dùng kết quả ở đây như mức tham khảo.</li>
+  </ul>
+  <h3>Mức tối thiểu và trợ cấp một lần</h3>
+  <ul>
+    <li><b>Lương hưu tối thiểu</b>: người tham gia BHXH trước 01/07/2025, có từ 20 năm đóng trở lên thì lương hưu không thấp hơn mức tham chiếu (2.530.000 đ).</li>
+    <li><b>Trợ cấp một lần khi nghỉ hưu</b>: mỗi năm đóng vượt 35 năm (nam) hoặc 30 năm (nữ) được thêm 0,5 tháng mức bình quân tiền lương.</li>
+  </ul>
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Đóng BHXH bao nhiêu năm thì được hưởng lương hưu?</summary><p>Từ 01/07/2025, chỉ cần đủ 15 năm đóng BHXH bắt buộc (trước đây là 20 năm) và đủ tuổi nghỉ hưu. Nếu đủ tuổi mà chưa đủ 15 năm, bạn có thể đóng tiếp, đóng tự nguyện cho đủ, hoặc nhận trợ cấp hằng tháng hay rút BHXH một lần.</p></details>
+  <details class="qa"><summary>Lương hưu có tăng theo thời gian không?</summary><p>Có. Lương hưu được Nhà nước điều chỉnh theo mức tăng giá tiêu dùng và tăng trưởng kinh tế, thường vào cùng đợt điều chỉnh lương cơ sở. Kết quả ở đây là mức tính theo quy định và hệ số hiện hành.</p></details>
+  <details class="qa"><summary>Vì sao cần nhập tháng, năm sinh?</summary><p>Để tính tuổi nghỉ hưu của bạn và giả định bạn tiếp tục đóng với mức lương cuối cùng cho đến tháng nghỉ hưu. Nếu bỏ chọn "Đóng tiếp", công cụ chỉ tính trên quá trình đóng bạn đã nhập.</p></details>
+  <p>Xem thêm: <a href="/tinh-tuoi-nghi-huu/">Tính tuổi nghỉ hưu</a> · <a href="/tinh-bhxh-mot-lan/">Tính BHXH một lần</a> · <a href="/tinh-luong-giao-vien/">Tính lương giáo viên</a></p>
+  <p class="note">Kết quả để tham khảo, tính theo Luật BHXH 2024 và hệ số điều chỉnh năm 2026. Số tiền chính thức do cơ quan BHXH tính khi giải quyết hồ sơ.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/bao-hiem.js"></script>
+<script src="/js/lao-dong.js"></script>
+<script src="/js/luong-huu.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const f1 = v => v.toLocaleString("vi-VN", { maximumFractionDigits: 1 });
+  const state = () => $("sector").value === "state";
+  const ym = (y, m) => `${String(m).padStart(2, "0")}/${y}`;
+  const dur = n => { const y = Math.floor(n / 12), m = n % 12; return (y ? y + " năm" : "") + (y && m ? " " : "") + (m ? m + " tháng" : "") || "0 tháng"; };
+  function maskMonth(i){ i.addEventListener("input", () => { const d = i.value.replace(/\D/g, "").slice(0, 6); i.value = d.length > 2 ? d.slice(0, 2) + "/" + d.slice(2) : d; }); return i; }
+  function monthInput(v){ const i = document.createElement("input"); i.className = "in w-s mm"; i.inputMode = "numeric"; i.placeholder = "mm/yyyy"; i.value = v || ""; return maskMonth(i); }
+  function addRow(a, b, s){
+    const tr = document.createElement("tr"), td = () => tr.appendChild(document.createElement("td"));
+    td().appendChild(monthInput(a)); td().appendChild(monthInput(b));
+    const v = document.createElement("input"); v.className = "in w-m val"; v.inputMode = "decimal"; v.value = s || ""; v.setAttribute("aria-label", "Mức lương hoặc hệ số");
+    td().appendChild(v);
+    const x = document.createElement("button"); x.type = "button"; x.className = "btn"; x.textContent = "×"; x.setAttribute("aria-label", "Xoá giai đoạn");
+    x.addEventListener("click", () => { tr.remove(); if (!$("rows").children.length) addRow(); });
+    td().appendChild(x); $("rows").appendChild(tr);
+  }
+  const parseM = s => { const m = String(s).match(/^(\d{1,2})\/(\d{4})$/); return m && +m[1] >= 1 && +m[1] <= 12 && +m[2] >= 1960 && +m[2] <= 2070 ? { m: +m[1], y: +m[2] } : null; };
+  const parseVal = s => state() ? parseFloat(String(s).replace(/\s/g, "").replace(",", ".")) || 0 : +String(s).replace(/\D/g, "");
+  function examples(){
+    $("rows").innerHTML = "";
+    if (state()) { addRow("09/2005", "08/2014", "2,34"); addRow("09/2014", "10/2026", "3,66"); }
+    else { addRow("03/2004", "12/2015", "6.000.000"); addRow("01/2016", "10/2026", "14.000.000"); }
+    $("vh").textContent = state() ? "Tổng hệ số (lương + phụ cấp)" : "Mức lương đóng BHXH (đồng)";
+    $("vhint").textContent = state()
+      ? "Tổng hệ số = hệ số lương + hệ số phụ cấp chức vụ, vượt khung, thâm niên (nếu có). Ví dụ 3,66 + 0,2 = 3,86. Tháng ghi dạng mm/yyyy."
+      : "Mỗi lần đổi mức lương hoặc đổi công ty là một giai đoạn. Tháng ghi dạng mm/yyyy, ví dụ 01/2018. Xem quá trình đóng trên ứng dụng VssID.";
+  }
+  maskMonth($("by")); $("by").value = "05/1980";
+  examples();
+  $("sector").addEventListener("change", () => { examples(); form.run(false); });
+  $("add").addEventListener("click", () => { addRow(); $("rows").lastChild.querySelector("input").focus(); });
+  $("reset").addEventListener("click", () => { $("rows").innerHTML = ""; addRow(); $("by").value = ""; $("early").value = "0"; $("out").hidden = true; });
+
+  const err = (el, msg) => { if (el) el.focus(); $("res").innerHTML = `<span class="err">${msg}</span>`; $("tbl").innerHTML = ""; $("sub").textContent = ""; };
+  const form = KC.form($("f"), { calc(){
+    const periods = [];
+    for (const tr of $("rows").children) {
+      const [a, b, s] = tr.querySelectorAll("input"), from = parseM(a.value), to = parseM(b.value), val = parseVal(s.value);
+      if (!a.value && !b.value && !s.value) continue;
+      if (!from) return err(a, "Tháng bắt đầu chưa đúng dạng mm/yyyy.");
+      if (!to || to.y * 12 + to.m < from.y * 12 + from.m) return err(b, "Tháng kết thúc chưa đúng hoặc trước tháng bắt đầu.");
+      if (!val || (state() && val > 15)) return err(s, state() ? "Nhập tổng hệ số, ví dụ 3,86." : "Nhập mức lương đóng BHXH.");
+      periods.push(Object.assign({ from, to }, state() ? { coef: val } : { salary: val }));
+    }
+    if (!periods.length) return err(null, "Nhập ít nhất một giai đoạn đóng.");
+    const sex = $("sex").value, early = Math.max(0, Math.min(60, parseInt($("early").value, 10) || 0));
+    const birth = parseM($("by").value);
+    if ($("by").value && !birth) return err($("by"), "Tháng, năm sinh chưa đúng dạng mm/yyyy.");
+    const rows = [];
+    let note = "";
+    if (birth) {
+      const rt = LaoDong.retire(birth.m, birth.y, sex, false);
+      const endIdx = rt.year * 12 + (rt.month - 1) - early;          // tháng cuối cùng đi làm
+      const end = { y: Math.floor(endIdx / 12), m: endIdx % 12 + 1 };
+      rows.push(["Tuổi nghỉ hưu", `${rt.ageYears} tuổi${rt.ageMonths ? " " + rt.ageMonths + " tháng" : ""}`]);
+      rows.push(["Nghỉ hưu từ", `${early ? "tháng " + ym(end.y, end.m) + " (sớm " + dur(early) + ")" : "tháng " + ym(rt.year, rt.month)}`]);
+      const last = periods.reduce((p, q) => (q.to.y * 12 + q.to.m > p.to.y * 12 + p.to.m ? q : p));
+      const lastIdx = last.to.y * 12 + last.to.m - 1;
+      if ($("proj").checked && lastIdx < endIdx) {
+        const start = lastIdx + 1;
+        periods.push(Object.assign({ from: { y: Math.floor(start / 12), m: start % 12 + 1 }, to: end }, state() ? { coef: last.coef } : { salary: last.salary }));
+        note = `Giả định bạn đóng tiếp ${dur(endIdx - lastIdx)} với mức ${state() ? "hệ số " + last.coef.toLocaleString("vi-VN", { maximumFractionDigits: 2 }) : money(last.salary) + " đ"} đến khi nghỉ hưu. Lương những năm sau 2026 được tính theo giá trị hiện nay.`;
+      }
+    }
+    const r = LuongHuu.pension({ sex, sector: $("sector").value, periods, earlyMonths: early });
+    rows.unshift(["Tổng thời gian đóng", dur(r.months)]);
+    if (!r.eligible) {
+      $("res").innerHTML = `Chưa đủ 15 năm đóng, còn thiếu <b>${dur(r.monthsShort)}</b>`;
+      $("tbl").innerHTML = rows.map(([a, b]) => `<tr><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+      $("sub").innerHTML = (note ? note + " " : "") + `Bạn có thể đóng tiếp (kể cả BHXH tự nguyện) cho đủ 15 năm, hoặc xem <a href="/tinh-bhxh-mot-lan/">số tiền rút BHXH một lần</a>.`;
+      return;
+    }
+    $("res").innerHTML = `Lương hưu khoảng: <b>${money(r.amount)} đ/tháng</b>`;
+    rows.push(
+      [state() ? `Lương bình quân (${dur(r.avgMonths)} cuối)` : "Lương bình quân đã điều chỉnh", money(r.avg) + " đ"],
+      ["Số năm tính tỷ lệ", f1(r.years) + " năm"],
+      ["Tỷ lệ hưởng", f1(r.rate) + "%"],
+      ...(r.cut ? [["Giảm do nghỉ hưu sớm", "−" + f1(r.cut) + "%"], ["Tỷ lệ còn lại", f1(r.finalRate) + "%"]] : []),
+      ...(r.floored ? [["Nâng lên mức tối thiểu", money(r.ref) + " đ"]] : []),
+      ["Lương hưu hằng tháng", money(r.amount) + " đ", "tot"],
+      ...(r.oneOff ? [[`Trợ cấp một lần (đóng vượt ${f1(r.extraYears)} năm)`, money(r.oneOff) + " đ"]] : [])
+    );
+    $("tbl").innerHTML = rows.map(([a, b, c]) => `<tr${c ? ` class="${c}"` : ""}><td>${a}</td><td class="n">${b}</td></tr>`).join("");
+    const tip = r.rate < 75 ? ` Đóng thêm ${dur(Math.round(r.yearsToMax * 12))} nữa để đạt tỷ lệ tối đa 75%.` : "";
+    $("sub").textContent = (note ? note : "") + tip;
+  } });
+  form.run(false);
+})();
+</script>

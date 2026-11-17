@@ -1,0 +1,171 @@
+<!--
+title: Lập bảng lương online 2026, xuất file Excel có công thức | Tính Giùm
+h1: Lập bảng lương nhân viên
+description: Lập bảng lương cho nhiều nhân viên: tính lương theo ngày công, tăng ca, BHXH, BHYT, BHTN, thuế TNCN theo biểu thuế 2026, thực lĩnh và chi phí công ty; dán từ Excel và tải về file .xlsx có sẵn công thức. Miễn phí, dữ liệu không rời máy bạn.
+category: tien-hoa-don
+order: 03
+summary: Bảng lương nhiều người, tải về Excel có công thức.
+intro: Nhập hoặc dán danh sách nhân viên, công cụ tính bảo hiểm, thuế TNCN, thực lĩnh cho từng người và xuất ra file Excel để lưu sổ.
+keywords: bảng lương, mẫu bảng lương excel, lập bảng lương, bảng lương nhân viên, tính lương nhân viên, bảng lương 2026, bảng tính lương excel, file bảng lương
+rules: Biểu thuế TNCN và giảm trừ gia cảnh từ 2026 (15,5 triệu / 6,2 triệu), BHXH 8% · BHYT 1,5% · BHTN 1% (công ty 17,5% · 3% · 1%), lương tối thiểu vùng 2026, Điều 98 BLLĐ 2019
+updated: 11/2026
+-->
+<style>
+.pay .in{width:100%;min-width:0;padding:6px 7px;font-size:15px}
+.pay td{padding:3px 3px}
+.pay th{font-size:13px;line-height:1.25;vertical-align:bottom}
+.pay .c-name{min-width:140px}.pay .c-m{min-width:112px}.pay .c-s{min-width:58px}
+.paste{width:100%;min-height:110px;font:14px/1.4 ui-monospace,Consolas,monospace;padding:8px;border:1px solid var(--line,#ccc);border-radius:8px}
+.res-pay td:first-child{min-width:120px}
+.res-pay td.n,.res-pay th.n{text-align:right;white-space:nowrap}
+</style>
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="title">Kỳ lương</label>
+  <div><input id="title" class="in" autocomplete="off" placeholder="Tháng 11/2026"></div>
+  <label class="l" for="region">Vùng lương tối thiểu</label>
+  <div><select id="region" class="in">
+    <option value="1">Vùng I: 5.310.000 đ</option>
+    <option value="2">Vùng II: 4.730.000 đ</option>
+    <option value="3">Vùng III: 4.140.000 đ</option>
+    <option value="4">Vùng IV: 3.700.000 đ</option>
+  </select></div>
+  <label class="l" for="std">Ngày công chuẩn</label>
+  <div class="f"><input id="std" class="in w-s" inputmode="numeric" value="26" aria-label="Ngày công chuẩn">
+    <label class="chk"><input type="checkbox" id="union" checked> Tính kinh phí công đoàn 2%</label></div>
+  <span class="l top-l">Nhân viên</span>
+  <div>
+    <div class="scroll"><table class="t pay"><thead><tr>
+      <th class="c-name">Họ tên</th><th class="c-m">Lương hợp đồng</th><th class="c-m">Lương đóng BH <small>(trống = lương HĐ, 0 = không đóng)</small></th>
+      <th class="c-s">Ngày công</th><th class="c-m">Phụ cấp chịu thuế</th><th class="c-m">Phụ cấp không chịu thuế</th>
+      <th class="c-s">Giờ TC thường</th><th class="c-s">Giờ TC ngày nghỉ</th><th class="c-s">Giờ TC lễ tết</th>
+      <th class="c-m">Thưởng</th><th class="c-s">Người phụ thuộc</th><th class="c-m">Khấu trừ khác <small>(tạm ứng…)</small></th><th></th>
+    </tr></thead><tbody id="rows"></tbody></table></div>
+    <div class="btns"><button class="btn" type="button" id="add">+ Thêm nhân viên</button><button class="btn" type="button" id="pasteBtn">Dán từ Excel</button></div>
+    <div id="pasteBox" hidden>
+      <span class="hint">Chép các cột theo đúng thứ tự trên (Họ tên, Lương hợp đồng, Lương đóng BH, Ngày công, …) từ Excel hoặc Google Sheets rồi dán vào đây. Cột trống để trống.</span>
+      <textarea id="paste" class="paste" aria-label="Dán dữ liệu từ Excel"></textarea>
+      <div class="btns"><button class="btn solid" type="button" id="pasteGo">Thay danh sách bằng dữ liệu đã dán</button></div>
+    </div>
+    <span class="hint">Danh sách được lưu ngay trên trình duyệt của bạn để tháng sau mở lại dùng tiếp; không gửi lên máy chủ.</span>
+  </div>
+  <div class="btns"><button class="go" type="submit">Tính __PLAY__</button><button class="clr" type="button" id="reset">Xoá hết</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Bảng lương</h2>
+  <div class="body">
+    <p class="big" id="res"></p>
+    <div class="scroll"><table class="t res-pay"><thead><tr><th>Họ tên</th><th class="n">Tổng thu nhập</th><th class="n">BH người lao động</th><th class="n">Thuế TNCN</th><th class="n">Thực lĩnh</th><th class="n">Chi phí công ty</th></tr></thead><tbody id="tbl"></tbody></table></div>
+    <p class="note" id="warn"></p>
+    <p><button class="btn solid" type="button" id="xlsx">Tải bảng lương Excel (.xlsx)</button></p>
+    <p class="sub">File Excel có đủ các cột chi tiết (lương ngày công, tăng ca, BHXH, BHYT, BHTN, thu nhập tính thuế…) và các ô tính đều là công thức, sửa số là Excel tự tính lại.</p>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Bảng lương tính những gì?</h2>
+  <ul>
+    <li><b>Lương theo ngày công</b> = Lương hợp đồng × Ngày công thực tế ÷ Ngày công chuẩn.</li>
+    <li><b>Tiền tăng ca</b>: lương giờ = lương hợp đồng ÷ ngày công chuẩn ÷ 8; ngày thường × 150%, ngày nghỉ hằng tuần × 200%, lễ tết × 300%. Làm thêm ban đêm có hệ số riêng, xem <a href="/tinh-luong-tang-ca/">công cụ tính lương tăng ca</a>.</li>
+    <li><b>Tổng thu nhập</b> = lương ngày công + phụ cấp + tăng ca + thưởng.</li>
+    <li><b>Bảo hiểm người lao động đóng</b>: BHXH 8%, BHYT 1,5%, BHTN 1% trên lương đóng BH; BHXH, BHYT tối đa trên 20 lần mức tham chiếu (50,6 triệu), BHTN tối đa 20 lần lương tối thiểu vùng.</li>
+    <li><b>Công ty đóng</b>: BHXH 17,5% (gồm 0,5% tai nạn lao động, bệnh nghề nghiệp), BHYT 3%, BHTN 1%, cộng kinh phí công đoàn 2%.</li>
+    <li><b>Thu nhập tính thuế</b> = tổng thu nhập − phụ cấp không chịu thuế − phần tăng ca trả cao hơn giờ thường − bảo hiểm − giảm trừ bản thân 15,5 triệu − 6,2 triệu mỗi người phụ thuộc. Thuế TNCN tính theo biểu lũy tiến 5 bậc (5%, 10%, 20%, 30%, 35%).</li>
+    <li><b>Thực lĩnh</b> = tổng thu nhập − bảo hiểm − thuế TNCN − khấu trừ khác (tạm ứng, đoàn phí…).</li>
+  </ul>
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Phụ cấp nào không chịu thuế TNCN?</summary><p>Một số khoản như phụ cấp ăn giữa ca trong mức quy định, trang phục, công tác phí theo mức khoán, phụ cấp độc hại, nguy hiểm, phụ cấp khu vực theo quy định… không tính vào thu nhập chịu thuế. Phụ cấp xăng xe, điện thoại trả theo lương thường vẫn chịu thuế trừ khi có quy chế khoán phù hợp. Hãy đối chiếu quy chế lương của công ty.</p></details>
+  <details class="qa"><summary>Nhân viên thử việc hoặc hợp đồng dưới 3 tháng tính thế nào?</summary><p>Hợp đồng dưới 1 tháng không phải đóng BHXH bắt buộc: nhập 0 ở cột Lương đóng BH. Riêng thuế TNCN, người không ký hợp đồng hoặc hợp đồng dưới 3 tháng có thu nhập từ 2 triệu đồng mỗi lần trả thường bị khấu trừ 10% trên tổng thu nhập, không theo biểu lũy tiến; bảng này tính theo biểu lũy tiến nên hãy điều chỉnh riêng cho trường hợp đó.</p></details>
+  <details class="qa"><summary>Lương đóng bảo hiểm thấp nhất là bao nhiêu?</summary><p>Không thấp hơn lương tối thiểu vùng nơi doanh nghiệp hoạt động. Công cụ sẽ nhắc nếu có nhân viên đóng thấp hơn mức này.</p></details>
+  <details class="qa"><summary>Dữ liệu lương có bị gửi đi đâu không?</summary><p>Không. Mọi phép tính và file Excel đều được tạo ngay trên trình duyệt của bạn. Danh sách được lưu tạm trên máy bạn để lần sau dùng tiếp; bấm "Xoá hết" để xoá.</p></details>
+  <p>Xem thêm: <a href="/tinh-luong-gross-net/">Tính lương Gross sang Net</a> · <a href="/quyet-toan-thue-tncn/">Quyết toán thuế TNCN</a> · <a href="/tinh-luong-tang-ca/">Tính lương tăng ca</a></p>
+  <p class="note">Kết quả để tham khảo theo quy định hiện hành năm 2026; doanh nghiệp tự chịu trách nhiệm đối chiếu với quy chế lương và hồ sơ thực tế.</p>
+</div>
+
+<script src="/js/so-nhap.js"></script>
+<script src="/js/luong.js"></script>
+<script src="/js/bang-luong.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
+  const KEY = "tg-bang-luong-v1", F = BangLuong.INPUTS.map(f => f[0]);
+  const MONEY = { base: 1, insBase: 1, allowTax: 1, allowFree: 1, bonus: 1, deduct: 1 };
+  const read = s => { if (s === "" || s == null) return ""; const v = parseFloat(String(s).replace(/\./g, "").replace(",", ".")); return isFinite(v) ? v : ""; };
+  const show = (k, v) => v === "" || v == null ? "" : MONEY[k] ? money(v) : String(v).replace(".", ",");
+  function addRow(e){
+    e = e || {};
+    const tr = document.createElement("tr");
+    F.forEach(k => {
+      const td = tr.appendChild(document.createElement("td")), i = document.createElement("input");
+      i.className = "in"; i.dataset.k = k; i.autocomplete = "off";
+      i.setAttribute("aria-label", BangLuong.INPUTS.find(f => f[0] === k)[1]);
+      if (k === "name") i.value = e.name || "";
+      else { i.inputMode = MONEY[k] ? "numeric" : "decimal"; i.value = show(k, e[k]); KCNum.attach(i, { decimals: MONEY[k] || k === "deps" ? 0 : 1 }); }
+      i.addEventListener("change", save);
+      td.appendChild(i);
+    });
+    const x = document.createElement("button"); x.type = "button"; x.className = "btn"; x.textContent = "×"; x.setAttribute("aria-label", "Xoá nhân viên");
+    x.addEventListener("click", () => { tr.remove(); if (!$("rows").children.length) addRow(); save(); });
+    tr.appendChild(document.createElement("td")).appendChild(x);
+    $("rows").appendChild(tr);
+  }
+  function list(){
+    return [...$("rows").children].map(tr => { const e = {}; tr.querySelectorAll("input").forEach(i => { e[i.dataset.k] = i.dataset.k === "name" ? i.value.trim() : read(i.value); }); return e; })
+      .filter(e => e.name || e.base !== "");
+  }
+  const opts = () => ({ stdDays: Math.max(1, Math.min(31, read($("std").value) || 26)), region: +$("region").value, union: $("union").checked, title: $("title").value.trim() });
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify({ list: list(), o: opts() })); } catch (e) {} }
+  function load(){
+    let d = null; try { d = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+    if (d && d.list && d.list.length) {
+      d.list.forEach(addRow);
+      if (d.o) { $("region").value = d.o.region || 1; $("std").value = d.o.stdDays || 26; $("union").checked = d.o.union !== false; $("title").value = d.o.title || ""; }
+      return;
+    }
+    [{ name: "Nguyễn Văn An", base: 20000000, deps: 1 },
+     { name: "Trần Thị Bình", base: 10400000, insBase: 8000000, days: 24, allowFree: 730000, otDay: 10, otRest: 8 },
+     { name: "Lê Minh Cường", base: 35000000, allowTax: 3000000, bonus: 5000000, deps: 2, deduct: 2000000 }].forEach(addRow);
+    const d0 = new Date(); $("title").value = `Tháng ${d0.getMonth() + 1}/${d0.getFullYear()}`;
+  }
+  load();
+  ["region", "std", "union", "title"].forEach(id => $(id).addEventListener("change", save));
+  $("add").addEventListener("click", () => { addRow(); $("rows").lastChild.querySelector("input").focus(); });
+  $("pasteBtn").addEventListener("click", () => { $("pasteBox").hidden = !$("pasteBox").hidden; if (!$("pasteBox").hidden) $("paste").focus(); });
+  $("pasteGo").addEventListener("click", () => {
+    const rows = BangLuong.parsePaste($("paste").value);
+    if (!rows.length) { KC.toast("Không đọc được dòng nào"); return; }
+    $("rows").innerHTML = ""; rows.forEach(addRow); $("paste").value = ""; $("pasteBox").hidden = true; save();
+    KC.toast(`Đã nhập ${rows.length} nhân viên`); form.run(true);
+  });
+  $("reset").addEventListener("click", () => { $("rows").innerHTML = ""; addRow(); $("out").hidden = true; try { localStorage.removeItem(KEY); } catch (e) {} });
+
+  let last = null;
+  const form = KC.form($("f"), { calc(){
+    const l = list(), o = opts();
+    if (!l.length) { $("res").innerHTML = `<span class="err">Nhập ít nhất một nhân viên có lương hợp đồng.</span>`; $("tbl").innerHTML = ""; $("warn").textContent = ""; last = null; return; }
+    const t = BangLuong.sheet(l, o); last = { l, o };
+    $("res").innerHTML = `${t.rows.length} nhân viên · Tổng thực lĩnh <b>${money(t.sum.net)} đ</b> · Chi phí công ty <b>${money(t.sum.cost)} đ</b>`;
+    $("tbl").innerHTML = t.rows.map(r => `<tr><td>${r.name.replace(/[<&]/g, c => c === "<" ? "&lt;" : "&amp;") || "(chưa đặt tên)"}</td><td class="n">${money(r.gross)}</td><td class="n">${money(r.insTotal)}</td><td class="n">${money(r.tax)}</td><td class="n"><b>${money(r.net)}</b></td><td class="n">${money(r.cost)}</td></tr>`).join("") +
+      `<tr class="tot"><td>Tổng cộng</td><td class="n">${money(t.sum.gross)}</td><td class="n">${money(t.sum.insTotal)}</td><td class="n">${money(t.sum.tax)}</td><td class="n">${money(t.sum.net)}</td><td class="n">${money(t.sum.cost)}</td></tr>`;
+    const low = t.rows.filter(r => r.belowMin).map(r => r.name || "(chưa đặt tên)");
+    $("warn").textContent = (low.length ? `Lương đóng BH thấp hơn lương tối thiểu vùng: ${low.join(", ")}. ` : "") +
+      `Công ty nộp cơ quan BHXH: ${money(t.rows.reduce((s, r) => s + r.insTotal + r.company, 0))} đ (gồm phần trích từ lương người lao động); nộp thuế TNCN đã khấu trừ: ${money(t.sum.tax)} đ.`;
+    save();
+  } });
+
+  function loadZip(){ return window.JSZip ? Promise.resolve(window.JSZip) : new Promise((ok, no) => {
+    const s = document.createElement("script"); s.src = "/js/jszip.min.js"; s.onload = () => ok(window.JSZip); s.onerror = no; document.head.appendChild(s); }); }
+  $("xlsx").addEventListener("click", async () => {
+    if (!last) return;
+    try {
+      const JSZip = await loadZip(), z = new JSZip(), parts = BangLuong.xlsx(last.l, last.o);
+      for (const k in parts) z.file(k, parts[k]);
+      const blob = await z.generateAsync({ type: "blob", compression: "DEFLATE", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+      const a = document.createElement("a"), slug = (last.o.title || "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/gi, "d").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "").toLowerCase();
+      a.href = URL.createObjectURL(blob); a.download = "bang-luong" + (slug ? "-" + slug : "") + ".xlsx";
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    } catch (e) { KC.toast("Không tạo được file, hãy thử lại"); }
+  });
+  form.run(false);
+})();
+</script>

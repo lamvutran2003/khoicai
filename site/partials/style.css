@@ -221,3 +221,14 @@ table.days td{white-space:nowrap}
 table.kv th{width:150px;background:#f7f7f7}
 ul.yrs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px 12px}
 ul.yrs small{color:var(--muted)}
+/* Công cụ PDF: danh sách file, ảnh thu nhỏ */
+.flist{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+.flist li{display:flex;gap:6px;align-items:center;border:1px solid var(--panel-line);background:#fff;padding:6px 8px}
+.flist .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flist .meta{color:var(--muted);font-size:14px;white-space:nowrap}
+.flist img{width:40px;height:40px;object-fit:cover;border:1px solid var(--line)}
+.flist .btn{padding:4px 9px;min-width:34px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:10px}
+.thumbs figure{margin:0;border:1px solid var(--panel-line);background:#fff;padding:6px;text-align:center;font-size:14px}
+.thumbs img{width:100%;height:auto;display:block;margin-bottom:4px}
+.privacy{font-size:14px;color:var(--muted)}

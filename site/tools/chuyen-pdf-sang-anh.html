@@ -1,0 +1,104 @@
+<!--
+title: Chuyển PDF sang ảnh JPG, PNG online miễn phí | Tính Giùm
+h1: Chuyển PDF sang ảnh JPG
+description: Chuyển từng trang PDF thành ảnh JPG hoặc PNG sắc nét, chọn độ phân giải, tải từng ảnh hoặc cả bộ dạng .zip. Xử lý ngay trên trình duyệt, file không bị gửi lên mạng.
+category: van-ban
+order: 23
+summary: Mỗi trang PDF thành một ảnh JPG hoặc PNG.
+intro: Chọn file PDF, chọn trang và độ nét, rồi tải các trang về dạng ảnh để gửi Zalo, đăng mạng xã hội hay chèn vào tài liệu.
+keywords: chuyển pdf sang jpg, pdf sang ảnh, chuyển pdf thành ảnh, pdf to jpg, pdf sang png, xuất ảnh từ pdf
+rules: Xử lý trên trình duyệt bằng pdf.js (Mozilla), không tải file lên máy chủ
+updated: 11/2026
+-->
+<form class="calc" id="f" onsubmit="return false">
+  <label class="l top-l" for="file">File PDF</label>
+  <div>
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept="application/pdf,.pdf">
+      <b>Kéo thả file PDF vào đây hoặc bấm để chọn</b>
+      <span class="hint" id="info">File không được gửi lên mạng.</span>
+    </label>
+  </div>
+  <label class="l" for="pages">Trang</label>
+  <div><input id="pages" class="in" autocomplete="off" placeholder="Để trống = tất cả các trang"><span class="hint" style="display:block">Ví dụ: 1-3, 5. Để trống để chuyển tất cả.</span></div>
+  <label class="l" for="fmt">Định dạng, độ nét</label>
+  <div class="f"><select id="fmt" class="in"><option value="jpg">JPG</option><option value="png">PNG</option></select>
+    <select id="dpi" class="in" aria-label="Độ nét"><option value="96">Thường (96 dpi)</option><option value="150" selected>Nét (150 dpi)</option><option value="220">Rất nét (220 dpi)</option><option value="300">In ấn (300 dpi)</option></select></div>
+  <div class="btns"><button class="go" type="button" id="go" disabled>Chuyển sang ảnh __PLAY__</button><button class="clr" type="button" id="reset">Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body"><p id="msg"></p><div class="actions" id="act"></div><div class="thumbs" id="thumbs"></div></div>
+</section>
+
+<div class="article">
+  <h2>Cách dùng</h2>
+  <ol>
+    <li>Chọn file PDF.</li>
+    <li>Nhập các trang cần chuyển, hoặc để trống để lấy tất cả.</li>
+    <li>Chọn JPG (nhẹ, hợp để gửi tin nhắn) hoặc PNG (giữ nét chữ tuyệt đối), chọn độ nét rồi bấm <b>Chuyển sang ảnh</b>.</li>
+    <li>Bấm vào từng ảnh để tải riêng, hoặc tải tất cả trong một file .zip.</li>
+  </ol>
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Nên chọn độ nét nào?</summary><p>150 dpi đủ để đọc rõ trên điện thoại và máy tính. Chọn 300 dpi khi cần in ảnh ra giấy; ảnh sẽ nặng hơn và chuyển chậm hơn với file nhiều trang.</p></details>
+  <details class="qa"><summary>Có chuyển PDF sang Word được không?</summary><p>Chưa. Chuyển sang Word mà giữ đúng bố cục cần xử lý phức tạp trên máy chủ, trong khi công cụ ở đây làm mọi thứ ngay trên máy bạn để giữ kín tài liệu.</p></details>
+  <details class="qa"><summary>File của tôi có bị gửi lên mạng không?</summary><p>Không. Trang PDF được vẽ thành ảnh ngay trên trình duyệt của bạn.</p></details>
+  <p>Xem thêm: <a href="/ghep-file-pdf/">Ghép file PDF</a> · <a href="/tach-file-pdf/">Tách file PDF</a> · <a href="/chuyen-anh-sang-pdf/">Chuyển ảnh sang PDF</a></p>
+</div>
+
+<script src="/js/pdf-tools.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), T = PdfTools;
+  let cur = null, outs = [];
+  const esc = s => s.replace(/[<&]/g, c => c === "<" ? "&lt;" : "&amp;");
+  function clearOut(){ outs.forEach(o => URL.revokeObjectURL(o.url)); outs = []; $("thumbs").innerHTML = ""; $("act").innerHTML = ""; }
+  T.dropZone($("drop"), $("file"), async list => {
+    const file = list.find(f => /pdf$/i.test(f.type) || /\.pdf$/i.test(f.name));
+    if (!file) { if (list.length) KC.toast("Chỉ nhận file PDF"); return; }
+    $("info").textContent = "Đang đọc " + file.name + "…"; $("go").disabled = true;
+    if (cur) cur.doc.destroy(); cur = null;
+    try {
+      const lib = await T.pdfjs(), bytes = await T.readBytes(file);
+      const doc = await lib.getDocument({ data: bytes, standardFontDataUrl: "/js/pdfjs-fonts/" }).promise;
+      cur = { file, doc, n: doc.numPages };
+      $("info").innerHTML = `<b>${esc(file.name)}</b> · ${cur.n} trang · ${T.size(file.size)}`; $("go").disabled = false;
+    } catch (e) { $("info").innerHTML = `<span class="err">${/password/i.test(e && e.name + e.message) ? T.errorText({ message: "password" }) : T.errorText(e)}</span>`; }
+  });
+  $("reset").addEventListener("click", () => { if (cur) cur.doc.destroy(); cur = null; clearOut(); $("info").textContent = "File không được gửi lên mạng."; $("go").disabled = true; $("out").hidden = true; $("pages").value = ""; });
+  $("go").addEventListener("click", async () => {
+    if (!cur) return;
+    const say = h => $("msg").innerHTML = h;
+    let pages = [...Array(cur.n).keys()];
+    if ($("pages").value.trim()) { const r = T.parsePages($("pages").value, cur.n); if (r.error) { $("out").hidden = false; say(`<span class="err">${r.error}</span>`); return; } pages = r.pages; }
+    clearOut(); $("out").hidden = false; $("go").disabled = true;
+    const png = $("fmt").value === "png", scale = +$("dpi").value / 72, name = T.baseName(cur.file.name), pad = String(cur.n).length;
+    try {
+      for (let i = 0; i < pages.length; i++) {
+        say(`Đang chuyển trang ${pages[i] + 1} (${i + 1}/${pages.length})…`);
+        const page = await cur.doc.getPage(pages[i] + 1), vp = page.getViewport({ scale });
+        const c = document.createElement("canvas"); c.width = Math.ceil(vp.width); c.height = Math.ceil(vp.height);
+        const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height);
+        await page.render({ canvasContext: g, viewport: vp }).promise; page.cleanup();
+        const blob = await new Promise(r => c.toBlob(r, png ? "image/png" : "image/jpeg", 0.9));
+        c.width = c.height = 0;
+        const o = { blob, url: URL.createObjectURL(blob), name: `${name}-trang-${String(pages[i] + 1).padStart(pad, "0")}.${png ? "png" : "jpg"}` };
+        outs.push(o);
+        const fig = document.createElement("figure");
+        fig.innerHTML = `<a href="${o.url}" download="${esc(o.name)}"><img src="${o.url}" alt="Trang ${pages[i] + 1}" loading="lazy"></a><figcaption>Trang ${pages[i] + 1} · ${T.size(blob.size)}</figcaption>`;
+        $("thumbs").appendChild(fig);
+      }
+      const total = outs.reduce((s, o) => s + o.blob.size, 0);
+      say(`Đã chuyển <b>${outs.length} trang</b> (${T.size(total)}). Bấm vào ảnh để tải từng trang.`);
+      const btn = document.createElement("button"); btn.type = "button"; btn.className = "btn solid";
+      if (outs.length === 1) { btn.textContent = "Tải ảnh"; btn.addEventListener("click", () => T.download(outs[0].blob, outs[0].name)); }
+      else { btn.textContent = `Tải tất cả (.zip)`; btn.addEventListener("click", async () => {
+        btn.disabled = true; const JSZip = await T.zip(), z = new JSZip(); outs.forEach(o => z.file(o.name, o.blob));
+        T.download(await z.generateAsync({ type: "blob" }), name + "-anh.zip", "application/zip"); btn.disabled = false; }); }
+      $("act").appendChild(btn);
+    } catch (e) { say(`<span class="err">${T.errorText(e)}</span>`); }
+    $("go").disabled = false;
+  });
+})();
+</script>

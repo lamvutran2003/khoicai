@@ -1,0 +1,117 @@
+<!--
+title: Chuyển ảnh sang PDF, JPG sang PDF online miễn phí | Tính Giùm
+h1: Chuyển ảnh sang PDF
+description: Gộp nhiều ảnh JPG, PNG, ảnh chụp điện thoại thành một file PDF khổ A4, tự xoay đúng chiều, chọn dung lượng nhẹ để nộp hồ sơ online. Xử lý ngay trên máy, ảnh không bị gửi lên mạng.
+category: van-ban
+order: 22
+summary: Gộp ảnh JPG, PNG thành một file PDF khổ A4.
+intro: Chọn các ảnh (chụp giấy tờ, hóa đơn, bài làm…), sắp xếp thứ tự rồi tải về một file PDF.
+keywords: chuyển ảnh sang pdf, jpg sang pdf, chuyển hình sang pdf, gộp ảnh thành pdf, png sang pdf, ảnh sang pdf trên điện thoại, image to pdf
+rules: Xử lý trên trình duyệt bằng pdf-lib, không tải ảnh lên máy chủ
+updated: 11/2026
+-->
+<form class="calc" id="f" onsubmit="return false">
+  <label class="l top-l" for="file">Ảnh</label>
+  <div>
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept="image/*" multiple>
+      <b>Kéo thả ảnh vào đây hoặc bấm để chọn</b>
+      <span class="hint">JPG, PNG, WebP… chọn được nhiều ảnh. Ảnh không được gửi lên mạng.</span>
+    </label>
+    <ul class="flist" id="list"></ul>
+  </div>
+  <label class="l" for="paper">Khổ giấy</label>
+  <div class="f"><select id="paper" class="in"><option value="a4">A4</option><option value="letter">Letter</option><option value="image">Theo kích thước ảnh</option></select>
+    <select id="orient" class="in" aria-label="Hướng giấy"><option value="auto">Tự xoay theo ảnh</option><option value="portrait">Dọc</option><option value="landscape">Ngang</option></select></div>
+  <label class="l" for="margin">Lề</label>
+  <div><select id="margin" class="in"><option value="0">Không lề</option><option value="20" selected>Lề nhỏ</option><option value="42">Lề vừa</option></select></div>
+  <label class="l" for="q">Dung lượng</label>
+  <div><select id="q" class="in"><option value="hi">Nét nhất</option><option value="mid" selected>Cân bằng</option><option value="lo">Nhẹ nhất (nộp hồ sơ online)</option></select></div>
+  <div class="btns"><button class="go" type="button" id="go" disabled>Tạo PDF __PLAY__</button><button class="clr" type="button" id="reset">Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body"><p id="msg"></p><div class="actions" id="act"></div></div>
+</section>
+
+<div class="article">
+  <h2>Cách dùng</h2>
+  <ol>
+    <li>Chọn ảnh từ máy hoặc thư viện ảnh điện thoại; có thể chọn thêm nhiều lần.</li>
+    <li>Sắp xếp bằng nút ↑ ↓; mỗi ảnh là một trang.</li>
+    <li>Chọn khổ giấy, lề, dung lượng rồi bấm <b>Tạo PDF</b>.</li>
+  </ol>
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Cổng dịch vụ công giới hạn dung lượng file, nên chọn gì?</summary><p>Chọn "Nhẹ nhất". Ảnh được thu nhỏ vừa đủ đọc rõ chữ trên khổ A4, file thường chỉ vài trăm KB mỗi trang. Nếu vẫn quá giới hạn, hãy chia thành nhiều file hoặc bớt ảnh.</p></details>
+  <details class="qa"><summary>Ảnh chụp điện thoại bị xoay ngang?</summary><p>Công cụ đọc hướng chụp lưu trong ảnh nên tự xoay đúng chiều. Chọn "Tự xoay theo ảnh" để ảnh ngang nằm trên trang ngang.</p></details>
+  <details class="qa"><summary>Ảnh HEIC của iPhone có dùng được không?</summary><p>Trên Safari (iPhone, iPad, Mac) được. Trên trình duyệt khác, nếu ảnh HEIC không đọc được, hãy chọn ảnh qua ứng dụng Ảnh hoặc đặt máy ảnh lưu ở định dạng "Tương thích nhất" (JPG).</p></details>
+  <details class="qa"><summary>Ảnh có bị gửi lên mạng không?</summary><p>Không. File PDF được tạo ngay trên thiết bị của bạn.</p></details>
+  <p>Xem thêm: <a href="/ghep-file-pdf/">Ghép file PDF</a> · <a href="/tach-file-pdf/">Tách file PDF</a> · <a href="/chuyen-pdf-sang-anh/">Chuyển PDF sang ảnh JPG</a></p>
+</div>
+
+<script src="/js/pdf-tools.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), T = PdfTools;
+  const Q = { hi: [3508, 0.92], mid: [2200, 0.85], lo: [1400, 0.72] };   // cạnh dài tối đa (px), chất lượng JPEG
+  let items = [];   // { file, url }
+  const esc = s => s.replace(/[<&"]/g, c => ({ "<": "&lt;", "&": "&amp;", '"': "&quot;" }[c]));
+  function render(){
+    $("list").innerHTML = items.map((it, i) => `<li><img src="${it.url}" alt=""><span class="nm" title="${esc(it.file.name)}">${i + 1}. ${esc(it.file.name)}</span>
+      <span class="meta">${T.size(it.file.size)}</span>
+      <button type="button" class="btn" data-up="${i}" aria-label="Lên"${i ? "" : " disabled"}>↑</button><button type="button" class="btn" data-down="${i}" aria-label="Xuống"${i < items.length - 1 ? "" : " disabled"}>↓</button><button type="button" class="btn" data-del="${i}" aria-label="Bỏ ảnh">×</button></li>`).join("");
+    $("go").disabled = !items.length;
+  }
+  $("list").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    const i = +(b.dataset.up ?? b.dataset.down ?? b.dataset.del);
+    if (b.dataset.up) [items[i - 1], items[i]] = [items[i], items[i - 1]];
+    else if (b.dataset.down) [items[i + 1], items[i]] = [items[i], items[i + 1]];
+    else { URL.revokeObjectURL(items[i].url); items.splice(i, 1); }
+    render();
+  });
+  T.dropZone($("drop"), $("file"), list => {
+    const add = list.filter(f => /^image\//.test(f.type) || /\.(jpe?g|png|webp|gif|bmp|heic|heif|avif)$/i.test(f.name));
+    if (list.length && !add.length) { KC.toast("Chỉ nhận file ảnh"); return; }
+    items.push(...add.map(file => ({ file, url: URL.createObjectURL(file) }))); render();
+  });
+  $("reset").addEventListener("click", () => { items.forEach(it => URL.revokeObjectURL(it.url)); items = []; render(); $("out").hidden = true; });
+
+  function loadImg(url){ return new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = url; }); }
+  async function toJpeg(it, maxSide, quality){
+    const img = await loadImg(it.url);   // trình duyệt tự xoay theo EXIF
+    const w0 = img.naturalWidth, h0 = img.naturalHeight, k = Math.min(1, maxSide / Math.max(w0, h0));
+    const w = Math.max(1, Math.round(w0 * k)), h = Math.max(1, Math.round(h0 * k));
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, w, h); g.drawImage(img, 0, 0, w, h);
+    const blob = await new Promise(r => c.toBlob(r, "image/jpeg", quality));
+    return { bytes: new Uint8Array(await blob.arrayBuffer()), w, h };
+  }
+  $("go").addEventListener("click", async () => {
+    $("go").disabled = true; $("out").hidden = false; $("act").innerHTML = "";
+    const say = h => $("msg").innerHTML = h, [maxSide, quality] = Q[$("q").value];
+    const paper = $("paper").value, orient = $("orient").value, margin = +$("margin").value;
+    try {
+      const PDFLib = await T.pdfLib(), doc = await PDFLib.PDFDocument.create();
+      const bad = [];
+      for (let i = 0; i < items.length; i++) {
+        say(`Đang xử lý ảnh ${i + 1}/${items.length}…`);
+        let j; try { j = await toJpeg(items[i], maxSide, quality); } catch (e) { bad.push(items[i].file.name); continue; }
+        const im = await doc.embedJpg(j.bytes);
+        // khổ "theo ảnh": quy về 150 dpi để kích thước trang hợp lý
+        const pl = T.placeImage(paper === "image" ? j.w * 72 / 150 : j.w, paper === "image" ? j.h * 72 / 150 : j.h, paper, orient, paper === "image" ? 0 : margin);
+        doc.addPage([pl.pageW, pl.pageH]).drawImage(im, { x: pl.x, y: pl.y, width: pl.w, height: pl.h });
+      }
+      if (!doc.getPageCount()) throw new Error("no images");
+      const bytes = await doc.save(), name = (items.length === 1 ? T.baseName(items[0].file.name) : "anh") + "-tinhgium.pdf";
+      const n = T.download(bytes, name);
+      say(`Đã tạo PDF <b>${doc.getPageCount()} trang</b>, dung lượng <b>${T.size(n)}</b>. File đã được tải về.` +
+          (bad.length ? `<br><span class="err">Không đọc được: ${bad.map(esc).join(", ")}</span>` : ""));
+      const a = document.createElement("button"); a.type = "button"; a.className = "btn solid"; a.textContent = "Tải lại " + name;
+      a.addEventListener("click", () => T.download(bytes, name)); $("act").appendChild(a);
+    } catch (e) { say(`<span class="err">${/no images/.test(e.message) ? "Không đọc được ảnh nào. Nếu là ảnh HEIC, hãy dùng Safari hoặc đổi sang JPG." : T.errorText(e)}</span>`); }
+    $("go").disabled = !items.length;
+  });
+})();
+</script>

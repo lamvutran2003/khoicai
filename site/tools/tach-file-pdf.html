@@ -1,0 +1,109 @@
+<!--
+title: Tách file PDF, cắt trang PDF online miễn phí | Tính Giùm
+h1: Tách file PDF, trích hoặc xoá trang
+description: Tách file PDF ngay trên trình duyệt: trích các trang cần lấy thành file mới, xoá trang thừa, hoặc chia thành nhiều file mỗi file N trang. File không bị gửi lên máy chủ, không cần đăng ký.
+category: van-ban
+order: 21
+summary: Trích trang, xoá trang, chia nhỏ file PDF.
+intro: Chọn một file PDF, rồi chọn cách tách: lấy một số trang, bỏ một số trang, hoặc chia đều thành nhiều file.
+keywords: tách file pdf, cắt file pdf, tách trang pdf, trích trang pdf, xoá trang pdf, chia nhỏ file pdf, split pdf
+rules: Xử lý trên trình duyệt bằng pdf-lib, không tải file lên máy chủ
+updated: 11/2026
+-->
+<form class="calc" id="f" onsubmit="return false">
+  <label class="l top-l" for="file">File PDF</label>
+  <div>
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept="application/pdf,.pdf">
+      <b>Kéo thả file PDF vào đây hoặc bấm để chọn</b>
+      <span class="hint" id="info">File không được gửi lên mạng.</span>
+    </label>
+  </div>
+  <label class="l" for="mode">Cách tách</label>
+  <div><select id="mode" class="in">
+    <option value="pick">Lấy các trang đã chọn thành 1 file</option>
+    <option value="drop">Xoá các trang đã chọn, giữ phần còn lại</option>
+    <option value="every">Chia thành nhiều file, mỗi file N trang</option>
+  </select></div>
+  <label class="l" for="pages" id="pagesL">Các trang</label>
+  <div id="pagesW"><input id="pages" class="in" autocomplete="off" placeholder="Ví dụ: 1-3, 5, 8-" value="1">
+    <span class="hint" style="display:block">Dùng dấu gạch cho khoảng trang, dấu phẩy để ngăn cách. "8-" là từ trang 8 đến hết.</span></div>
+  <label class="l" for="every" id="everyL" hidden>Số trang mỗi file</label>
+  <div id="everyW" hidden><input id="every" class="in w-s" inputmode="numeric" value="1"> <span class="hint">1 = tách từng trang ra file riêng (tải về dạng .zip)</span></div>
+  <div class="btns"><button class="go" type="button" id="go" disabled>Tách PDF __PLAY__</button><button class="clr" type="button" id="reset">Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body"><p id="msg"></p><div class="actions" id="act"></div></div>
+</section>
+
+<div class="article">
+  <h2>Cách dùng</h2>
+  <ul>
+    <li><b>Lấy trang</b>: nhập các trang cần giữ, ví dụ <code>1-3, 7</code>, để được file mới chỉ có các trang đó. Viết <code>5-1</code> để đảo ngược thứ tự.</li>
+    <li><b>Xoá trang</b>: nhập các trang muốn bỏ, ví dụ trang trắng hay trang bìa.</li>
+    <li><b>Chia file</b>: file 30 trang chia mỗi file 10 trang sẽ ra 3 file, tải về trong một file nén .zip.</li>
+  </ul>
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Tách file có làm giảm chất lượng không?</summary><p>Không. Các trang được sao chép nguyên vẹn, giữ chữ, hình và độ nét như file gốc.</p></details>
+  <details class="qa"><summary>File của tôi có bị gửi lên mạng không?</summary><p>Không. Mọi xử lý diễn ra trên trình duyệt của bạn; trang web không nhận được nội dung file.</p></details>
+  <p>Xem thêm: <a href="/ghep-file-pdf/">Ghép file PDF</a> · <a href="/chuyen-anh-sang-pdf/">Chuyển ảnh sang PDF</a> · <a href="/chuyen-pdf-sang-anh/">Chuyển PDF sang ảnh JPG</a></p>
+</div>
+
+<script src="/js/pdf-tools.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), T = PdfTools;
+  let cur = null;   // { file, bytes, n }
+  const esc = s => s.replace(/[<&]/g, c => c === "<" ? "&lt;" : "&amp;");
+  function mode(){ const ev = $("mode").value === "every"; $("pagesL").hidden = $("pagesW").hidden = ev; $("everyL").hidden = $("everyW").hidden = !ev; }
+  $("mode").addEventListener("change", mode); mode();
+  T.dropZone($("drop"), $("file"), async list => {
+    const file = list.find(f => /pdf$/i.test(f.type) || /\.pdf$/i.test(f.name));
+    if (!file) { if (list.length) KC.toast("Chỉ nhận file PDF"); return; }
+    $("info").textContent = "Đang đọc " + file.name + "…"; $("go").disabled = true; cur = null;
+    try {
+      const PDFLib = await T.pdfLib(), bytes = await T.readBytes(file), doc = await T.openPdf(PDFLib, bytes);
+      cur = { file, bytes, n: doc.getPageCount() };
+      $("info").innerHTML = `<b>${esc(file.name)}</b> · ${cur.n} trang · ${T.size(file.size)}`;
+      $("go").disabled = false;
+    } catch (e) { $("info").innerHTML = `<span class="err">${T.errorText(e)}</span>`; }
+  });
+  $("reset").addEventListener("click", () => { cur = null; $("info").textContent = "File không được gửi lên mạng."; $("go").disabled = true; $("out").hidden = true; $("pages").value = "1"; });
+  async function build(PDFLib, src, idx){ const d = await PDFLib.PDFDocument.create(); (await d.copyPages(src, idx)).forEach(p => d.addPage(p)); return d.save(); }
+  $("go").addEventListener("click", async () => {
+    if (!cur) return;
+    const m = $("mode").value, name = T.baseName(cur.file.name);
+    $("out").hidden = false; $("act").innerHTML = ""; const say = h => $("msg").innerHTML = h;
+    let groups;
+    if (m === "every") groups = T.chunks(cur.n, parseInt($("every").value, 10) || 1);
+    else {
+      const r = T.parsePages($("pages").value, cur.n);
+      if (r.error) { say(`<span class="err">${r.error}</span>`); return; }
+      if (m === "drop") { const del = new Set(r.pages), keep = [...Array(cur.n).keys()].filter(i => !del.has(i));
+        if (!keep.length) { say(`<span class="err">Không thể xoá hết tất cả các trang.</span>`); return; } groups = [keep]; }
+      else groups = [r.pages];
+    }
+    $("go").disabled = true; say("Đang xử lý…");
+    try {
+      const PDFLib = await T.pdfLib(), src = await T.openPdf(PDFLib, cur.bytes);
+      let data, fname, type;
+      if (groups.length === 1) {
+        data = await build(PDFLib, src, groups[0]); fname = `${name}-trang-${T.label(groups[0]).replace(/, /g, "_")}.pdf`.slice(-120);
+        say(`File mới có <b>${groups[0].length} trang</b> (trang ${T.label(groups[0])}).`);
+      } else {
+        const JSZip = await T.zip(), z = new JSZip();
+        for (let i = 0; i < groups.length; i++) { say(`Đang tạo file ${i + 1}/${groups.length}…`); z.file(`${name}-${String(i + 1).padStart(String(groups.length).length, "0")}-trang-${T.label(groups[i]).replace(/, /g, "_")}.pdf`, await build(PDFLib, src, groups[i])); }
+        data = await z.generateAsync({ type: "blob" }); fname = name + "-tach.zip"; type = "application/zip";
+        say(`Đã chia thành <b>${groups.length} file</b>, gói trong một file .zip.`);
+      }
+      const n = T.download(data, fname, type);
+      $("msg").innerHTML += ` Đã tải về ${T.size(n)}.`;
+      const a = document.createElement("button"); a.type = "button"; a.className = "btn solid"; a.textContent = "Tải lại";
+      a.addEventListener("click", () => T.download(data, fname, type)); $("act").appendChild(a);
+    } catch (e) { say(`<span class="err">${T.errorText(e)}</span>`); }
+    $("go").disabled = false;
+  });
+})();
+</script>
