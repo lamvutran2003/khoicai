@@ -1,12 +1,12 @@
 <!--
 title: Làm ảnh thẻ online 3x4, 4x6, ảnh hộ chiếu, visa: tự tách nền, in 10x15 | Tính Giùm
 h1: Làm ảnh thẻ từ ảnh selfie
-description: Làm ảnh thẻ 3x4, 4x6, ảnh hộ chiếu, visa từ ảnh chụp điện thoại: tự tách nền, đổi nền trắng hoặc xanh, ghép áo vest, sơ mi trắng, căn khung chuẩn, xuất JPG 300 dpi và tờ in 10x15. Ảnh xử lý ngay trên máy, không tải lên mạng.
+description: Làm ảnh thẻ 3x4, 4x6, ảnh hộ chiếu, visa Mỹ, Schengen, Hàn, Nhật, Trung từ ảnh chụp điện thoại: tự tách nền, đổi nền trắng hoặc xanh, căn khung chuẩn, xuất JPG 300 dpi và tờ in 10x15. Ảnh xử lý ngay trên máy, không tải lên mạng.
 category: van-ban
 order: 24
 summary: Ảnh 3x4, 4x6, hộ chiếu, visa: tách nền, in 10x15.
 intro: Chụp hoặc chọn một ảnh chân dung, công cụ tự tách nền, căn đúng cỡ đầu theo loại giấy tờ và xếp sẵn tờ in để mang ra tiệm in.
-keywords: làm ảnh thẻ online, ghép áo vest vào ảnh thẻ, ảnh thẻ mặc vest, ảnh thẻ 3x4, ảnh 4x6, ảnh hộ chiếu, ảnh visa, đổi nền ảnh thẻ, ảnh thẻ nền xanh, ảnh thẻ nền trắng, ghép ảnh thẻ in 10x15, ảnh thẻ 3x4 bao nhiêu pixel
+keywords: làm ảnh thẻ online, ảnh thẻ 3x4, ảnh 4x6, ảnh hộ chiếu, ảnh visa, đổi nền ảnh thẻ, ảnh thẻ nền xanh, ảnh thẻ nền trắng, ghép ảnh thẻ in 10x15, ảnh thẻ 3x4 bao nhiêu pixel
 rules: Hộ chiếu: Mẫu TK01, Thông tư 69/2026/TT-BCA (4×6 cm, nền trắng); quy định ảnh visa của từng nước; xử lý trên trình duyệt bằng MODNet và YuNet
 updated: 11/2026
 -->
@@ -57,7 +57,6 @@ updated: 11/2026
     <svg viewBox="0 0 72 88" width="72" height="88" aria-hidden="true"><rect width="72" height="88" fill="#3d85d6"/><ellipse cx="36" cy="34" rx="15" ry="19" fill="#f1c9a5"/><path d="M21 30c0-14 7-21 15-21s15 7 15 21c-3-6-8-9-15-9s-12 3-15 9z" fill="#2b2b2b"/><path d="M8 88c2-16 12-24 28-25 16 1 26 9 28 25z" fill="#1f2c48"/><path d="M29 63l7 9 7-9z" fill="#fff"/><circle cx="30" cy="33" r="1.6" fill="#222"/><circle cx="42" cy="33" r="1.6" fill="#222"/><path d="M31 44h10" stroke="#b05a4a" stroke-width="1.6" stroke-linecap="round"/></svg>
     <div><p><b class="ok">✓ Đúng:</b> nhìn thẳng, miệng khép, hai vai ngang, hai tay để xuôi, lấy cả đầu và vai.</p>
     <p><b class="no">✗ Tránh:</b> cười lộ răng, tay chạm mặt, nghiêng đầu, đeo kính, tóc che tai.</p>
-    <p class="hint">Mặc áo gì cũng được: ở bước 2 có thể ghép <b>vest</b> hoặc <b>sơ mi trắng</b>.</p></div>
   </div>
   <details class="qa" style="margin-top:10px"><summary>Mẹo chụp để ảnh đẹp và đạt chuẩn</summary>
     <ul>
@@ -81,10 +80,6 @@ updated: 11/2026
     <div class="at-ctl">
       <div class="row"><label for="spec"><b>Loại ảnh</b></label><select id="spec" class="in"></select><span class="hint" id="specNote"></span></div>
       <div class="row"><span><b>Màu nền</b></span><div class="at-sw" id="bgs" role="group" aria-label="Màu nền"></div></div>
-      <div class="row"><span><b>Trang phục</b></span><div class="at-sw" id="outfits" role="group" aria-label="Trang phục"></div></div>
-      <div class="row" id="ocolRow" hidden><span>Màu áo</span><div class="at-sw" id="ocols" role="group" aria-label="Màu áo"></div></div>
-      <div class="pair" id="oadjRow" hidden><label for="oDy">Vị trí áo</label><input type="range" id="oDy" min="-0.5" max="0.4" step="0.02" value="0"><label for="oScale">Độ rộng áo</label><input type="range" id="oScale" min="0.85" max="1.25" step="0.01" value="1"><label for="oLift">Vai cao</label><input type="range" id="oLift" min="0" max="80" step="5" value="0"></div>
-      <span class="hint" id="oHint" hidden>Nếu vai hoặc áo cũ còn lộ phía trên áo ghép, kéo "Vai cao" hoặc "Vị trí áo".</span>
       <div class="row"><label for="zoom">Cỡ đầu <span class="hint" id="zoomV"></span></label><input type="range" id="zoom" min="0.8" max="1.25" step="0.01" value="1"></div>
       <div class="row"><label for="rot">Xoay <span class="hint" id="rotV"></span></label><input type="range" id="rot" min="-8" max="8" step="0.5" value="0"></div>
       <label class="chk"><input type="checkbox" id="guides" checked> Hiện đường căn (đỉnh đầu, cằm)</label>
@@ -128,7 +123,6 @@ updated: 11/2026
 
   <h2>Hỏi đáp</h2>
   <details class="qa"><summary>Ảnh thẻ 3x4, 4x6 là bao nhiêu pixel?</summary><p>Ở độ phân giải 300 dpi (chuẩn in ảnh): ảnh 3×4 cm là 354 × 472 pixel, ảnh 4×6 cm là 472 × 709 pixel. File tải về từ công cụ có đúng các kích thước này và đã ghi sẵn 300 dpi.</p></details>
-  <details class="qa"><summary>Có ghép áo vest, sơ mi vào ảnh được không?</summary><p>Được. Ở bước 2, chọn <b>Vest nam</b>, <b>Vest nữ</b> (đen, xanh than, xám) hoặc <b>Sơ mi trắng</b>; áo được đặt theo cằm và vai, có thể chỉnh vị trí và độ rộng. Công cụ không đổi được tư thế: nếu ảnh đang cười lộ răng, tay chạm mặt hay nghiêng đầu, hãy chụp lại cho đúng.</p></details>
   <details class="qa"><summary>Làm căn cước (CCCD) có cần mang ảnh không?</summary><p>Không. Khi làm thẻ căn cước, ảnh chân dung được chụp trực tiếp tại nơi làm thủ tục. Ảnh 3×4 "kiểu căn cước" ở đây dùng cho các hồ sơ khác như bằng lái, hồ sơ xin việc, nhập học.</p></details>
   <details class="qa"><summary>In tờ ảnh ở đâu, giá bao nhiêu?</summary><p>Mang file tờ in (hoặc gửi qua Zalo) đến tiệm in ảnh hay photocopy và yêu cầu in ảnh khổ 10×15, giá thường vài nghìn đồng một tờ. Một tờ được 9 ảnh 3×4 hoặc 4 ảnh 4×6. Nhắc tiệm in đúng kích thước, không phóng to thu nhỏ.</p></details>
   <details class="qa"><summary>Nên chọn nền trắng hay nền xanh?</summary><p>Hộ chiếu và hầu hết visa yêu cầu nền trắng. Một số hồ sơ trong nước (ví dụ hồ sơ liên quan đến lái xe) yêu cầu ảnh 3×4 nền xanh. Nếu không rõ, hãy hỏi nơi nhận hồ sơ; bạn có thể tải cả hai bản.</p></details>
@@ -145,18 +139,8 @@ updated: 11/2026
   const ENGINE = "/js/anh-the.js", ORT = "/js/ort-1.22.0/ort.wasm.min.js", WORKER = "/js/anh-the-worker.js";
   const MAX_SIDE = 1600;
   let worker = null, ready = null, fg = null, img = { w: 0, h: 0 }, face = null, crownMask = null, multi = false;
-  let st = { spec: "the-3x4", bg: "blue", zoom: 1, dx: 0, dy: 0, rot: 0, sheet: "10x15", outfit: "none", ocol: "den", oDy: 0, oScale: 1, oLift: 0 };
+  let st = { spec: "the-3x4", bg: "blue", zoom: 1, dx: 0, dy: 0, rot: 0, sheet: "10x15" };
   let pose = [];
-  // Ảnh vector trang phục, tạo sẵn để vẽ ngay
-  const outfitImgs = {}; let lastOutfit = null;
-  function outfitImg(){
-    if (st.outfit === "none") return null;
-    const key = st.outfit + "/" + st.ocol + "/" + st.oLift;
-    if (!outfitImgs[key]) { const im = new Image(); im.onload = () => { im.ready = true; render(); }; im.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(A.outfitSVG(st.outfit, st.ocol, 1600, st.oLift)); im.lift = st.oLift; im.id = st.outfit; outfitImgs[key] = im; }
-    const im = outfitImgs[key];
-    if (im.ready) { lastOutfit = im; return im; }
-    return lastOutfit && lastOutfit.id === st.outfit ? lastOutfit : null;   // giữ ảnh cũ trong lúc ảnh mới đang dựng, tránh nháy
-  }
 
   // ---- Bảng kích thước + lựa chọn ----
   const inGroup = s => s.id.indexOf("visa-") !== 0 || s.id === "visa-vn";
@@ -165,8 +149,8 @@ updated: 11/2026
   const cm = mm => (mm / 10).toLocaleString("vi-VN", { maximumFractionDigits: 1 });
   $("specTbl").innerHTML = A.SPECS.map(s => `<tr><td>${s.name}</td><td>${cm(s.w)} × ${cm(s.h)} cm</td><td>${A.mmToPx(s.w)} × ${A.mmToPx(s.h)}</td><td>${s.bgs.map(b => A.BGS[b].name).join(", ")}</td><td>${s.range[0]}–${s.range[1]} mm</td></tr>`).join("");
   $("sheet").innerHTML = Object.keys(A.SHEETS).map(k => `<option value="${k}">${A.SHEETS[k].name}</option>`).join("");
-  try { const s = JSON.parse(localStorage.getItem("tg-anh-the") || "{}"); if (A.spec(s.spec)) { st.spec = s.spec; st.bg = A.spec(s.spec).bgs.includes(s.bg) ? s.bg : A.spec(s.spec).bgs[0]; } if (A.SHEETS[s.sheet]) st.sheet = s.sheet; if (A.OUTFITS.some(o => o.id === s.outfit)) st.outfit = s.outfit; if (A.OUTFIT_COLORS[s.ocol]) st.ocol = s.ocol; } catch (e) {}
-  const remember = () => { try { localStorage.setItem("tg-anh-the", JSON.stringify({ spec: st.spec, bg: st.bg, sheet: st.sheet, outfit: st.outfit, ocol: st.ocol })); } catch (e) {} };
+  try { const s = JSON.parse(localStorage.getItem("tg-anh-the") || "{}"); if (A.spec(s.spec)) { st.spec = s.spec; st.bg = A.spec(s.spec).bgs.includes(s.bg) ? s.bg : A.spec(s.spec).bgs[0]; } if (A.SHEETS[s.sheet]) st.sheet = s.sheet; } catch (e) {}
+  const remember = () => { try { localStorage.setItem("tg-anh-the", JSON.stringify({ spec: st.spec, bg: st.bg, sheet: st.sheet })); } catch (e) {} };
 
   // ---- Worker: tải mô hình khi người dùng bắt đầu ----
   function startWorker(){
@@ -236,7 +220,7 @@ updated: 11/2026
     }
     fg = c; img = { w: m.w, h: c.height };
     pose = A.poseChecks(raw, m.w, m.h, best, A.faceGeometry(best, m.crown)).list;
-    st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; st.oDy = 0; st.oScale = 1; st.oLift = 0; syncControls();
+    st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; syncControls();
     $("step2").hidden = $("step3").hidden = false; render();
     $("step2").scrollIntoView({ behavior: "smooth", block: "start" });
   }
@@ -252,20 +236,12 @@ updated: 11/2026
     ctx.save();
     ctx.fillStyle = A.BGS[st.bg].color; ctx.fillRect(0, 0, W, H);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
-    const oi = outfitImg(), pl = oi ? A.outfitPlacement(geo, c, W, { scale: st.oScale, dy: st.oDy }) : null;
-    if (pl) {   // bỏ phần vai, áo gốc nhô lên trên áo ghép; giữ đầu, tóc và cổ
-      const pts = A.outfitTopLine(st.outfit, oi.lift).map(([x, y]) => [pl.chin[0] + x * pl.unit, pl.chin[1] + y * pl.unit]);
-      ctx.beginPath(); ctx.moveTo(-10, -10); ctx.lineTo(W + 10, -10); ctx.lineTo(W + 10, pts[pts.length - 1][1]);
-      for (let i = pts.length - 1; i >= 0; i--) ctx.lineTo(pts[i][0], pts[i][1]);
-      ctx.lineTo(-10, pts[0][1]); ctx.closePath(); ctx.clip();
-    }
     const S = W / c.w;
     ctx.save();
     ctx.scale(S, S); ctx.translate(c.ox - c.x, c.oy - c.y); ctx.rotate(-c.angle); ctx.translate(-c.ox, -c.oy);
     ctx.drawImage(fg, 0, 0);
     ctx.restore();
     ctx.restore();
-    if (pl) ctx.drawImage(oi, pl.x, pl.y, pl.w, pl.h);
   }
   function photoCanvas(){
     const s = spec(), W = A.mmToPx(s.w), H = A.mmToPx(s.h), cv = document.createElement("canvas"); cv.width = W; cv.height = H;
@@ -288,7 +264,7 @@ updated: 11/2026
     $("specNote").textContent = s.note;
     $("zoomV").textContent = `(${c.headMM.toFixed(0)} mm)`; $("rotV").textContent = st.rot ? `(${st.rot > 0 ? "+" : ""}${String(st.rot).replace(".", ",")}°)` : "";
     const warns = A.checks(s, geo, c, img);
-    warns.unshift(...pose.filter(p => !(p.id === "shoulder" && st.outfit !== "none")));
+    warns.unshift(...pose);
     if (multi) warns.unshift({ level: "info", text: "Ảnh có nhiều người; đã chọn khuôn mặt lớn nhất." });
     $("warn").innerHTML = warns.map(w => `<li class="${w.level}">${w.text}</li>`).join("");
     renderDownloads();
@@ -323,24 +299,14 @@ updated: 11/2026
     $("spec").value = st.spec; $("zoom").value = st.zoom; $("rot").value = st.rot; $("sheet").value = st.sheet;
     const s = spec(); if (!s.bgs.includes(st.bg)) st.bg = s.bgs[0];
     $("bgs").innerHTML = s.bgs.map(b => `<button type="button" data-bg="${b}" aria-pressed="${b === st.bg}"><i style="background:${A.BGS[b].color}"></i>${A.BGS[b].name}</button>`).join("");
-    $("outfits").innerHTML = A.OUTFITS.map(o => `<button type="button" data-outfit="${o.id}" aria-pressed="${o.id === st.outfit}">${o.name}</button>`).join("");
-    const oc = (A.OUTFITS.find(o => o.id === st.outfit) || {}).colors;
-    $("ocolRow").hidden = !oc; $("oadjRow").hidden = st.outfit === "none";
-    if (oc) $("ocols").innerHTML = oc.map(k => `<button type="button" data-ocol="${k}" aria-pressed="${k === st.ocol}"><i style="background:${A.OUTFIT_COLORS[k].hex}"></i>${A.OUTFIT_COLORS[k].name}</button>`).join("");
-    $("oDy").value = st.oDy; $("oScale").value = st.oScale; $("oLift").value = st.oLift; $("oHint").hidden = st.outfit === "none";
   }
-  $("outfits").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; st.outfit = b.dataset.outfit; syncControls(); remember(); render(); });
-  $("ocols").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; st.ocol = b.dataset.ocol; syncControls(); remember(); render(); });
-  $("oDy").addEventListener("input", e => { st.oDy = +e.target.value; render(); });
-  $("oScale").addEventListener("input", e => { st.oScale = +e.target.value; render(); });
-  $("oLift").addEventListener("input", e => { st.oLift = +e.target.value; render(); });
   $("spec").addEventListener("change", e => { st.spec = e.target.value; st.zoom = 1; st.dx = st.dy = 0; syncControls(); remember(); render(); });
   $("bgs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; st.bg = b.dataset.bg; syncControls(); remember(); render(); });
   $("zoom").addEventListener("input", e => { st.zoom = +e.target.value; render(); });
   $("rot").addEventListener("input", e => { st.rot = +e.target.value; render(); });
   $("guides").addEventListener("change", render);
   $("sheet").addEventListener("change", e => { st.sheet = e.target.value; remember(); renderDownloads(); });
-  $("resetAdj").addEventListener("click", () => { st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; st.oDy = 0; st.oScale = 1; st.oLift = 0; syncControls(); render(); });
+  $("resetAdj").addEventListener("click", () => { st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; syncControls(); render(); });
   $("again").addEventListener("click", () => { $("step1").scrollIntoView({ behavior: "smooth" }); $("file").click(); });
 
   // Kéo để dịch ảnh, chụm hai ngón để đổi cỡ đầu
@@ -366,7 +332,7 @@ updated: 11/2026
       document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 10000);
     }, "image/jpeg", 0.92);
   }
-  const fname = () => `anh-the-${st.spec}-nen-${st.bg === "white" ? "trang" : st.bg === "blue" ? "xanh" : "xanh-nhat"}${st.outfit === "none" ? "" : "-" + st.outfit}`;
+  const fname = () => `anh-the-${st.spec}-nen-${st.bg === "white" ? "trang" : st.bg === "blue" ? "xanh" : "xanh-nhat"}`;
   $("dlSingle").addEventListener("click", () => saveJpeg(photoCanvas(), fname() + ".jpg"));
   $("dlSheet").addEventListener("click", () => {
     const lay = A.sheetLayout(spec(), st.sheet), cv = document.createElement("canvas"); cv.width = lay.wpx; cv.height = lay.hpx;
