@@ -1,0 +1,330 @@
+<!--
+title: Làm ảnh thẻ online 3x4, 4x6, ảnh hộ chiếu, visa: tự tách nền, in 10x15 | Tính Giùm
+h1: Làm ảnh thẻ từ ảnh selfie
+description: Làm ảnh thẻ 3x4, 4x6, ảnh hộ chiếu, visa Mỹ, Schengen, Hàn, Nhật, Trung từ ảnh chụp điện thoại: tự tách nền, đổi nền trắng hoặc xanh, căn khung chuẩn, xuất JPG 300 dpi và tờ in 10x15. Ảnh xử lý ngay trên máy, không tải lên mạng.
+category: van-ban
+order: 24
+summary: Ảnh 3x4, 4x6, hộ chiếu, visa: tách nền, in 10x15.
+intro: Chụp hoặc chọn một ảnh chân dung, công cụ tự tách nền, căn đúng cỡ đầu theo loại giấy tờ và xếp sẵn tờ in để mang ra tiệm in.
+keywords: làm ảnh thẻ online, ảnh thẻ 3x4, ảnh 4x6, ảnh hộ chiếu, ảnh visa, đổi nền ảnh thẻ, ảnh thẻ nền xanh, ảnh thẻ nền trắng, ghép ảnh thẻ in 10x15, ảnh thẻ 3x4 bao nhiêu pixel
+rules: Hộ chiếu: Mẫu TK01, Thông tư 69/2026/TT-BCA (4×6 cm, nền trắng); quy định ảnh visa của từng nước; xử lý trên trình duyệt bằng MODNet và YuNet
+updated: 11/2026
+-->
+<style>
+.at-privacy{display:flex;gap:10px;align-items:flex-start;background:#eef7e8;border:1px solid #b9d9a5;padding:10px 12px;margin:0 0 12px;font-size:15px}
+.at-privacy b{color:var(--green-d)}
+.at-box{background:var(--panel);border:1px solid var(--panel-line);padding:14px;margin-bottom:14px}
+.at-box h2{margin:0 0 10px;font-size:19px}
+.at-pick{display:flex;gap:10px;flex-wrap:wrap}
+.at-pick label.go,.at-pick label.btn{cursor:pointer}
+.at-pick input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.at-bar{height:12px;background:#fff;border:1px solid var(--panel-line);margin:8px 0}
+.at-bar i{display:block;height:100%;width:0;background:var(--green);transition:width .15s}
+.at-edit{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:16px;align-items:start}
+.at-stage{position:relative;background:repeating-conic-gradient(#e6e6e6 0 25%,#fff 0 50%) 0 0/16px 16px;border:1px solid var(--panel-line);touch-action:none;cursor:grab;user-select:none}
+.at-stage canvas{display:block;width:100%;height:auto}
+.at-ctl{display:grid;gap:10px}
+.at-ctl .row{display:grid;gap:4px}
+.at-ctl select,.at-ctl input[type=range]{width:100%}
+.at-sw{display:flex;gap:8px;flex-wrap:wrap}
+.at-sw button{display:flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--input-line);background:#fff;font:15px var(--font);cursor:pointer}
+.at-sw button i{width:18px;height:18px;border:1px solid #999;display:inline-block}
+.at-sw button[aria-pressed=true]{outline:3px solid var(--green);outline-offset:1px}
+.at-warn{margin:0;padding-left:18px;font-size:15px}
+.at-warn li{color:var(--warn)}
+.at-warn li.info{color:var(--muted)}
+.at-dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:6px}
+.at-dl .card{border:1px solid var(--panel-line);background:#fff;padding:10px;display:grid;gap:8px;align-content:start}
+.at-dl canvas{max-width:100%;height:auto;border:1px solid var(--line);justify-self:center}
+.at-dl #sheetPrev{max-height:240px;width:auto}
+.at-specs td,.at-specs th{font-size:15px}
+@media (max-width:640px){.at-edit{grid-template-columns:minmax(0,1fr)}.at-stage{max-width:260px;margin:0 auto;width:100%}.at-dl{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<p class="at-privacy"><span aria-hidden="true">🔒</span><span><b>Ảnh của bạn không rời khỏi máy.</b> Việc tách nền, căn khung và tạo file đều chạy ngay trên trình duyệt; trang web không nhận và không lưu ảnh của bạn.</span></p>
+
+<section class="at-box" id="step1">
+  <h2>1. Chụp hoặc chọn ảnh</h2>
+  <div class="at-pick">
+    <label class="go" id="camL">Chụp ảnh <input type="file" id="cam" accept="image/*" capture="user"></label>
+    <label class="btn" id="fileL">Chọn ảnh có sẵn <input type="file" id="file" accept="image/*"></label>
+  </div>
+  <details class="qa" style="margin-top:10px"><summary>Mẹo chụp để ảnh đẹp và đạt chuẩn</summary>
+    <ul>
+      <li>Đứng trước tường sáng màu, cách tường khoảng 0,5–1 m để không đổ bóng.</li>
+      <li>Đủ sáng, ánh sáng chiếu đều từ phía trước (đứng quay mặt ra cửa sổ là đẹp nhất).</li>
+      <li>Nhờ người khác chụp, máy ngang tầm mắt, cách khoảng 1–1,5 m; lấy cả đầu và hai vai.</li>
+      <li>Nhìn thẳng, không cười há miệng, bỏ kính, vén tóc để lộ trán và hai tai.</li>
+    </ul>
+  </details>
+  <div id="load" hidden>
+    <p id="loadMsg" class="note">Đang chuẩn bị bộ xử lý…</p>
+    <div class="at-bar" aria-hidden="true"><i id="loadBar"></i></div>
+  </div>
+  <p id="err" class="err" hidden></p>
+</section>
+
+<section class="at-box" id="step2" hidden>
+  <h2>2. Chọn loại ảnh, nền và căn khung</h2>
+  <div class="at-edit">
+    <div class="at-stage" id="stage" aria-label="Ảnh xem trước, kéo để di chuyển"><canvas id="prev" width="520" height="780"></canvas></div>
+    <div class="at-ctl">
+      <div class="row"><label for="spec"><b>Loại ảnh</b></label><select id="spec" class="in"></select><span class="hint" id="specNote"></span></div>
+      <div class="row"><span><b>Màu nền</b></span><div class="at-sw" id="bgs" role="group" aria-label="Màu nền"></div></div>
+      <div class="row"><label for="zoom">Cỡ đầu <span class="hint" id="zoomV"></span></label><input type="range" id="zoom" min="0.8" max="1.25" step="0.01" value="1"></div>
+      <div class="row"><label for="rot">Xoay <span class="hint" id="rotV"></span></label><input type="range" id="rot" min="-8" max="8" step="0.5" value="0"></div>
+      <label class="chk"><input type="checkbox" id="guides" checked> Hiện đường căn (đỉnh đầu, cằm)</label>
+      <span class="hint">Kéo ảnh để di chuyển. Đường nét đứt: vị trí đỉnh đầu và cằm chuẩn; vùng tô xanh lá: khoảng cằm được chấp nhận.</span>
+      <div><button class="btn" type="button" id="resetAdj">Căn lại tự động</button> <button class="btn" type="button" id="again">Chọn ảnh khác</button></div>
+      <ul class="at-warn" id="warn"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="at-box" id="step3" hidden>
+  <h2>3. Tải về</h2>
+  <div class="at-dl">
+    <div class="card">
+      <b>Ảnh đơn</b>
+      <canvas id="single" width="236" height="354"></canvas>
+      <span class="hint" id="singleInfo"></span>
+      <button class="btn solid" type="button" id="dlSingle">Tải ảnh JPG</button>
+    </div>
+    <div class="card">
+      <b>Tờ in</b>
+      <select id="sheet" class="in" aria-label="Khổ giấy in"></select>
+      <canvas id="sheetPrev" width="200" height="300"></canvas>
+      <span class="hint" id="sheetInfo"></span>
+      <button class="btn solid" type="button" id="dlSheet">Tải tờ in JPG</button>
+    </div>
+  </div>
+</section>
+
+<div class="article">
+  <h2>Kích thước ảnh theo từng loại giấy tờ</h2>
+  <div class="scroll"><table class="t at-specs"><thead><tr><th>Loại ảnh</th><th>Kích thước</th><th>Pixel (300 dpi)</th><th>Nền</th><th>Cỡ đầu (cằm → đỉnh)</th></tr></thead><tbody id="specTbl"></tbody></table></div>
+  <p class="note">Ảnh 3×4 và 4×6 cho hồ sơ trong nước không có quy định số đo khuôn mặt cụ thể; công cụ dùng tỷ lệ thông dụng của tiệm ảnh và bạn có thể chỉnh lại. Luôn xem hướng dẫn của nơi nhận hồ sơ.</p>
+
+  <h2>Cách dùng</h2>
+  <ol>
+    <li>Bấm <b>Chụp ảnh</b> (dùng camera điện thoại) hoặc <b>Chọn ảnh có sẵn</b>. Lần đầu, trang tải bộ xử lý khoảng 9 MB; các lần sau dùng ngay.</li>
+    <li>Chọn loại ảnh và màu nền. Ảnh được căn tự động; kéo để dịch, dùng thanh trượt để chỉnh cỡ đầu hoặc xoay.</li>
+    <li>Tải <b>ảnh đơn</b> để nộp online, hoặc <b>tờ in 10×15</b> để in ở tiệm ảnh rồi cắt theo dấu.</li>
+  </ol>
+
+  <h2>Hỏi đáp</h2>
+  <details class="qa"><summary>Ảnh thẻ 3x4, 4x6 là bao nhiêu pixel?</summary><p>Ở độ phân giải 300 dpi (chuẩn in ảnh): ảnh 3×4 cm là 354 × 472 pixel, ảnh 4×6 cm là 472 × 709 pixel. File tải về từ công cụ có đúng các kích thước này và đã ghi sẵn 300 dpi.</p></details>
+  <details class="qa"><summary>Làm căn cước (CCCD) có cần mang ảnh không?</summary><p>Không. Khi làm thẻ căn cước, ảnh chân dung được chụp trực tiếp tại nơi làm thủ tục. Ảnh 3×4 "kiểu căn cước" ở đây dùng cho các hồ sơ khác như bằng lái, hồ sơ xin việc, nhập học.</p></details>
+  <details class="qa"><summary>In tờ ảnh ở đâu, giá bao nhiêu?</summary><p>Mang file tờ in (hoặc gửi qua Zalo) đến tiệm in ảnh hay photocopy và yêu cầu in ảnh khổ 10×15, giá thường vài nghìn đồng một tờ. Một tờ được 9 ảnh 3×4 hoặc 4 ảnh 4×6. Nhắc tiệm in đúng kích thước, không phóng to thu nhỏ.</p></details>
+  <details class="qa"><summary>Nên chọn nền trắng hay nền xanh?</summary><p>Hộ chiếu và hầu hết visa yêu cầu nền trắng. Một số hồ sơ trong nước (ví dụ hồ sơ liên quan đến lái xe) yêu cầu ảnh 3×4 nền xanh. Nếu không rõ, hãy hỏi nơi nhận hồ sơ; bạn có thể tải cả hai bản.</p></details>
+  <details class="qa"><summary>Ảnh của tôi có bị gửi lên mạng không?</summary><p>Không. Trang chỉ tải về bộ xử lý (mô hình tách nền và dò khuôn mặt) rồi chạy ngay trên điện thoại hoặc máy tính của bạn. Ảnh không được gửi đi, không được lưu trên máy chủ.</p></details>
+  <details class="qa"><summary>Vì sao ảnh tách nền chưa đẹp?</summary><p>Ảnh chụp tối, ngược sáng, tóc lẫn vào nền tối hoặc nền quá nhiều đồ vật sẽ khó tách hơn. Chụp lại trước tường sáng, đủ ánh sáng sẽ cho kết quả tốt nhất.</p></details>
+  <p>Xem thêm: <a href="/chuyen-anh-sang-pdf/">Chuyển ảnh sang PDF</a> · <a href="/ghep-file-pdf/">Ghép file PDF</a> · <a href="/tinh-tuoi/">Tính tuổi</a></p>
+  <p class="note">Công cụ hỗ trợ tạo ảnh theo kích thước công bố; nơi nhận hồ sơ quyết định ảnh có được chấp nhận hay không.</p>
+</div>
+
+<script src="/js/anh-the.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id), A = AnhThe;
+  const ENGINE = "/js/anh-the.js", ORT = "/js/ort-1.22.0/ort.wasm.min.js", WORKER = "/js/anh-the-worker.js";
+  const MAX_SIDE = 1600;
+  let worker = null, ready = null, fg = null, img = { w: 0, h: 0 }, face = null, crownMask = null, multi = false;
+  let st = { spec: "the-3x4", bg: "blue", zoom: 1, dx: 0, dy: 0, rot: 0, sheet: "10x15" };
+
+  // ---- Bảng kích thước + lựa chọn ----
+  const inGroup = s => s.id.indexOf("visa-") !== 0 || s.id === "visa-vn";
+  $("spec").innerHTML = `<optgroup label="Trong nước">${A.SPECS.filter(inGroup).map(s => `<option value="${s.id}">${s.name}</option>`).join("")}</optgroup>` +
+    `<optgroup label="Visa nước ngoài">${A.SPECS.filter(s => !inGroup(s)).map(s => `<option value="${s.id}">${s.name}</option>`).join("")}</optgroup>`;
+  const cm = mm => (mm / 10).toLocaleString("vi-VN", { maximumFractionDigits: 1 });
+  $("specTbl").innerHTML = A.SPECS.map(s => `<tr><td>${s.name}</td><td>${cm(s.w)} × ${cm(s.h)} cm</td><td>${A.mmToPx(s.w)} × ${A.mmToPx(s.h)}</td><td>${s.bgs.map(b => A.BGS[b].name).join(", ")}</td><td>${s.range[0]}–${s.range[1]} mm</td></tr>`).join("");
+  $("sheet").innerHTML = Object.keys(A.SHEETS).map(k => `<option value="${k}">${A.SHEETS[k].name}</option>`).join("");
+  try { const s = JSON.parse(localStorage.getItem("tg-anh-the") || "{}"); if (A.spec(s.spec)) { st.spec = s.spec; st.bg = A.spec(s.spec).bgs.includes(s.bg) ? s.bg : A.spec(s.spec).bgs[0]; } if (A.SHEETS[s.sheet]) st.sheet = s.sheet; } catch (e) {}
+  const remember = () => { try { localStorage.setItem("tg-anh-the", JSON.stringify({ spec: st.spec, bg: st.bg, sheet: st.sheet })); } catch (e) {} };
+
+  // ---- Worker: tải mô hình khi người dùng bắt đầu ----
+  function startWorker(){
+    if (ready) return ready;
+    $("load").hidden = false; $("loadMsg").textContent = "Đang tải bộ xử lý (khoảng 9 MB, chỉ lần đầu)…";
+    worker = new Worker(WORKER);
+    ready = new Promise((ok, no) => {
+      worker.onmessage = e => {
+        const m = e.data;
+        if (m.type === "progress") { $("loadBar").style.width = (100 * m.done / m.total).toFixed(1) + "%"; $("loadMsg").textContent = `Đang tải bộ xử lý: ${(m.done / 1048576).toFixed(1).replace(".", ",")} / ${(m.total / 1048576).toFixed(1).replace(".", ",")} MB (chỉ lần đầu)`; }
+        else if (m.type === "ready") { $("loadBar").style.width = "100%"; ok(); }
+        else if (m.type === "error" && m.stage === "load") no(new Error(m.message));
+        else handle(m);
+      };
+      worker.onerror = e => no(new Error(e.message || "worker"));
+    });
+    worker.postMessage({ type: "init", engine: new URL(ENGINE, location.href).href, ort: new URL(ORT, location.href).href, base: new URL("/js/ort-1.22.0/", location.href).href });
+    ready.catch(() => { ready = null; });
+    return ready;
+  }
+  ["camL", "fileL"].forEach(id => $(id).addEventListener("pointerdown", () => startWorker().catch(() => {}), { once: false }));
+
+  const showErr = t => { $("err").hidden = !t; $("err").textContent = t || ""; };
+
+  async function loadFile(file){
+    if (!file) return;
+    showErr(""); $("step2").hidden = $("step3").hidden = true;
+    const url = URL.createObjectURL(file), im = new Image();
+    try { im.src = url; await im.decode(); }
+    catch (e) { URL.revokeObjectURL(url); showErr(/heic|heif/i.test(file.type + file.name) ? "Trình duyệt này không đọc được ảnh HEIC. Hãy mở trang bằng Safari, hoặc chọn ảnh JPG." : "Không đọc được ảnh này. Hãy chọn ảnh JPG hoặc PNG."); return; }
+    const k = Math.min(1, MAX_SIDE / Math.max(im.naturalWidth, im.naturalHeight)), w = Math.round(im.naturalWidth * k), h = Math.round(im.naturalHeight * k);
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    const g = c.getContext("2d"); g.imageSmoothingQuality = "high"; g.drawImage(im, 0, 0, w, h); URL.revokeObjectURL(url);
+    const data = g.getImageData(0, 0, w, h);
+    img = { w, h };
+    $("load").hidden = false;
+    try { await startWorker(); } catch (e) { showErr("Không tải được bộ xử lý. Kiểm tra kết nối mạng rồi thử lại."); $("load").hidden = true; return; }
+    $("loadMsg").textContent = "Đang tìm khuôn mặt và tách nền…"; $("loadBar").style.width = "100%";
+    worker.postMessage({ type: "process", rgba: data.data.buffer, w, h, side: 512 }, [data.data.buffer]);
+  }
+  ["cam", "file"].forEach(id => $(id).addEventListener("change", e => { loadFile(e.target.files[0]); e.target.value = ""; }));
+
+  function handle(m){
+    if (m.type === "stage") { $("loadMsg").textContent = m.faces ? "Đã thấy khuôn mặt, đang tách nền (vài giây, điện thoại cũ có thể lâu hơn)…" : "Đang tách nền…"; return; }
+    if (m.type === "error") { $("load").hidden = true; showErr("Có lỗi khi xử lý ảnh. Hãy thử lại hoặc dùng ảnh khác."); return; }
+    if (m.type !== "result") return;
+    window.__anhTheMs = m.ms;
+    $("load").hidden = true;
+    if (!m.faces.length) { showErr("Không tìm thấy khuôn mặt. Hãy dùng ảnh chụp thẳng mặt, rõ nét, đủ sáng."); return; }
+    const best = m.faces.slice().sort((a, b) => b.box[2] * b.box[3] - a.box[2] * a.box[3])[0];
+    face = best; crownMask = m.crown; multi = m.faces.length > 1;
+    // Ảnh selfie thường bị cắt ngang ngực: kéo dài hàng điểm ảnh cuối xuống dưới để phần vai, áo không bị hụt khi căn khung
+    const raw = new Uint8ClampedArray(m.fg), ext = Math.round(m.h * 0.5);
+    let bottom = 0; for (let x = 0; x < m.w; x++) bottom += raw[((m.h - 1) * m.w + x) * 4 + 3];
+    const extend = bottom / (255 * m.w) > 0.15;
+    const c = document.createElement("canvas"); c.width = m.w; c.height = m.h + (extend ? ext : 0);
+    const cx = c.getContext("2d"); cx.putImageData(new ImageData(raw, m.w, m.h), 0, 0);
+    if (extend) {   // trung bình vài hàng cuối rồi làm mờ ngang để không kéo dài chi tiết (dây chuyền, cúc áo) thành vệt
+      const rows = Math.min(8, m.h), r = Math.max(2, Math.round(m.w * 0.02)), avg = new Float32Array(m.w * 4), line = new ImageData(m.w, 1);
+      for (let y = m.h - rows; y < m.h; y++) for (let i = 0; i < m.w * 4; i++) avg[i] += raw[y * m.w * 4 + i] / rows;
+      for (let x = 0; x < m.w; x++) {
+        const a = Math.max(0, x - r), b = Math.min(m.w - 1, x + r);
+        for (let ch = 0; ch < 4; ch++) { let s = 0; for (let k = a; k <= b; k++) s += avg[k * 4 + ch]; line.data[x * 4 + ch] = s / (b - a + 1); }
+      }
+      const lc = document.createElement("canvas"); lc.width = m.w; lc.height = 1; lc.getContext("2d").putImageData(line, 0, 0);
+      cx.drawImage(lc, 0, 0, m.w, 1, 0, m.h, m.w, ext);
+    }
+    fg = c; img = { w: m.w, h: c.height };
+    st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; syncControls();
+    $("step2").hidden = $("step3").hidden = false; render();
+    $("step2").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ---- Căn khung & vẽ ----
+  const spec = () => A.spec(st.spec);
+  function crop(){
+    const geo = A.faceGeometry(face, crownMask), c = A.cropRect(spec(), geo, { zoom: st.zoom, dx: st.dx, dy: st.dy });
+    c.angle = geo.angle + st.rot * Math.PI / 180;
+    return { geo, c };
+  }
+  function drawPhoto(ctx, W, H, c){
+    ctx.save();
+    ctx.fillStyle = A.BGS[st.bg].color; ctx.fillRect(0, 0, W, H);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+    const S = W / c.w;
+    ctx.scale(S, S); ctx.translate(c.ox - c.x, c.oy - c.y); ctx.rotate(-c.angle); ctx.translate(-c.ox, -c.oy);
+    ctx.drawImage(fg, 0, 0);
+    ctx.restore();
+  }
+  function photoCanvas(){
+    const s = spec(), W = A.mmToPx(s.w), H = A.mmToPx(s.h), cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+    drawPhoto(cv.getContext("2d"), W, H, crop().c); return cv;
+  }
+  function render(){
+    if (!fg) return;
+    const s = spec(), { geo, c } = crop(), pv = $("prev");
+    const PW = 520, PH = Math.round(PW * s.h / s.w); if (pv.height !== PH) pv.height = PH;
+    const ctx = pv.getContext("2d"); drawPhoto(ctx, PW, PH, c);
+    if ($("guides").checked) {
+      const y = mm => mm / s.h * PH;
+      ctx.save(); ctx.lineWidth = 2;
+      ctx.fillStyle = "rgba(76,141,43,.16)"; ctx.fillRect(0, y(s.top + s.range[0]), PW, y(s.range[1] - s.range[0]));
+      ctx.strokeStyle = "#2f7d1a"; ctx.setLineDash([10, 6]);
+      [s.top, s.top + s.head].forEach(v => { ctx.beginPath(); ctx.moveTo(0, y(v)); ctx.lineTo(PW, y(v)); ctx.stroke(); });
+      ctx.strokeStyle = "rgba(47,125,26,.6)"; ctx.setLineDash([4, 6]); ctx.beginPath(); ctx.moveTo(PW / 2, 0); ctx.lineTo(PW / 2, PH); ctx.stroke();
+      ctx.restore();
+    }
+    $("specNote").textContent = s.note;
+    $("zoomV").textContent = `(${c.headMM.toFixed(0)} mm)`; $("rotV").textContent = st.rot ? `(${st.rot > 0 ? "+" : ""}${String(st.rot).replace(".", ",")}°)` : "";
+    const warns = A.checks(s, geo, c, img);
+    if (multi) warns.unshift({ level: "info", text: "Ảnh có nhiều người; đã chọn khuôn mặt lớn nhất." });
+    $("warn").innerHTML = warns.map(w => `<li class="${w.level}">${w.text}</li>`).join("");
+    renderDownloads();
+  }
+  let dlTimer = 0;
+  function renderDownloads(){
+    clearTimeout(dlTimer);
+    dlTimer = setTimeout(() => {
+      const s = spec(), pc = photoCanvas(), sc = $("single");
+      sc.width = Math.round(pc.width / 2); sc.height = Math.round(pc.height / 2);
+      const g = sc.getContext("2d"); g.imageSmoothingQuality = "high"; g.drawImage(pc, 0, 0, sc.width, sc.height);
+      $("singleInfo").textContent = `${cm(s.w)} × ${cm(s.h)} cm · ${pc.width} × ${pc.height} pixel · 300 dpi · nền ${A.BGS[st.bg].name.toLowerCase()}`;
+      const lay = A.sheetLayout(s, st.sheet), sp = $("sheetPrev"), k = 300 / Math.max(lay.wpx, lay.hpx);
+      sp.width = Math.round(lay.wpx * k); sp.height = Math.round(lay.hpx * k);
+      drawSheet(sp.getContext("2d"), lay, pc, k);
+      $("sheetInfo").textContent = `${lay.count} ảnh trên một tờ ${A.SHEETS[st.sheet].name.split(" (")[0]}${lay.landscape ? " (xoay ngang)" : ""}. In đúng khổ, không phóng to, rồi cắt theo dấu.`;
+    }, 60);
+  }
+  function drawSheet(ctx, lay, pc, k){
+    const px = mm => mm / 25.4 * 300 * k;
+    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, lay.wpx * k, lay.hpx * k);
+    ctx.imageSmoothingQuality = "high";
+    lay.cells.forEach(c => ctx.drawImage(pc, c.px.x * k, c.px.y * k, c.px.w * k, c.px.h * k));
+    ctx.strokeStyle = "#d0d0d0"; ctx.lineWidth = Math.max(0.5, k);          // viền mảnh quanh mỗi ảnh để dễ cắt khi nền trắng
+    lay.cells.forEach(c => ctx.strokeRect(c.px.x * k + 0.5 * ctx.lineWidth, c.px.y * k + 0.5 * ctx.lineWidth, c.px.w * k - ctx.lineWidth, c.px.h * k - ctx.lineWidth));
+    ctx.strokeStyle = "#777"; ctx.lineWidth = Math.max(1, 2 * k);
+    A.cutMarks(lay).forEach(([x1, y1, x2, y2]) => { ctx.beginPath(); ctx.moveTo(px(x1), px(y1)); ctx.lineTo(px(x2), px(y2)); ctx.stroke(); });
+  }
+
+  // ---- Điều khiển ----
+  function syncControls(){
+    $("spec").value = st.spec; $("zoom").value = st.zoom; $("rot").value = st.rot; $("sheet").value = st.sheet;
+    const s = spec(); if (!s.bgs.includes(st.bg)) st.bg = s.bgs[0];
+    $("bgs").innerHTML = s.bgs.map(b => `<button type="button" data-bg="${b}" aria-pressed="${b === st.bg}"><i style="background:${A.BGS[b].color}"></i>${A.BGS[b].name}</button>`).join("");
+  }
+  $("spec").addEventListener("change", e => { st.spec = e.target.value; st.zoom = 1; st.dx = st.dy = 0; syncControls(); remember(); render(); });
+  $("bgs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; st.bg = b.dataset.bg; syncControls(); remember(); render(); });
+  $("zoom").addEventListener("input", e => { st.zoom = +e.target.value; render(); });
+  $("rot").addEventListener("input", e => { st.rot = +e.target.value; render(); });
+  $("guides").addEventListener("change", render);
+  $("sheet").addEventListener("change", e => { st.sheet = e.target.value; remember(); renderDownloads(); });
+  $("resetAdj").addEventListener("click", () => { st.zoom = 1; st.dx = st.dy = 0; st.rot = 0; syncControls(); render(); });
+  $("again").addEventListener("click", () => { $("step1").scrollIntoView({ behavior: "smooth" }); $("file").click(); });
+
+  // Kéo để dịch ảnh, chụm hai ngón để đổi cỡ đầu
+  const stage = $("stage"), pts = new Map(); let pinch0 = 0, zoom0 = 1;
+  stage.addEventListener("pointerdown", e => { stage.setPointerCapture(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch0 = Math.hypot(a[0] - b[0], a[1] - b[1]); zoom0 = st.zoom; } });
+  stage.addEventListener("pointermove", e => {
+    if (!pts.has(e.pointerId) || !fg) return;
+    const prev = pts.get(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pts.size === 2) { const [a, b] = [...pts.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]); if (pinch0) { st.zoom = Math.min(1.25, Math.max(0.8, zoom0 * d / pinch0)); $("zoom").value = st.zoom; render(); } return; }
+    const mmPerPx = spec().w / stage.clientWidth;
+    st.dx += (e.clientX - prev[0]) * mmPerPx; st.dy += (e.clientY - prev[1]) * mmPerPx; render();
+  });
+  const up = e => { pts.delete(e.pointerId); if (pts.size < 2) pinch0 = 0; };
+  stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
+  stage.addEventListener("wheel", e => { if (!fg) return; e.preventDefault(); st.zoom = Math.min(1.25, Math.max(0.8, st.zoom * (e.deltaY < 0 ? 1.02 : 0.98))); $("zoom").value = st.zoom; render(); }, { passive: false });
+
+  // ---- Tải về ----
+  function saveJpeg(cv, name){
+    cv.toBlob(async b => {
+      const bytes = A.setJpegDpi(new Uint8Array(await b.arrayBuffer()), 300);
+      const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" })); a.download = name;
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    }, "image/jpeg", 0.92);
+  }
+  const fname = () => `anh-the-${st.spec}-nen-${st.bg === "white" ? "trang" : st.bg === "blue" ? "xanh" : "xanh-nhat"}`;
+  $("dlSingle").addEventListener("click", () => saveJpeg(photoCanvas(), fname() + ".jpg"));
+  $("dlSheet").addEventListener("click", () => {
+    const lay = A.sheetLayout(spec(), st.sheet), cv = document.createElement("canvas"); cv.width = lay.wpx; cv.height = lay.hpx;
+    drawSheet(cv.getContext("2d"), lay, photoCanvas(), 1);
+    saveJpeg(cv, `to-in-${st.sheet}-${fname()}.jpg`);
+  });
+  syncControls();
+})();
+</script>
