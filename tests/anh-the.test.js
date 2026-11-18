@@ -177,3 +177,64 @@ test("crown from mask", () => {
   assert.strictEqual(A.crownFromMask(a, w, h, 5, 2, 8), 3);
   assert.strictEqual(A.crownFromMask(new Float32Array(100), w, h, 5, 2, 8), null);
 });
+
+test("outfit artwork: valid SVG for every outfit and colour", () => {
+  for (const o of A.OUTFITS.filter(o => o.id !== "none")) for (const c of (o.colors || ["den"])) {
+    const svg = A.outfitSVG(o.id, c, 800);
+    assert.ok(svg.startsWith("<svg") && svg.endsWith("</svg>"), o.id);
+    assert.ok(!/NaN|undefined/.test(svg), o.id + " has no bad numbers");
+    assert.ok(/width="800" height="640"/.test(svg));
+    if (o.colors) assert.ok(svg.includes(A.OUTFIT_COLORS[c].hex), o.id + " uses colour " + c);
+  }
+  assert.ok(A.outfitSVG("vest-nam", "den").includes("url(#gt)"), "men's suit has a tie");
+  assert.ok(!A.outfitSVG("vest-nu", "den").includes("url(#gt)"), "women's blazer has no tie");
+});
+
+test("outfit top line: symmetric, dips to show the neck, spans the shoulders", () => {
+  for (const id of ["vest-nam", "vest-nu", "so-mi"]) {
+    const l = A.outfitTopLine(id), n = l.length;
+    for (let i = 0; i < n; i++) { near(l[i][0], -l[n - 1 - i][0], 1e-9, id + " symmetric x"); near(l[i][1], l[n - 1 - i][1], 1e-9, id + " symmetric y"); }
+    assert.ok(l[0][0] < -330 && l[n - 1][0] > 330, id + " reaches the shoulders");
+    const centre = l.find(p => p[0] === 0);
+    assert.strictEqual(centre[1], 50, id + " neck visible down to the collar");
+    assert.ok(l.every(p => p[1] >= -10), id + " never above chin level");
+  }
+  assert.strictEqual(A.outfitTopLine("none"), null);
+});
+
+test("outfit placement follows the chin and eye distance", () => {
+  const s = A.spec("ho-chieu"), g = A.faceGeometry(face(), null), c = A.cropRect(s, g), W = 472;
+  const p = A.outfitPlacement(g, c, W), S = W / c.w;
+  near(p.chin[0], (500 - c.x) * S); near(p.chin[1], (560 - c.y) * S);
+  near(p.unit, 100 * S / 100); near(p.w, 800 * p.unit); near(p.x, p.chin[0] - 400 * p.unit);
+  const q = A.outfitPlacement(g, c, W, { scale: 1.1, dy: 0.2 });
+  near(q.unit, p.unit * 1.1); near(q.chin[1], p.chin[1] + 0.2 * 100 * S);
+});
+
+test("pose checks: smile, hand near the face, uneven shoulders", () => {
+  // 400×400 synthetic portrait: eyes at y=150 (100 px apart), mouth corners at y=250, skin face, background transparent
+  const w = 400, h = 400, d = 100, skin = [225, 180, 150];
+  const mk = () => { const a = new Uint8ClampedArray(w * h * 4);
+    const put = (x0, y0, x1, y1, c) => { for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) a.set([...c, 255], (y * w + x) * 4); };
+    put(140, 80, 260, 320, skin);                       // face + neck
+    put(0, 340, 400, 400, [40, 60, 120]);               // shoulders (shirt)
+    return { a, put }; };
+  const f = { box: [140, 80, 120, 240], eyeR: [150, 150], eyeL: [250, 150], nose: [200, 200], mouthR: [165, 250], mouthL: [235, 250] };
+  const g = A.faceGeometry(f, null);
+  const clean = mk(); assert.deepStrictEqual(A.poseChecks(clean.a, w, h, f, g).list, []);
+  const smile = mk(); smile.put(180, 243, 220, 262, [245, 245, 240]);
+  assert.deepStrictEqual(A.poseChecks(smile.a, w, h, f, g).list.map(x => x.id), ["smile"]);
+  const hand = mk(); hand.put(300, 270, 380, 320, skin);
+  assert.deepStrictEqual(A.poseChecks(hand.a, w, h, f, g).list.map(x => x.id), ["hand"]);
+  const tilt = mk(); for (let y = 290; y < 340; y++) for (let x = 0; x < 60; x++) tilt.a.set([40, 60, 120, 255], (y * w + x) * 4);
+  assert.deepStrictEqual(A.poseChecks(tilt.a, w, h, f, g).list.map(x => x.id), ["shoulder"]);
+});
+
+test("raising the shoulders lifts the outer line but keeps the collar", () => {
+  const a = A.outfitTopLine("vest-nam", 0), b = A.outfitTopLine("vest-nam", 60);
+  const neckA = a.filter(p => Math.abs(p[0]) <= 106), neckB = b.filter(p => Math.abs(p[0]) <= 106);
+  assert.deepStrictEqual(neckA, neckB, "collar untouched");
+  const at = (l, x) => l.filter(p => p[0] < -150 && p[0] > -340).reduce((m, p) => Math.abs(p[0] - x) < Math.abs(m[0] - x) ? p : m);
+  assert.ok(at(b, -280)[1] < at(a, -280)[1] - 40, "outer shoulder raised");
+  assert.ok(!/NaN/.test(A.outfitSVG("so-mi", "den", 400, 80)));
+});

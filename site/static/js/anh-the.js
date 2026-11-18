@@ -280,9 +280,164 @@
     return null;
   }
 
+  // ---------- Trang phục ghép (vẽ vector, tự thiết kế) ----------
+  // Hệ toạ độ SVG: gốc (0, 0) = điểm giữa cằm; 100 đơn vị = khoảng cách hai mắt; trục y hướng xuống.
+  var OUTFIT_BOX = { x: -400, y: -80, w: 800, h: 640 };
+  var OUTFITS = [
+    { id: "none", name: "Giữ nguyên" },
+    { id: "vest-nam", name: "Vest nam", colors: ["den", "xanh-than", "xam"] },
+    { id: "vest-nu", name: "Vest nữ", colors: ["den", "xanh-than", "xam"] },
+    { id: "so-mi", name: "Sơ mi trắng" }
+  ];
+  var OUTFIT_COLORS = { den: { name: "Đen", hex: "#1c1e23" }, "xanh-than": { name: "Xanh than", hex: "#1f2c48" }, xam: { name: "Xám", hex: "#545a63" } };
+  function mix(hex, to, t) {
+    var a = parseInt(hex.slice(1), 16), b = parseInt(to.slice(1), 16), r = [16, 8, 0].map(function (s) { return Math.round(((a >> s) & 255) * (1 - t) + ((b >> s) & 255) * t); });
+    return "#" + r.map(function (v) { return (v < 16 ? "0" : "") + v.toString(16); }).join("");
+  }
+  // Thân áo: nửa trái (vai dốc từ cổ ra vai) gồm điểm đầu và 3 đoạn cong bậc ba; nửa phải đối xứng
+  // lift: nâng vai lên (đơn vị SVG, 0–80) cho người vai cao hoặc ảnh chụp từ trên xuống; phần sát cổ giữ nguyên
+  function outfitHalf(sx, t, lift) {
+    var k = function (x) { return Math.round(x * sx); }, L = lift || 0;
+    return [[-106, t], [k(-128), t + 6 - 0.2 * L, k(-162), t + 30 - 0.55 * L, k(-215), t + 48 - L], [k(-275), t + 66 - L, k(-322), t + 86 - L, k(-346), t + 118 - L],
+            [k(-364), t + 150 - L, k(-368), 205, k(-370), 560]];
+  }
+  var OUTFIT_SHAPE = { "vest-nam": [1, -4], "vest-nu": [0.92, -4], "so-mi": [0.96, -2] };
+  // Đường viền trên của trang phục (đơn vị SVG), từ trái sang phải: vai trái → cổ áo → vai phải.
+  // Dùng để xoá phần vai, áo gốc nhô lên trên áo ghép; giữ cổ lộ ra giữa hai cánh cổ áo.
+  function outfitTopLine(id, lift) {
+    var sh = OUTFIT_SHAPE[id]; if (!sh) return null;
+    var h = outfitHalf(sh[0], sh[1], lift), pts = [], p0 = h[0], i, t;
+    var seg = [];
+    for (i = 1; i < h.length; i++) { var a = i === 1 ? p0 : [h[i - 1][4], h[i - 1][5]]; seg.push([a, [h[i][0], h[i][1]], [h[i][2], h[i][3]], [h[i][4], h[i][5]]]); }
+    var bez = function (q, u) { var v = 1 - u; return [0, 1].map(function (k) { return v * v * v * q[0][k] + 3 * v * v * u * q[1][k] + 3 * v * u * u * q[2][k] + u * u * u * q[3][k]; }); };
+    for (i = seg.length - 1; i >= 0; i--) for (t = 1; t >= 0; t -= 0.125) { var b = bez(seg[i], t); if (b[1] <= 200) pts.push(b); }
+    pts.push([-92, -8], [-22, 44], [0, 50], [22, 44], [92, -8]);
+    var right = pts.slice(0, pts.length - 5).reverse().map(function (q) { return [-q[0], q[1]]; });
+    return pts.concat(right);
+  }
+  function outfitSVG(id, colorId, px, lift) {
+    var o = OUTFIT_BOX, C = (OUTFIT_COLORS[colorId] || OUTFIT_COLORS.den).hex, parts = [], defs = [];
+    var W = px || 1600, H = Math.round(W * o.h / o.w);
+    var grad = function (gid, stops, horiz) {
+      defs.push('<linearGradient id="' + gid + '" x1="0" y1="0" x2="' + (horiz ? 1 : 0) + '" y2="' + (horiz ? 0 : 1) + '">' +
+        stops.map(function (s) { return '<stop offset="' + s[0] + '" stop-color="' + s[1] + '"' + (s[2] != null ? ' stop-opacity="' + s[2] + '"' : "") + "/>"; }).join("") + "</linearGradient>");
+    };
+    var path = function (d, fill, extra) { parts.push('<path d="' + d + '" fill="' + fill + '"' + (extra || "") + "/>"); };
+    var mirror = function (d) { return d.replace(/(-?\d+(\.\d+)?)\s+(-?\d+(\.\d+)?)/g, function (m, x, _, y) { return (-x) + " " + y; }); };
+    defs.push('<filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>');
+    grad("shade", [[0, "#000", 0.32], [0.28, "#000", 0], [0.72, "#000", 0], [1, "#000", 0.32]], true);
+    var silhouette = function (sx, vb, t) {
+      t = t == null ? -4 : t;
+      var h = outfitHalf(sx, t, lift), d = "M " + h[0][0] + " " + h[0][1];
+      for (var i = 1; i < h.length; i++) d += " C " + h[i].join(" ");
+      d += " L " + (-h[3][4]) + " 560";
+      for (i = h.length - 1; i >= 1; i--) { var p = h[i], prev = h[i - 1], end = prev.length === 2 ? prev : [prev[4], prev[5]];
+        d += " C " + (-p[2]) + " " + p[3] + " " + (-p[0]) + " " + p[1] + " " + (-end[0]) + " " + end[1]; }
+      d += vb == null ? " Q 0 " + (t + 52) + " " + h[0][0] + " " + t + " Z" : " L 6 " + vb + " L -6 " + vb + " Z";
+      return d;
+    };
+    var collarL = "M -92 -8 C -66 10 -40 28 -22 44 L -26 62 L -54 112 C -76 86 -96 52 -106 22 Z";
+    var neckShadow = function () {
+      path("M -96 -6 C -60 12 -30 32 0 46 C 30 32 60 12 96 -6 L 96 -30 C 60 -12 30 8 0 22 C -30 8 -60 -12 -96 -30 Z", "#000", ' opacity="0.22" filter="url(#soft)"');
+    };
+    var collar = function () {
+      grad("gc", [[0, "#ffffff"], [0.7, "#f2f4f6"], [1, "#dde2e7"]]);
+      [collarL, mirror(collarL)].forEach(function (d) { path(d, "#000", ' opacity="0.25" filter="url(#soft)" transform="translate(0 7)"'); });
+      [collarL, mirror(collarL)].forEach(function (d) { path(d, "url(#gc)", ' stroke="#b7bec8" stroke-width="2.2" stroke-linejoin="round"'); });
+    };
+    neckShadow();
+    if (id === "vest-nam" || id === "vest-nu") {
+      var nu = id === "vest-nu", sx = nu ? 0.92 : 1, vb = nu ? 260 : 300;
+      grad("gj", [[0, mix(C, "#ffffff", 0.14)], [0.3, mix(C, "#ffffff", 0.05)], [1, C]]);
+      grad("gl", [[0, mix(C, "#000000", 0.02)], [1, mix(C, "#000000", 0.2)]]);
+      grad("gs", [[0, "#f6f8fa"], [1, "#e4e8ec"]]);
+      path("M -110 22 L -24 60 L 24 60 L 110 22 L 0 " + (vb + 12) + " Z", "url(#gs)");   // mép trên nằm dưới hai cánh cổ áo, để lộ cổ
+      if (!nu) {
+        grad("gt", [[0, "#8e2434"], [1, "#5c1520"]]);
+        path("M -15 84 L 15 84 L 32 244 L 0 282 L -32 244 Z", "url(#gt)");
+        path("M -26 44 L 26 44 L 17 88 L -17 88 Z", "#69182a");
+        path("M -3 62 L 3 62 L 2 86 L -2 86 Z", "#4a0f1b", ' opacity="0.6"');
+      } else {
+        parts.push('<circle cx="0" cy="74" r="5" fill="#eef0f3" stroke="#a9b1bb" stroke-width="1.5"/>');
+      }
+      collar();
+      var sil = silhouette(sx, vb);
+      path(sil, "#000", ' opacity="0.3" filter="url(#soft)" transform="translate(0 4)"');
+      path(sil, "url(#gj)");
+      path(sil, "url(#shade)");
+      var lap = nu ? "M -104 -2 L -6 260 L -38 260 L -136 158 L -116 146 L -134 134 C -126 92 -116 44 -112 4 Z"
+                   : "M -106 -4 L -6 300 L -44 300 L -156 172 L -132 158 L -154 146 C -144 100 -128 50 -116 2 Z";
+      [lap, mirror(lap)].forEach(function (d) { path(d, "url(#gl)", ' stroke="' + mix(C, "#ffffff", 0.25) + '" stroke-width="2.4" stroke-linejoin="round"'); });
+    } else if (id === "so-mi") {
+      grad("gw", [[0, "#ffffff"], [0.55, "#f7f8fa"], [1, "#e6e9ed"]]);
+      var shirt = silhouette(0.96, null, -2);
+      path(shirt, "#000", ' opacity="0.18" filter="url(#soft)" transform="translate(0 4)"');
+      path(shirt, "url(#gw)", ' stroke="#c2c9d1" stroke-width="2.4"');
+      path(shirt, "url(#shade)", ' opacity="0.45"');
+      ["M -128 6 C -170 34 -205 46 -240 58", mirror("M -128 6 C -170 34 -205 46 -240 58")].forEach(function (d) { parts.push('<path d="' + d + '" fill="none" stroke="#d0d6dd" stroke-width="2"/>'); });
+      path("M -3 60 L -3 560 L 3 560 L 3 60 Z", "#dfe3e8");
+      [96, 186, 276, 366].forEach(function (y) { parts.push('<circle cx="0" cy="' + y + '" r="6" fill="#eceef1" stroke="#a9b1bb" stroke-width="1.6"/>'); });
+      collar();
+    }
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="' + W + '" height="' + H + '" viewBox="' + o.x + " " + o.y + " " + o.w + " " + o.h + '"><defs>' + defs.join("") + "</defs>" + parts.join("") + "</svg>";
+  }
+  // Vị trí vẽ trang phục trên ảnh đầu ra (pixel). adj: { scale (1 = mặc định), dy (đơn vị: khoảng cách hai mắt) }
+  function outfitPlacement(geo, crop, outW, adj) {
+    adj = adj || {};
+    var S = outW / crop.w, unit = geo.eyeDist * S * (adj.scale || 1) / 100;
+    var X = (geo.cx - crop.x) * S, Y = (geo.chinY - crop.y) * S + (adj.dy || 0) * geo.eyeDist * S;
+    return { x: X + OUTFIT_BOX.x * unit, y: Y + OUTFIT_BOX.y * unit, w: OUTFIT_BOX.w * unit, h: OUTFIT_BOX.h * unit, unit: unit, chin: [X, Y] };
+  }
+
+  // ---------- Kiểm tra tư thế (cười lộ răng, tay gần mặt, vai lệch) ----------
+  // fg: RGBA đã tách nền (A = độ phủ); face: điểm YuNet; geo: faceGeometry
+  function poseChecks(fg, w, h, face, geo) {
+    var out = [], d = geo.eyeDist, px = function (x, y) { x = Math.round(x); y = Math.round(y); return x >= 0 && y >= 0 && x < w && y < h ? (y * w + x) * 4 : -1; };
+    // 1. Cười lộ răng: điểm ảnh sáng, ít màu giữa hai khoé miệng; hoặc miệng kéo rộng
+    var mR = face.mouthR, mL = face.mouthL, mw = Math.hypot(mL[0] - mR[0], mL[1] - mR[1]), my = (mR[1] + mL[1]) / 2;
+    var teeth = 0, n = 0;
+    for (var y = my - 0.12 * d; y <= my + 0.16 * d; y++) for (var x = mR[0] + 0.15 * mw; x <= mL[0] - 0.15 * mw; x++) {
+      var i = px(x, y); if (i < 0) continue; n++;
+      var r = fg[i], g = fg[i + 1], b = fg[i + 2], mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+      if (mx > 165 && (mx - mn) / mx < 0.22) teeth++;
+    }
+    var teethFrac = n ? teeth / n : 0, ratio = mw / d;
+    if (teethFrac > 0.06 || ratio > 1.02) out.push({ id: "smile", level: "warn", text: "Đang cười lộ răng hoặc miệng mở. Ảnh giấy tờ cần nét mặt tự nhiên, miệng khép." });
+    // 2. Vật hoặc tay sát mặt: vùng hai bên quai hàm có màu da giống mặt
+    var sk = [0, 0, 0], sn = 0;
+    for (y = geo.cy + 0.25 * d; y <= geo.cy + 0.5 * d; y++) for (x = geo.cx - 0.2 * d; x <= geo.cx + 0.2 * d; x++) {
+      i = px(x, y); if (i < 0 || fg[i + 3] < 128) continue; sk[0] += fg[i]; sk[1] += fg[i + 1]; sk[2] += fg[i + 2]; sn++;
+    }
+    var hand = false;
+    if (sn > 10) {
+      var sr = sk[0] / sn, sg = sk[1] / sn, sb = sk[2] / sn, ss = sr + sg + sb, cr = sr / ss, cg = sg / ss;
+      [-1, 1].forEach(function (side) {
+        var hit = 0, tot = 0;
+        for (var yy = geo.chinY - 0.45 * d; yy <= geo.chinY + 0.1 * d; yy += 1) for (var t = 1.0; t <= 1.7; t += 1 / d) {
+          var j = px(geo.cx + side * t * d, yy); if (j < 0) continue; tot++;
+          if (fg[j + 3] < 128) continue;
+          var s2 = fg[j] + fg[j + 1] + fg[j + 2];
+          if (s2 > 0.5 * ss && s2 < 1.7 * ss && Math.abs(fg[j] / s2 - cr) < 0.035 && Math.abs(fg[j + 1] / s2 - cg) < 0.03) hit++;
+        }
+        if (tot && hit / tot > 0.3) hand = true;
+      });
+    }
+    if (hand) out.push({ id: "hand", level: "warn", text: "Có tay hoặc vật sát mặt. Hãy để hai tay xuôi, không che mặt và cổ." });
+    // 3. Vai lệch: so độ cao mép vai hai bên trên mặt nạ
+    var shoulder = function (side) {
+      var x0 = geo.cx + side * 1.8 * d;
+      for (var yy = Math.max(0, geo.chinY - 0.3 * d); yy < h; yy++) { var j = px(x0, yy); if (j < 0) return null; if (fg[j + 3] > 128) return yy; }
+      return null;
+    };
+    var sl = shoulder(-1), sr2 = shoulder(1);
+    if (sl != null && sr2 != null && Math.abs(sl - sr2) > 0.4 * d) out.push({ id: "shoulder", level: "info", text: "Hai vai chưa ngang. Nên đứng thẳng, vai thả lỏng; hoặc chọn ghép trang phục để vai cân." });
+    return { list: out, teeth: teethFrac, mouthRatio: ratio, hand: hand };
+  }
+
   return { SPECS: SPECS, BGS: BGS, SHEETS: SHEETS, spec: function (id) { return byId[id]; }, mmToPx: mmToPx,
            faceGeometry: faceGeometry, cropRect: cropRect, cropToSource: cropToSource, checks: checks,
            sheetLayout: sheetLayout, cutMarks: cutMarks, setJpegDpi: setJpegDpi, readJpegDpi: readJpegDpi,
            YUNET_SIZE: YUNET_SIZE, yunetInput: yunetInput, yunetDecode: yunetDecode, iou: iou,
-           modnetSize: modnetSize, modnetInput: modnetInput, upsample: upsample, boxBlur: boxBlur, refine: refine, crownFromMask: crownFromMask };
+           modnetSize: modnetSize, modnetInput: modnetInput, upsample: upsample, boxBlur: boxBlur, refine: refine, crownFromMask: crownFromMask,
+           OUTFITS: OUTFITS, OUTFIT_COLORS: OUTFIT_COLORS, OUTFIT_BOX: OUTFIT_BOX, outfitSVG: outfitSVG, outfitTopLine: outfitTopLine, outfitPlacement: outfitPlacement, poseChecks: poseChecks };
 });
