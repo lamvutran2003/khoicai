@@ -1,0 +1,6573 @@
+{
+ "id": "48",
+ "name": "Đà Nẵng",
+ "full_name": "Thành phố Đà Nẵng",
+ "type": "thành phố",
+ "slug": "da-nang",
+ "formed_from": [
+  {
+   "id": "48",
+   "name": "Thành phố Đà Nẵng"
+  },
+  {
+   "id": "49",
+   "name": "Tỉnh Quảng Nam"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1659/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 94,
+   "phường": 23,
+   "xã": 70,
+   "đặc khu": 1
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1659/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1659-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-thanh-pho-da-nang-nam-2025-119250616202714604.htm",
+    "copy": "sources/nghi-quyet/1659-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "20194",
+   "name": "Hải Vân",
+   "type": "phường",
+   "full_name": "Phường Hải Vân",
+   "slug": "phuong-hai-van",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20194",
+     "name": "Hòa Hiệp Bắc",
+     "type": "phường",
+     "full_name": "Phường Hòa Hiệp Bắc",
+     "district": "Quận Liên Chiểu",
+     "district_id": "490",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20195",
+     "name": "Hòa Hiệp Nam",
+     "type": "phường",
+     "full_name": "Phường Hòa Hiệp Nam",
+     "district": "Quận Liên Chiểu",
+     "district_id": "490",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20293",
+     "name": "Hòa Bắc",
+     "type": "xã",
+     "full_name": "Xã Hòa Bắc",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20296",
+     "name": "Hòa Liên",
+     "type": "xã",
+     "full_name": "Xã Hòa Liên",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "20197"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20197",
+   "name": "Liên Chiểu",
+   "type": "phường",
+   "full_name": "Phường Liên Chiểu",
+   "slug": "phuong-lien-chieu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20197",
+     "name": "Hòa Khánh Bắc",
+     "type": "phường",
+     "full_name": "Phường Hòa Khánh Bắc",
+     "district": "Quận Liên Chiểu",
+     "district_id": "490",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20296",
+     "name": "Hòa Liên",
+     "type": "xã",
+     "full_name": "Xã Hòa Liên",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "20194"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20200",
+   "name": "Hòa Khánh",
+   "type": "phường",
+   "full_name": "Phường Hòa Khánh",
+   "slug": "phuong-hoa-khanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20198",
+     "name": "Hòa Khánh Nam",
+     "type": "phường",
+     "full_name": "Phường Hòa Khánh Nam",
+     "district": "Quận Liên Chiểu",
+     "district_id": "490",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20200",
+     "name": "Hòa Minh",
+     "type": "phường",
+     "full_name": "Phường Hòa Minh",
+     "district": "Quận Liên Chiểu",
+     "district_id": "490",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20302",
+     "name": "Hòa Sơn",
+     "type": "xã",
+     "full_name": "Xã Hòa Sơn",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20209",
+   "name": "Thanh Khê",
+   "type": "phường",
+   "full_name": "Phường Thanh Khê",
+   "slug": "phuong-thanh-khe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20206",
+     "name": "Thanh Khê Tây",
+     "type": "phường",
+     "full_name": "Phường Thanh Khê Tây",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20207",
+     "name": "Thanh Khê Đông",
+     "type": "phường",
+     "full_name": "Phường Thanh Khê Đông",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20209",
+     "name": "Xuân Hà",
+     "type": "phường",
+     "full_name": "Phường Xuân Hà",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20215",
+     "name": "Chính Gián",
+     "type": "phường",
+     "full_name": "Phường Chính Gián",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20218",
+     "name": "Thạc Gián",
+     "type": "phường",
+     "full_name": "Phường Thạc Gián",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20242",
+   "name": "Hải Châu",
+   "type": "phường",
+   "full_name": "Phường Hải Châu",
+   "slug": "phuong-hai-chau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20227",
+     "name": "Thanh Bình",
+     "type": "phường",
+     "full_name": "Phường Thanh Bình",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20230",
+     "name": "Thuận Phước",
+     "type": "phường",
+     "full_name": "Phường Thuận Phước",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20233",
+     "name": "Thạch Thang",
+     "type": "phường",
+     "full_name": "Phường Thạch Thang",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20236",
+     "name": "Hải Châu",
+     "type": "phường",
+     "full_name": "Phường Hải Châu",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20242",
+     "name": "Phước Ninh",
+     "type": "phường",
+     "full_name": "Phường Phước Ninh",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20257",
+   "name": "Hòa Cường",
+   "type": "phường",
+   "full_name": "Phường Hòa Cường",
+   "slug": "phuong-hoa-cuong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20245",
+     "name": "Hòa Thuận Tây",
+     "type": "phường",
+     "full_name": "Phường Hòa Thuận Tây",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20254",
+     "name": "Bình Thuận",
+     "type": "phường",
+     "full_name": "Phường Bình Thuận",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20257",
+     "name": "Hòa Cường Bắc",
+     "type": "phường",
+     "full_name": "Phường Hòa Cường Bắc",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20258",
+     "name": "Hòa Cường Nam",
+     "type": "phường",
+     "full_name": "Phường Hòa Cường Nam",
+     "district": "Quận Hải Châu",
+     "district_id": "492",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20260",
+   "name": "Cẩm Lệ",
+   "type": "phường",
+   "full_name": "Phường Cẩm Lệ",
+   "slug": "phuong-cam-le",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20260",
+     "name": "Khuê Trung",
+     "type": "phường",
+     "full_name": "Phường Khuê Trung",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20311",
+     "name": "Hòa Thọ Tây",
+     "type": "phường",
+     "full_name": "Phường Hòa Thọ Tây",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20312",
+     "name": "Hòa Thọ Đông",
+     "type": "phường",
+     "full_name": "Phường Hòa Thọ Đông",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20263",
+   "name": "Sơn Trà",
+   "type": "phường",
+   "full_name": "Phường Sơn Trà",
+   "slug": "phuong-son-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20263",
+     "name": "Thọ Quang",
+     "type": "phường",
+     "full_name": "Phường Thọ Quang",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20266",
+     "name": "Nại Hiên Đông",
+     "type": "phường",
+     "full_name": "Phường Nại Hiên Đông",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20269",
+     "name": "Mân Thái",
+     "type": "phường",
+     "full_name": "Phường Mân Thái",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20275",
+   "name": "An Hải",
+   "type": "phường",
+   "full_name": "Phường An Hải",
+   "slug": "phuong-an-hai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20272",
+     "name": "An Hải Bắc",
+     "type": "phường",
+     "full_name": "Phường An Hải Bắc",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20275",
+     "name": "Phước Mỹ",
+     "type": "phường",
+     "full_name": "Phường Phước Mỹ",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20278",
+     "name": "An Hải Nam",
+     "type": "phường",
+     "full_name": "Phường An Hải Nam",
+     "district": "Quận Sơn Trà",
+     "district_id": "493",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20285",
+   "name": "Ngũ Hành Sơn",
+   "type": "phường",
+   "full_name": "Phường Ngũ Hành Sơn",
+   "slug": "phuong-ngu-hanh-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20284",
+     "name": "Mỹ An",
+     "type": "phường",
+     "full_name": "Phường Mỹ An",
+     "district": "Quận Ngũ Hành Sơn",
+     "district_id": "494",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20285",
+     "name": "Khuê Mỹ",
+     "type": "phường",
+     "full_name": "Phường Khuê Mỹ",
+     "district": "Quận Ngũ Hành Sơn",
+     "district_id": "494",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20287",
+     "name": "Hòa Quý",
+     "type": "phường",
+     "full_name": "Phường Hòa Quý",
+     "district": "Quận Ngũ Hành Sơn",
+     "district_id": "494",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20290",
+     "name": "Hòa Hải",
+     "type": "phường",
+     "full_name": "Phường Hòa Hải",
+     "district": "Quận Ngũ Hành Sơn",
+     "district_id": "494",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20305",
+   "name": "An Khê",
+   "type": "phường",
+   "full_name": "Phường An Khê",
+   "slug": "phuong-an-khe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20224",
+     "name": "An Khê",
+     "type": "phường",
+     "full_name": "Phường An Khê",
+     "district": "Quận Thanh Khê",
+     "district_id": "491",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20305",
+     "name": "Hòa Phát",
+     "type": "phường",
+     "full_name": "Phường Hòa Phát",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20306",
+     "name": "Hòa An",
+     "type": "phường",
+     "full_name": "Phường Hòa An",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20314",
+   "name": "Hòa Xuân",
+   "type": "phường",
+   "full_name": "Phường Hòa Xuân",
+   "slug": "phuong-hoa-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20314",
+     "name": "Hòa Xuân",
+     "type": "phường",
+     "full_name": "Phường Hòa Xuân",
+     "district": "Quận Cẩm Lệ",
+     "district_id": "495",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20323",
+     "name": "Hòa Châu",
+     "type": "xã",
+     "full_name": "Xã Hòa Châu",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20329",
+     "name": "Hòa Phước",
+     "type": "xã",
+     "full_name": "Xã Hòa Phước",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20335",
+   "name": "Bàn Thạch",
+   "type": "phường",
+   "full_name": "Phường Bàn Thạch",
+   "slug": "phuong-ban-thach",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20335",
+     "name": "Tân Thạnh",
+     "type": "phường",
+     "full_name": "Phường Tân Thạnh",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20362",
+     "name": "Tam Thăng",
+     "type": "xã",
+     "full_name": "Xã Tam Thăng",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20375",
+     "name": "Hòa Thuận",
+     "type": "phường",
+     "full_name": "Phường Hòa Thuận",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20341",
+   "name": "Tam Kỳ",
+   "type": "phường",
+   "full_name": "Phường Tam Kỳ",
+   "slug": "phuong-tam-ky",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20341",
+     "name": "An Mỹ",
+     "type": "phường",
+     "full_name": "Phường An Mỹ",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20347",
+     "name": "An Xuân",
+     "type": "phường",
+     "full_name": "Phường An Xuân",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20353",
+     "name": "Trường Xuân",
+     "type": "phường",
+     "full_name": "Phường Trường Xuân",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20350",
+   "name": "Hương Trà",
+   "type": "phường",
+   "full_name": "Phường Hương Trà",
+   "slug": "phuong-huong-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20344",
+     "name": "Hòa Hương",
+     "type": "phường",
+     "full_name": "Phường Hòa Hương",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20350",
+     "name": "An Sơn",
+     "type": "phường",
+     "full_name": "Phường An Sơn",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20389",
+     "name": "Tam Ngọc",
+     "type": "xã",
+     "full_name": "Xã Tam Ngọc",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20356",
+   "name": "Quảng Phú",
+   "type": "phường",
+   "full_name": "Phường Quảng Phú",
+   "slug": "phuong-quang-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20356",
+     "name": "An Phú",
+     "type": "phường",
+     "full_name": "Phường An Phú",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20359",
+     "name": "Tam Thanh",
+     "type": "xã",
+     "full_name": "Xã Tam Thanh",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20371",
+     "name": "Tam Phú",
+     "type": "xã",
+     "full_name": "Xã Tam Phú",
+     "district": "Thành phố Tam Kỳ",
+     "district_id": "502",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20401",
+   "name": "Hội An Tây",
+   "type": "phường",
+   "full_name": "Phường Hội An Tây",
+   "slug": "phuong-hoi-an-tay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20401",
+     "name": "Tân An",
+     "type": "phường",
+     "full_name": "Phường Tân An",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20407",
+     "name": "Thanh Hà",
+     "type": "phường",
+     "full_name": "Phường Thanh Hà",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20419",
+     "name": "Cẩm An",
+     "type": "phường",
+     "full_name": "Phường Cẩm An",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20422",
+     "name": "Cẩm Hà",
+     "type": "xã",
+     "full_name": "Xã Cẩm Hà",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20410",
+   "name": "Hội An",
+   "type": "phường",
+   "full_name": "Phường Hội An",
+   "slug": "phuong-hoi-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20398",
+     "name": "Minh An",
+     "type": "phường",
+     "full_name": "Phường Minh An",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20404",
+     "name": "Cẩm Phô",
+     "type": "phường",
+     "full_name": "Phường Cẩm Phô",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20410",
+     "name": "Sơn Phong",
+     "type": "phường",
+     "full_name": "Phường Sơn Phong",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20425",
+     "name": "Cẩm Kim",
+     "type": "xã",
+     "full_name": "Xã Cẩm Kim",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20428",
+     "name": "Cẩm Nam",
+     "type": "phường",
+     "full_name": "Phường Cẩm Nam",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20413",
+   "name": "Hội An Đông",
+   "type": "phường",
+   "full_name": "Phường Hội An Đông",
+   "slug": "phuong-hoi-an-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20413",
+     "name": "Cẩm Châu",
+     "type": "phường",
+     "full_name": "Phường Cẩm Châu",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20416",
+     "name": "Cửa Đại",
+     "type": "phường",
+     "full_name": "Phường Cửa Đại",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20431",
+     "name": "Cẩm Thanh",
+     "type": "xã",
+     "full_name": "Xã Cẩm Thanh",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20551",
+   "name": "Điện Bàn",
+   "type": "phường",
+   "full_name": "Phường Điện Bàn",
+   "slug": "phuong-dien-ban",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20551",
+     "name": "Vĩnh Điện",
+     "type": "phường",
+     "full_name": "Phường Vĩnh Điện",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20593",
+     "name": "Điện Minh",
+     "type": "phường",
+     "full_name": "Phường Điện Minh",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20596",
+     "name": "Điện Phương",
+     "type": "phường",
+     "full_name": "Phường Điện Phương",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20557",
+   "name": "Điện Bàn Bắc",
+   "type": "phường",
+   "full_name": "Phường Điện Bàn Bắc",
+   "slug": "phuong-dien-ban-bac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20554",
+     "name": "Điện Tiến",
+     "type": "xã",
+     "full_name": "Xã Điện Tiến",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20557",
+     "name": "Điện Hòa",
+     "type": "xã",
+     "full_name": "Xã Điện Hòa",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20560",
+     "name": "Điện Thắng Bắc",
+     "type": "phường",
+     "full_name": "Phường Điện Thắng Bắc",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20575",
+   "name": "An Thắng",
+   "type": "phường",
+   "full_name": "Phường An Thắng",
+   "slug": "phuong-an-thang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20561",
+     "name": "Điện Thắng Trung",
+     "type": "phường",
+     "full_name": "Phường Điện Thắng Trung",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20562",
+     "name": "Điện Thắng Nam",
+     "type": "phường",
+     "full_name": "Phường Điện Thắng Nam",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20575",
+     "name": "Điện An",
+     "type": "phường",
+     "full_name": "Phường Điện An",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20579",
+   "name": "Điện Bàn Đông",
+   "type": "phường",
+   "full_name": "Phường Điện Bàn Đông",
+   "slug": "phuong-dien-ban-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20563",
+     "name": "Điện Ngọc",
+     "type": "phường",
+     "full_name": "Phường Điện Ngọc",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20578",
+     "name": "Điện Nam Bắc",
+     "type": "phường",
+     "full_name": "Phường Điện Nam Bắc",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20579",
+     "name": "Điện Nam Trung",
+     "type": "phường",
+     "full_name": "Phường Điện Nam Trung",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20580",
+     "name": "Điện Nam Đông",
+     "type": "phường",
+     "full_name": "Phường Điện Nam Đông",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20581",
+     "name": "Điện Dương",
+     "type": "phường",
+     "full_name": "Phường Điện Dương",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20308",
+   "name": "Bà Nà",
+   "type": "xã",
+   "full_name": "Xã Bà Nà",
+   "slug": "xa-ba-na",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20299",
+     "name": "Hòa Ninh",
+     "type": "xã",
+     "full_name": "Xã Hòa Ninh",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20308",
+     "name": "Hòa Nhơn",
+     "type": "xã",
+     "full_name": "Xã Hòa Nhơn",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20320",
+   "name": "Hòa Vang",
+   "type": "xã",
+   "full_name": "Xã Hòa Vang",
+   "slug": "xa-hoa-vang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20317",
+     "name": "Hòa Phú",
+     "type": "xã",
+     "full_name": "Xã Hòa Phú",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20320",
+     "name": "Hòa Phong",
+     "type": "xã",
+     "full_name": "Xã Hòa Phong",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20332",
+   "name": "Hòa Tiến",
+   "type": "xã",
+   "full_name": "Xã Hòa Tiến",
+   "slug": "xa-hoa-tien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20326",
+     "name": "Hòa Tiến",
+     "type": "xã",
+     "full_name": "Xã Hòa Tiến",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20332",
+     "name": "Hòa Khương",
+     "type": "xã",
+     "full_name": "Xã Hòa Khương",
+     "district": "Huyện Hòa Vang",
+     "district_id": "497",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20364",
+   "name": "Chiên Đàn",
+   "type": "xã",
+   "full_name": "Xã Chiên Đàn",
+   "slug": "xa-chien-dan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20364",
+     "name": "Phú Thịnh",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Phú Thịnh",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20374",
+     "name": "Tam Đàn",
+     "type": "xã",
+     "full_name": "Xã Tam Đàn",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20386",
+     "name": "Tam Thái",
+     "type": "xã",
+     "full_name": "Xã Tam Thái",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20380",
+   "name": "Tây Hồ",
+   "type": "xã",
+   "full_name": "Xã Tây Hồ",
+   "slug": "xa-tay-ho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20365",
+     "name": "Tam Thành",
+     "type": "xã",
+     "full_name": "Xã Tam Thành",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20368",
+     "name": "Tam An",
+     "type": "xã",
+     "full_name": "Xã Tam An",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20377",
+     "name": "Tam Lộc",
+     "type": "xã",
+     "full_name": "Xã Tam Lộc",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20380",
+     "name": "Tam Phước",
+     "type": "xã",
+     "full_name": "Xã Tam Phước",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20392",
+   "name": "Phú Ninh",
+   "type": "xã",
+   "full_name": "Xã Phú Ninh",
+   "slug": "xa-phu-ninh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20387",
+     "name": "Tam Đại",
+     "type": "xã",
+     "full_name": "Xã Tam Đại",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20392",
+     "name": "Tam Dân",
+     "type": "xã",
+     "full_name": "Xã Tam Dân",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20395",
+     "name": "Tam Lãnh",
+     "type": "xã",
+     "full_name": "Xã Tam Lãnh",
+     "district": "Huyện Phú Ninh",
+     "district_id": "518",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20434",
+   "name": "Tân Hiệp",
+   "type": "xã",
+   "full_name": "Xã Tân Hiệp",
+   "slug": "xa-tan-hiep",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20434",
+     "name": "Tân Hiệp",
+     "type": "xã",
+     "full_name": "Xã Tân Hiệp",
+     "district": "Thành phố Hội An",
+     "district_id": "503",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20443",
+   "name": "Hùng Sơn",
+   "type": "xã",
+   "full_name": "Xã Hùng Sơn",
+   "slug": "xa-hung-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 83
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20437",
+     "name": "Ch'ơm",
+     "type": "xã",
+     "full_name": "Xã Ch'ơm",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20440",
+     "name": "Gari",
+     "type": "xã",
+     "full_name": "Xã Gari",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20443",
+     "name": "Axan",
+     "type": "xã",
+     "full_name": "Xã Axan",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20446",
+     "name": "Tr'hy",
+     "type": "xã",
+     "full_name": "Xã Tr'hy",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20455",
+   "name": "Tây Giang",
+   "type": "xã",
+   "full_name": "Xã Tây Giang",
+   "slug": "xa-tay-giang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 82
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20449",
+     "name": "Lăng",
+     "type": "xã",
+     "full_name": "Xã Lăng",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20452",
+     "name": "Anông",
+     "type": "xã",
+     "full_name": "Xã Anông",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20455",
+     "name": "Atiêng",
+     "type": "xã",
+     "full_name": "Xã Atiêng",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20464",
+     "name": "Dang",
+     "type": "xã",
+     "full_name": "Xã Dang",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20458",
+   "name": "Avương",
+   "type": "xã",
+   "full_name": "Xã Avương",
+   "slug": "xa-avuong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 81
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20458",
+     "name": "Bhalêê",
+     "type": "xã",
+     "full_name": "Xã Bhalêê",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Bha Lê",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20461",
+     "name": "Avương",
+     "type": "xã",
+     "full_name": "Xã Avương",
+     "district": "Huyện Tây Giang",
+     "district_id": "504",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20467",
+   "name": "Đông Giang",
+   "type": "xã",
+   "full_name": "Xã Đông Giang",
+   "slug": "xa-dong-giang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 79
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20467",
+     "name": "Prao",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Prao",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20470",
+     "name": "Tà Lu",
+     "type": "xã",
+     "full_name": "Xã Tà Lu",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20488",
+     "name": "A Rooi",
+     "type": "xã",
+     "full_name": "Xã A Rooi",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20491",
+     "name": "Zà Hung",
+     "type": "xã",
+     "full_name": "Xã Zà Hung",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Za Hung",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20476",
+   "name": "Sông Kôn",
+   "type": "xã",
+   "full_name": "Xã Sông Kôn",
+   "slug": "xa-song-kon",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 78
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20473",
+     "name": "Sông Kôn",
+     "type": "xã",
+     "full_name": "Xã Sông Kôn",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20476",
+     "name": "Jơ Ngây",
+     "type": "xã",
+     "full_name": "Xã Jơ Ngây",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20479",
+     "name": "A Ting",
+     "type": "xã",
+     "full_name": "Xã A Ting",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20485",
+   "name": "Sông Vàng",
+   "type": "xã",
+   "full_name": "Xã Sông Vàng",
+   "slug": "xa-song-vang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 77
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20482",
+     "name": "Tư",
+     "type": "xã",
+     "full_name": "Xã Tư",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20485",
+     "name": "Ba",
+     "type": "xã",
+     "full_name": "Xã Ba",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20494",
+   "name": "Bến Hiên",
+   "type": "xã",
+   "full_name": "Xã Bến Hiên",
+   "slug": "xa-ben-hien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 80
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20494",
+     "name": "Mà Cooih",
+     "type": "xã",
+     "full_name": "Xã Mà Cooih",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Mà Cooi",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20497",
+     "name": "Kà Dăng",
+     "type": "xã",
+     "full_name": "Xã Kà Dăng",
+     "district": "Huyện Đông Giang",
+     "district_id": "505",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Ka Dăng",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20500",
+   "name": "Đại Lộc",
+   "type": "xã",
+   "full_name": "Xã Đại Lộc",
+   "slug": "xa-dai-loc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 66
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20500",
+     "name": "Ái Nghĩa",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Ái Nghĩa",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20521",
+     "name": "Đại Nghĩa",
+     "type": "xã",
+     "full_name": "Xã Đại Nghĩa",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20524",
+     "name": "Đại Hiệp",
+     "type": "xã",
+     "full_name": "Xã Đại Hiệp",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20547",
+     "name": "Đại An",
+     "type": "xã",
+     "full_name": "Xã Đại An",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20548",
+     "name": "Đại Hòa",
+     "type": "xã",
+     "full_name": "Xã Đại Hòa",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20506",
+   "name": "Thượng Đức",
+   "type": "xã",
+   "full_name": "Xã Thượng Đức",
+   "slug": "xa-thuong-duc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 68
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20503",
+     "name": "Đại Sơn",
+     "type": "xã",
+     "full_name": "Xã Đại Sơn",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20506",
+     "name": "Đại Lãnh",
+     "type": "xã",
+     "full_name": "Xã Đại Lãnh",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20509",
+     "name": "Đại Hưng",
+     "type": "xã",
+     "full_name": "Xã Đại Hưng",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20515",
+   "name": "Hà Nha",
+   "type": "xã",
+   "full_name": "Xã Hà Nha",
+   "slug": "xa-ha-nha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 67
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20512",
+     "name": "Đại Hồng",
+     "type": "xã",
+     "full_name": "Xã Đại Hồng",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20515",
+     "name": "Đại Đồng",
+     "type": "xã",
+     "full_name": "Xã Đại Đồng",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20518",
+     "name": "Đại Quang",
+     "type": "xã",
+     "full_name": "Xã Đại Quang",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20539",
+   "name": "Vu Gia",
+   "type": "xã",
+   "full_name": "Xã Vu Gia",
+   "slug": "xa-vu-gia",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 69
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20536",
+     "name": "Đại Phong",
+     "type": "xã",
+     "full_name": "Xã Đại Phong",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20539",
+     "name": "Đại Minh",
+     "type": "xã",
+     "full_name": "Xã Đại Minh",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20545",
+     "name": "Đại Cường",
+     "type": "xã",
+     "full_name": "Xã Đại Cường",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20542",
+   "name": "Phú Thuận",
+   "type": "xã",
+   "full_name": "Xã Phú Thuận",
+   "slug": "xa-phu-thuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 70
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20527",
+     "name": "Đại Thạnh",
+     "type": "xã",
+     "full_name": "Xã Đại Thạnh",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20530",
+     "name": "Đại Chánh",
+     "type": "xã",
+     "full_name": "Xã Đại Chánh",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20533",
+     "name": "Đại Tân",
+     "type": "xã",
+     "full_name": "Xã Đại Tân",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20542",
+     "name": "Đại Thắng",
+     "type": "xã",
+     "full_name": "Xã Đại Thắng",
+     "district": "Huyện Đại Lộc",
+     "district_id": "506",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20569",
+   "name": "Điện Bàn Tây",
+   "type": "xã",
+   "full_name": "Xã Điện Bàn Tây",
+   "slug": "xa-dien-ban-tay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 64
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20566",
+     "name": "Điện Hồng",
+     "type": "xã",
+     "full_name": "Xã Điện Hồng",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20569",
+     "name": "Điện Thọ",
+     "type": "xã",
+     "full_name": "Xã Điện Thọ",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20572",
+     "name": "Điện Phước",
+     "type": "xã",
+     "full_name": "Xã Điện Phước",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20587",
+   "name": "Gò Nổi",
+   "type": "xã",
+   "full_name": "Xã Gò Nổi",
+   "slug": "xa-go-noi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 65
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20584",
+     "name": "Điện Quang",
+     "type": "xã",
+     "full_name": "Xã Điện Quang",
+     "district": "Thị Xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20587",
+     "name": "Điện Trung",
+     "type": "xã",
+     "full_name": "Xã Điện Trung",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20590",
+     "name": "Điện Phong",
+     "type": "xã",
+     "full_name": "Xã Điện Phong",
+     "district": "Thị xã Điện Bàn",
+     "district_id": "507",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20599",
+   "name": "Nam Phước",
+   "type": "xã",
+   "full_name": "Xã Nam Phước",
+   "slug": "xa-nam-phuoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 61
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20599",
+     "name": "Nam Phước",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Nam Phước",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20626",
+     "name": "Duy Phước",
+     "type": "xã",
+     "full_name": "Xã Duy Phước",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20632",
+     "name": "Duy Vinh",
+     "type": "xã",
+     "full_name": "Xã Duy Vinh",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20611",
+   "name": "Thu Bồn",
+   "type": "xã",
+   "full_name": "Xã Thu Bồn",
+   "slug": "xa-thu-bon",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 63
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20605",
+     "name": "Duy Phú",
+     "type": "xã",
+     "full_name": "Xã Duy Phú",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20608",
+     "name": "Duy Tân",
+     "type": "xã",
+     "full_name": "Xã Duy Tân",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20611",
+     "name": "Duy Hòa",
+     "type": "xã",
+     "full_name": "Xã Duy Hòa",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20614",
+     "name": "Duy Châu",
+     "type": "xã",
+     "full_name": "Xã Duy Châu",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20623",
+   "name": "Duy Xuyên",
+   "type": "xã",
+   "full_name": "Xã Duy Xuyên",
+   "slug": "xa-duy-xuyen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 62
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20617",
+     "name": "Duy Trinh",
+     "type": "xã",
+     "full_name": "Xã Duy Trinh",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20620",
+     "name": "Duy Sơn",
+     "type": "xã",
+     "full_name": "Xã Duy Sơn",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20623",
+     "name": "Duy Trung",
+     "type": "xã",
+     "full_name": "Xã Duy Trung",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20635",
+   "name": "Duy Nghĩa",
+   "type": "xã",
+   "full_name": "Xã Duy Nghĩa",
+   "slug": "xa-duy-nghia",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 60
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20629",
+     "name": "Duy Thành",
+     "type": "xã",
+     "full_name": "Xã Duy Thành",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20635",
+     "name": "Duy Nghĩa",
+     "type": "xã",
+     "full_name": "Xã Duy Nghĩa",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20638",
+     "name": "Duy Hải",
+     "type": "xã",
+     "full_name": "Xã Duy Hải",
+     "district": "Huyện Duy Xuyên",
+     "district_id": "508",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20641",
+   "name": "Quế Sơn",
+   "type": "xã",
+   "full_name": "Xã Quế Sơn",
+   "slug": "xa-que-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 56
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20641",
+     "name": "Đông Phú",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Đông Phú",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20677",
+     "name": "Quế Long",
+     "type": "xã",
+     "full_name": "Xã Quế Long",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20683",
+     "name": "Quế Phong",
+     "type": "xã",
+     "full_name": "Xã Quế Phong",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20686",
+     "name": "Quế An",
+     "type": "xã",
+     "full_name": "Xã Quế An",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20689",
+     "name": "Quế Minh",
+     "type": "xã",
+     "full_name": "Xã Quế Minh",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20650",
+   "name": "Xuân Phú",
+   "type": "xã",
+   "full_name": "Xã Xuân Phú",
+   "slug": "xa-xuan-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 57
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20644",
+     "name": "Quế Xuân 1",
+     "type": "xã",
+     "full_name": "Xã Quế Xuân 1",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20647",
+     "name": "Quế Xuân 2",
+     "type": "xã",
+     "full_name": "Xã Quế Xuân 2",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20650",
+     "name": "Quế Phú",
+     "type": "xã",
+     "full_name": "Xã Quế Phú",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20651",
+     "name": "Hương An",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Hương An",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20656",
+   "name": "Nông Sơn",
+   "type": "xã",
+   "full_name": "Xã Nông Sơn",
+   "slug": "xa-nong-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 58
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20656",
+     "name": "Trung Phước",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Trung Phước",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20671",
+     "name": "Quế Lộc",
+     "type": "xã",
+     "full_name": "Xã Quế Lộc",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20662",
+   "name": "Quế Sơn Trung",
+   "type": "xã",
+   "full_name": "Xã Quế Sơn Trung",
+   "slug": "xa-que-son-trung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 55
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20659",
+     "name": "Quế Hiệp",
+     "type": "xã",
+     "full_name": "Xã Quế Hiệp",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20662",
+     "name": "Quế Thuận",
+     "type": "xã",
+     "full_name": "Xã Quế Thuận",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20665",
+     "name": "Quế Mỹ",
+     "type": "xã",
+     "full_name": "Xã Quế Mỹ",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20680",
+     "name": "Quế Châu",
+     "type": "xã",
+     "full_name": "Xã Quế Châu",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20669",
+   "name": "Quế Phước",
+   "type": "xã",
+   "full_name": "Xã Quế Phước",
+   "slug": "xa-que-phuoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 59
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20668",
+     "name": "Ninh Phước",
+     "type": "xã",
+     "full_name": "Xã Ninh Phước",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20669",
+     "name": "Phước Ninh",
+     "type": "xã",
+     "full_name": "Xã Phước Ninh",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20692",
+     "name": "Quế Lâm",
+     "type": "xã",
+     "full_name": "Xã Quế Lâm",
+     "district": "Huyện Quế Sơn",
+     "district_id": "509",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20695",
+   "name": "Thạnh Mỹ",
+   "type": "xã",
+   "full_name": "Xã Thạnh Mỹ",
+   "slug": "xa-thanh-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 71
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20695",
+     "name": "Thạnh Mỹ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Thạnh Mỹ",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Đổi loại hình",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20698",
+   "name": "La Êê",
+   "type": "xã",
+   "full_name": "Xã La Êê",
+   "slug": "xa-la-ee",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 76
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20698",
+     "name": "La Êê",
+     "type": "xã",
+     "full_name": "Xã La Êê",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20699",
+     "name": "Chơ Chun",
+     "type": "xã",
+     "full_name": "Xã Chơ Chun",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20704",
+   "name": "La Dêê",
+   "type": "xã",
+   "full_name": "Xã La Dêê",
+   "slug": "xa-la-dee",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 75
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20704",
+     "name": "La Dêê",
+     "type": "xã",
+     "full_name": "Xã La Dêê",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20705",
+     "name": "Đắc Tôi",
+     "type": "xã",
+     "full_name": "Xã Đắc Tôi",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20707",
+   "name": "Nam Giang",
+   "type": "xã",
+   "full_name": "Xã Nam Giang",
+   "slug": "xa-nam-giang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 73
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20701",
+     "name": "Zuôih",
+     "type": "xã",
+     "full_name": "Xã Zuôih",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Zuôich",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20707",
+     "name": "Chà Vàl",
+     "type": "xã",
+     "full_name": "Xã Chà Vàl",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20710",
+   "name": "Bến Giằng",
+   "type": "xã",
+   "full_name": "Xã Bến Giằng",
+   "slug": "xa-ben-giang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 72
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20702",
+     "name": "Tà Pơơ",
+     "type": "xã",
+     "full_name": "Xã Tà Pơơ",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20710",
+     "name": "Tà Bhing",
+     "type": "xã",
+     "full_name": "Xã Tà Bhing",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Tà Bhinh",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20713",
+     "name": "Cà Dy",
+     "type": "xã",
+     "full_name": "Xã Cà Dy",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20716",
+   "name": "Đắc Pring",
+   "type": "xã",
+   "full_name": "Xã Đắc Pring",
+   "slug": "xa-dac-pring",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 74
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20716",
+     "name": "Đắc Pre",
+     "type": "xã",
+     "full_name": "Xã Đắc Pre",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20719",
+     "name": "Đắc Pring",
+     "type": "xã",
+     "full_name": "Xã Đắc Pring",
+     "district": "Huyện Nam Giang",
+     "district_id": "510",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20722",
+   "name": "Khâm Đức",
+   "type": "xã",
+   "full_name": "Xã Khâm Đức",
+   "slug": "xa-kham-duc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 87
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20722",
+     "name": "Khâm Đức",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Khâm Đức",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20725",
+     "name": "Phước Xuân",
+     "type": "xã",
+     "full_name": "Xã Phước Xuân",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20728",
+   "name": "Phước Hiệp",
+   "type": "xã",
+   "full_name": "Xã Phước Hiệp",
+   "slug": "xa-phuoc-hiep",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 91
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20728",
+     "name": "Phước Hiệp",
+     "type": "xã",
+     "full_name": "Xã Phước Hiệp",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20729",
+     "name": "Phước Hòa",
+     "type": "xã",
+     "full_name": "Xã Phước Hòa",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20734",
+   "name": "Phước Năng",
+   "type": "xã",
+   "full_name": "Xã Phước Năng",
+   "slug": "xa-phuoc-nang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 88
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20731",
+     "name": "Phước Đức",
+     "type": "xã",
+     "full_name": "Xã Phước Đức",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20734",
+     "name": "Phước Năng",
+     "type": "xã",
+     "full_name": "Xã Phước Năng",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20737",
+     "name": "Phước Mỹ",
+     "type": "xã",
+     "full_name": "Xã Phước Mỹ",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20740",
+   "name": "Phước Chánh",
+   "type": "xã",
+   "full_name": "Xã Phước Chánh",
+   "slug": "xa-phuoc-chanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 89
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20740",
+     "name": "Phước Chánh",
+     "type": "xã",
+     "full_name": "Xã Phước Chánh",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20743",
+     "name": "Phước Công",
+     "type": "xã",
+     "full_name": "Xã Phước Công",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20752",
+   "name": "Phước Thành",
+   "type": "xã",
+   "full_name": "Xã Phước Thành",
+   "slug": "xa-phuoc-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 90
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20746",
+     "name": "Phước Kim",
+     "type": "xã",
+     "full_name": "Xã Phước Kim",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20749",
+     "name": "Phước Lộc",
+     "type": "xã",
+     "full_name": "Xã Phước Lộc",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20752",
+     "name": "Phước Thành",
+     "type": "xã",
+     "full_name": "Xã Phước Thành",
+     "district": "Huyện Phước Sơn",
+     "district_id": "511",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20767",
+   "name": "Việt An",
+   "type": "xã",
+   "full_name": "Xã Việt An",
+   "slug": "xa-viet-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 85
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20764",
+     "name": "Quế Thọ",
+     "type": "xã",
+     "full_name": "Xã Quế Thọ",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20767",
+     "name": "Bình Lâm",
+     "type": "xã",
+     "full_name": "Xã Bình Lâm",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20785",
+     "name": "Thăng Phước",
+     "type": "xã",
+     "full_name": "Xã Thăng Phước",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20788",
+     "name": "Bình Sơn",
+     "type": "xã",
+     "full_name": "Xã Bình Sơn",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20770",
+   "name": "Phước Trà",
+   "type": "xã",
+   "full_name": "Xã Phước Trà",
+   "slug": "xa-phuoc-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 86
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20770",
+     "name": "Sông Trà",
+     "type": "xã",
+     "full_name": "Xã Sông Trà",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20773",
+     "name": "Phước Trà",
+     "type": "xã",
+     "full_name": "Xã Phước Trà",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20776",
+     "name": "Phước Gia",
+     "type": "xã",
+     "full_name": "Xã Phước Gia",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20779",
+   "name": "Hiệp Đức",
+   "type": "xã",
+   "full_name": "Xã Hiệp Đức",
+   "slug": "xa-hiep-duc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 84
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20758",
+     "name": "Quế Tân",
+     "type": "xã",
+     "full_name": "Xã Quế Tân",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20779",
+     "name": "Tân Bình",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tân Bình",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20782",
+     "name": "Quế Lưu",
+     "type": "xã",
+     "full_name": "Xã Quế Lưu",
+     "district": "Huyện Hiệp Đức",
+     "district_id": "512",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20791",
+   "name": "Thăng Bình",
+   "type": "xã",
+   "full_name": "Xã Thăng Bình",
+   "slug": "xa-thang-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 49
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20791",
+     "name": "Hà Lam",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Hà Lam",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20800",
+     "name": "Bình Nguyên",
+     "type": "xã",
+     "full_name": "Xã Bình Nguyên",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20803",
+     "name": "Bình Phục",
+     "type": "xã",
+     "full_name": "Xã Bình Phục",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20824",
+     "name": "Bình Quý",
+     "type": "xã",
+     "full_name": "Xã Bình Quý",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20794",
+   "name": "Thăng An",
+   "type": "xã",
+   "full_name": "Xã Thăng An",
+   "slug": "xa-thang-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 50
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20794",
+     "name": "Bình Dương",
+     "type": "xã",
+     "full_name": "Xã Bình Dương",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20797",
+     "name": "Bình Giang",
+     "type": "xã",
+     "full_name": "Xã Bình Giang",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20806",
+     "name": "Bình Triều",
+     "type": "xã",
+     "full_name": "Xã Bình Triều",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20809",
+     "name": "Bình Đào",
+     "type": "xã",
+     "full_name": "Xã Bình Đào",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20812",
+     "name": "Bình Minh",
+     "type": "xã",
+     "full_name": "Xã Bình Minh",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20818",
+   "name": "Đồng Dương",
+   "type": "xã",
+   "full_name": "Xã Đồng Dương",
+   "slug": "xa-dong-duong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 54
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20815",
+     "name": "Bình Lãnh",
+     "type": "xã",
+     "full_name": "Xã Bình Lãnh",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20818",
+     "name": "Bình Trị",
+     "type": "xã",
+     "full_name": "Xã Bình Trị",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20821",
+     "name": "Bình Định",
+     "type": "xã",
+     "full_name": "Xã Bình Định",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20827",
+   "name": "Thăng Phú",
+   "type": "xã",
+   "full_name": "Xã Thăng Phú",
+   "slug": "xa-thang-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 53
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20827",
+     "name": "Bình Phú",
+     "type": "xã",
+     "full_name": "Xã Bình Phú",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20842",
+     "name": "Bình Quế",
+     "type": "xã",
+     "full_name": "Xã Bình Quế",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20836",
+   "name": "Thăng Trường",
+   "type": "xã",
+   "full_name": "Xã Thăng Trường",
+   "slug": "xa-thang-truong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 51
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20836",
+     "name": "Bình Sa",
+     "type": "xã",
+     "full_name": "Xã Bình Sa",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20839",
+     "name": "Bình Hải",
+     "type": "xã",
+     "full_name": "Xã Bình Hải",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20851",
+     "name": "Bình Nam",
+     "type": "xã",
+     "full_name": "Xã Bình Nam",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20848",
+   "name": "Thăng Điền",
+   "type": "xã",
+   "full_name": "Xã Thăng Điền",
+   "slug": "xa-thang-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 52
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20833",
+     "name": "Bình Tú",
+     "type": "xã",
+     "full_name": "Xã Bình Tú",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20845",
+     "name": "Bình An",
+     "type": "xã",
+     "full_name": "Xã Bình An",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20848",
+     "name": "Bình Trung",
+     "type": "xã",
+     "full_name": "Xã Bình Trung",
+     "district": "Huyện Thăng Bình",
+     "district_id": "513",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20854",
+   "name": "Tiên Phước",
+   "type": "xã",
+   "full_name": "Xã Tiên Phước",
+   "slug": "xa-tien-phuoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20854",
+     "name": "Tiên Kỳ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tiên Kỳ",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20881",
+     "name": "Tiên Mỹ",
+     "type": "xã",
+     "full_name": "Xã Tiên Mỹ",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20884",
+     "name": "Tiên Phong",
+     "type": "xã",
+     "full_name": "Xã Tiên Phong",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20887",
+     "name": "Tiên Thọ",
+     "type": "xã",
+     "full_name": "Xã Tiên Thọ",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20857",
+   "name": "Sơn Cẩm Hà",
+   "type": "xã",
+   "full_name": "Xã Sơn Cẩm Hà",
+   "slug": "xa-son-cam-ha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20857",
+     "name": "Tiên Sơn",
+     "type": "xã",
+     "full_name": "Xã Tiên Sơn",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20860",
+     "name": "Tiên Hà",
+     "type": "xã",
+     "full_name": "Xã Tiên Hà",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20866",
+     "name": "Tiên Châu",
+     "type": "xã",
+     "full_name": "Xã Tiên Châu",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20875",
+   "name": "Lãnh Ngọc",
+   "type": "xã",
+   "full_name": "Xã Lãnh Ngọc",
+   "slug": "xa-lanh-ngoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20869",
+     "name": "Tiên Lãnh",
+     "type": "xã",
+     "full_name": "Xã Tiên Lãnh",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20872",
+     "name": "Tiên Ngọc",
+     "type": "xã",
+     "full_name": "Xã Tiên Ngọc",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20875",
+     "name": "Tiên Hiệp",
+     "type": "xã",
+     "full_name": "Xã Tiên Hiệp",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20878",
+   "name": "Thạnh Bình",
+   "type": "xã",
+   "full_name": "Xã Thạnh Bình",
+   "slug": "xa-thanh-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20878",
+     "name": "Tiên Cảnh",
+     "type": "xã",
+     "full_name": "Xã Tiên Cảnh",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20890",
+     "name": "Tiên An",
+     "type": "xã",
+     "full_name": "Xã Tiên An",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20893",
+     "name": "Tiên Lộc",
+     "type": "xã",
+     "full_name": "Xã Tiên Lộc",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20896",
+     "name": "Tiên Lập",
+     "type": "xã",
+     "full_name": "Xã Tiên Lập",
+     "district": "Huyện Tiên Phước",
+     "district_id": "514",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20900",
+   "name": "Trà My",
+   "type": "xã",
+   "full_name": "Xã Trà My",
+   "slug": "xa-tra-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 43
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20899",
+     "name": "Trà My",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Trà My",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20900",
+     "name": "Trà Sơn",
+     "type": "xã",
+     "full_name": "Xã Trà Sơn",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20911",
+     "name": "Trà Dương",
+     "type": "xã",
+     "full_name": "Xã Trà Dương",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20914",
+     "name": "Trà Giang",
+     "type": "xã",
+     "full_name": "Xã Trà Giang",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20908",
+   "name": "Trà Liên",
+   "type": "xã",
+   "full_name": "Xã Trà Liên",
+   "slug": "xa-tra-lien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20902",
+     "name": "Trà Kót",
+     "type": "xã",
+     "full_name": "Xã Trà Kót",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20905",
+     "name": "Trà Nú",
+     "type": "xã",
+     "full_name": "Xã Trà Nú",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20908",
+     "name": "Trà Đông",
+     "type": "xã",
+     "full_name": "Xã Trà Đông",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20920",
+   "name": "Trà Đốc",
+   "type": "xã",
+   "full_name": "Xã Trà Đốc",
+   "slug": "xa-tra-doc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 42
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20917",
+     "name": "Trà Bui",
+     "type": "xã",
+     "full_name": "Xã Trà Bui",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20920",
+     "name": "Trà Đốc",
+     "type": "xã",
+     "full_name": "Xã Trà Đốc",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20923",
+   "name": "Trà Tân",
+   "type": "xã",
+   "full_name": "Xã Trà Tân",
+   "slug": "xa-tra-tan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 41
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20923",
+     "name": "Trà Tân",
+     "type": "xã",
+     "full_name": "Xã Trà Tân",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20926",
+     "name": "Trà Giác",
+     "type": "xã",
+     "full_name": "Xã Trà Giác",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20929",
+   "name": "Trà Giáp",
+   "type": "xã",
+   "full_name": "Xã Trà Giáp",
+   "slug": "xa-tra-giap",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 40
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20929",
+     "name": "Trà Giáp",
+     "type": "xã",
+     "full_name": "Xã Trà Giáp",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20932",
+     "name": "Trà Ka",
+     "type": "xã",
+     "full_name": "Xã Trà Ka",
+     "district": "Huyện Bắc Trà My",
+     "district_id": "515",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20938",
+   "name": "Trà Leng",
+   "type": "xã",
+   "full_name": "Xã Trà Leng",
+   "slug": "xa-tra-leng",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 48
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20935",
+     "name": "Trà Leng",
+     "type": "xã",
+     "full_name": "Xã Trà Leng",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20938",
+     "name": "Trà Dơn",
+     "type": "xã",
+     "full_name": "Xã Trà Dơn",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20941",
+   "name": "Trà Tập",
+   "type": "xã",
+   "full_name": "Xã Trà Tập",
+   "slug": "xa-tra-tap",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 45
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20941",
+     "name": "Trà Tập",
+     "type": "xã",
+     "full_name": "Xã Trà Tập",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20947",
+     "name": "Trà Cang",
+     "type": "xã",
+     "full_name": "Xã Trà Cang",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20944",
+   "name": "Nam Trà My",
+   "type": "xã",
+   "full_name": "Xã Nam Trà My",
+   "slug": "xa-nam-tra-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 44
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20944",
+     "name": "Trà Mai",
+     "type": "xã",
+     "full_name": "Xã Trà Mai",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20956",
+     "name": "Trà Don",
+     "type": "xã",
+     "full_name": "Xã Trà Don",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20950",
+   "name": "Trà Linh",
+   "type": "xã",
+   "full_name": "Xã Trà Linh",
+   "slug": "xa-tra-linh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 47
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20950",
+     "name": "Trà Linh",
+     "type": "xã",
+     "full_name": "Xã Trà Linh",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20953",
+     "name": "Trà Nam",
+     "type": "xã",
+     "full_name": "Xã Trà Nam",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20959",
+   "name": "Trà Vân",
+   "type": "xã",
+   "full_name": "Xã Trà Vân",
+   "slug": "xa-tra-van",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 46
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20959",
+     "name": "Trà Vân",
+     "type": "xã",
+     "full_name": "Xã Trà Vân",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20962",
+     "name": "Trà Vinh",
+     "type": "xã",
+     "full_name": "Xã Trà Vinh",
+     "district": "Huyện Nam Trà My",
+     "district_id": "516",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20965",
+   "name": "Núi Thành",
+   "type": "xã",
+   "full_name": "Xã Núi Thành",
+   "slug": "xa-nui-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20965",
+     "name": "Núi Thành",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Núi Thành",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20989",
+     "name": "Tam Hiệp",
+     "type": "xã",
+     "full_name": "Xã Tam Hiệp",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20995",
+     "name": "Tam Giang",
+     "type": "xã",
+     "full_name": "Xã Tam Giang",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20998",
+     "name": "Tam Quang",
+     "type": "xã",
+     "full_name": "Xã Tam Quang",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "21001",
+     "name": "Tam Nghĩa",
+     "type": "xã",
+     "full_name": "Xã Tam Nghĩa",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20971",
+   "name": "Tam Xuân",
+   "type": "xã",
+   "full_name": "Xã Tam Xuân",
+   "slug": "xa-tam-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20968",
+     "name": "Tam Xuân I",
+     "type": "xã",
+     "full_name": "Xã Tam Xuân I",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20971",
+     "name": "Tam Xuân II",
+     "type": "xã",
+     "full_name": "Xã Tam Xuân II",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20974",
+     "name": "Tam Tiến",
+     "type": "xã",
+     "full_name": "Xã Tam Tiến",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20977",
+   "name": "Đức Phú",
+   "type": "xã",
+   "full_name": "Xã Đức Phú",
+   "slug": "xa-duc-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20977",
+     "name": "Tam Sơn",
+     "type": "xã",
+     "full_name": "Xã Tam Sơn",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20980",
+     "name": "Tam Thạnh",
+     "type": "xã",
+     "full_name": "Xã Tam Thạnh",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20984",
+   "name": "Tam Anh",
+   "type": "xã",
+   "full_name": "Xã Tam Anh",
+   "slug": "xa-tam-anh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20983",
+     "name": "Tam Anh Bắc",
+     "type": "xã",
+     "full_name": "Xã Tam Anh Bắc",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20984",
+     "name": "Tam Anh Nam",
+     "type": "xã",
+     "full_name": "Xã Tam Anh Nam",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20986",
+     "name": "Tam Hòa",
+     "type": "xã",
+     "full_name": "Xã Tam Hòa",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20992",
+   "name": "Tam Hải",
+   "type": "xã",
+   "full_name": "Xã Tam Hải",
+   "slug": "xa-tam-hai",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20992",
+     "name": "Tam Hải",
+     "type": "xã",
+     "full_name": "Xã Tam Hải",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "21004",
+   "name": "Tam Mỹ",
+   "type": "xã",
+   "full_name": "Xã Tam Mỹ",
+   "slug": "xa-tam-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "21004",
+     "name": "Tam Mỹ Tây",
+     "type": "xã",
+     "full_name": "Xã Tam Mỹ Tây",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "21005",
+     "name": "Tam Mỹ Đông",
+     "type": "xã",
+     "full_name": "Xã Tam Mỹ Đông",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "21007",
+     "name": "Tam Trà",
+     "type": "xã",
+     "full_name": "Xã Tam Trà",
+     "district": "Huyện Núi Thành",
+     "district_id": "517",
+     "province": "Tỉnh Quảng Nam",
+     "province_id": "49",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20333",
+   "name": "Hoàng Sa",
+   "type": "đặc khu",
+   "full_name": "Đặc khu Hoàng Sa",
+   "slug": "dac-khu-hoang-sa",
+   "formation": "dac-khu-tu-huyen",
+   "source": {
+    "resolution": "1659/NQ-UBTVQH15",
+    "clause": 92
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": null,
+     "name": "Hoàng Sa",
+     "type": "huyện",
+     "full_name": "Huyện Hoàng Sa",
+     "district": "Huyện Hoàng Sa",
+     "district_id": "498",
+     "province": "Thành phố Đà Nẵng",
+     "province_id": "48",
+     "portion": "toan-bo",
+     "nso_note": "Sắp xếp toàn bộ huyện Hoàng Sa thành đặc khu Hoàng Sa",
+     "source": "nghi-quyet+nso",
+     "code_check": null,
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

@@ -1,0 +1,3040 @@
+{
+ "id": "46",
+ "name": "Huế",
+ "full_name": "Thành phố Huế",
+ "type": "thành phố",
+ "slug": "hue",
+ "formed_from": [
+  {
+   "id": "46",
+   "name": "Thành phố Huế"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1675/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 40,
+   "phường": 21,
+   "xã": 19
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1675/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1675-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-thanh-pho-hue-nam-2025-119250616195617897.htm",
+    "copy": "sources/nghi-quyet/1675-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "19753",
+   "name": "Phú Xuân",
+   "type": "phường",
+   "full_name": "Phường Phú Xuân",
+   "slug": "phuong-phu-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19750",
+     "name": "Tây Lộc",
+     "type": "phường",
+     "full_name": "Phường Tây Lộc",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19753",
+     "name": "Thuận Lộc",
+     "type": "phường",
+     "full_name": "Phường Thuận Lộc",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19756",
+     "name": "Gia Hội",
+     "type": "phường",
+     "full_name": "Phường Gia Hội",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19759",
+     "name": "Phú Hậu",
+     "type": "phường",
+     "full_name": "Phường Phú Hậu",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19762",
+     "name": "Thuận Hòa",
+     "type": "phường",
+     "full_name": "Phường Thuận Hòa",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19768",
+     "name": "Đông Ba",
+     "type": "phường",
+     "full_name": "Phường Đông Ba",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19774",
+   "name": "Kim Long",
+   "type": "phường",
+   "full_name": "Phường Kim Long",
+   "slug": "phuong-kim-long",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19774",
+     "name": "Kim Long",
+     "type": "phường",
+     "full_name": "Phường Kim Long",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19810",
+     "name": "Hương Long",
+     "type": "phường",
+     "full_name": "Phường Hương Long",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20029",
+     "name": "Long Hồ",
+     "type": "phường",
+     "full_name": "Phường Long Hồ",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19777",
+   "name": "Vỹ Dạ",
+   "type": "phường",
+   "full_name": "Phường Vỹ Dạ",
+   "slug": "phuong-vy-da",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19777",
+     "name": "Vỹ Dạ",
+     "type": "phường",
+     "full_name": "Phường Vỹ Dạ",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19792",
+     "name": "Xuân Phú",
+     "type": "phường",
+     "full_name": "Phường Xuân Phú",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19963",
+     "name": "Thủy Vân",
+     "type": "phường",
+     "full_name": "Phường Thủy Vân",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19789",
+   "name": "Thuận Hóa",
+   "type": "phường",
+   "full_name": "Phường Thuận Hóa",
+   "slug": "phuong-thuan-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19780",
+     "name": "Đúc",
+     "type": "phường",
+     "full_name": "Phường Đúc",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19783",
+     "name": "Vĩnh Ninh",
+     "type": "phường",
+     "full_name": "Phường Vĩnh Ninh",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19786",
+     "name": "Phú Hội",
+     "type": "phường",
+     "full_name": "Phường Phú Hội",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19789",
+     "name": "Phú Nhuận",
+     "type": "phường",
+     "full_name": "Phường Phú Nhuận",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19795",
+     "name": "Trường An",
+     "type": "phường",
+     "full_name": "Phường Trường An",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19798",
+     "name": "Phước Vĩnh",
+     "type": "phường",
+     "full_name": "Phường Phước Vĩnh",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19804",
+   "name": "Hương An",
+   "type": "phường",
+   "full_name": "Phường Hương An",
+   "slug": "phuong-huong-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19803",
+     "name": "An Hòa",
+     "type": "phường",
+     "full_name": "Phường An Hòa",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19804",
+     "name": "Hương Sơ",
+     "type": "phường",
+     "full_name": "Phường Hương Sơ",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20023",
+     "name": "Hương An",
+     "type": "phường",
+     "full_name": "Phường Hương An",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19813",
+   "name": "Thủy Xuân",
+   "type": "phường",
+   "full_name": "Phường Thủy Xuân",
+   "slug": "phuong-thuy-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19807",
+     "name": "Thủy Biều",
+     "type": "phường",
+     "full_name": "Phường Thủy Biều",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19813",
+     "name": "Thủy Xuân",
+     "type": "phường",
+     "full_name": "Phường Thủy Xuân",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19981",
+     "name": "Thủy Bằng",
+     "type": "phường",
+     "full_name": "Phường Thủy Bằng",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19815",
+   "name": "An Cựu",
+   "type": "phường",
+   "full_name": "Phường An Cựu",
+   "slug": "phuong-an-cuu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19801",
+     "name": "An Cựu",
+     "type": "phường",
+     "full_name": "Phường An Cựu",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19815",
+     "name": "An Đông",
+     "type": "phường",
+     "full_name": "Phường An Đông",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19816",
+     "name": "An Tây",
+     "type": "phường",
+     "full_name": "Phường An Tây",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19819",
+   "name": "Phong Điền",
+   "type": "phường",
+   "full_name": "Phường Phong Điền",
+   "slug": "phuong-phong-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19819",
+     "name": "Phong Thu",
+     "type": "phường",
+     "full_name": "Phường Phong Thu",
+     "district": "Thị Xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19855",
+     "name": "Phong Mỹ",
+     "type": "xã",
+     "full_name": "Xã Phong Mỹ",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19861",
+     "name": "Phong Xuân",
+     "type": "xã",
+     "full_name": "Xã Phong Xuân",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19828",
+   "name": "Phong Phú",
+   "type": "phường",
+   "full_name": "Phường Phong Phú",
+   "slug": "phuong-phong-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19825",
+     "name": "Phong Thạnh",
+     "type": "xã",
+     "full_name": "Xã Phong Thạnh",
+     "district": "Thị Xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19828",
+     "name": "Phong Phú",
+     "type": "phường",
+     "full_name": "Phường Phong Phú",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19831",
+   "name": "Phong Dinh",
+   "type": "phường",
+   "full_name": "Phường Phong Dinh",
+   "slug": "phuong-phong-dinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19831",
+     "name": "Phong Bình",
+     "type": "xã",
+     "full_name": "Xã Phong Bình",
+     "district": "Thị Xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19837",
+     "name": "Phong Chương",
+     "type": "xã",
+     "full_name": "Xã Phong Chương",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19846",
+     "name": "Phong Hòa",
+     "type": "phường",
+     "full_name": "Phường Phong Hòa",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19858",
+   "name": "Phong Thái",
+   "type": "phường",
+   "full_name": "Phường Phong Thái",
+   "slug": "phuong-phong-thai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19852",
+     "name": "Phong Hiền",
+     "type": "phường",
+     "full_name": "Phường Phong Hiền",
+     "district": "Thị Xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19858",
+     "name": "Phong An",
+     "type": "phường",
+     "full_name": "Phường Phong An",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19864",
+     "name": "Phong Sơn",
+     "type": "xã",
+     "full_name": "Xã Phong Sơn",
+     "district": "Thị xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19873",
+   "name": "Phong Quảng",
+   "type": "phường",
+   "full_name": "Phường Phong Quảng",
+   "slug": "phuong-phong-quang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19843",
+     "name": "Phong Hải",
+     "type": "phường",
+     "full_name": "Phường Phong Hải",
+     "district": "Thị Xã Phong Điền",
+     "district_id": "476",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19873",
+     "name": "Quảng Ngạn",
+     "type": "xã",
+     "full_name": "Xã Quảng Ngạn",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19879",
+     "name": "Quảng Công",
+     "type": "xã",
+     "full_name": "Xã Quảng Công",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19900",
+   "name": "Thuận An",
+   "type": "phường",
+   "full_name": "Phường Thuận An",
+   "slug": "phuong-thuan-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19900",
+     "name": "Thuận An",
+     "type": "phường",
+     "full_name": "Phường Thuận An",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19903",
+     "name": "Phú Thuận",
+     "type": "xã",
+     "full_name": "Xã Phú Thuận",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19915",
+     "name": "Phú Hải",
+     "type": "xã",
+     "full_name": "Xã Phú Hải",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19909",
+   "name": "Dương Nỗ",
+   "type": "phường",
+   "full_name": "Phường Dương Nỗ",
+   "slug": "phuong-duong-no",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19909",
+     "name": "Dương Nỗ",
+     "type": "phường",
+     "full_name": "Phường Dương Nỗ",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19930",
+   "name": "Mỹ Thượng",
+   "type": "phường",
+   "full_name": "Phường Mỹ Thượng",
+   "slug": "phuong-my-thuong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "19930",
+     "name": "Phú Thượng",
+     "type": "phường",
+     "full_name": "Phường Phú Thượng",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19912",
+     "name": "Phú An",
+     "type": "xã",
+     "full_name": "Xã Phú An",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19927",
+     "name": "Phú Mỹ",
+     "type": "xã",
+     "full_name": "Xã Phú Mỹ",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19960",
+   "name": "Phú Bài",
+   "type": "phường",
+   "full_name": "Phường Phú Bài",
+   "slug": "phuong-phu-bai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19960",
+     "name": "Phú Bài",
+     "type": "phường",
+     "full_name": "Phường Phú Bài",
+     "district": "Thị Xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19987",
+     "name": "Thủy Phù",
+     "type": "xã",
+     "full_name": "Xã Thủy Phù",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19990",
+     "name": "Phú Sơn",
+     "type": "xã",
+     "full_name": "Xã Phú Sơn",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19993",
+     "name": "Dương Hòa",
+     "type": "xã",
+     "full_name": "Xã Dương Hòa",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19969",
+   "name": "Thanh Thủy",
+   "type": "phường",
+   "full_name": "Phường Thanh Thủy",
+   "slug": "phuong-thanh-thuy",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19966",
+     "name": "Thủy Thanh",
+     "type": "xã",
+     "full_name": "Xã Thủy Thanh",
+     "district": "Thị Xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19969",
+     "name": "Thủy Dương",
+     "type": "phường",
+     "full_name": "Phường Thủy Dương",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19972",
+     "name": "Thủy Phương",
+     "type": "phường",
+     "full_name": "Phường Thủy Phương",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19975",
+   "name": "Hương Thủy",
+   "type": "phường",
+   "full_name": "Phường Hương Thủy",
+   "slug": "phuong-huong-thuy",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19975",
+     "name": "Thủy Châu",
+     "type": "phường",
+     "full_name": "Phường Thủy Châu",
+     "district": "Thị Xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19978",
+     "name": "Thủy Lương",
+     "type": "phường",
+     "full_name": "Phường Thủy Lương",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19984",
+     "name": "Thủy Tân",
+     "type": "xã",
+     "full_name": "Xã Thủy Tân",
+     "district": "Thị xã Hương Thủy",
+     "district_id": "479",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19996",
+   "name": "Hương Trà",
+   "type": "phường",
+   "full_name": "Phường Hương Trà",
+   "slug": "phuong-huong-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19996",
+     "name": "Tứ Hạ",
+     "type": "phường",
+     "full_name": "Phường Tứ Hạ",
+     "district": "Thị Xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20008",
+     "name": "Hương Vân",
+     "type": "phường",
+     "full_name": "Phường Hương Vân",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20011",
+     "name": "Hương Văn",
+     "type": "phường",
+     "full_name": "Phường Hương Văn",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20014",
+   "name": "Hóa Châu",
+   "type": "phường",
+   "full_name": "Phường Hóa Châu",
+   "slug": "phuong-hoa-chau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "20002",
+     "name": "Hương Phong",
+     "type": "phường",
+     "full_name": "Phường Hương Phong",
+     "district": "Quận Thuận Hóa",
+     "district_id": "474",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20014",
+     "name": "Hương Vinh",
+     "type": "phường",
+     "full_name": "Phường Hương Vinh",
+     "district": "Quận Phú Xuân",
+     "district_id": "475",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19891",
+     "name": "Quảng Thành",
+     "type": "xã",
+     "full_name": "Xã Quảng Thành",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20017",
+   "name": "Kim Trà",
+   "type": "phường",
+   "full_name": "Phường Kim Trà",
+   "slug": "phuong-kim-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20005",
+     "name": "Hương Toàn",
+     "type": "xã",
+     "full_name": "Xã Hương Toàn",
+     "district": "Thị Xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20017",
+     "name": "Hương Xuân",
+     "type": "phường",
+     "full_name": "Phường Hương Xuân",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20020",
+     "name": "Hương Chữ",
+     "type": "phường",
+     "full_name": "Phường Hương Chữ",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19867",
+   "name": "Quảng Điền",
+   "type": "xã",
+   "full_name": "Xã Quảng Điền",
+   "slug": "xa-quang-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19867",
+     "name": "Sịa",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Sịa",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19882",
+     "name": "Quảng Phước",
+     "type": "xã",
+     "full_name": "Xã Quảng Phước",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19888",
+     "name": "Quảng An",
+     "type": "xã",
+     "full_name": "Xã Quảng An",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19894",
+     "name": "Quảng Thọ",
+     "type": "xã",
+     "full_name": "Xã Quảng Thọ",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19885",
+   "name": "Đan Điền",
+   "type": "xã",
+   "full_name": "Xã Đan Điền",
+   "slug": "xa-dan-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19870",
+     "name": "Quảng Thái",
+     "type": "xã",
+     "full_name": "Xã Quảng Thái",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19876",
+     "name": "Quảng Lợi",
+     "type": "xã",
+     "full_name": "Xã Quảng Lợi",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19885",
+     "name": "Quảng Vinh",
+     "type": "xã",
+     "full_name": "Xã Quảng Vinh",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19897",
+     "name": "Quảng Phú",
+     "type": "xã",
+     "full_name": "Xã Quảng Phú",
+     "district": "Huyện Quảng Điền",
+     "district_id": "477",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19918",
+   "name": "Phú Hồ",
+   "type": "xã",
+   "full_name": "Xã Phú Hồ",
+   "slug": "xa-phu-ho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19918",
+     "name": "Phú Xuân",
+     "type": "xã",
+     "full_name": "Xã Phú Xuân",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19933",
+     "name": "Phú Hồ",
+     "type": "xã",
+     "full_name": "Xã Phú Hồ",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19939",
+     "name": "Phú Lương",
+     "type": "xã",
+     "full_name": "Xã Phú Lương",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19942",
+   "name": "Phú Vang",
+   "type": "xã",
+   "full_name": "Xã Phú Vang",
+   "slug": "xa-phu-vang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19942",
+     "name": "Phú Đa",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Phú Đa",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19954",
+     "name": "Phú Gia",
+     "type": "xã",
+     "full_name": "Xã Phú Gia",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19957",
+     "name": "Vinh Hà",
+     "type": "xã",
+     "full_name": "Xã Vinh Hà",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "19945",
+   "name": "Phú Vinh",
+   "type": "xã",
+   "full_name": "Xã Phú Vinh",
+   "slug": "xa-phu-vinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "19921",
+     "name": "Phú Diên",
+     "type": "xã",
+     "full_name": "Xã Phú Diên",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19936",
+     "name": "Vinh Xuân",
+     "type": "xã",
+     "full_name": "Xã Vinh Xuân",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19945",
+     "name": "Vinh Thanh",
+     "type": "xã",
+     "full_name": "Xã Vinh Thanh",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "19948",
+     "name": "Vinh An",
+     "type": "xã",
+     "full_name": "Xã Vinh An",
+     "district": "Huyện Phú Vang",
+     "district_id": "478",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20035",
+   "name": "Bình Điền",
+   "type": "xã",
+   "full_name": "Xã Bình Điền",
+   "slug": "xa-binh-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20026",
+     "name": "Hương Bình",
+     "type": "xã",
+     "full_name": "Xã Hương Bình",
+     "district": "Thị Xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20035",
+     "name": "Bình Tiến",
+     "type": "xã",
+     "full_name": "Xã Bình Tiến",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20041",
+     "name": "Bình Thành",
+     "type": "xã",
+     "full_name": "Xã Bình Thành",
+     "district": "Thị xã Hương Trà",
+     "district_id": "480",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20044",
+   "name": "A Lưới 2",
+   "type": "xã",
+   "full_name": "Xã A Lưới 2",
+   "slug": "xa-a-luoi-2",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20044",
+     "name": "A Lưới",
+     "type": "thị trấn",
+     "full_name": "Thị trấn A Lưới",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20065",
+     "name": "Hồng Bắc",
+     "type": "xã",
+     "full_name": "Xã Hồng Bắc",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20068",
+     "name": "A Ngo",
+     "type": "xã",
+     "full_name": "Xã A Ngo",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20083",
+     "name": "Quảng Nhâm",
+     "type": "xã",
+     "full_name": "Xã Quảng Nhâm",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20050",
+   "name": "A Lưới 5",
+   "type": "xã",
+   "full_name": "Xã A Lưới 5",
+   "slug": "xa-a-luoi-5",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20050",
+     "name": "Hồng Hạ",
+     "type": "xã",
+     "full_name": "Xã Hồng Hạ",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20059",
+     "name": "Hương Nguyên",
+     "type": "xã",
+     "full_name": "Xã Hương Nguyên",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20056",
+   "name": "A Lưới 1",
+   "type": "xã",
+   "full_name": "Xã A Lưới 1",
+   "slug": "xa-a-luoi-1",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20047",
+     "name": "Hồng Vân",
+     "type": "xã",
+     "full_name": "Xã Hồng Vân",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20053",
+     "name": "Hồng Kim",
+     "type": "xã",
+     "full_name": "Xã Hồng Kim",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20056",
+     "name": "Trung Sơn",
+     "type": "xã",
+     "full_name": "Xã Trung Sơn",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20104",
+     "name": "Hồng Thủy",
+     "type": "xã",
+     "full_name": "Xã Hồng Thủy",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20071",
+   "name": "A Lưới 3",
+   "type": "xã",
+   "full_name": "Xã A Lưới 3",
+   "slug": "xa-a-luoi-3",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20071",
+     "name": "Sơn Thủy",
+     "type": "xã",
+     "full_name": "Xã Sơn Thủy",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20074",
+     "name": "Phú Vinh",
+     "type": "xã",
+     "full_name": "Xã Phú Vinh",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20086",
+     "name": "Hồng Thượng",
+     "type": "xã",
+     "full_name": "Xã Hồng Thượng",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20089",
+     "name": "Hồng Thái",
+     "type": "xã",
+     "full_name": "Xã Hồng Thái",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20101",
+   "name": "A Lưới 4",
+   "type": "xã",
+   "full_name": "Xã A Lưới 4",
+   "slug": "xa-a-luoi-4",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "20080",
+     "name": "Hương Phong",
+     "type": "xã",
+     "full_name": "Xã Hương Phong",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20095",
+     "name": "A Roàng",
+     "type": "xã",
+     "full_name": "Xã A Roàng",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20098",
+     "name": "Đông Sơn",
+     "type": "xã",
+     "full_name": "Xã Đông Sơn",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20101",
+     "name": "Lâm Đớt",
+     "type": "xã",
+     "full_name": "Xã Lâm Đớt",
+     "district": "Huyện A Lưới",
+     "district_id": "481",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20107",
+   "name": "Phú Lộc",
+   "type": "xã",
+   "full_name": "Xã Phú Lộc",
+   "slug": "xa-phu-loc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20107",
+     "name": "Phú Lộc",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Phú Lộc",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20134",
+     "name": "Lộc Bình",
+     "type": "xã",
+     "full_name": "Xã Lộc Bình",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20149",
+     "name": "Lộc Trì",
+     "type": "xã",
+     "full_name": "Xã Lộc Trì",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20122",
+   "name": "Vinh Lộc",
+   "type": "xã",
+   "full_name": "Xã Vinh Lộc",
+   "slug": "xa-vinh-loc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20113",
+     "name": "Vinh Mỹ",
+     "type": "xã",
+     "full_name": "Xã Vinh Mỹ",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20116",
+     "name": "Vinh Hưng",
+     "type": "xã",
+     "full_name": "Xã Vinh Hưng",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20122",
+     "name": "Giang Hải",
+     "type": "xã",
+     "full_name": "Xã Giang Hải",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20125",
+     "name": "Vinh Hiền",
+     "type": "xã",
+     "full_name": "Xã Vinh Hiền",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20131",
+   "name": "Hưng Lộc",
+   "type": "xã",
+   "full_name": "Xã Hưng Lộc",
+   "slug": "xa-hung-loc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20128",
+     "name": "Lộc Bổn",
+     "type": "xã",
+     "full_name": "Xã Lộc Bổn",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20131",
+     "name": "Lộc Sơn",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Lộc Sơn",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20158",
+     "name": "Xuân Lộc",
+     "type": "xã",
+     "full_name": "Xã Xuân Lộc",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20137",
+   "name": "Chân Mây - Lăng Cô",
+   "type": "xã",
+   "full_name": "Xã Chân Mây - Lăng Cô",
+   "slug": "xa-chan-may-lang-co",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20110",
+     "name": "Lăng Cô",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Lăng Cô",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20137",
+     "name": "Lộc Vĩnh",
+     "type": "xã",
+     "full_name": "Xã Lộc Vĩnh",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20146",
+     "name": "Lộc Thủy",
+     "type": "xã",
+     "full_name": "Xã Lộc Thủy",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20152",
+     "name": "Lộc Tiến",
+     "type": "xã",
+     "full_name": "Xã Lộc Tiến",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20140",
+   "name": "Lộc An",
+   "type": "xã",
+   "full_name": "Xã Lộc An",
+   "slug": "xa-loc-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20140",
+     "name": "Lộc An",
+     "type": "xã",
+     "full_name": "Xã Lộc An",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20143",
+     "name": "Lộc Điền",
+     "type": "xã",
+     "full_name": "Xã Lộc Điền",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20155",
+     "name": "Lộc Hòa",
+     "type": "xã",
+     "full_name": "Xã Lộc Hòa",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20161",
+   "name": "Khe Tre",
+   "type": "xã",
+   "full_name": "Xã Khe Tre",
+   "slug": "xa-khe-tre",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20161",
+     "name": "Khe Tre",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Khe Tre",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20164",
+     "name": "Hương Phú",
+     "type": "xã",
+     "full_name": "Xã Hương Phú",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20170",
+     "name": "Hương Lộc",
+     "type": "xã",
+     "full_name": "Xã Hương Lộc",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20185",
+     "name": "Thượng Lộ",
+     "type": "xã",
+     "full_name": "Xã Thượng Lộ",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20179",
+   "name": "Nam Đông",
+   "type": "xã",
+   "full_name": "Xã Nam Đông",
+   "slug": "xa-nam-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20167",
+     "name": "Hương Sơn",
+     "type": "xã",
+     "full_name": "Xã Hương Sơn",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20179",
+     "name": "Hương Xuân",
+     "type": "xã",
+     "full_name": "Xã Hương Xuân",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20191",
+     "name": "Thượng Nhật",
+     "type": "xã",
+     "full_name": "Xã Thượng Nhật",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "20182",
+   "name": "Long Quảng",
+   "type": "xã",
+   "full_name": "Xã Long Quảng",
+   "slug": "xa-long-quang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1675/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "20173",
+     "name": "Thượng Quảng",
+     "type": "xã",
+     "full_name": "Xã Thượng Quảng",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20182",
+     "name": "Hương Hữu",
+     "type": "xã",
+     "full_name": "Xã Hương Hữu",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "20188",
+     "name": "Thượng Long",
+     "type": "xã",
+     "full_name": "Xã Thượng Long",
+     "district": "Huyện Phú Lộc",
+     "district_id": "482",
+     "province": "Thành phố Huế",
+     "province_id": "46",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

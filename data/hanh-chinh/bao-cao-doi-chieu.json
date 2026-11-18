@@ -1,0 +1,1399 @@
+{
+ "issues": [
+  {
+   "issue": "wrong old province in NSO table (corrected)",
+   "row": 6211,
+   "unit": "Đặc khu Cồn Cỏ",
+   "table": "Quảng Trị (44)",
+   "used": "Tỉnh Quảng Trị (45)",
+   "why": "44 là mã tỉnh Quảng Trị mới; 119 dòng khác của tỉnh Quảng Trị cũ đều ghi mã 45."
+  },
+  {
+   "issue": "old unit only in resolution (added)",
+   "province": "Tỉnh Lâm Đồng",
+   "unit": "Xã Hồng Thái",
+   "old": "Xã Hòa Thắng",
+   "code_found": true
+  },
+  {
+   "issue": "whole/part differs (resolution kept)",
+   "province": "Tỉnh Lâm Đồng",
+   "unit": "Xã Hòa Thắng",
+   "old": "Xã Hòa Thắng",
+   "resolution": "phan-con-lai",
+   "nso": "Nhập toàn bộ"
+  },
+  {
+   "issue": "wrong old code in NSO table (corrected)",
+   "unit": "Xã Thuận An",
+   "old": "Xã Đặng Xá",
+   "table_code": "00553",
+   "that_code_is": "Xã Cổ Bi",
+   "correct_code": "00556"
+  },
+  {
+   "issue": "wrong old code in NSO table (corrected)",
+   "unit": "Xã Phục Hòa",
+   "old": "Xã Mỹ Hưng",
+   "table_code": "01615",
+   "that_code_is": "Xã Hồng Quang",
+   "correct_code": "01651"
+  },
+  {
+   "issue": "wrong old code in NSO table (corrected)",
+   "unit": "Xã Thái Bình",
+   "old": "Xã Phú Thịnh",
+   "table_code": "02485",
+   "that_code_is": "Xã Công Đa",
+   "correct_code": "02482"
+  }
+ ],
+ "notes": [
+  {
+   "note": "missing from NSO current list",
+   "province": "Thành phố Hà Nội",
+   "unit": "Phường Hoàn Kiếm",
+   "code": "00070"
+  },
+  {
+   "note": "non-commune area named only in resolution",
+   "province": "Thành phố Bắc Ninh",
+   "unit": "Xã Biên Sơn",
+   "area": "Trường bắn TB1"
+  },
+  {
+   "note": "old unit type missing in NSO table (taken from resolution)",
+   "province": "Tỉnh Đắk Lắk",
+   "unit": "Xã Xuân Phước",
+   "old": "Xã Xuân Quang 3",
+   "code": "22108"
+  },
+  {
+   "note": "old unit type missing in NSO table (taken from resolution)",
+   "province": "Tỉnh Đắk Lắk",
+   "unit": "Xã Xuân Phước",
+   "old": "Xã Xuân Phước",
+   "code": "22111"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đình Phong",
+   "old": "Xã Phong Nặm",
+   "list": "Xã Phong Nậm",
+   "code": "01483"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Sà Phìn",
+   "old": "Xã Sà Phìn",
+   "list": "Xã Xà Phìn",
+   "code": "00736",
+   "district": "Huyện Đồng Văn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Phố Bảng",
+   "old": "Thị trấn Phố Bảng",
+   "list": "Thị trấn Phó Bảng",
+   "code": "00712",
+   "district": "Huyện Đồng Văn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Thắng Mố",
+   "old": "Xã Sủng Cháng",
+   "list": "Xã Sủng Tráng",
+   "code": "00829",
+   "district": "Huyện Yên Minh"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Pờ Ly Ngài",
+   "old": "Xã Sán Sả Hồ",
+   "list": "Xã Sán Xả Hồ",
+   "code": "01060",
+   "district": "Huyện Hoàng Su Phì"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Nậm Dịch",
+   "old": "Xã Nậm Ty",
+   "list": "Xã Nậm Tỵ",
+   "code": "01087"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Yên Hoa",
+   "old": "Xã Khâu Tinh",
+   "list": "Xã Khau Tinh",
+   "code": "02263"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Lực Hành",
+   "old": "Xã Quý Quân",
+   "list": "Xã Quí Quân",
+   "code": "02431",
+   "district": "Huyện Yên Sơn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Mường Lay",
+   "old": "Xã Sá Tổng",
+   "list": "Xã Xá Tổng",
+   "code": "03178",
+   "district": "Huyện Mường Chà"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Mường Toong",
+   "old": "Xã Huổi Lếch",
+   "list": "Xã Huổi Lếnh",
+   "code": "03177",
+   "district": "Huyện Mường Nhé"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Mường Luân",
+   "old": "Xã Luân Giói",
+   "list": "Xã Luân Giới",
+   "code": "03379",
+   "district": "Huyện Điện Biên Đông"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Sín Chải",
+   "old": "Xã Sín Chải",
+   "list": "Xã Xín Chải",
+   "code": "03223",
+   "district": "Huyện Tủa Chùa"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Sáng Nhè",
+   "old": "Xã Xá Nhè",
+   "list": "Xã Sáng Nhè",
+   "code": "03244",
+   "district": "Huyện Tủa Chùa"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Thanh An",
+   "old": "Xã Noong Hẹt",
+   "list": "Xã Noọng Hẹt",
+   "code": "03352"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Pu Nhi",
+   "old": "Xã Pu Nhi",
+   "list": "Xã Pú Nhi",
+   "code": "03370"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Đoàn Kết",
+   "old": "Xã Lản Nhì Thàng",
+   "list": "Xã Lả Nhì Thàng",
+   "code": "03391",
+   "district": "Huyện Phong Thổ"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bum Tở",
+   "old": "Xã Can Hồ",
+   "list": "Xã Kan Hồ",
+   "code": "03469",
+   "district": "Huyện Mường Tè"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Hua Bum",
+   "old": "Xã Hua Bum",
+   "list": "Xã Hua Bun",
+   "code": "03460",
+   "district": "Huyện Nậm Nhùn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bum Nưa",
+   "old": "Xã Pa Vệ Sủ",
+   "list": "Xã Pa Vệ Sử",
+   "code": "03448",
+   "district": "Huyện Mường Tè"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Phong Thổ",
+   "old": "Xã Ma Li Pho",
+   "list": "Xã Ma Ly Pho",
+   "code": "03574",
+   "district": "Huyện Phong Thổ"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Dào San",
+   "old": "Xã Tung Qua Lìn",
+   "list": "Xã Tông Qua Lìn",
+   "code": "03565",
+   "district": "Huyện Phong Thổ"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Khoen On",
+   "old": "Xã Ta Gia",
+   "list": "Xã Tà Gia",
+   "code": "03640"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Mường Sại",
+   "old": "Xã Nặm Ét",
+   "list": "Xã Nậm ét",
+   "code": "03712"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Chiềng La",
+   "old": "Xã Nong Lay",
+   "list": "Xã Noong Lay",
+   "code": "03754",
+   "district": "Huyện Thuận Châu"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Mường La",
+   "old": "Xã Nặm Păm",
+   "list": "Xã Nậm Păm",
+   "code": "03826"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Phiêng Pằn",
+   "old": "Xã Nà Ớt",
+   "list": "Xã Nà Ơt",
+   "code": "04162"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bó Sinh",
+   "old": "Xã Pú Bẩu",
+   "list": "Xã Pú Pẩu",
+   "code": "04174",
+   "district": "Huyện Sông Mã"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Pha Long",
+   "old": "Xã Tả Ngài Chồ",
+   "list": "Xã Tả Ngải Chồ",
+   "code": "02755"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Sín Chéng",
+   "old": "Xã Nàn Sín",
+   "list": "Xã Nàn Xín",
+   "code": "02836",
+   "district": "Huyện Si Ma Cai"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Võ Lao",
+   "old": "Xã Nậm Dạng",
+   "list": "Xã Nậm Rạng",
+   "code": "03073",
+   "district": "Huyện Văn Bàn"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Nậm Chày",
+   "old": "Xã Nậm Chày",
+   "list": "Xã Nậm Chầy",
+   "code": "03076"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Dương Quỳ",
+   "old": "Xã Thẳm Dương",
+   "list": "Xã Thẩm Dương",
+   "code": "03115"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Mù Cang Chải",
+   "old": "Thị trấn Mù Cang Chải",
+   "list": "Thị trấn Mù Căng Chải",
+   "code": "04456"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Púng Luông",
+   "old": "Xã Dế Xu Phình",
+   "list": "Xã Dế Su Phình",
+   "code": "04486",
+   "district": "Huyện Mù Căng Chải"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Hạnh Phúc",
+   "old": "Xã Hát Lừu",
+   "list": "Xã Hát Lìu",
+   "code": "04618",
+   "district": "Huyện Trạm Tấu"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Tà Xi Láng",
+   "old": "Xã Tà Xi Láng",
+   "list": "Xã Tà Si Láng",
+   "code": "04603",
+   "district": "Huyện Trạm Tấu"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Phường Quan Triều",
+   "old": "Phường Quan Triều",
+   "list": "Phường Quán Triều",
+   "code": "05431"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Vĩnh Thông",
+   "old": "Xã Sỹ Bình",
+   "list": "Xã Sĩ Bình",
+   "code": "01978",
+   "district": "Huyện Bạch Thông"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Phường Đồng Nguyên",
+   "old": "Phường Trạng Hạ",
+   "list": "Phường Trang Hạ",
+   "code": "09383"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Sa Lý",
+   "old": "Xã Sa Lý",
+   "list": "Xã Xa Lý",
+   "code": "07540",
+   "district": "Huyện Lục Ngạn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Dũng Tiến",
+   "old": "Xã Mỵ Hòa",
+   "list": "Xã Mi Hòa",
+   "code": "05083",
+   "district": "Huyện Kim Bôi"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bao La",
+   "old": "Xã Xăm Khòe",
+   "list": "Xã Săm Khóe",
+   "code": "05245",
+   "district": "Huyện Mai Châu"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đại Sơn",
+   "old": "Xã Bình Lãng",
+   "list": "Xã Bình Lăng",
+   "code": "11092"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đồng Bằng",
+   "old": "Xã An Quý",
+   "list": "Xã An Quí",
+   "code": "12538",
+   "district": "Huyện Quỳnh Phụ"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Hưng Hà",
+   "old": "Xã Kim Trung",
+   "list": "Xã Kim Chung",
+   "code": "12664",
+   "district": "Huyện Hưng Hà"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Vũ Quý",
+   "old": "Xã Vũ Quý",
+   "list": "Xã Vũ Quí",
+   "code": "13141",
+   "district": "Huyện Kiến Xương"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Tiên Sơn",
+   "old": "Phường Tiên Sơn",
+   "list": "Xã Tiên Sơn",
+   "code": "13369",
+   "district": "Thị xã Duy Tiên"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Nguyệt Ấn",
+   "old": "Xã Vân Am",
+   "list": "Xã Vân Âm",
+   "code": "15076"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Tân Ninh",
+   "old": "Xã Vân Sơn",
+   "list": "Xã Văn Sơn",
+   "code": "15712"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Mường Quàng",
+   "old": "Xã Cắm Muộn",
+   "list": "Xã Căm Muộn",
+   "code": "16774"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Lượng Minh",
+   "old": "Xã Lượng Minh",
+   "list": "Xã Lưỡng Minh",
+   "code": "16906"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Yên Trung",
+   "old": "Xã Hưng Yên Nam",
+   "list": "Xã Hưng Yên",
+   "code": "18007",
+   "district": "Huyện Hưng Nguyên"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Cổ Đạm",
+   "old": "Xã Cổ Đạm",
+   "list": "Xã Cỗ Đạm",
+   "code": "18391"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Avương",
+   "old": "Xã Bhalêê",
+   "list": "Xã Bha Lê",
+   "code": "20458",
+   "district": "Huyện Tây Giang"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đông Giang",
+   "old": "Xã Zà Hung",
+   "list": "Xã Za Hung",
+   "code": "20491"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bến Hiên",
+   "old": "Xã Mà Cooih",
+   "list": "Xã Mà Cooi",
+   "code": "20494",
+   "district": "Huyện Đông Giang"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Bến Hiên",
+   "old": "Xã Kà Dăng",
+   "list": "Xã Ka Dăng",
+   "code": "20497"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Nam Giang",
+   "old": "Xã Zuôih",
+   "list": "Xã Zuôich",
+   "code": "20701",
+   "district": "Huyện Nam Giang"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bến Giằng",
+   "old": "Xã Tà Bhing",
+   "list": "Xã Tà Bhinh",
+   "code": "20710",
+   "district": "Huyện Nam Giang"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Phường Đăk Cấm",
+   "old": "Xã Đăk Cấm",
+   "list": "Xã Đắk Cấm",
+   "code": "23311"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Rơ Wa",
+   "old": "Xã Đăk Blà",
+   "list": "Xã Đắk Blà",
+   "code": "23323"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Rơ Wa",
+   "old": "Xã Đăk Rơ Wa",
+   "list": "Xã Đắk Rơ Wa",
+   "code": "23335"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Pék",
+   "old": "Thị trấn Đăk Glei",
+   "list": "Thị trấn Đắk Glei",
+   "code": "23341"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Pék",
+   "old": "Xã Đăk Pék",
+   "list": "Xã Đắk Pék",
+   "code": "23353"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đăk Plô",
+   "old": "Xã Đăk Plô",
+   "list": "Xã Đắk Blô",
+   "code": "23344",
+   "district": "Huyện Đắk Glei"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Plô",
+   "old": "Xã Đăk Man",
+   "list": "Xã Đắk Man",
+   "code": "23347"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Plô",
+   "old": "Xã Đăk Nhoong",
+   "list": "Xã Đắk Nhoong",
+   "code": "23350"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Xốp",
+   "old": "Xã Đăk Choong",
+   "list": "Xã Đắk Choong",
+   "code": "23356"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Long",
+   "old": "Xã Đăk Long",
+   "list": "Xã Đắk Long",
+   "code": "23368"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Môn",
+   "old": "Xã Đăk Kroong",
+   "list": "Xã Đắk KRoong",
+   "code": "23371"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Môn",
+   "old": "Xã Đăk Môn",
+   "list": "Xã Đắk Môn",
+   "code": "23374"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Bờ Y",
+   "old": "Xã Đăk Xú",
+   "list": "Xã Đắk Xú",
+   "code": "23389"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Bờ Y",
+   "old": "Xã Pờ Y",
+   "list": "Xã Bờ Y",
+   "code": "23395",
+   "district": "Huyện Ngọc Hồi"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Dục Nông",
+   "old": "Xã Đăk Ang",
+   "list": "Xã Đắk Ang",
+   "code": "23380"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Dục Nông",
+   "old": "Xã Đăk Dục",
+   "list": "Xã Đắk Dục",
+   "code": "23383"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Dục Nông",
+   "old": "Xã Đăk Nông",
+   "list": "Xã Đắk Nông",
+   "code": "23386"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Sa Loong",
+   "old": "Xã Đăk Kan",
+   "list": "Xã Đắk Kan",
+   "code": "23392"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Tô",
+   "old": "Thị trấn Đăk Tô",
+   "list": "Thị trấn Đắk Tô",
+   "code": "23401"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Sao",
+   "old": "Xã Đăk Na",
+   "list": "Xã Đắk Na",
+   "code": "23407"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Sao",
+   "old": "Xã Đăk Sao",
+   "list": "Xã Đắk Sao",
+   "code": "23416"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Tờ Kan",
+   "old": "Xã Đăk Rơ Ông",
+   "list": "Xã Đắk Rơ Ông",
+   "code": "23417"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Tờ Kan",
+   "old": "Xã Đăk Tờ Kan",
+   "list": "Xã Đắk Tờ Kan",
+   "code": "23419"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Tu Mơ Rông",
+   "old": "Xã Đăk Hà",
+   "list": "Xã Đắk Hà",
+   "code": "23425"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ngọk Tụ",
+   "old": "Xã Đăk Rơ Nga",
+   "list": "Xã Đắk Rơ Nga",
+   "code": "23427"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Kon Đào",
+   "old": "Xã Đăk Trăm",
+   "list": "Xã Đắk Trăm",
+   "code": "23430"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Măng Ri",
+   "old": "Xã Ngọk Lây",
+   "list": "Xã Ngọc Lây",
+   "code": "23404",
+   "district": "Huyện Tu Mơ Rông"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Măng Ri",
+   "old": "Xã Ngọk Yêu",
+   "list": "Xã Ngọc Yêu",
+   "code": "23413",
+   "district": "Huyện Tu Mơ Rông"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Măng Bút",
+   "old": "Xã Đăk Nên",
+   "list": "Xã Đắk Nên",
+   "code": "23452"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Măng Bút",
+   "old": "Xã Đăk Ring",
+   "list": "Xã Đắk Ring",
+   "code": "23455"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Măng Bút",
+   "old": "Xã Măng Bút",
+   "list": "Xã Măng Buk",
+   "code": "23458",
+   "district": "Huyện Kon Plông"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Măng Đen",
+   "old": "Xã Đăk Tăng",
+   "list": "Xã Đắk Tăng",
+   "code": "23461"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Kon Plông",
+   "old": "Xã Ngọk Tem",
+   "list": "Xã Ngok Tem",
+   "code": "23464"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Rve",
+   "old": "Thị trấn Đăk Rve",
+   "list": "Thị trấn Đắk Rve",
+   "code": "23479"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Rve",
+   "old": "Xã Đăk Pne",
+   "list": "Xã Đắk Pne",
+   "code": "23491"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Kôi",
+   "old": "Xã Đăk Kôi",
+   "list": "Xã Đắk Kôi",
+   "code": "23482"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Kôi",
+   "old": "Xã Đăk Tơ Lung",
+   "list": "Xã Đắk Tơ Lung",
+   "code": "23485"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Kon Braih",
+   "old": "Xã Đăk Ruồng",
+   "list": "Xã Đắk Ruồng",
+   "code": "23488"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Kon Braih",
+   "old": "Xã Đăk Tờ Re",
+   "list": "Xã Đắk Tờ Re",
+   "code": "23494"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Hà",
+   "old": "Thị trấn Đăk Hà",
+   "list": "Thị trấn Đắk Hà",
+   "code": "23500"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Hà",
+   "old": "Xã Đăk La",
+   "list": "Xã Đắk La",
+   "code": "23524"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Pxi",
+   "old": "Xã Đăk Pxi",
+   "list": "Xã Đắk PXi",
+   "code": "23503"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Ui",
+   "old": "Xã Đăk Ui",
+   "list": "Xã Đắk Ui",
+   "code": "23509"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Mar",
+   "old": "Xã Đăk Hring",
+   "list": "Xã Đắk HRing",
+   "code": "23506"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Mar",
+   "old": "Xã Đăk Mar",
+   "list": "Xã Đắk Mar",
+   "code": "23512"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ngọk Réo",
+   "old": "Xã Ngọk Wang",
+   "list": "Xã Ngok Wang",
+   "code": "23515"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ngọk Réo",
+   "old": "Xã Ngọk Réo",
+   "list": "Xã Ngok Réo",
+   "code": "23518"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Rờ Kơi",
+   "old": "Xã Rờ Kơi",
+   "list": "Xã Rơ Kơi",
+   "code": "23530"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Biển Hồ",
+   "old": "Xã Chư Đang Ya",
+   "list": "Xã Chư Đăng Ya",
+   "code": "23746"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đak Rong",
+   "old": "Xã Đak Rong",
+   "list": "Xã Đăk Roong",
+   "code": "23644",
+   "district": "Huyện KBang"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đak Đoa",
+   "old": "Thị trấn Đak Đoa",
+   "list": "Thị trấn Đăk Đoa",
+   "code": "23677"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đak Sơmei",
+   "old": "Xã Đak Sơmei",
+   "list": "Xã Đăk Sơmei",
+   "code": "23683"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Kon Gang",
+   "old": "Xã Đak Krong",
+   "list": "Xã Đăk Krong",
+   "code": "23684"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ia Krái",
+   "old": "Xã Ia Krái",
+   "list": "Xã Ia KRai",
+   "code": "23776"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Mang Yang",
+   "old": "Xã Đak Djrăng",
+   "list": "Xã Đăk Djrăng",
+   "code": "23806"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Chư Krey",
+   "old": "Xã Chư Krey",
+   "list": "Xã Chư Krêy",
+   "code": "23827",
+   "district": "Huyện Kông Chro"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Chơ Long",
+   "old": "Xã Chơ GLong",
+   "list": "Xã Chơ Long",
+   "code": "23851",
+   "district": "Huyện Kông Chro"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Chư Prông",
+   "old": "Xã Ia Drang",
+   "list": "Xã Ia Drăng",
+   "code": "23893"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Ia Pa",
+   "old": "Xã Ia Mrơn",
+   "list": "Xã Ia Ma Rơn",
+   "code": "24031",
+   "district": "Huyện Ia Pa"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Ia Pa",
+   "old": "Xã Ia Trôk",
+   "list": "Xã Ia Trok",
+   "code": "24037",
+   "district": "Huyện Ia Pa"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Phú Túc",
+   "old": "Xã Ia Mlah",
+   "list": "Xã Ia Mláh",
+   "code": "24091"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Ia Dreh",
+   "old": "Xã Ia Dreh",
+   "list": "Xã Ia HDreh",
+   "code": "24100",
+   "district": "Huyện Krông Pa"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Đông Hòa",
+   "old": "Phường Hòa Tân Đông",
+   "list": "Xã Hòa Tân Đông",
+   "code": "22267",
+   "district": "Thị xã Đông Hòa"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ea Khăl",
+   "old": "Xã Ea Khăl",
+   "list": "Xã Ea Khal",
+   "code": "24202"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Cư M’gar",
+   "old": "Xã Ea H'đing",
+   "list": "Xã Ea H'đinh",
+   "code": "24274",
+   "district": "Huyện Cư M'gar"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Ea M’Droh",
+   "old": "Xã Ea M'Droh",
+   "list": "Xã Ea M'DRóh",
+   "code": "24283"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Cuôr Đăng",
+   "old": "Xã Cuôr Đăng",
+   "list": "Xã Cuor Đăng",
+   "code": "24301",
+   "district": "Huyện Cư M'gar"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Krông Búk",
+   "old": "Xã Chứ Kbô",
+   "list": "Xã Chư KBô",
+   "code": "24310"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Dliê Ya",
+   "old": "Xã Dliê Ya",
+   "list": "Xã ĐLiê Ya",
+   "code": "24346",
+   "district": "Huyện Krông Năng"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Phú Xuân",
+   "old": "Xã Ea Púk",
+   "list": "Xã Ea Puk",
+   "code": "24359"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Cư Yang",
+   "old": "Xã Cư Yang",
+   "list": "Xã Cư Jang",
+   "code": "24409",
+   "district": "Huyện Ea Kar"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã M’Drắk",
+   "old": "Thị trấn M'Drắk",
+   "list": "Thị trấn M'Đrắk",
+   "code": "24412",
+   "district": "Huyện M'Đrắk"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Ea Knuếc",
+   "old": "Xã Ea Knuếc",
+   "list": "Xã Ea KNuec",
+   "code": "24505",
+   "district": "Huyện Krông Pắc"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Phường Nam Gia Nghĩa",
+   "old": "Xã Đắk R'Moan",
+   "list": "Xã Đăk R'Moan",
+   "code": "24618"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Phường 2 Bảo Lộc",
+   "old": "Xã ĐamBri",
+   "list": "Xã Đạm Bri",
+   "code": "24832"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Tân Thành",
+   "old": "Xã Thuận Quý",
+   "list": "Xã Thuận Quí",
+   "code": "23140",
+   "district": "Huyện Hàm Thuận Nam"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đắk Wil",
+   "old": "Xã Đăk Wil",
+   "list": "Xã Đắk Wil",
+   "code": "24643"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Nam Đà",
+   "old": "Xã Buôn Choáh",
+   "list": "Xã Buôn Choah",
+   "code": "24694"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đức An",
+   "old": "Xã Đắk N’Drung",
+   "list": "Xã Đắk N'Dung",
+   "code": "24727",
+   "district": "Huyện Đắk Song"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đam Rông 3",
+   "old": "Xã Đạ M'Rông",
+   "list": "Xã Đạ M' Rong",
+   "code": "24859",
+   "district": "Huyện Đam Rông"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Tân Hội",
+   "old": "Xã N' Thôn Hạ",
+   "list": "Xã N'Thol Hạ",
+   "code": "24973",
+   "district": "Huyện Đức Trọng"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Đăk Ơ",
+   "old": "Xã Đăk Ơ",
+   "list": "Xã Đak Ơ",
+   "code": "25225"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Đak Lua",
+   "old": "Xã Đak Lua",
+   "list": "Xã Dak Lua",
+   "code": "26119",
+   "district": "Huyện Tân Phú"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Hưng Long",
+   "old": "Xã Qui Đức",
+   "list": "Xã Quy Đức",
+   "code": "27640",
+   "district": "Huyện Bình Chánh"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Tân Ninh",
+   "old": "Phường IV",
+   "list": "Phường 4",
+   "code": "25462",
+   "district": "Thành phố Tây Ninh"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Mỹ Quí",
+   "old": "Xã Mỹ Quí",
+   "list": "Xã Mỹ Quý",
+   "code": "30055",
+   "district": "Huyện Tháp Mười"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Giao Long",
+   "old": "Xã Quới Sơn",
+   "list": "Xã Qưới Sơn",
+   "code": "28807",
+   "district": "Huyện Châu Thành"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã An Qui",
+   "old": "Xã An Qui",
+   "list": "Xã An Quy",
+   "code": "29218",
+   "district": "Huyện Thạnh Phú"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Vinh Kim",
+   "old": "Xã Vinh Kim",
+   "list": "Xã Vĩnh Kim",
+   "code": "29431"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Lục Sĩ Thành",
+   "old": "Xã Lục Sĩ Thành",
+   "list": "Xã Lục Sỹ Thành",
+   "code": "29857",
+   "district": "Huyện Trà Ôn"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Phường Châu Đốc",
+   "old": "Phường Vĩnh Nguơn",
+   "list": "Phường Vĩnh Ngươn",
+   "code": "30328",
+   "district": "Thành phố Châu Đốc"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Thạnh Mỹ Tây",
+   "old": "Xã Ô Long Vĩ",
+   "list": "Xã Ô Long Vỹ",
+   "code": "30475",
+   "district": "Huyện Châu Phú"
+  },
+  {
+   "note": "old unit spelled differently in the pre-merger list",
+   "unit": "Xã Thạnh An",
+   "old": "Thị trấn Thạnh An",
+   "list": "Thị trấn Thanh An",
+   "code": "31231"
+  },
+  {
+   "note": "old unit name differs from the pre-merger list (code kept, unverified)",
+   "unit": "Xã Hòa Tú",
+   "old": "Xã Hòa Tú 2",
+   "list": "Xã Hòa Tú II",
+   "code": "31729",
+   "district": "Huyện Mỹ Xuyên"
+  },
+  {
+   "note": "wage appendix erratum applied",
+   "year": "2026",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "phường Tự Lan",
+   "read_as": [
+    "Tự Lạn"
+   ],
+   "why": "Nghị quyết 1658/NQ-UBTVQH15 và Cục Thống kê ghi phường Tự Lạn; không có đơn vị Tự Lan."
+  },
+  {
+   "note": "wage appendix erratum applied",
+   "year": "2026",
+   "province": "Thành phố Hồ Chí Minh",
+   "appendix": "phường Tân Thạnh",
+   "read_as": [
+    "Tây Thạnh"
+   ],
+   "why": "Không có phường Tân Thạnh ở TP.HCM sau sắp xếp; cùng vị trí trong danh sách, Nghị định 399/2026/NĐ-CP ghi 'Tây Thạnh' (phường Tây Thạnh, khoản 62 Nghị quyết 1685/NQ-UBTVQH15)."
+  },
+  {
+   "note": "wage appendix erratum applied",
+   "year": "2026",
+   "province": "Thành phố Hồ Chí Minh",
+   "appendix": "xã Tân Nhựt Bình Chánh",
+   "read_as": [
+    "Tân Nhựt",
+    "Bình Chánh"
+   ],
+   "why": "Thiếu dấu phẩy giữa hai xã Tân Nhựt và Bình Chánh; Nghị định 399/2026/NĐ-CP ghi 'Tân Nhựt, Bình Chánh'."
+  },
+  {
+   "note": "wage appendix erratum applied",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "phường Tự Lan",
+   "read_as": [
+    "Tự Lạn"
+   ],
+   "why": "Nghị quyết 1658/NQ-UBTVQH15 và Cục Thống kê ghi phường Tự Lạn; không có đơn vị Tự Lan."
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Chi Lăng",
+   "unit": "Phường Chi Lăng"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Phù Lãng",
+   "unit": "Phường Phù Lãng"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Yên Phong",
+   "unit": "Phường Yên Phong"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Tiên Du",
+   "unit": "Phường Tiên Du"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Gia Bình",
+   "unit": "Phường Gia Bình"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Nhân Thắng",
+   "unit": "Phường Nhân Thắng"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Lương Tài",
+   "unit": "Phường Lương Tài"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Lạng Giang",
+   "unit": "Phường Lạng Giang"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Kép",
+   "unit": "Phường Kép"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Bắc Ninh",
+   "appendix": "xã Hiệp Hòa",
+   "unit": "Phường Hiệp Hoà"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Nhơn Trạch",
+   "unit": "Phường Nhơn Trạch"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Long Thành",
+   "unit": "Phường Long Thành"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Trảng Bom",
+   "unit": "Phường Trảng Bom"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Dầu Giây",
+   "unit": "Phường Dầu Giây"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Xuân Lộc",
+   "unit": "Phường Xuân Lộc"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Trị An",
+   "unit": "Phường Trị An"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Tân Phú",
+   "unit": "Phường Tân Phú"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Đồng Phú",
+   "unit": "Phường Đồng Phú"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Tân Khai",
+   "unit": "Phường Tân Khai"
+  },
+  {
+   "note": "wage appendix lists unit with another type",
+   "year": "2027",
+   "province": "Thành phố Đồng Nai",
+   "appendix": "xã Lộc Ninh",
+   "unit": "Phường Lộc Ninh"
+  }
+ ]
+}

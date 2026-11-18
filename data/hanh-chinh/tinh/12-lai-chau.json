@@ -1,0 +1,2573 @@
+{
+ "id": "12",
+ "name": "Lai Châu",
+ "full_name": "Tỉnh Lai Châu",
+ "type": "tỉnh",
+ "slug": "lai-chau",
+ "formed_from": [
+  {
+   "id": "12",
+   "name": "Tỉnh Lai Châu"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1670/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 38,
+   "xã": 36,
+   "phường": 2
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1670/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1670-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-lai-chau-nam-2025-119250616215807976.htm",
+    "copy": "sources/nghi-quyet/1670-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "03388",
+   "name": "Đoàn Kết",
+   "type": "phường",
+   "full_name": "Phường Đoàn Kết",
+   "slug": "phuong-doan-ket",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03391",
+     "name": "Lản Nhì Thàng",
+     "type": "xã",
+     "full_name": "Xã Lản Nhì Thàng",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Lả Nhì Thàng",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03386",
+     "name": "Quyết Thắng",
+     "type": "phường",
+     "full_name": "Phường Quyết Thắng",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03388",
+     "name": "Quyết Tiến",
+     "type": "phường",
+     "full_name": "Phường Quyết Tiến",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03389",
+     "name": "Đoàn Kết",
+     "type": "phường",
+     "full_name": "Phường Đoàn Kết",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03403",
+     "name": "Sùng Phài",
+     "type": "xã",
+     "full_name": "Xã Sùng Phài",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03408",
+   "name": "Tân Phong",
+   "type": "phường",
+   "full_name": "Phường Tân Phong",
+   "slug": "phuong-tan-phong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03387",
+     "name": "Tân Phong",
+     "type": "phường",
+     "full_name": "Phường Tân Phong",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03408",
+     "name": "Đông Phong",
+     "type": "phường",
+     "full_name": "Phường Đông Phong",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03409",
+     "name": "San Thàng",
+     "type": "xã",
+     "full_name": "Xã San Thàng",
+     "district": "Thành phố Lai Châu",
+     "district_id": "105",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03415",
+     "name": "Nùng Nàng",
+     "type": "xã",
+     "full_name": "Xã Nùng Nàng",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03418",
+     "name": "Bản Giang",
+     "type": "xã",
+     "full_name": "Xã Bản Giang",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03390",
+   "name": "Bình Lư",
+   "type": "xã",
+   "full_name": "Xã Bình Lư",
+   "slug": "xa-binh-lu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03390",
+     "name": "Tam Đường",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tam Đường",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03412",
+     "name": "Bình Lư",
+     "type": "xã",
+     "full_name": "Xã Bình Lư",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03413",
+     "name": "Sơn Bình",
+     "type": "xã",
+     "full_name": "Xã Sơn Bình",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03394",
+   "name": "Sin Suối Hồ",
+   "type": "xã",
+   "full_name": "Xã Sin Suối Hồ",
+   "slug": "xa-sin-suoi-ho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03586",
+     "name": "Nậm Xe",
+     "type": "xã",
+     "full_name": "Xã Nậm Xe",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03592",
+     "name": "Sin Suối Hồ",
+     "type": "xã",
+     "full_name": "Xã Sin Suối Hồ",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03394",
+     "name": "Thèn Sin",
+     "type": "xã",
+     "full_name": "Xã Thèn Sin",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03405",
+   "name": "Tả Lèng",
+   "type": "xã",
+   "full_name": "Xã Tả Lèng",
+   "slug": "xa-ta-leng",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03400",
+     "name": "Tả Lèng",
+     "type": "xã",
+     "full_name": "Xã Tả Lèng",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03405",
+     "name": "Giang Ma",
+     "type": "xã",
+     "full_name": "Xã Giang Ma",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03406",
+     "name": "Hồ Thầu",
+     "type": "xã",
+     "full_name": "Xã Hồ Thầu",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03424",
+   "name": "Bản Bo",
+   "type": "xã",
+   "full_name": "Xã Bản Bo",
+   "slug": "xa-ban-bo",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03424",
+     "name": "Bản Bo",
+     "type": "xã",
+     "full_name": "Xã Bản Bo",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03427",
+     "name": "Nà Tăm",
+     "type": "xã",
+     "full_name": "Xã Nà Tăm",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03430",
+   "name": "Khun Há",
+   "type": "xã",
+   "full_name": "Xã Khun Há",
+   "slug": "xa-khun-ha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03421",
+     "name": "Bản Hon",
+     "type": "xã",
+     "full_name": "Xã Bản Hon",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03430",
+     "name": "Khun Há",
+     "type": "xã",
+     "full_name": "Xã Khun Há",
+     "district": "Huyện Tam Đường",
+     "district_id": "106",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03433",
+   "name": "Bum Tở",
+   "type": "xã",
+   "full_name": "Xã Bum Tở",
+   "slug": "xa-bum-to",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03433",
+     "name": "Mường Tè",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mường Tè",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03454",
+     "name": "Bum Tở",
+     "type": "xã",
+     "full_name": "Xã Bum Tở",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03469",
+     "name": "Can Hồ",
+     "type": "xã",
+     "full_name": "Xã Can Hồ",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Kan Hồ",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03434",
+   "name": "Nậm Hàng",
+   "type": "xã",
+   "full_name": "Xã Nậm Hàng",
+   "slug": "xa-nam-hang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03434",
+     "name": "Nậm Nhùn",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Nậm Nhùn",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03474",
+     "name": "Nậm Manh",
+     "type": "xã",
+     "full_name": "Xã Nậm Manh",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03475",
+     "name": "Nậm Hàng",
+     "type": "xã",
+     "full_name": "Xã Nậm Hàng",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03439",
+   "name": "Thu Lũm",
+   "type": "xã",
+   "full_name": "Xã Thu Lũm",
+   "slug": "xa-thu-lum",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03436",
+     "name": "Thu Lũm",
+     "type": "xã",
+     "full_name": "Xã Thu Lũm",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03439",
+     "name": "Ka Lăng",
+     "type": "xã",
+     "full_name": "Xã Ka Lăng",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03442",
+   "name": "Pa Ủ",
+   "type": "xã",
+   "full_name": "Xã Pa Ủ",
+   "slug": "xa-pa-u",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03440",
+     "name": "Tá Bạ",
+     "type": "xã",
+     "full_name": "Xã Tá Bạ",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03442",
+     "name": "Pa Ủ",
+     "type": "xã",
+     "full_name": "Xã Pa Ủ",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03445",
+   "name": "Mường Tè",
+   "type": "xã",
+   "full_name": "Xã Mường Tè",
+   "slug": "xa-muong-te",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03445",
+     "name": "Mường Tè",
+     "type": "xã",
+     "full_name": "Xã Mường Tè",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03457",
+     "name": "Nậm Khao",
+     "type": "xã",
+     "full_name": "Xã Nậm Khao",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03451",
+   "name": "Mù Cả",
+   "type": "xã",
+   "full_name": "Xã Mù Cả",
+   "slug": "xa-mu-ca",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03451",
+     "name": "Mù Cả",
+     "type": "xã",
+     "full_name": "Xã Mù Cả",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03460",
+   "name": "Hua Bum",
+   "type": "xã",
+   "full_name": "Xã Hua Bum",
+   "slug": "xa-hua-bum",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03460",
+     "name": "Hua Bum",
+     "type": "xã",
+     "full_name": "Xã Hua Bum",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Hua Bun",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03467",
+     "name": "Vàng San",
+     "type": "xã",
+     "full_name": "Xã Vàng San",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03463",
+   "name": "Tà Tổng",
+   "type": "xã",
+   "full_name": "Xã Tà Tổng",
+   "slug": "xa-ta-tong",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03463",
+     "name": "Tà Tổng",
+     "type": "xã",
+     "full_name": "Xã Tà Tổng",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03466",
+   "name": "Bum Nưa",
+   "type": "xã",
+   "full_name": "Xã Bum Nưa",
+   "slug": "xa-bum-nua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03448",
+     "name": "Pa Vệ Sủ",
+     "type": "xã",
+     "full_name": "Xã Pa Vệ Sủ",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Pa Vệ Sử",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03466",
+     "name": "Bum Nưa",
+     "type": "xã",
+     "full_name": "Xã Bum Nưa",
+     "district": "Huyện Mường Tè",
+     "district_id": "107",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03472",
+   "name": "Mường Mô",
+   "type": "xã",
+   "full_name": "Xã Mường Mô",
+   "slug": "xa-muong-mo",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03472",
+     "name": "Mường Mô",
+     "type": "xã",
+     "full_name": "Xã Mường Mô",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03473",
+     "name": "Nậm Chà",
+     "type": "xã",
+     "full_name": "Xã Nậm Chà",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03478",
+   "name": "Sìn Hồ",
+   "type": "xã",
+   "full_name": "Xã Sìn Hồ",
+   "slug": "xa-sin-ho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03478",
+     "name": "Sìn Hồ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Sìn Hồ",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03505",
+     "name": "Phăng Sô Lin",
+     "type": "xã",
+     "full_name": "Xã Phăng Sô Lin",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03511",
+     "name": "Tả Phìn",
+     "type": "xã",
+     "full_name": "Xã Tả Phìn",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03514",
+     "name": "Sà Dề Phìn",
+     "type": "xã",
+     "full_name": "Xã Sà Dề Phìn",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03487",
+   "name": "Lê Lợi",
+   "type": "xã",
+   "full_name": "Xã Lê Lợi",
+   "slug": "xa-le-loi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03481",
+     "name": "Lê Lợi",
+     "type": "xã",
+     "full_name": "Xã Lê Lợi",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03484",
+     "name": "Pú Đao",
+     "type": "xã",
+     "full_name": "Xã Pú Đao",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03488",
+     "name": "Nậm Pì",
+     "type": "xã",
+     "full_name": "Xã Nậm Pì",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03487",
+     "name": "Chăn Nưa",
+     "type": "xã",
+     "full_name": "Xã Chăn Nưa",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03503",
+   "name": "Pa Tần",
+   "type": "xã",
+   "full_name": "Xã Pa Tần",
+   "slug": "xa-pa-tan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03502",
+     "name": "Nậm Ban",
+     "type": "xã",
+     "full_name": "Xã Nậm Ban",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03503",
+     "name": "Trung Chải",
+     "type": "xã",
+     "full_name": "Xã Trung Chải",
+     "district": "Huyện Nậm Nhùn",
+     "district_id": "112",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03493",
+     "name": "Pa Tần",
+     "type": "xã",
+     "full_name": "Xã Pa Tần",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03508",
+   "name": "Hồng Thu",
+   "type": "xã",
+   "full_name": "Xã Hồng Thu",
+   "slug": "xa-hong-thu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03496",
+     "name": "Phìn Hồ",
+     "type": "xã",
+     "full_name": "Xã Phìn Hồ",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03499",
+     "name": "Hồng Thu",
+     "type": "xã",
+     "full_name": "Xã Hồng Thu",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03508",
+     "name": "Ma Quai",
+     "type": "xã",
+     "full_name": "Xã Ma Quai",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03517",
+   "name": "Nậm Tăm",
+   "type": "xã",
+   "full_name": "Xã Nậm Tăm",
+   "slug": "xa-nam-tam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03509",
+     "name": "Lùng Thàng",
+     "type": "xã",
+     "full_name": "Xã Lùng Thàng",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03517",
+     "name": "Nậm Tăm",
+     "type": "xã",
+     "full_name": "Xã Nậm Tăm",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03526",
+     "name": "Nậm Cha",
+     "type": "xã",
+     "full_name": "Xã Nậm Cha",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03529",
+   "name": "Tủa Sín Chải",
+   "type": "xã",
+   "full_name": "Xã Tủa Sín Chải",
+   "slug": "xa-tua-sin-chai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03520",
+     "name": "Tả Ngảo",
+     "type": "xã",
+     "full_name": "Xã Tả Ngảo",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03529",
+     "name": "Làng Mô",
+     "type": "xã",
+     "full_name": "Xã Làng Mô",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03541",
+     "name": "Tủa Sín Chải",
+     "type": "xã",
+     "full_name": "Xã Tủa Sín Chải",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03532",
+   "name": "Pu Sam Cáp",
+   "type": "xã",
+   "full_name": "Xã Pu Sam Cáp",
+   "slug": "xa-pu-sam-cap",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03523",
+     "name": "Pu Sam Cáp",
+     "type": "xã",
+     "full_name": "Xã Pu Sam Cáp",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03527",
+     "name": "Pa Khóa",
+     "type": "xã",
+     "full_name": "Xã Pa Khóa",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03532",
+     "name": "Noong Hẻo",
+     "type": "xã",
+     "full_name": "Xã Noong Hẻo",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03538",
+   "name": "Nậm Mạ",
+   "type": "xã",
+   "full_name": "Xã Nậm Mạ",
+   "slug": "xa-nam-ma",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03535",
+     "name": "Nậm Mạ",
+     "type": "xã",
+     "full_name": "Xã Nậm Mạ",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03538",
+     "name": "Căn Co",
+     "type": "xã",
+     "full_name": "Xã Căn Co",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03544",
+   "name": "Nậm Cuổi",
+   "type": "xã",
+   "full_name": "Xã Nậm Cuổi",
+   "slug": "xa-nam-cuoi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03544",
+     "name": "Nậm Cuổi",
+     "type": "xã",
+     "full_name": "Xã Nậm Cuổi",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03547",
+     "name": "Nậm Hăn",
+     "type": "xã",
+     "full_name": "Xã Nậm Hăn",
+     "district": "Huyện Sìn Hồ",
+     "district_id": "108",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03549",
+   "name": "Phong Thổ",
+   "type": "xã",
+   "full_name": "Xã Phong Thổ",
+   "slug": "xa-phong-tho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03490",
+     "name": "Huổi Luông",
+     "type": "xã",
+     "full_name": "Xã Huổi Luông",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03549",
+     "name": "Phong Thổ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Phong Thổ",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03574",
+     "name": "Ma Li Pho",
+     "type": "xã",
+     "full_name": "Xã Ma Li Pho",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Ma Ly Pho",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03589",
+     "name": "Mường So",
+     "type": "xã",
+     "full_name": "Xã Mường So",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03562",
+   "name": "Sì Lở Lầu",
+   "type": "xã",
+   "full_name": "Xã Sì Lở Lầu",
+   "slug": "xa-si-lo-lau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03550",
+     "name": "Sì Lở Lầu",
+     "type": "xã",
+     "full_name": "Xã Sì Lở Lầu",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03553",
+     "name": "Mồ Sì San",
+     "type": "xã",
+     "full_name": "Xã Mồ Sì San",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03559",
+     "name": "Pa Vây Sử",
+     "type": "xã",
+     "full_name": "Xã Pa Vây Sử",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03562",
+     "name": "Vàng Ma Chải",
+     "type": "xã",
+     "full_name": "Xã Vàng Ma Chải",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03571",
+   "name": "Dào San",
+   "type": "xã",
+   "full_name": "Xã Dào San",
+   "slug": "xa-dao-san",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03565",
+     "name": "Tung Qua Lìn",
+     "type": "xã",
+     "full_name": "Xã Tung Qua Lìn",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Tông Qua Lìn",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03568",
+     "name": "Mù Sang",
+     "type": "xã",
+     "full_name": "Xã Mù Sang",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03571",
+     "name": "Dào San",
+     "type": "xã",
+     "full_name": "Xã Dào San",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03583",
+   "name": "Khổng Lào",
+   "type": "xã",
+   "full_name": "Xã Khổng Lào",
+   "slug": "xa-khong-lao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03577",
+     "name": "Bản Lang",
+     "type": "xã",
+     "full_name": "Xã Bản Lang",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03580",
+     "name": "Hoang Thèn",
+     "type": "xã",
+     "full_name": "Xã Hoang Thèn",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03583",
+     "name": "Khổng Lào",
+     "type": "xã",
+     "full_name": "Xã Khổng Lào",
+     "district": "Huyện Phong Thổ",
+     "district_id": "109",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03595",
+   "name": "Than Uyên",
+   "type": "xã",
+   "full_name": "Xã Than Uyên",
+   "slug": "xa-than-uyen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03595",
+     "name": "Than Uyên",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Than Uyên",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03619",
+     "name": "Mường Than",
+     "type": "xã",
+     "full_name": "Xã Mường Than",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03631",
+     "name": "Mường Cang",
+     "type": "xã",
+     "full_name": "Xã Mường Cang",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03632",
+     "name": "Hua Nà",
+     "type": "xã",
+     "full_name": "Xã Hua Nà",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03598",
+   "name": "Tân Uyên",
+   "type": "xã",
+   "full_name": "Xã Tân Uyên",
+   "slug": "xa-tan-uyen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03598",
+     "name": "Tân Uyên",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tân Uyên",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03604",
+     "name": "Thân Thuộc",
+     "type": "xã",
+     "full_name": "Xã Thân Thuộc",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03605",
+     "name": "Trung Đồng",
+     "type": "xã",
+     "full_name": "Xã Trung Đồng",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03610",
+     "name": "Nậm Cần",
+     "type": "xã",
+     "full_name": "Xã Nậm Cần",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03601",
+   "name": "Mường Khoa",
+   "type": "xã",
+   "full_name": "Xã Mường Khoa",
+   "slug": "xa-muong-khoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03601",
+     "name": "Mường Khoa",
+     "type": "xã",
+     "full_name": "Xã Mường Khoa",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03602",
+     "name": "Phúc Khoa",
+     "type": "xã",
+     "full_name": "Xã Phúc Khoa",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03613",
+   "name": "Nậm Sỏ",
+   "type": "xã",
+   "full_name": "Xã Nậm Sỏ",
+   "slug": "xa-nam-so",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03613",
+     "name": "Nậm Sỏ",
+     "type": "xã",
+     "full_name": "Xã Nậm Sỏ",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03622",
+     "name": "Tà Mít",
+     "type": "xã",
+     "full_name": "Xã Tà Mít",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03616",
+   "name": "Pắc Ta",
+   "type": "xã",
+   "full_name": "Xã Pắc Ta",
+   "slug": "xa-pac-ta",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03607",
+     "name": "Hố Mít",
+     "type": "xã",
+     "full_name": "Xã Hố Mít",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03616",
+     "name": "Pắc Ta",
+     "type": "xã",
+     "full_name": "Xã Pắc Ta",
+     "district": "Huyện Tân Uyên",
+     "district_id": "111",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03618",
+   "name": "Mường Than",
+   "type": "xã",
+   "full_name": "Xã Mường Than",
+   "slug": "xa-muong-than",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03618",
+     "name": "Phúc Than",
+     "type": "xã",
+     "full_name": "Xã Phúc Than",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03625",
+     "name": "Mường Mít",
+     "type": "xã",
+     "full_name": "Xã Mường Mít",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03637",
+   "name": "Mường Kim",
+   "type": "xã",
+   "full_name": "Xã Mường Kim",
+   "slug": "xa-muong-kim",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03628",
+     "name": "Pha Mu",
+     "type": "xã",
+     "full_name": "Xã Pha Mu",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03634",
+     "name": "Tà Hừa",
+     "type": "xã",
+     "full_name": "Xã Tà Hừa",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03637",
+     "name": "Mường Kim",
+     "type": "xã",
+     "full_name": "Xã Mường Kim",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03638",
+     "name": "Tà Mung",
+     "type": "xã",
+     "full_name": "Xã Tà Mung",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03640",
+   "name": "Khoen On",
+   "type": "xã",
+   "full_name": "Xã Khoen On",
+   "slug": "xa-khoen-on",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1670/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03640",
+     "name": "Ta Gia",
+     "type": "xã",
+     "full_name": "Xã Ta Gia",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Tà Gia",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03643",
+     "name": "Khoen On",
+     "type": "xã",
+     "full_name": "Xã Khoen On",
+     "district": "Huyện Than Uyên",
+     "district_id": "110",
+     "province": "Tỉnh Lai Châu",
+     "province_id": "12",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

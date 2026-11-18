@@ -1,0 +1,7159 @@
+{
+ "id": "82",
+ "name": "Đồng Tháp",
+ "full_name": "Tỉnh Đồng Tháp",
+ "type": "tỉnh",
+ "slug": "dong-thap",
+ "formed_from": [
+  {
+   "id": "82",
+   "name": "Tỉnh Tiền Giang"
+  },
+  {
+   "id": "87",
+   "name": "Tỉnh Đồng Tháp"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1663/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 102,
+   "xã": 82,
+   "phường": 20
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1663/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1663-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-dong-thap-nam-2025-119250616203652359.htm",
+    "copy": "sources/nghi-quyet/1663-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "28249",
+   "name": "Đạo Thạnh",
+   "type": "phường",
+   "full_name": "Phường Đạo Thạnh",
+   "slug": "phuong-dao-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 84
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28249",
+     "name": "5",
+     "type": "phường",
+     "full_name": "Phường 5",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28252",
+     "name": "4",
+     "type": "phường",
+     "full_name": "Phường 4",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28282",
+     "name": "Đạo Thạnh",
+     "type": "xã",
+     "full_name": "Xã Đạo Thạnh",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28261",
+   "name": "Mỹ Tho",
+   "type": "phường",
+   "full_name": "Phường Mỹ Tho",
+   "slug": "phuong-my-tho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 83
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28261",
+     "name": "1",
+     "type": "phường",
+     "full_name": "Phường 1",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28264",
+     "name": "2",
+     "type": "phường",
+     "full_name": "Phường 2",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28279",
+     "name": "Tân Long",
+     "type": "phường",
+     "full_name": "Phường Tân Long",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28270",
+   "name": "Thới Sơn",
+   "type": "phường",
+   "full_name": "Phường Thới Sơn",
+   "slug": "phuong-thoi-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 86
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28270",
+     "name": "6",
+     "type": "phường",
+     "full_name": "Phường 6",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28591",
+     "name": "Thới Sơn",
+     "type": "xã",
+     "full_name": "Xã Thới Sơn",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28273",
+   "name": "Mỹ Phong",
+   "type": "phường",
+   "full_name": "Phường Mỹ Phong",
+   "slug": "phuong-my-phong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 85
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28273",
+     "name": "9",
+     "type": "phường",
+     "full_name": "Phường 9",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28288",
+     "name": "Mỹ Phong",
+     "type": "xã",
+     "full_name": "Xã Mỹ Phong",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28291",
+     "name": "Tân Mỹ Chánh",
+     "type": "xã",
+     "full_name": "Xã Tân Mỹ Chánh",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28285",
+   "name": "Trung An",
+   "type": "phường",
+   "full_name": "Phường Trung An",
+   "slug": "phuong-trung-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 87
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28276",
+     "name": "10",
+     "type": "phường",
+     "full_name": "Phường 10",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28285",
+     "name": "Trung An",
+     "type": "xã",
+     "full_name": "Xã Trung An",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28567",
+     "name": "Phước Thạnh",
+     "type": "xã",
+     "full_name": "Xã Phước Thạnh",
+     "district": "Thành phố Mỹ Tho",
+     "district_id": "815",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28297",
+   "name": "Long Thuận",
+   "type": "phường",
+   "full_name": "Phường Long Thuận",
+   "slug": "phuong-long-thuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 89
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28297",
+     "name": "2",
+     "type": "phường",
+     "full_name": "Phường 2",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28312",
+     "name": "Long Thuận",
+     "type": "phường",
+     "full_name": "Phường Long Thuận",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28306",
+   "name": "Gò Công",
+   "type": "phường",
+   "full_name": "Phường Gò Công",
+   "slug": "phuong-go-cong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 88
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28300",
+     "name": "1",
+     "type": "phường",
+     "full_name": "Phường 1",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28306",
+     "name": "5",
+     "type": "phường",
+     "full_name": "Phường 5",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28318",
+     "name": "Long Hòa",
+     "type": "phường",
+     "full_name": "Phường Long Hòa",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28315",
+   "name": "Bình Xuân",
+   "type": "phường",
+   "full_name": "Phường Bình Xuân",
+   "slug": "phuong-binh-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 90
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28315",
+     "name": "Long Chánh",
+     "type": "phường",
+     "full_name": "Phường Long Chánh",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28717",
+     "name": "Bình Xuân",
+     "type": "xã",
+     "full_name": "Xã Bình Xuân",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28435",
+   "name": "Mỹ Phước Tây",
+   "type": "phường",
+   "full_name": "Phường Mỹ Phước Tây",
+   "slug": "phuong-my-phuoc-tay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 99
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28435",
+     "name": "1",
+     "type": "phường",
+     "full_name": "Phường 1",
+     "district": "Thị Xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28437",
+     "name": "3",
+     "type": "phường",
+     "full_name": "Phường 3",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28447",
+     "name": "Mỹ Phước Tây",
+     "type": "xã",
+     "full_name": "Xã Mỹ Phước Tây",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28453",
+     "name": "Mỹ Hạnh Trung",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hạnh Trung",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28436",
+   "name": "Thanh Hòa",
+   "type": "phường",
+   "full_name": "Phường Thanh Hòa",
+   "slug": "phuong-thanh-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 100
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28436",
+     "name": "2",
+     "type": "phường",
+     "full_name": "Phường 2",
+     "district": "Thị Xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28462",
+     "name": "Tân Bình",
+     "type": "xã",
+     "full_name": "Xã Tân Bình",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28480",
+     "name": "Thanh Hòa",
+     "type": "xã",
+     "full_name": "Xã Thanh Hòa",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28439",
+   "name": "Cai Lậy",
+   "type": "phường",
+   "full_name": "Phường Cai Lậy",
+   "slug": "phuong-cai-lay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 101
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28439",
+     "name": "4",
+     "type": "phường",
+     "full_name": "Phường 4",
+     "district": "Thị Xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28440",
+     "name": "5",
+     "type": "phường",
+     "full_name": "Phường 5",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28486",
+     "name": "Long Khánh",
+     "type": "xã",
+     "full_name": "Xã Long Khánh",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28477",
+   "name": "Nhị Quý",
+   "type": "phường",
+   "full_name": "Phường Nhị Quý",
+   "slug": "phuong-nhi-quy",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 102
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28474",
+     "name": "Nhị Mỹ",
+     "type": "phường",
+     "full_name": "Phường Nhị Mỹ",
+     "district": "Thị Xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28477",
+     "name": "Nhị Quý",
+     "type": "xã",
+     "full_name": "Xã Nhị Quý",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28483",
+     "name": "Phú Quý",
+     "type": "xã",
+     "full_name": "Xã Phú Quý",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28729",
+   "name": "Sơn Qui",
+   "type": "phường",
+   "full_name": "Phường Sơn Qui",
+   "slug": "phuong-son-qui",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 91
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28309",
+     "name": "Long Hưng",
+     "type": "phường",
+     "full_name": "Phường Long Hưng",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28708",
+     "name": "Bình Đông",
+     "type": "xã",
+     "full_name": "Xã Bình Đông",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28729",
+     "name": "Tân Trung",
+     "type": "xã",
+     "full_name": "Xã Tân Trung",
+     "district": "Thành phố Gò Công",
+     "district_id": "816",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29869",
+   "name": "Cao Lãnh",
+   "type": "phường",
+   "full_name": "Phường Cao Lãnh",
+   "slug": "phuong-cao-lanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 95
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29869",
+     "name": "1",
+     "type": "phường",
+     "full_name": "Phường 1",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29872",
+     "name": "4",
+     "type": "phường",
+     "full_name": "Phường 4",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29875",
+     "name": "3",
+     "type": "phường",
+     "full_name": "Phường 3",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29878",
+     "name": "6",
+     "type": "phường",
+     "full_name": "Phường 6",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29890",
+     "name": "Tân Thuận Tây",
+     "type": "xã",
+     "full_name": "Xã Tân Thuận Tây",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29892",
+     "name": "Hòa Thuận",
+     "type": "phường",
+     "full_name": "Phường Hòa Thuận",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29893",
+     "name": "Hòa An",
+     "type": "xã",
+     "full_name": "Xã Hòa An",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29896",
+     "name": "Tân Thuận Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Thuận Đông",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29899",
+     "name": "Tịnh Thới",
+     "type": "xã",
+     "full_name": "Xã Tịnh Thới",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29884",
+   "name": "Mỹ Ngãi",
+   "type": "phường",
+   "full_name": "Phường Mỹ Ngãi",
+   "slug": "phuong-my-ngai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 96
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29881",
+     "name": "Mỹ Ngãi",
+     "type": "phường",
+     "full_name": "Phường Mỹ Ngãi",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29884",
+     "name": "Mỹ Tân",
+     "type": "xã",
+     "full_name": "Xã Mỹ Tân",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30091",
+     "name": "Tân Nghĩa",
+     "type": "xã",
+     "full_name": "Xã Tân Nghĩa",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29888",
+   "name": "Mỹ Trà",
+   "type": "phường",
+   "full_name": "Phường Mỹ Trà",
+   "slug": "phuong-my-tra",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 97
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29887",
+     "name": "Mỹ Trà",
+     "type": "xã",
+     "full_name": "Xã Mỹ Trà",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29888",
+     "name": "Mỹ Phú",
+     "type": "phường",
+     "full_name": "Phường Mỹ Phú",
+     "district": "Thành phố Cao Lãnh",
+     "district_id": "866",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30097",
+     "name": "Nhị Mỹ",
+     "type": "xã",
+     "full_name": "Xã Nhị Mỹ",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30106",
+     "name": "An Bình",
+     "type": "xã",
+     "full_name": "Xã An Bình",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29905",
+   "name": "Sa Đéc",
+   "type": "phường",
+   "full_name": "Phường Sa Đéc",
+   "slug": "phuong-sa-dec",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 98
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29902",
+     "name": "3",
+     "type": "phường",
+     "full_name": "Phường 3",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29905",
+     "name": "1",
+     "type": "phường",
+     "full_name": "Phường 1",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29908",
+     "name": "4",
+     "type": "phường",
+     "full_name": "Phường 4",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29911",
+     "name": "2",
+     "type": "phường",
+     "full_name": "Phường 2",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29914",
+     "name": "Tân Khánh Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Khánh Đông",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29917",
+     "name": "Tân Quy Đông",
+     "type": "phường",
+     "full_name": "Phường Tân Quy Đông",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29919",
+     "name": "An Hòa",
+     "type": "phường",
+     "full_name": "Phường An Hòa",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29920",
+     "name": "Tân Quy Tây",
+     "type": "xã",
+     "full_name": "Xã Tân Quy Tây",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29954",
+   "name": "An Bình",
+   "type": "phường",
+   "full_name": "Phường An Bình",
+   "slug": "phuong-an-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 92
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29954",
+     "name": "An Lộc",
+     "type": "phường",
+     "full_name": "Phường An Lộc",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29986",
+     "name": "An Bình B",
+     "type": "phường",
+     "full_name": "Phường An Bình B",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29989",
+     "name": "An Bình A",
+     "type": "phường",
+     "full_name": "Phường An Bình A",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29955",
+   "name": "Hồng Ngự",
+   "type": "phường",
+   "full_name": "Phường Hồng Ngự",
+   "slug": "phuong-hong-ngu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 93
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29955",
+     "name": "An Thạnh",
+     "type": "phường",
+     "full_name": "Phường An Thạnh",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29959",
+     "name": "Bình Thạnh",
+     "type": "xã",
+     "full_name": "Xã Bình Thạnh",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29965",
+     "name": "Tân Hội",
+     "type": "xã",
+     "full_name": "Xã Tân Hội",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29978",
+   "name": "Thường Lạc",
+   "type": "phường",
+   "full_name": "Phường Thường Lạc",
+   "slug": "phuong-thuong-lac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 94
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29962",
+     "name": "Thường Thới Hậu A",
+     "type": "xã",
+     "full_name": "Xã Thường Thới Hậu A",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29977",
+     "name": "Thường Lạc",
+     "type": "xã",
+     "full_name": "Xã Thường Lạc",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29978",
+     "name": "An Lạc",
+     "type": "phường",
+     "full_name": "Phường An Lạc",
+     "district": "Thành phố Hồng Ngự",
+     "district_id": "868",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28321",
+   "name": "Tân Phước 1",
+   "type": "xã",
+   "full_name": "Xã Tân Phước 1",
+   "slug": "xa-tan-phuoc-1",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 54
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28321",
+     "name": "Mỹ Phước",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mỹ Phước",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28324",
+     "name": "Tân Hòa Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa Đông",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28330",
+     "name": "Thạnh Mỹ",
+     "type": "xã",
+     "full_name": "Xã Thạnh Mỹ",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28327",
+   "name": "Tân Phước 2",
+   "type": "xã",
+   "full_name": "Xã Tân Phước 2",
+   "slug": "xa-tan-phuoc-2",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 55
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28327",
+     "name": "Thạnh Tân",
+     "type": "xã",
+     "full_name": "Xã Thạnh Tân",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28333",
+     "name": "Thạnh Hòa",
+     "type": "xã",
+     "full_name": "Xã Thạnh Hòa",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28348",
+     "name": "Tân Hòa Tây",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa Tây",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28336",
+   "name": "Hưng Thạnh",
+   "type": "xã",
+   "full_name": "Xã Hưng Thạnh",
+   "slug": "xa-hung-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 57
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28336",
+     "name": "Phú Mỹ",
+     "type": "xã",
+     "full_name": "Xã Phú Mỹ",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28339",
+     "name": "Tân Hòa Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa Thành",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28342",
+     "name": "Hưng Thạnh",
+     "type": "xã",
+     "full_name": "Xã Hưng Thạnh",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28345",
+   "name": "Tân Phước 3",
+   "type": "xã",
+   "full_name": "Xã Tân Phước 3",
+   "slug": "xa-tan-phuoc-3",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 56
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28345",
+     "name": "Tân Lập 1",
+     "type": "xã",
+     "full_name": "Xã Tân Lập 1",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28354",
+     "name": "Tân Lập 2",
+     "type": "xã",
+     "full_name": "Xã Tân Lập 2",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28357",
+     "name": "Phước Lập",
+     "type": "xã",
+     "full_name": "Xã Phước Lập",
+     "district": "Huyện Tân Phước",
+     "district_id": "818",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28360",
+   "name": "Cái Bè",
+   "type": "xã",
+   "full_name": "Xã Cái Bè",
+   "slug": "xa-cai-be",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 47
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28360",
+     "name": "Cái Bè",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Cái Bè",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28399",
+     "name": "Hòa Khánh",
+     "type": "xã",
+     "full_name": "Xã Hòa Khánh",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28411",
+     "name": "Đông Hòa Hiệp",
+     "type": "xã",
+     "full_name": "Xã Đông Hòa Hiệp",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28366",
+   "name": "Hậu Mỹ",
+   "type": "xã",
+   "full_name": "Xã Hậu Mỹ",
+   "slug": "xa-hau-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 45
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28363",
+     "name": "Hậu Mỹ Bắc B",
+     "type": "xã",
+     "full_name": "Xã Hậu Mỹ Bắc B",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28366",
+     "name": "Hậu Mỹ Bắc A",
+     "type": "xã",
+     "full_name": "Xã Hậu Mỹ Bắc A",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28372",
+     "name": "Hậu Mỹ Trinh",
+     "type": "xã",
+     "full_name": "Xã Hậu Mỹ Trinh",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28378",
+   "name": "Mỹ Thiện",
+   "type": "xã",
+   "full_name": "Xã Mỹ Thiện",
+   "slug": "xa-my-thien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 44
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28369",
+     "name": "Mỹ Trung",
+     "type": "xã",
+     "full_name": "Xã Mỹ Trung",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28378",
+     "name": "Mỹ Tân",
+     "type": "xã",
+     "full_name": "Xã Mỹ Tân",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28384",
+     "name": "Thiện Trung",
+     "type": "xã",
+     "full_name": "Xã Thiện Trung",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28393",
+   "name": "Hội Cư",
+   "type": "xã",
+   "full_name": "Xã Hội Cư",
+   "slug": "xa-hoi-cu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 46
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28375",
+     "name": "Hậu Mỹ Phú",
+     "type": "xã",
+     "full_name": "Xã Hậu Mỹ Phú",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28387",
+     "name": "Mỹ Hội",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hội",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28390",
+     "name": "An Cư",
+     "type": "xã",
+     "full_name": "Xã An Cư",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28393",
+     "name": "Hậu Thành",
+     "type": "xã",
+     "full_name": "Xã Hậu Thành",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28405",
+   "name": "Mỹ Đức Tây",
+   "type": "xã",
+   "full_name": "Xã Mỹ Đức Tây",
+   "slug": "xa-my-duc-tay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 43
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28402",
+     "name": "Thiện Trí",
+     "type": "xã",
+     "full_name": "Xã Thiện Trí",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28405",
+     "name": "Mỹ Đức Đông",
+     "type": "xã",
+     "full_name": "Xã Mỹ Đức Đông",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28408",
+     "name": "Mỹ Đức Tây",
+     "type": "xã",
+     "full_name": "Xã Mỹ Đức Tây",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28414",
+   "name": "Mỹ Lợi",
+   "type": "xã",
+   "full_name": "Xã Mỹ Lợi",
+   "slug": "xa-my-loi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 42
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28381",
+     "name": "Mỹ Lợi B",
+     "type": "xã",
+     "full_name": "Xã Mỹ Lợi B",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28396",
+     "name": "Mỹ Lợi A",
+     "type": "xã",
+     "full_name": "Xã Mỹ Lợi A",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28414",
+     "name": "An Thái Đông",
+     "type": "xã",
+     "full_name": "Xã An Thái Đông",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28426",
+   "name": "Thanh Hưng",
+   "type": "xã",
+   "full_name": "Xã Thanh Hưng",
+   "slug": "xa-thanh-hung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 40
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28417",
+     "name": "Tân Hưng",
+     "type": "xã",
+     "full_name": "Xã Tân Hưng",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28423",
+     "name": "Tân Thanh",
+     "type": "xã",
+     "full_name": "Xã Tân Thanh",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28426",
+     "name": "An Thái Trung",
+     "type": "xã",
+     "full_name": "Xã An Thái Trung",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28429",
+   "name": "An Hữu",
+   "type": "xã",
+   "full_name": "Xã An Hữu",
+   "slug": "xa-an-huu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 41
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28420",
+     "name": "Mỹ Lương",
+     "type": "xã",
+     "full_name": "Xã Mỹ Lương",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28429",
+     "name": "An Hữu",
+     "type": "xã",
+     "full_name": "Xã An Hữu",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28432",
+     "name": "Hòa Hưng",
+     "type": "xã",
+     "full_name": "Xã Hòa Hưng",
+     "district": "Huyện Cái Bè",
+     "district_id": "819",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28444",
+   "name": "Thạnh Phú",
+   "type": "xã",
+   "full_name": "Xã Thạnh Phú",
+   "slug": "xa-thanh-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 49
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28438",
+     "name": "Thạnh Lộc",
+     "type": "xã",
+     "full_name": "Xã Thạnh Lộc",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28444",
+     "name": "Phú Cường",
+     "type": "xã",
+     "full_name": "Xã Phú Cường",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28456",
+   "name": "Mỹ Thành",
+   "type": "xã",
+   "full_name": "Xã Mỹ Thành",
+   "slug": "xa-my-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 48
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28441",
+     "name": "Mỹ Thành Bắc",
+     "type": "xã",
+     "full_name": "Xã Mỹ Thành Bắc",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28456",
+     "name": "Mỹ Thành Nam",
+     "type": "xã",
+     "full_name": "Xã Mỹ Thành Nam",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28465",
+     "name": "Phú Nhuận",
+     "type": "xã",
+     "full_name": "Xã Phú Nhuận",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28468",
+   "name": "Tân Phú",
+   "type": "xã",
+   "full_name": "Xã Tân Phú",
+   "slug": "xa-tan-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28450",
+     "name": "Mỹ Hạnh Đông",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hạnh Đông",
+     "district": "Thị Xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28459",
+     "name": "Tân Phú",
+     "type": "xã",
+     "full_name": "Xã Tân Phú",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28468",
+     "name": "Tân Hội",
+     "type": "xã",
+     "full_name": "Xã Tân Hội",
+     "district": "Thị xã Cai Lậy",
+     "district_id": "817",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28471",
+   "name": "Bình Phú",
+   "type": "xã",
+   "full_name": "Xã Bình Phú",
+   "slug": "xa-binh-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 50
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28471",
+     "name": "Bình Phú",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Bình Phú",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28489",
+     "name": "Cẩm Sơn",
+     "type": "xã",
+     "full_name": "Xã Cẩm Sơn",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28492",
+     "name": "Phú An",
+     "type": "xã",
+     "full_name": "Xã Phú An",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28501",
+   "name": "Hiệp Đức",
+   "type": "xã",
+   "full_name": "Xã Hiệp Đức",
+   "slug": "xa-hiep-duc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 51
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28501",
+     "name": "Hiệp Đức",
+     "type": "xã",
+     "full_name": "Xã Hiệp Đức",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28507",
+     "name": "Hội Xuân",
+     "type": "xã",
+     "full_name": "Xã Hội Xuân",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28510",
+     "name": "Tân Phong",
+     "type": "xã",
+     "full_name": "Xã Tân Phong",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28504",
+   "name": "Long Tiên",
+   "type": "xã",
+   "full_name": "Xã Long Tiên",
+   "slug": "xa-long-tien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 52
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28495",
+     "name": "Mỹ Long",
+     "type": "xã",
+     "full_name": "Xã Mỹ Long",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28498",
+     "name": "Long Tiên",
+     "type": "xã",
+     "full_name": "Xã Long Tiên",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28504",
+     "name": "Long Trung",
+     "type": "xã",
+     "full_name": "Xã Long Trung",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28516",
+   "name": "Ngũ Hiệp",
+   "type": "xã",
+   "full_name": "Xã Ngũ Hiệp",
+   "slug": "xa-ngu-hiep",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 53
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28513",
+     "name": "Tam Bình",
+     "type": "xã",
+     "full_name": "Xã Tam Bình",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28516",
+     "name": "Ngũ Hiệp",
+     "type": "xã",
+     "full_name": "Xã Ngũ Hiệp",
+     "district": "Huyện Cai Lậy",
+     "district_id": "820",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28519",
+   "name": "Châu Thành",
+   "type": "xã",
+   "full_name": "Xã Châu Thành",
+   "slug": "xa-chau-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 59
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28519",
+     "name": "Tân Hiệp",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tân Hiệp",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28534",
+     "name": "Thân Cửu Nghĩa",
+     "type": "xã",
+     "full_name": "Xã Thân Cửu Nghĩa",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28558",
+     "name": "Long An",
+     "type": "xã",
+     "full_name": "Xã Long An",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28525",
+   "name": "Tân Hương",
+   "type": "xã",
+   "full_name": "Xã Tân Hương",
+   "slug": "xa-tan-huong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 58
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28522",
+     "name": "Tân Hội Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Hội Đông",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28525",
+     "name": "Tân Hương",
+     "type": "xã",
+     "full_name": "Xã Tân Hương",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28528",
+     "name": "Tân Lý Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Lý Đông",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28537",
+   "name": "Long Hưng",
+   "type": "xã",
+   "full_name": "Xã Long Hưng",
+   "slug": "xa-long-hung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 60
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28537",
+     "name": "Tam Hiệp",
+     "type": "xã",
+     "full_name": "Xã Tam Hiệp",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28561",
+     "name": "Long Hưng",
+     "type": "xã",
+     "full_name": "Xã Long Hưng",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28570",
+     "name": "Thạnh Phú",
+     "type": "xã",
+     "full_name": "Xã Thạnh Phú",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28543",
+   "name": "Long Định",
+   "type": "xã",
+   "full_name": "Xã Long Định",
+   "slug": "xa-long-dinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 61
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28543",
+     "name": "Nhị Bình",
+     "type": "xã",
+     "full_name": "Xã Nhị Bình",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28549",
+     "name": "Đông Hòa",
+     "type": "xã",
+     "full_name": "Xã Đông Hòa",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28552",
+     "name": "Long Định",
+     "type": "xã",
+     "full_name": "Xã Long Định",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28564",
+   "name": "Bình Trưng",
+   "type": "xã",
+   "full_name": "Xã Bình Trưng",
+   "slug": "xa-binh-trung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 62
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28540",
+     "name": "Điềm Hy",
+     "type": "xã",
+     "full_name": "Xã Điềm Hy",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28564",
+     "name": "Bình Trưng",
+     "type": "xã",
+     "full_name": "Xã Bình Trưng",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28576",
+   "name": "Vĩnh Kim",
+   "type": "xã",
+   "full_name": "Xã Vĩnh Kim",
+   "slug": "xa-vinh-kim",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 63
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28573",
+     "name": "Bàn Long",
+     "type": "xã",
+     "full_name": "Xã Bàn Long",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28576",
+     "name": "Vĩnh Kim",
+     "type": "xã",
+     "full_name": "Xã Vĩnh Kim",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28588",
+     "name": "Phú Phong",
+     "type": "xã",
+     "full_name": "Xã Phú Phong",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28582",
+   "name": "Kim Sơn",
+   "type": "xã",
+   "full_name": "Xã Kim Sơn",
+   "slug": "xa-kim-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 64
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "II",
+    "2027": "II"
+   },
+   "old_units": [
+    {
+     "id": "28579",
+     "name": "Bình Đức",
+     "type": "xã",
+     "full_name": "Xã Bình Đức",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28582",
+     "name": "Song Thuận",
+     "type": "xã",
+     "full_name": "Xã Song Thuận",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28585",
+     "name": "Kim Sơn",
+     "type": "xã",
+     "full_name": "Xã Kim Sơn",
+     "district": "Huyện Châu Thành",
+     "district_id": "821",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28594",
+   "name": "Chợ Gạo",
+   "type": "xã",
+   "full_name": "Xã Chợ Gạo",
+   "slug": "xa-cho-gao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 68
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28594",
+     "name": "Chợ Gạo",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Chợ Gạo",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28630",
+     "name": "Song Bình",
+     "type": "xã",
+     "full_name": "Xã Song Bình",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28636",
+     "name": "Long Bình Điền",
+     "type": "xã",
+     "full_name": "Xã Long Bình Điền",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28603",
+   "name": "Mỹ Tịnh An",
+   "type": "xã",
+   "full_name": "Xã Mỹ Tịnh An",
+   "slug": "xa-my-tinh-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 65
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28597",
+     "name": "Trung Hòa",
+     "type": "xã",
+     "full_name": "Xã Trung Hòa",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28600",
+     "name": "Hòa Tịnh",
+     "type": "xã",
+     "full_name": "Xã Hòa Tịnh",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28603",
+     "name": "Mỹ Tịnh An",
+     "type": "xã",
+     "full_name": "Xã Mỹ Tịnh An",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28606",
+     "name": "Tân Bình Thạnh",
+     "type": "xã",
+     "full_name": "Xã Tân Bình Thạnh",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28615",
+   "name": "Lương Hòa Lạc",
+   "type": "xã",
+   "full_name": "Xã Lương Hòa Lạc",
+   "slug": "xa-luong-hoa-lac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 66
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28615",
+     "name": "Thanh Bình",
+     "type": "xã",
+     "full_name": "Xã Thanh Bình",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28609",
+     "name": "Phú Kiết",
+     "type": "xã",
+     "full_name": "Xã Phú Kiết",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28612",
+     "name": "Lương Hòa Lạc",
+     "type": "xã",
+     "full_name": "Xã Lương Hòa Lạc",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28627",
+   "name": "Tân Thuận Bình",
+   "type": "xã",
+   "full_name": "Xã Tân Thuận Bình",
+   "slug": "xa-tan-thuan-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 67
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28618",
+     "name": "Quơn Long",
+     "type": "xã",
+     "full_name": "Xã Quơn Long",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28624",
+     "name": "Đăng Hưng Phước",
+     "type": "xã",
+     "full_name": "Xã Đăng Hưng Phước",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28627",
+     "name": "Tân Thuận Bình",
+     "type": "xã",
+     "full_name": "Xã Tân Thuận Bình",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28633",
+   "name": "An Thạnh Thủy",
+   "type": "xã",
+   "full_name": "Xã An Thạnh Thủy",
+   "slug": "xa-an-thanh-thuy",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 69
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28621",
+     "name": "Bình Phục Nhứt",
+     "type": "xã",
+     "full_name": "Xã Bình Phục Nhứt",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28633",
+     "name": "Bình Phan",
+     "type": "xã",
+     "full_name": "Xã Bình Phan",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28639",
+     "name": "An Thạnh Thủy",
+     "type": "xã",
+     "full_name": "Xã An Thạnh Thủy",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28648",
+   "name": "Bình Ninh",
+   "type": "xã",
+   "full_name": "Xã Bình Ninh",
+   "slug": "xa-binh-ninh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 70
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "28642",
+     "name": "Xuân Đông",
+     "type": "xã",
+     "full_name": "Xã Xuân Đông",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28645",
+     "name": "Hòa Định",
+     "type": "xã",
+     "full_name": "Xã Hòa Định",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28648",
+     "name": "Bình Ninh",
+     "type": "xã",
+     "full_name": "Xã Bình Ninh",
+     "district": "Huyện Chợ Gạo",
+     "district_id": "822",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28651",
+   "name": "Vĩnh Bình",
+   "type": "xã",
+   "full_name": "Xã Vĩnh Bình",
+   "slug": "xa-vinh-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 71
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28651",
+     "name": "Vĩnh Bình",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Vĩnh Bình",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28672",
+     "name": "Thạnh Trị",
+     "type": "xã",
+     "full_name": "Xã Thạnh Trị",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28675",
+     "name": "Thạnh Nhựt",
+     "type": "xã",
+     "full_name": "Xã Thạnh Nhựt",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28660",
+   "name": "Đồng Sơn",
+   "type": "xã",
+   "full_name": "Xã Đồng Sơn",
+   "slug": "xa-dong-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 72
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28654",
+     "name": "Đồng Sơn",
+     "type": "xã",
+     "full_name": "Xã Đồng Sơn",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28660",
+     "name": "Đồng Thạnh",
+     "type": "xã",
+     "full_name": "Xã Đồng Thạnh",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28666",
+     "name": "Bình Nhì",
+     "type": "xã",
+     "full_name": "Xã Bình Nhì",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28663",
+   "name": "Phú Thành",
+   "type": "xã",
+   "full_name": "Xã Phú Thành",
+   "slug": "xa-phu-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 73
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28657",
+     "name": "Bình Phú",
+     "type": "xã",
+     "full_name": "Xã Bình Phú",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28663",
+     "name": "Thành Công",
+     "type": "xã",
+     "full_name": "Xã Thành Công",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28669",
+     "name": "Yên Luông",
+     "type": "xã",
+     "full_name": "Xã Yên Luông",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28678",
+   "name": "Vĩnh Hựu",
+   "type": "xã",
+   "full_name": "Xã Vĩnh Hựu",
+   "slug": "xa-vinh-huu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 75
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28678",
+     "name": "Long Vĩnh",
+     "type": "xã",
+     "full_name": "Xã Long Vĩnh",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28684",
+     "name": "Vĩnh Hựu",
+     "type": "xã",
+     "full_name": "Xã Vĩnh Hựu",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28687",
+   "name": "Long Bình",
+   "type": "xã",
+   "full_name": "Xã Long Bình",
+   "slug": "xa-long-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 74
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28681",
+     "name": "Bình Tân",
+     "type": "xã",
+     "full_name": "Xã Bình Tân",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28687",
+     "name": "Long Bình",
+     "type": "xã",
+     "full_name": "Xã Long Bình",
+     "district": "Huyện Gò Công Tây",
+     "district_id": "823",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28693",
+   "name": "Tân Thới",
+   "type": "xã",
+   "full_name": "Xã Tân Thới",
+   "slug": "xa-tan-thoi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 81
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28690",
+     "name": "Tân Thới",
+     "type": "xã",
+     "full_name": "Xã Tân Thới",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28693",
+     "name": "Tân Phú",
+     "type": "xã",
+     "full_name": "Xã Tân Phú",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28699",
+     "name": "Tân Thạnh",
+     "type": "xã",
+     "full_name": "Xã Tân Thạnh",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28696",
+   "name": "Tân Phú Đông",
+   "type": "xã",
+   "full_name": "Xã Tân Phú Đông",
+   "slug": "xa-tan-phu-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 82
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28696",
+     "name": "Phú Thạnh",
+     "type": "xã",
+     "full_name": "Xã Phú Thạnh",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28750",
+     "name": "Phú Đông",
+     "type": "xã",
+     "full_name": "Xã Phú Đông",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28753",
+     "name": "Phú Tân",
+     "type": "xã",
+     "full_name": "Xã Phú Tân",
+     "district": "Huyện Tân Phú Đông",
+     "district_id": "825",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28702",
+   "name": "Tân Hòa",
+   "type": "xã",
+   "full_name": "Xã Tân Hòa",
+   "slug": "xa-tan-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 78
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28702",
+     "name": "Tân Hòa",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tân Hòa",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28741",
+     "name": "Bình Nghị",
+     "type": "xã",
+     "full_name": "Xã Bình Nghị",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28744",
+     "name": "Phước Trung",
+     "type": "xã",
+     "full_name": "Xã Phước Trung",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28720",
+   "name": "Gia Thuận",
+   "type": "xã",
+   "full_name": "Xã Gia Thuận",
+   "slug": "xa-gia-thuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 80
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28714",
+     "name": "Gia Thuận",
+     "type": "xã",
+     "full_name": "Xã Gia Thuận",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28720",
+     "name": "Vàm Láng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Vàm Láng",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28726",
+     "name": "Kiểng Phước",
+     "type": "xã",
+     "full_name": "Xã Kiểng Phước",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28723",
+   "name": "Tân Đông",
+   "type": "xã",
+   "full_name": "Xã Tân Đông",
+   "slug": "xa-tan-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 79
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28711",
+     "name": "Tân Phước",
+     "type": "xã",
+     "full_name": "Xã Tân Phước",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28723",
+     "name": "Tân Tây",
+     "type": "xã",
+     "full_name": "Xã Tân Tây",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28732",
+     "name": "Tân Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Đông",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28738",
+   "name": "Tân Điền",
+   "type": "xã",
+   "full_name": "Xã Tân Điền",
+   "slug": "xa-tan-dien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 77
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28735",
+     "name": "Bình Ân",
+     "type": "xã",
+     "full_name": "Xã Bình Ân",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28738",
+     "name": "Tân Điền",
+     "type": "xã",
+     "full_name": "Xã Tân Điền",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "28747",
+   "name": "Gò Công Đông",
+   "type": "xã",
+   "full_name": "Xã Gò Công Đông",
+   "slug": "xa-go-cong-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 76
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "28705",
+     "name": "Tăng Hòa",
+     "type": "xã",
+     "full_name": "Xã Tăng Hòa",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "28747",
+     "name": "Tân Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Thành",
+     "district": "Huyện Gò Công Đông",
+     "district_id": "824",
+     "province": "Tỉnh Tiền Giang",
+     "province_id": "82",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29926",
+   "name": "Tân Hồng",
+   "type": "xã",
+   "full_name": "Xã Tân Hồng",
+   "slug": "xa-tan-hong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29926",
+     "name": "Sa Rài",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Sa Rài",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29935",
+     "name": "Bình Phú",
+     "type": "xã",
+     "full_name": "Xã Bình Phú",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29947",
+     "name": "Tân Công Chí",
+     "type": "xã",
+     "full_name": "Xã Tân Công Chí",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29929",
+   "name": "Tân Hộ Cơ",
+   "type": "xã",
+   "full_name": "Xã Tân Hộ Cơ",
+   "slug": "xa-tan-ho-co",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29929",
+     "name": "Tân Hộ Cơ",
+     "type": "xã",
+     "full_name": "Xã Tân Hộ Cơ",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29941",
+     "name": "Tân Thành B",
+     "type": "xã",
+     "full_name": "Xã Tân Thành B",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29938",
+   "name": "Tân Thành",
+   "type": "xã",
+   "full_name": "Xã Tân Thành",
+   "slug": "xa-tan-thanh-29938",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29932",
+     "name": "Thông Bình",
+     "type": "xã",
+     "full_name": "Xã Thông Bình",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29938",
+     "name": "Tân Thành A",
+     "type": "xã",
+     "full_name": "Xã Tân Thành A",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29944",
+   "name": "An Phước",
+   "type": "xã",
+   "full_name": "Xã An Phước",
+   "slug": "xa-an-phuoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29944",
+     "name": "Tân Phước",
+     "type": "xã",
+     "full_name": "Xã Tân Phước",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29950",
+     "name": "An Phước",
+     "type": "xã",
+     "full_name": "Xã An Phước",
+     "district": "Huyện Tân Hồng",
+     "district_id": "869",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29971",
+   "name": "Thường Phước",
+   "type": "xã",
+   "full_name": "Xã Thường Phước",
+   "slug": "xa-thuong-phuoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29956",
+     "name": "Thường Phước 1",
+     "type": "xã",
+     "full_name": "Xã Thường Phước 1",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29971",
+     "name": "Thường Thới Tiền",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Thường Thới Tiền",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29974",
+     "name": "Thường Phước 2",
+     "type": "xã",
+     "full_name": "Xã Thường Phước 2",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29983",
+   "name": "Long Khánh",
+   "type": "xã",
+   "full_name": "Xã Long Khánh",
+   "slug": "xa-long-khanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29980",
+     "name": "Long Khánh A",
+     "type": "xã",
+     "full_name": "Xã Long Khánh A",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29983",
+     "name": "Long Khánh B",
+     "type": "xã",
+     "full_name": "Xã Long Khánh B",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "29992",
+   "name": "Long Phú Thuận",
+   "type": "xã",
+   "full_name": "Xã Long Phú Thuận",
+   "slug": "xa-long-phu-thuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "29992",
+     "name": "Long Thuận",
+     "type": "xã",
+     "full_name": "Xã Long Thuận",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29998",
+     "name": "Phú Thuận A",
+     "type": "xã",
+     "full_name": "Xã Phú Thuận A",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29995",
+     "name": "Phú Thuận B",
+     "type": "xã",
+     "full_name": "Xã Phú Thuận B",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "30154"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30001",
+   "name": "Tràm Chim",
+   "type": "xã",
+   "full_name": "Xã Tràm Chim",
+   "slug": "xa-tram-chim",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30001",
+     "name": "Tràm Chim",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tràm Chim",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30007",
+     "name": "Tân Công Sính",
+     "type": "xã",
+     "full_name": "Xã Tân Công Sính",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30010",
+   "name": "Tam Nông",
+   "type": "xã",
+   "full_name": "Xã Tam Nông",
+   "slug": "xa-tam-nong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30010",
+     "name": "Phú Hiệp",
+     "type": "xã",
+     "full_name": "Xã Phú Hiệp",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30013",
+     "name": "Phú Đức",
+     "type": "xã",
+     "full_name": "Xã Phú Đức",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30019",
+   "name": "An Hòa",
+   "type": "xã",
+   "full_name": "Xã An Hòa",
+   "slug": "xa-an-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30016",
+     "name": "Phú Thành B",
+     "type": "xã",
+     "full_name": "Xã Phú Thành B",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30019",
+     "name": "An Hòa",
+     "type": "xã",
+     "full_name": "Xã An Hòa",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30025",
+   "name": "Phú Cường",
+   "type": "xã",
+   "full_name": "Xã Phú Cường",
+   "slug": "xa-phu-cuong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30004",
+     "name": "Hòa Bình",
+     "type": "xã",
+     "full_name": "Xã Hòa Bình",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30025",
+     "name": "Phú Cường",
+     "type": "xã",
+     "full_name": "Xã Phú Cường",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30079",
+     "name": "Gáo Giồng",
+     "type": "xã",
+     "full_name": "Xã Gáo Giồng",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "30088"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30028",
+   "name": "An Long",
+   "type": "xã",
+   "full_name": "Xã An Long",
+   "slug": "xa-an-long",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30022",
+     "name": "An Long",
+     "type": "xã",
+     "full_name": "Xã An Long",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30028",
+     "name": "Phú Ninh",
+     "type": "xã",
+     "full_name": "Xã Phú Ninh",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30139",
+     "name": "An Phong",
+     "type": "xã",
+     "full_name": "Xã An Phong",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30034",
+   "name": "Phú Thọ",
+   "type": "xã",
+   "full_name": "Xã Phú Thọ",
+   "slug": "xa-phu-tho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30031",
+     "name": "Phú Thọ",
+     "type": "xã",
+     "full_name": "Xã Phú Thọ",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30034",
+     "name": "Phú Thành A",
+     "type": "xã",
+     "full_name": "Xã Phú Thành A",
+     "district": "Huyện Tam Nông",
+     "district_id": "871",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30037",
+   "name": "Tháp Mười",
+   "type": "xã",
+   "full_name": "Xã Tháp Mười",
+   "slug": "xa-thap-muoi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30037",
+     "name": "Mỹ An",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mỹ An",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30052",
+     "name": "Mỹ Hòa",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hòa",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30064",
+     "name": "Mỹ An",
+     "type": "xã",
+     "full_name": "Xã Mỹ An",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30043",
+   "name": "Phương Thịnh",
+   "type": "xã",
+   "full_name": "Xã Phương Thịnh",
+   "slug": "xa-phuong-thinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30043",
+     "name": "Hưng Thạnh",
+     "type": "xã",
+     "full_name": "Xã Hưng Thạnh",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30082",
+     "name": "Phương Thịnh",
+     "type": "xã",
+     "full_name": "Xã Phương Thịnh",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30046",
+   "name": "Trường Xuân",
+   "type": "xã",
+   "full_name": "Xã Trường Xuân",
+   "slug": "xa-truong-xuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30040",
+     "name": "Thạnh Lợi",
+     "type": "xã",
+     "full_name": "Xã Thạnh Lợi",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30046",
+     "name": "Trường Xuân",
+     "type": "xã",
+     "full_name": "Xã Trường Xuân",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30055",
+   "name": "Mỹ Quí",
+   "type": "xã",
+   "full_name": "Xã Mỹ Quí",
+   "slug": "xa-my-qui",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30055",
+     "name": "Mỹ Quí",
+     "type": "xã",
+     "full_name": "Xã Mỹ Quí",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Mỹ Quý",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30058",
+     "name": "Mỹ Đông",
+     "type": "xã",
+     "full_name": "Xã Mỹ Đông",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30070",
+     "name": "Láng Biển",
+     "type": "xã",
+     "full_name": "Xã Láng Biển",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30061",
+   "name": "Đốc Binh Kiều",
+   "type": "xã",
+   "full_name": "Xã Đốc Binh Kiều",
+   "slug": "xa-doc-binh-kieu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30049",
+     "name": "Tân Kiều",
+     "type": "xã",
+     "full_name": "Xã Tân Kiều",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30061",
+     "name": "Đốc Binh Kiều",
+     "type": "xã",
+     "full_name": "Xã Đốc Binh Kiều",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30073",
+   "name": "Thanh Mỹ",
+   "type": "xã",
+   "full_name": "Xã Thanh Mỹ",
+   "slug": "xa-thanh-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30067",
+     "name": "Phú Điền",
+     "type": "xã",
+     "full_name": "Xã Phú Điền",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30073",
+     "name": "Thanh Mỹ",
+     "type": "xã",
+     "full_name": "Xã Thanh Mỹ",
+     "district": "Huyện Tháp Mười",
+     "district_id": "872",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30076",
+   "name": "Mỹ Thọ",
+   "type": "xã",
+   "full_name": "Xã Mỹ Thọ",
+   "slug": "xa-my-tho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30076",
+     "name": "Mỹ Thọ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mỹ Thọ",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30100",
+     "name": "Mỹ Thọ",
+     "type": "xã",
+     "full_name": "Xã Mỹ Thọ",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30109",
+     "name": "Mỹ Hội",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hội",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30121",
+     "name": "Mỹ Xương",
+     "type": "xã",
+     "full_name": "Xã Mỹ Xương",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30085",
+   "name": "Ba Sao",
+   "type": "xã",
+   "full_name": "Xã Ba Sao",
+   "slug": "xa-ba-sao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30085",
+     "name": "Ba Sao",
+     "type": "xã",
+     "full_name": "Xã Ba Sao",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30094",
+     "name": "Phương Trà",
+     "type": "xã",
+     "full_name": "Xã Phương Trà",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30088",
+   "name": "Phong Mỹ",
+   "type": "xã",
+   "full_name": "Xã Phong Mỹ",
+   "slug": "xa-phong-my",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30088",
+     "name": "Phong Mỹ",
+     "type": "xã",
+     "full_name": "Xã Phong Mỹ",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30079",
+     "name": "Gáo Giồng",
+     "type": "xã",
+     "full_name": "Xã Gáo Giồng",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "30025"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30112",
+   "name": "Mỹ Hiệp",
+   "type": "xã",
+   "full_name": "Xã Mỹ Hiệp",
+   "slug": "xa-my-hiep",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30112",
+     "name": "Mỹ Hiệp",
+     "type": "xã",
+     "full_name": "Xã Mỹ Hiệp",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30115",
+     "name": "Mỹ Long",
+     "type": "xã",
+     "full_name": "Xã Mỹ Long",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30127",
+     "name": "Bình Thạnh",
+     "type": "xã",
+     "full_name": "Xã Bình Thạnh",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30118",
+   "name": "Bình Hàng Trung",
+   "type": "xã",
+   "full_name": "Xã Bình Hàng Trung",
+   "slug": "xa-binh-hang-trung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30103",
+     "name": "Tân Hội Trung",
+     "type": "xã",
+     "full_name": "Xã Tân Hội Trung",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30118",
+     "name": "Bình Hàng Trung",
+     "type": "xã",
+     "full_name": "Xã Bình Hàng Trung",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30124",
+     "name": "Bình Hàng Tây",
+     "type": "xã",
+     "full_name": "Xã Bình Hàng Tây",
+     "district": "Huyện Cao Lãnh",
+     "district_id": "873",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30130",
+   "name": "Thanh Bình",
+   "type": "xã",
+   "full_name": "Xã Thanh Bình",
+   "slug": "xa-thanh-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30130",
+     "name": "Thanh Bình",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Thanh Bình",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30160",
+     "name": "Tân Phú",
+     "type": "xã",
+     "full_name": "Xã Tân Phú",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30145",
+     "name": "Tân Mỹ",
+     "type": "xã",
+     "full_name": "Xã Tân Mỹ",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30157",
+     "name": "Tân Thạnh",
+     "type": "xã",
+     "full_name": "Xã Tân Thạnh",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "30157"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30154",
+   "name": "Tân Long",
+   "type": "xã",
+   "full_name": "Xã Tân Long",
+   "slug": "xa-tan-long",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30133",
+     "name": "Tân Quới",
+     "type": "xã",
+     "full_name": "Xã Tân Quới",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30136",
+     "name": "Tân Hòa",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30151",
+     "name": "Tân Huề",
+     "type": "xã",
+     "full_name": "Xã Tân Huề",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30154",
+     "name": "Tân Bình",
+     "type": "xã",
+     "full_name": "Xã Tân Bình",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30166",
+     "name": "Tân Long",
+     "type": "xã",
+     "full_name": "Xã Tân Long",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "29995",
+     "name": "Phú Thuận B",
+     "type": "xã",
+     "full_name": "Xã Phú Thuận B",
+     "district": "Huyện Hồng Ngự",
+     "district_id": "870",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "29992"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30157",
+   "name": "Tân Thạnh",
+   "type": "xã",
+   "full_name": "Xã Tân Thạnh",
+   "slug": "xa-tan-thanh-30157",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30142",
+     "name": "Phú Lợi",
+     "type": "xã",
+     "full_name": "Xã Phú Lợi",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30157",
+     "name": "Tân Thạnh",
+     "type": "xã",
+     "full_name": "Xã Tân Thạnh",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "30130"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30163",
+   "name": "Bình Thành",
+   "type": "xã",
+   "full_name": "Xã Bình Thành",
+   "slug": "xa-binh-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30148",
+     "name": "Bình Tấn",
+     "type": "xã",
+     "full_name": "Xã Bình Tấn",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30163",
+     "name": "Bình Thành",
+     "type": "xã",
+     "full_name": "Xã Bình Thành",
+     "district": "Huyện Thanh Bình",
+     "district_id": "874",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30169",
+   "name": "Lấp Vò",
+   "type": "xã",
+   "full_name": "Xã Lấp Vò",
+   "slug": "xa-lap-vo",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30169",
+     "name": "Lấp Vò",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Lấp Vò",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30187",
+     "name": "Vĩnh Thạnh",
+     "type": "xã",
+     "full_name": "Xã Vĩnh Thạnh",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30193",
+     "name": "Bình Thành",
+     "type": "xã",
+     "full_name": "Xã Bình Thành",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30205",
+     "name": "Bình Thạnh Trung",
+     "type": "xã",
+     "full_name": "Xã Bình Thạnh Trung",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30178",
+   "name": "Mỹ An Hưng",
+   "type": "xã",
+   "full_name": "Xã Mỹ An Hưng",
+   "slug": "xa-my-an-hung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30172",
+     "name": "Mỹ An Hưng A",
+     "type": "xã",
+     "full_name": "Xã Mỹ An Hưng A",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30175",
+     "name": "Tân Mỹ",
+     "type": "xã",
+     "full_name": "Xã Tân Mỹ",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30178",
+     "name": "Mỹ An Hưng B",
+     "type": "xã",
+     "full_name": "Xã Mỹ An Hưng B",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30202",
+     "name": "Hội An Đông",
+     "type": "xã",
+     "full_name": "Xã Hội An Đông",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30184",
+   "name": "Tân Khánh Trung",
+   "type": "xã",
+   "full_name": "Xã Tân Khánh Trung",
+   "slug": "xa-tan-khanh-trung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30181",
+     "name": "Tân Khánh Trung",
+     "type": "xã",
+     "full_name": "Xã Tân Khánh Trung",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30184",
+     "name": "Long Hưng A",
+     "type": "xã",
+     "full_name": "Xã Long Hưng A",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30190",
+     "name": "Long Hưng B",
+     "type": "xã",
+     "full_name": "Xã Long Hưng B",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30208",
+   "name": "Hòa Long",
+   "type": "xã",
+   "full_name": "Xã Hòa Long",
+   "slug": "xa-hoa-long",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30208",
+     "name": "Lai Vung",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Lai Vung",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30217",
+     "name": "Long Hậu",
+     "type": "xã",
+     "full_name": "Xã Long Hậu",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30223",
+     "name": "Hòa Long",
+     "type": "xã",
+     "full_name": "Xã Hòa Long",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30229",
+     "name": "Long Thắng",
+     "type": "xã",
+     "full_name": "Xã Long Thắng",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30214",
+   "name": "Tân Dương",
+   "type": "xã",
+   "full_name": "Xã Tân Dương",
+   "slug": "xa-tan-duong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "29923",
+     "name": "Tân Phú Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Phú Đông",
+     "district": "Thành phố Sa Đéc",
+     "district_id": "867",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30211",
+     "name": "Tân Dương",
+     "type": "xã",
+     "full_name": "Xã Tân Dương",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30214",
+     "name": "Hòa Thành",
+     "type": "xã",
+     "full_name": "Xã Hòa Thành",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30226",
+   "name": "Lai Vung",
+   "type": "xã",
+   "full_name": "Xã Lai Vung",
+   "slug": "xa-lai-vung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30196",
+     "name": "Định An",
+     "type": "xã",
+     "full_name": "Xã Định An",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30199",
+     "name": "Định Yên",
+     "type": "xã",
+     "full_name": "Xã Định Yên",
+     "district": "Huyện Lấp Vò",
+     "district_id": "875",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30220",
+     "name": "Tân Phước",
+     "type": "xã",
+     "full_name": "Xã Tân Phước",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30226",
+     "name": "Tân Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Thành",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30235",
+   "name": "Phong Hòa",
+   "type": "xã",
+   "full_name": "Xã Phong Hòa",
+   "slug": "xa-phong-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30232",
+     "name": "Vĩnh Thới",
+     "type": "xã",
+     "full_name": "Xã Vĩnh Thới",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30235",
+     "name": "Tân Hòa",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30238",
+     "name": "Định Hòa",
+     "type": "xã",
+     "full_name": "Xã Định Hòa",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30241",
+     "name": "Phong Hòa",
+     "type": "xã",
+     "full_name": "Xã Phong Hòa",
+     "district": "Huyện Lai Vung",
+     "district_id": "876",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30244",
+   "name": "Phú Hựu",
+   "type": "xã",
+   "full_name": "Xã Phú Hựu",
+   "slug": "xa-phu-huu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30244",
+     "name": "Cái Tàu Hạ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Cái Tàu Hạ",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30247",
+     "name": "An Hiệp",
+     "type": "xã",
+     "full_name": "Xã An Hiệp",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30250",
+     "name": "An Nhơn",
+     "type": "xã",
+     "full_name": "Xã An Nhơn",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30265",
+     "name": "An Phú Thuận",
+     "type": "xã",
+     "full_name": "Xã An Phú Thuận",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30268",
+     "name": "Phú Hựu",
+     "type": "xã",
+     "full_name": "Xã Phú Hựu",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30253",
+   "name": "Tân Nhuận Đông",
+   "type": "xã",
+   "full_name": "Xã Tân Nhuận Đông",
+   "slug": "xa-tan-nhuan-dong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30253",
+     "name": "Tân Nhuận Đông",
+     "type": "xã",
+     "full_name": "Xã Tân Nhuận Đông",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30271",
+     "name": "An Khánh",
+     "type": "xã",
+     "full_name": "Xã An Khánh",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30277",
+     "name": "Hòa Tân",
+     "type": "xã",
+     "full_name": "Xã Hòa Tân",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "30259",
+   "name": "Tân Phú Trung",
+   "type": "xã",
+   "full_name": "Xã Tân Phú Trung",
+   "slug": "xa-tan-phu-trung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1663/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "30256",
+     "name": "Tân Bình",
+     "type": "xã",
+     "full_name": "Xã Tân Bình",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30259",
+     "name": "Tân Phú Trung",
+     "type": "xã",
+     "full_name": "Xã Tân Phú Trung",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30262",
+     "name": "Phú Long",
+     "type": "xã",
+     "full_name": "Xã Phú Long",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "30274",
+     "name": "Tân Phú",
+     "type": "xã",
+     "full_name": "Xã Tân Phú",
+     "district": "Huyện Châu Thành",
+     "district_id": "877",
+     "province": "Tỉnh Đồng Tháp",
+     "province_id": "87",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

@@ -1,0 +1,640 @@
+{
+ "schema_version": 1,
+ "built": "2026-11-18",
+ "as_of": "2026-11-18",
+ "description": "Đơn vị hành chính cấp tỉnh, cấp xã của Việt Nam sau sắp xếp từ 01/07/2025 (cập nhật thay đổi năm 2026), đơn vị cũ hợp thành và vùng lương tối thiểu.",
+ "wage": {
+  "2026": {
+   "decree": "293/2025/NĐ-CP",
+   "effective": "2026-01-01",
+   "until": "2026-12-31",
+   "monthly": {
+    "I": 5310000,
+    "II": 4730000,
+    "III": 4140000,
+    "IV": 3700000
+   },
+   "hourly": {
+    "I": 25500,
+    "II": 22700,
+    "III": 20000,
+    "IV": 17800
+   }
+  },
+  "2027": {
+   "decree": "399/2026/NĐ-CP",
+   "effective": "2027-01-01",
+   "monthly": {
+    "I": 5700000,
+    "II": 5080000,
+    "III": 4450000,
+    "IV": 4040000
+   },
+   "hourly": {
+    "I": 27400,
+    "II": 24400,
+    "III": 21400,
+    "IV": 19400
+   }
+  }
+ },
+ "provinces": [
+  {
+   "id": "01",
+   "name": "Hà Nội",
+   "full_name": "Thành phố Hà Nội",
+   "slug": "ha-noi",
+   "file": "tinh/01-ha-noi.json",
+   "units": 126,
+   "by_type": {
+    "phường": 51,
+    "xã": 75
+   },
+   "formed_from": [
+    "Thành phố Hà Nội"
+   ],
+   "commune_resolution": "1656/NQ-UBTVQH15"
+  },
+  {
+   "id": "04",
+   "name": "Cao Bằng",
+   "full_name": "Tỉnh Cao Bằng",
+   "slug": "cao-bang",
+   "file": "tinh/04-cao-bang.json",
+   "units": 56,
+   "by_type": {
+    "phường": 3,
+    "xã": 53
+   },
+   "formed_from": [
+    "Tỉnh Cao Bằng"
+   ],
+   "commune_resolution": "1657/NQ-UBTVQH15"
+  },
+  {
+   "id": "08",
+   "name": "Tuyên Quang",
+   "full_name": "Tỉnh Tuyên Quang",
+   "slug": "tuyen-quang",
+   "file": "tinh/08-tuyen-quang.json",
+   "units": 124,
+   "by_type": {
+    "phường": 7,
+    "xã": 117
+   },
+   "formed_from": [
+    "Tỉnh Hà Giang",
+    "Tỉnh Tuyên Quang"
+   ],
+   "commune_resolution": "1684/NQ-UBTVQH15"
+  },
+  {
+   "id": "11",
+   "name": "Điện Biên",
+   "full_name": "Tỉnh Điện Biên",
+   "slug": "dien-bien",
+   "file": "tinh/11-dien-bien.json",
+   "units": 45,
+   "by_type": {
+    "phường": 3,
+    "xã": 42
+   },
+   "formed_from": [
+    "Tỉnh Điện Biên"
+   ],
+   "commune_resolution": "1661/NQ-UBTVQH15"
+  },
+  {
+   "id": "12",
+   "name": "Lai Châu",
+   "full_name": "Tỉnh Lai Châu",
+   "slug": "lai-chau",
+   "file": "tinh/12-lai-chau.json",
+   "units": 38,
+   "by_type": {
+    "phường": 2,
+    "xã": 36
+   },
+   "formed_from": [
+    "Tỉnh Lai Châu"
+   ],
+   "commune_resolution": "1670/NQ-UBTVQH15"
+  },
+  {
+   "id": "14",
+   "name": "Sơn La",
+   "full_name": "Tỉnh Sơn La",
+   "slug": "son-la",
+   "file": "tinh/14-son-la.json",
+   "units": 75,
+   "by_type": {
+    "phường": 8,
+    "xã": 67
+   },
+   "formed_from": [
+    "Tỉnh Sơn La"
+   ],
+   "commune_resolution": "1681/NQ-UBTVQH15"
+  },
+  {
+   "id": "15",
+   "name": "Lào Cai",
+   "full_name": "Tỉnh Lào Cai",
+   "slug": "lao-cai",
+   "file": "tinh/15-lao-cai.json",
+   "units": 99,
+   "by_type": {
+    "phường": 10,
+    "xã": 89
+   },
+   "formed_from": [
+    "Tỉnh Lào Cai",
+    "Tỉnh Yên Bái"
+   ],
+   "commune_resolution": "1673/NQ-UBTVQH15"
+  },
+  {
+   "id": "19",
+   "name": "Thái Nguyên",
+   "full_name": "Tỉnh Thái Nguyên",
+   "slug": "thai-nguyen",
+   "file": "tinh/19-thai-nguyen.json",
+   "units": 92,
+   "by_type": {
+    "phường": 15,
+    "xã": 77
+   },
+   "formed_from": [
+    "Tỉnh Bắc Kạn",
+    "Tỉnh Thái Nguyên"
+   ],
+   "commune_resolution": "1683/NQ-UBTVQH15"
+  },
+  {
+   "id": "20",
+   "name": "Lạng Sơn",
+   "full_name": "Tỉnh Lạng Sơn",
+   "slug": "lang-son",
+   "file": "tinh/20-lang-son.json",
+   "units": 65,
+   "by_type": {
+    "phường": 4,
+    "xã": 61
+   },
+   "formed_from": [
+    "Tỉnh Lạng Sơn"
+   ],
+   "commune_resolution": "1672/NQ-UBTVQH15"
+  },
+  {
+   "id": "22",
+   "name": "Quảng Ninh",
+   "full_name": "Thành phố Quảng Ninh",
+   "slug": "quang-ninh",
+   "file": "tinh/22-quang-ninh.json",
+   "units": 54,
+   "by_type": {
+    "phường": 30,
+    "xã": 22,
+    "đặc khu": 2
+   },
+   "formed_from": [
+    "Tỉnh Quảng Ninh"
+   ],
+   "commune_resolution": "1679/NQ-UBTVQH15"
+  },
+  {
+   "id": "24",
+   "name": "Bắc Ninh",
+   "full_name": "Thành phố Bắc Ninh",
+   "slug": "bac-ninh",
+   "file": "tinh/24-bac-ninh.json",
+   "units": 99,
+   "by_type": {
+    "phường": 45,
+    "xã": 54
+   },
+   "formed_from": [
+    "Tỉnh Bắc Giang",
+    "Tỉnh Bắc Ninh"
+   ],
+   "commune_resolution": "1658/NQ-UBTVQH15"
+  },
+  {
+   "id": "25",
+   "name": "Phú Thọ",
+   "full_name": "Tỉnh Phú Thọ",
+   "slug": "phu-tho",
+   "file": "tinh/25-phu-tho.json",
+   "units": 148,
+   "by_type": {
+    "phường": 15,
+    "xã": 133
+   },
+   "formed_from": [
+    "Tỉnh Hoà Bình",
+    "Tỉnh Phú Thọ",
+    "Tỉnh Vĩnh Phúc"
+   ],
+   "commune_resolution": "1676/NQ-UBTVQH15"
+  },
+  {
+   "id": "31",
+   "name": "Hải Phòng",
+   "full_name": "Thành phố Hải Phòng",
+   "slug": "hai-phong",
+   "file": "tinh/31-hai-phong.json",
+   "units": 114,
+   "by_type": {
+    "phường": 45,
+    "xã": 67,
+    "đặc khu": 2
+   },
+   "formed_from": [
+    "Tỉnh Hải Dương",
+    "Thành phố Hải Phòng"
+   ],
+   "commune_resolution": "1669/NQ-UBTVQH15"
+  },
+  {
+   "id": "33",
+   "name": "Hưng Yên",
+   "full_name": "Tỉnh Hưng Yên",
+   "slug": "hung-yen",
+   "file": "tinh/33-hung-yen.json",
+   "units": 104,
+   "by_type": {
+    "phường": 11,
+    "xã": 93
+   },
+   "formed_from": [
+    "Tỉnh Hưng Yên",
+    "Tỉnh Thái Bình"
+   ],
+   "commune_resolution": "1666/NQ-UBTVQH15"
+  },
+  {
+   "id": "37",
+   "name": "Ninh Bình",
+   "full_name": "Tỉnh Ninh Bình",
+   "slug": "ninh-binh",
+   "file": "tinh/37-ninh-binh.json",
+   "units": 129,
+   "by_type": {
+    "phường": 32,
+    "xã": 97
+   },
+   "formed_from": [
+    "Tỉnh Hà Nam",
+    "Tỉnh Nam Định",
+    "Tỉnh Ninh Bình"
+   ],
+   "commune_resolution": "1674/NQ-UBTVQH15"
+  },
+  {
+   "id": "38",
+   "name": "Thanh Hóa",
+   "full_name": "Tỉnh Thanh Hóa",
+   "slug": "thanh-hoa",
+   "file": "tinh/38-thanh-hoa.json",
+   "units": 166,
+   "by_type": {
+    "phường": 19,
+    "xã": 147
+   },
+   "formed_from": [
+    "Tỉnh Thanh Hóa"
+   ],
+   "commune_resolution": "1686/NQ-UBTVQH15"
+  },
+  {
+   "id": "40",
+   "name": "Nghệ An",
+   "full_name": "Tỉnh Nghệ An",
+   "slug": "nghe-an",
+   "file": "tinh/40-nghe-an.json",
+   "units": 130,
+   "by_type": {
+    "phường": 11,
+    "xã": 119
+   },
+   "formed_from": [
+    "Tỉnh Nghệ An"
+   ],
+   "commune_resolution": "1678/NQ-UBTVQH15"
+  },
+  {
+   "id": "42",
+   "name": "Hà Tĩnh",
+   "full_name": "Tỉnh Hà Tĩnh",
+   "slug": "ha-tinh",
+   "file": "tinh/42-ha-tinh.json",
+   "units": 69,
+   "by_type": {
+    "phường": 9,
+    "xã": 60
+   },
+   "formed_from": [
+    "Tỉnh Hà Tĩnh"
+   ],
+   "commune_resolution": "1665/NQ-UBTVQH15"
+  },
+  {
+   "id": "44",
+   "name": "Quảng Trị",
+   "full_name": "Tỉnh Quảng Trị",
+   "slug": "quang-tri",
+   "file": "tinh/44-quang-tri.json",
+   "units": 78,
+   "by_type": {
+    "phường": 8,
+    "xã": 69,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Tỉnh Quảng Bình",
+    "Tỉnh Quảng Trị"
+   ],
+   "commune_resolution": "1680/NQ-UBTVQH15"
+  },
+  {
+   "id": "46",
+   "name": "Huế",
+   "full_name": "Thành phố Huế",
+   "slug": "hue",
+   "file": "tinh/46-hue.json",
+   "units": 40,
+   "by_type": {
+    "phường": 21,
+    "xã": 19
+   },
+   "formed_from": [
+    "Thành phố Huế"
+   ],
+   "commune_resolution": "1675/NQ-UBTVQH15"
+  },
+  {
+   "id": "48",
+   "name": "Đà Nẵng",
+   "full_name": "Thành phố Đà Nẵng",
+   "slug": "da-nang",
+   "file": "tinh/48-da-nang.json",
+   "units": 94,
+   "by_type": {
+    "phường": 23,
+    "xã": 70,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Thành phố Đà Nẵng",
+    "Tỉnh Quảng Nam"
+   ],
+   "commune_resolution": "1659/NQ-UBTVQH15"
+  },
+  {
+   "id": "51",
+   "name": "Quảng Ngãi",
+   "full_name": "Tỉnh Quảng Ngãi",
+   "slug": "quang-ngai",
+   "file": "tinh/51-quang-ngai.json",
+   "units": 96,
+   "by_type": {
+    "phường": 9,
+    "xã": 86,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Tỉnh Quảng Ngãi",
+    "Tỉnh Kon Tum"
+   ],
+   "commune_resolution": "1677/NQ-UBTVQH15"
+  },
+  {
+   "id": "52",
+   "name": "Gia Lai",
+   "full_name": "Tỉnh Gia Lai",
+   "slug": "gia-lai",
+   "file": "tinh/52-gia-lai.json",
+   "units": 135,
+   "by_type": {
+    "phường": 25,
+    "xã": 110
+   },
+   "formed_from": [
+    "Tỉnh Bình Định",
+    "Tỉnh Gia Lai"
+   ],
+   "commune_resolution": "1664/NQ-UBTVQH15"
+  },
+  {
+   "id": "56",
+   "name": "Khánh Hòa",
+   "full_name": "Tỉnh Khánh Hòa",
+   "slug": "khanh-hoa",
+   "file": "tinh/56-khanh-hoa.json",
+   "units": 65,
+   "by_type": {
+    "phường": 16,
+    "xã": 48,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Tỉnh Khánh Hòa",
+    "Tỉnh Ninh Thuận"
+   ],
+   "commune_resolution": "1667/NQ-UBTVQH15"
+  },
+  {
+   "id": "66",
+   "name": "Đắk Lắk",
+   "full_name": "Tỉnh Đắk Lắk",
+   "slug": "dak-lak",
+   "file": "tinh/66-dak-lak.json",
+   "units": 102,
+   "by_type": {
+    "phường": 14,
+    "xã": 88
+   },
+   "formed_from": [
+    "Tỉnh Phú Yên",
+    "Tỉnh Đắk Lắk"
+   ],
+   "commune_resolution": "1660/NQ-UBTVQH15"
+  },
+  {
+   "id": "68",
+   "name": "Lâm Đồng",
+   "full_name": "Tỉnh Lâm Đồng",
+   "slug": "lam-dong",
+   "file": "tinh/68-lam-dong.json",
+   "units": 124,
+   "by_type": {
+    "phường": 20,
+    "xã": 103,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Tỉnh Bình Thuận",
+    "Tỉnh Đắk Nông",
+    "Tỉnh Lâm Đồng"
+   ],
+   "commune_resolution": "1671/NQ-UBTVQH15"
+  },
+  {
+   "id": "75",
+   "name": "Đồng Nai",
+   "full_name": "Thành phố Đồng Nai",
+   "slug": "dong-nai",
+   "file": "tinh/75-dong-nai.json",
+   "units": 95,
+   "by_type": {
+    "phường": 33,
+    "xã": 62
+   },
+   "formed_from": [
+    "Tỉnh Bình Phước",
+    "Tỉnh Đồng Nai"
+   ],
+   "commune_resolution": "1662/NQ-UBTVQH15"
+  },
+  {
+   "id": "79",
+   "name": "Hồ Chí Minh",
+   "full_name": "Thành phố Hồ Chí Minh",
+   "slug": "ho-chi-minh",
+   "file": "tinh/79-ho-chi-minh.json",
+   "units": 168,
+   "by_type": {
+    "phường": 113,
+    "xã": 54,
+    "đặc khu": 1
+   },
+   "formed_from": [
+    "Tỉnh Bình Dương",
+    "Tỉnh Bà Rịa - Vũng Tàu",
+    "Thành phố Hồ Chí Minh"
+   ],
+   "commune_resolution": "1685/NQ-UBTVQH15"
+  },
+  {
+   "id": "80",
+   "name": "Tây Ninh",
+   "full_name": "Tỉnh Tây Ninh",
+   "slug": "tay-ninh",
+   "file": "tinh/80-tay-ninh.json",
+   "units": 96,
+   "by_type": {
+    "phường": 14,
+    "xã": 82
+   },
+   "formed_from": [
+    "Tỉnh Tây Ninh",
+    "Tỉnh Long An",
+    "Tỉnh Tiền Giang"
+   ],
+   "commune_resolution": "1682/NQ-UBTVQH15"
+  },
+  {
+   "id": "82",
+   "name": "Đồng Tháp",
+   "full_name": "Tỉnh Đồng Tháp",
+   "slug": "dong-thap",
+   "file": "tinh/82-dong-thap.json",
+   "units": 102,
+   "by_type": {
+    "phường": 20,
+    "xã": 82
+   },
+   "formed_from": [
+    "Tỉnh Tiền Giang",
+    "Tỉnh Đồng Tháp"
+   ],
+   "commune_resolution": "1663/NQ-UBTVQH15"
+  },
+  {
+   "id": "86",
+   "name": "Vĩnh Long",
+   "full_name": "Tỉnh Vĩnh Long",
+   "slug": "vinh-long",
+   "file": "tinh/86-vinh-long.json",
+   "units": 124,
+   "by_type": {
+    "phường": 19,
+    "xã": 105
+   },
+   "formed_from": [
+    "Tỉnh Bến Tre",
+    "Tỉnh Trà Vinh",
+    "Tỉnh Vĩnh Long"
+   ],
+   "commune_resolution": "1687/NQ-UBTVQH15"
+  },
+  {
+   "id": "91",
+   "name": "An Giang",
+   "full_name": "Tỉnh An Giang",
+   "slug": "an-giang",
+   "file": "tinh/91-an-giang.json",
+   "units": 102,
+   "by_type": {
+    "phường": 14,
+    "xã": 85,
+    "đặc khu": 3
+   },
+   "formed_from": [
+    "Tỉnh An Giang",
+    "Tỉnh Kiên Giang"
+   ],
+   "commune_resolution": "1654/NQ-UBTVQH15"
+  },
+  {
+   "id": "92",
+   "name": "Cần Thơ",
+   "full_name": "Thành phố Cần Thơ",
+   "slug": "can-tho",
+   "file": "tinh/92-can-tho.json",
+   "units": 103,
+   "by_type": {
+    "phường": 31,
+    "xã": 72
+   },
+   "formed_from": [
+    "Thành phố Cần Thơ",
+    "Tỉnh Hậu Giang",
+    "Tỉnh Sóc Trăng"
+   ],
+   "commune_resolution": "1668/NQ-UBTVQH15"
+  },
+  {
+   "id": "96",
+   "name": "Cà Mau",
+   "full_name": "Tỉnh Cà Mau",
+   "slug": "ca-mau",
+   "file": "tinh/96-ca-mau.json",
+   "units": 64,
+   "by_type": {
+    "phường": 9,
+    "xã": 55
+   },
+   "formed_from": [
+    "Tỉnh Bạc Liêu",
+    "Tỉnh Cà Mau"
+   ],
+   "commune_resolution": "1655/NQ-UBTVQH15"
+  }
+ ],
+ "totals": {
+  "provinces": 34,
+  "units": 3321,
+  "by_type_now": {
+   "phường": 709,
+   "xã": 2599,
+   "đặc khu": 13
+  },
+  "by_type_2025_07_01": {
+   "phường": 687,
+   "xã": 2621,
+   "đặc khu": 13
+  }
+ }
+}

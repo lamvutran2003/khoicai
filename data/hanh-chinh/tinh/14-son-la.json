@@ -1,0 +1,4852 @@
+{
+ "id": "14",
+ "name": "Sơn La",
+ "full_name": "Tỉnh Sơn La",
+ "type": "tỉnh",
+ "slug": "son-la",
+ "formed_from": [
+  {
+   "id": "14",
+   "name": "Tỉnh Sơn La"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1681/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 75,
+   "xã": 67,
+   "phường": 8
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1681/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1681-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-son-la-nam-2025-119250616213654219.htm",
+    "copy": "sources/nghi-quyet/1681-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "03646",
+   "name": "Tô Hiệu",
+   "type": "phường",
+   "full_name": "Phường Tô Hiệu",
+   "slug": "phuong-to-hieu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 61
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03646",
+     "name": "Chiềng Lề",
+     "type": "phường",
+     "full_name": "Phường Chiềng Lề",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03649",
+     "name": "Tô Hiệu",
+     "type": "phường",
+     "full_name": "Phường Tô Hiệu",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03652",
+     "name": "Quyết Thắng",
+     "type": "phường",
+     "full_name": "Phường Quyết Thắng",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03655",
+     "name": "Quyết Tâm",
+     "type": "phường",
+     "full_name": "Phường Quyết Tâm",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03664",
+   "name": "Chiềng An",
+   "type": "phường",
+   "full_name": "Phường Chiềng An",
+   "slug": "phuong-chieng-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 62
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03661",
+     "name": "Chiềng Đen",
+     "type": "xã",
+     "full_name": "Xã Chiềng Đen",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03664",
+     "name": "Chiềng Xôm",
+     "type": "xã",
+     "full_name": "Xã Chiềng Xôm",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03667",
+     "name": "Chiềng An",
+     "type": "phường",
+     "full_name": "Phường Chiềng An",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03670",
+   "name": "Chiềng Cơi",
+   "type": "phường",
+   "full_name": "Phường Chiềng Cơi",
+   "slug": "phuong-chieng-coi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 63
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03658",
+     "name": "Chiềng Cọ",
+     "type": "xã",
+     "full_name": "Xã Chiềng Cọ",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03670",
+     "name": "Chiềng Cơi",
+     "type": "phường",
+     "full_name": "Phường Chiềng Cơi",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03676",
+     "name": "Hua La",
+     "type": "xã",
+     "full_name": "Xã Hua La",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03679",
+   "name": "Chiềng Sinh",
+   "type": "phường",
+   "full_name": "Phường Chiềng Sinh",
+   "slug": "phuong-chieng-sinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 64
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03673",
+     "name": "Chiềng Ngần",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ngần",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03679",
+     "name": "Chiềng Sinh",
+     "type": "phường",
+     "full_name": "Phường Chiềng Sinh",
+     "district": "Thành phố Sơn La",
+     "district_id": "116",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03979",
+   "name": "Mộc Sơn",
+   "type": "phường",
+   "full_name": "Phường Mộc Sơn",
+   "slug": "phuong-moc-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 66
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03979",
+     "name": "Mộc Sơn",
+     "type": "phường",
+     "full_name": "Phường Mộc Sơn",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04030",
+     "name": "Đông Sang",
+     "type": "phường",
+     "full_name": "Phường Đông Sang",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03980",
+   "name": "Mộc Châu",
+   "type": "phường",
+   "full_name": "Phường Mộc Châu",
+   "slug": "phuong-moc-chau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 65
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03980",
+     "name": "Mộc Lỵ",
+     "type": "phường",
+     "full_name": "Phường Mộc Lỵ",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04012",
+     "name": "Chiềng Hắc",
+     "type": "xã",
+     "full_name": "Xã Chiềng Hắc",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04027",
+     "name": "Mường Sang",
+     "type": "phường",
+     "full_name": "Phường Mường Sang",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03982",
+   "name": "Thảo Nguyên",
+   "type": "phường",
+   "full_name": "Phường Thảo Nguyên",
+   "slug": "phuong-thao-nguyen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 68
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03982",
+     "name": "Thảo Nguyên",
+     "type": "phường",
+     "full_name": "Phường Thảo Nguyên",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03984",
+     "name": "Cờ Đỏ",
+     "type": "phường",
+     "full_name": "Phường Cờ Đỏ",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04033",
+   "name": "Vân Sơn",
+   "type": "phường",
+   "full_name": "Phường Vân Sơn",
+   "slug": "phuong-van-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 67
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03983",
+     "name": "Bình Minh",
+     "type": "phường",
+     "full_name": "Phường Bình Minh",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04033",
+     "name": "Vân Sơn",
+     "type": "phường",
+     "full_name": "Phường Vân Sơn",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03688",
+   "name": "Mường Chiên",
+   "type": "xã",
+   "full_name": "Xã Mường Chiên",
+   "slug": "xa-muong-chien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03682",
+     "name": "Mường Chiên",
+     "type": "xã",
+     "full_name": "Xã Mường Chiên",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03685",
+     "name": "Cà Nàng",
+     "type": "xã",
+     "full_name": "Xã Cà Nàng",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03688",
+     "name": "Chiềng Khay",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khay",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03694",
+   "name": "Mường Giôn",
+   "type": "xã",
+   "full_name": "Xã Mường Giôn",
+   "slug": "xa-muong-gion",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03694",
+     "name": "Mường Giôn",
+     "type": "xã",
+     "full_name": "Xã Mường Giôn",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03697",
+     "name": "Pá Ma Pha Khinh",
+     "type": "xã",
+     "full_name": "Xã Pá Ma Pha Khinh",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03703",
+   "name": "Quỳnh Nhai",
+   "type": "xã",
+   "full_name": "Xã Quỳnh Nhai",
+   "slug": "xa-quynh-nhai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03700",
+     "name": "Chiềng Ơn",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ơn",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03703",
+     "name": "Mường Giàng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mường Giàng",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03706",
+     "name": "Chiềng Bằng",
+     "type": "xã",
+     "full_name": "Xã Chiềng Bằng",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03718",
+     "name": "Chiềng Khoang",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khoang",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03712",
+   "name": "Mường Sại",
+   "type": "xã",
+   "full_name": "Xã Mường Sại",
+   "slug": "xa-muong-sai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03709",
+     "name": "Mường Sại",
+     "type": "xã",
+     "full_name": "Xã Mường Sại",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03712",
+     "name": "Nặm Ét",
+     "type": "xã",
+     "full_name": "Xã Nặm Ét",
+     "district": "Huyện Quỳnh Nhai",
+     "district_id": "118",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Nậm ét",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03721",
+   "name": "Thuận Châu",
+   "type": "xã",
+   "full_name": "Xã Thuận Châu",
+   "slug": "xa-thuan-chau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03721",
+     "name": "Thuận Châu",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Thuận Châu",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03748",
+     "name": "Phổng Ly",
+     "type": "xã",
+     "full_name": "Xã Phổng Ly",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03769",
+     "name": "Thôm Mòn",
+     "type": "xã",
+     "full_name": "Xã Thôm Mòn",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03772",
+     "name": "Tông Lạnh",
+     "type": "xã",
+     "full_name": "Xã Tông Lạnh",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03787",
+     "name": "Chiềng Pấc",
+     "type": "xã",
+     "full_name": "Xã Chiềng Pấc",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03724",
+   "name": "Bình Thuận",
+   "type": "xã",
+   "full_name": "Xã Bình Thuận",
+   "slug": "xa-binh-thuan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03724",
+     "name": "Phổng Lái",
+     "type": "xã",
+     "full_name": "Xã Phổng Lái",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03730",
+     "name": "Chiềng Pha",
+     "type": "xã",
+     "full_name": "Xã Chiềng Pha",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03727",
+   "name": "Mường É",
+   "type": "xã",
+   "full_name": "Xã Mường É",
+   "slug": "xa-muong-e",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03727",
+     "name": "Mường É",
+     "type": "xã",
+     "full_name": "Xã Mường É",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03745",
+     "name": "Phổng Lập",
+     "type": "xã",
+     "full_name": "Xã Phổng Lập",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03754",
+   "name": "Chiềng La",
+   "type": "xã",
+   "full_name": "Xã Chiềng La",
+   "slug": "xa-chieng-la",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03733",
+     "name": "Chiềng La",
+     "type": "xã",
+     "full_name": "Xã Chiềng La",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03736",
+     "name": "Chiềng Ngàm",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ngàm",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03754",
+     "name": "Nong Lay",
+     "type": "xã",
+     "full_name": "Xã Nong Lay",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Noong Lay",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03775",
+     "name": "Tông Cọ",
+     "type": "xã",
+     "full_name": "Xã Tông Cọ",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03757",
+   "name": "Mường Khiêng",
+   "type": "xã",
+   "full_name": "Xã Mường Khiêng",
+   "slug": "xa-muong-khieng",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03739",
+     "name": "Liệp Tè",
+     "type": "xã",
+     "full_name": "Xã Liệp Tè",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03757",
+     "name": "Mường Khiêng",
+     "type": "xã",
+     "full_name": "Xã Mường Khiêng",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03778",
+     "name": "Bó Mười",
+     "type": "xã",
+     "full_name": "Xã Bó Mười",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03760",
+   "name": "Mường Bám",
+   "type": "xã",
+   "full_name": "Xã Mường Bám",
+   "slug": "xa-muong-bam",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03760",
+     "name": "Mường Bám",
+     "type": "xã",
+     "full_name": "Xã Mường Bám",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03763",
+   "name": "Long Hẹ",
+   "type": "xã",
+   "full_name": "Xã Long Hẹ",
+   "slug": "xa-long-he",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03742",
+     "name": "É Tòng",
+     "type": "xã",
+     "full_name": "Xã É Tòng",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03763",
+     "name": "Long Hẹ",
+     "type": "xã",
+     "full_name": "Xã Long Hẹ",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03781",
+   "name": "Co Mạ",
+   "type": "xã",
+   "full_name": "Xã Co Mạ",
+   "slug": "xa-co-ma",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03781",
+     "name": "Co Mạ",
+     "type": "xã",
+     "full_name": "Xã Co Mạ",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03796",
+     "name": "Co Tòng",
+     "type": "xã",
+     "full_name": "Xã Co Tòng",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03802",
+     "name": "Pá Lông",
+     "type": "xã",
+     "full_name": "Xã Pá Lông",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03784",
+   "name": "Nậm Lầu",
+   "type": "xã",
+   "full_name": "Xã Nậm Lầu",
+   "slug": "xa-nam-lau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03766",
+     "name": "Chiềng Bôm",
+     "type": "xã",
+     "full_name": "Xã Chiềng Bôm",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03784",
+     "name": "Púng Tra",
+     "type": "xã",
+     "full_name": "Xã Púng Tra",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03790",
+     "name": "Nậm Lầu",
+     "type": "xã",
+     "full_name": "Xã Nậm Lầu",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03799",
+   "name": "Muổi Nọi",
+   "type": "xã",
+   "full_name": "Xã Muổi Nọi",
+   "slug": "xa-muoi-noi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03793",
+     "name": "Bon Phặng",
+     "type": "xã",
+     "full_name": "Xã Bon Phặng",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03799",
+     "name": "Muổi Nọi",
+     "type": "xã",
+     "full_name": "Xã Muổi Nọi",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03805",
+     "name": "Bản Lầm",
+     "type": "xã",
+     "full_name": "Xã Bản Lầm",
+     "district": "Huyện Thuận Châu",
+     "district_id": "119",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03808",
+   "name": "Mường La",
+   "type": "xã",
+   "full_name": "Xã Mường La",
+   "slug": "xa-muong-la",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03808",
+     "name": "Ít Ong",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Ít Ong",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03823",
+     "name": "Mường Trai",
+     "type": "xã",
+     "full_name": "Xã Mường Trai",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03826",
+     "name": "Nặm Păm",
+     "type": "xã",
+     "full_name": "Xã Nặm Păm",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Nậm Păm",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03829",
+     "name": "Chiềng Muôn",
+     "type": "xã",
+     "full_name": "Xã Chiềng Muôn",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03835",
+     "name": "Pi Toong",
+     "type": "xã",
+     "full_name": "Xã Pi Toong",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03844",
+     "name": "Chiềng San",
+     "type": "xã",
+     "full_name": "Xã Chiềng San",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03814",
+   "name": "Chiềng Lao",
+   "type": "xã",
+   "full_name": "Xã Chiềng Lao",
+   "slug": "xa-chieng-lao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03811",
+     "name": "Nậm Giôn",
+     "type": "xã",
+     "full_name": "Xã Nậm Giôn",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03814",
+     "name": "Chiềng Lao",
+     "type": "xã",
+     "full_name": "Xã Chiềng Lao",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03817",
+     "name": "Hua Trai",
+     "type": "xã",
+     "full_name": "Xã Hua Trai",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03820",
+   "name": "Ngọc Chiến",
+   "type": "xã",
+   "full_name": "Xã Ngọc Chiến",
+   "slug": "xa-ngoc-chien",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03820",
+     "name": "Ngọc Chiến",
+     "type": "xã",
+     "full_name": "Xã Ngọc Chiến",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03847",
+   "name": "Mường Bú",
+   "type": "xã",
+   "full_name": "Xã Mường Bú",
+   "slug": "xa-muong-bu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03841",
+     "name": "Tạ Bú",
+     "type": "xã",
+     "full_name": "Xã Tạ Bú",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03847",
+     "name": "Mường Bú",
+     "type": "xã",
+     "full_name": "Xã Mường Bú",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03853",
+     "name": "Mường Chùm",
+     "type": "xã",
+     "full_name": "Xã Mường Chùm",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03850",
+   "name": "Chiềng Hoa",
+   "type": "xã",
+   "full_name": "Xã Chiềng Hoa",
+   "slug": "xa-chieng-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03832",
+     "name": "Chiềng Ân",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ân",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03838",
+     "name": "Chiềng Công",
+     "type": "xã",
+     "full_name": "Xã Chiềng Công",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03850",
+     "name": "Chiềng Hoa",
+     "type": "xã",
+     "full_name": "Xã Chiềng Hoa",
+     "district": "Huyện Mường La",
+     "district_id": "120",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03856",
+   "name": "Bắc Yên",
+   "type": "xã",
+   "full_name": "Xã Bắc Yên",
+   "slug": "xa-bac-yen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03856",
+     "name": "Bắc Yên",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Bắc Yên",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03859",
+     "name": "Phiêng Ban",
+     "type": "xã",
+     "full_name": "Xã Phiêng Ban",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03883",
+     "name": "Song Pe",
+     "type": "xã",
+     "full_name": "Xã Song Pe",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03886",
+     "name": "Hồng Ngài",
+     "type": "xã",
+     "full_name": "Xã Hồng Ngài",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03862",
+   "name": "Xím Vàng",
+   "type": "xã",
+   "full_name": "Xã Xím Vàng",
+   "slug": "xa-xim-vang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03862",
+     "name": "Hang Chú",
+     "type": "xã",
+     "full_name": "Xã Hang Chú",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03865",
+     "name": "Xím Vàng",
+     "type": "xã",
+     "full_name": "Xã Xím Vàng",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03868",
+   "name": "Tà Xùa",
+   "type": "xã",
+   "full_name": "Xã Tà Xùa",
+   "slug": "xa-ta-xua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03868",
+     "name": "Tà Xùa",
+     "type": "xã",
+     "full_name": "Xã Tà Xùa",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03869",
+     "name": "Háng Đồng",
+     "type": "xã",
+     "full_name": "Xã Háng Đồng",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03874",
+     "name": "Làng Chếu",
+     "type": "xã",
+     "full_name": "Xã Làng Chếu",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03871",
+   "name": "Pắc Ngà",
+   "type": "xã",
+   "full_name": "Xã Pắc Ngà",
+   "slug": "xa-pac-nga",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03871",
+     "name": "Pắc Ngà",
+     "type": "xã",
+     "full_name": "Xã Pắc Ngà",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03877",
+     "name": "Chim Vàn",
+     "type": "xã",
+     "full_name": "Xã Chim Vàn",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03880",
+   "name": "Tạ Khoa",
+   "type": "xã",
+   "full_name": "Xã Tạ Khoa",
+   "slug": "xa-ta-khoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03880",
+     "name": "Mường Khoa",
+     "type": "xã",
+     "full_name": "Xã Mường Khoa",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03889",
+     "name": "Tạ Khoa",
+     "type": "xã",
+     "full_name": "Xã Tạ Khoa",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03890",
+     "name": "Hua Nhàn",
+     "type": "xã",
+     "full_name": "Xã Hua Nhàn",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03892",
+   "name": "Chiềng Sại",
+   "type": "xã",
+   "full_name": "Xã Chiềng Sại",
+   "slug": "xa-chieng-sai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03892",
+     "name": "Phiêng Côn",
+     "type": "xã",
+     "full_name": "Xã Phiêng Côn",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03895",
+     "name": "Chiềng Sại",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sại",
+     "district": "Huyện Bắc Yên",
+     "district_id": "121",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03901",
+   "name": "Suối Tọ",
+   "type": "xã",
+   "full_name": "Xã Suối Tọ",
+   "slug": "xa-suoi-to",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03901",
+     "name": "Suối Tọ",
+     "type": "xã",
+     "full_name": "Xã Suối Tọ",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03907",
+   "name": "Mường Cơi",
+   "type": "xã",
+   "full_name": "Xã Mường Cơi",
+   "slug": "xa-muong-coi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03904",
+     "name": "Mường Thải",
+     "type": "xã",
+     "full_name": "Xã Mường Thải",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03907",
+     "name": "Mường Cơi",
+     "type": "xã",
+     "full_name": "Xã Mường Cơi",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03919",
+     "name": "Tân Lang",
+     "type": "xã",
+     "full_name": "Xã Tân Lang",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03910",
+   "name": "Phù Yên",
+   "type": "xã",
+   "full_name": "Xã Phù Yên",
+   "slug": "xa-phu-yen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03910",
+     "name": "Quang Huy",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Quang Huy",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03916",
+     "name": "Huy Thượng",
+     "type": "xã",
+     "full_name": "Xã Huy Thượng",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03928",
+     "name": "Huy Hạ",
+     "type": "xã",
+     "full_name": "Xã Huy Hạ",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03931",
+     "name": "Huy Tân",
+     "type": "xã",
+     "full_name": "Xã Huy Tân",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03940",
+     "name": "Huy Tường",
+     "type": "xã",
+     "full_name": "Xã Huy Tường",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03922",
+   "name": "Gia Phù",
+   "type": "xã",
+   "full_name": "Xã Gia Phù",
+   "slug": "xa-gia-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03922",
+     "name": "Gia Phù",
+     "type": "xã",
+     "full_name": "Xã Gia Phù",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03925",
+     "name": "Tường Phù",
+     "type": "xã",
+     "full_name": "Xã Tường Phù",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03937",
+     "name": "Suối Bau",
+     "type": "xã",
+     "full_name": "Xã Suối Bau",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03946",
+     "name": "Sập Xa",
+     "type": "xã",
+     "full_name": "Xã Sập Xa",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03943",
+   "name": "Mường Bang",
+   "type": "xã",
+   "full_name": "Xã Mường Bang",
+   "slug": "xa-muong-bang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03934",
+     "name": "Mường Lang",
+     "type": "xã",
+     "full_name": "Xã Mường Lang",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03943",
+     "name": "Mường Do",
+     "type": "xã",
+     "full_name": "Xã Mường Do",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03964",
+     "name": "Mường Bang",
+     "type": "xã",
+     "full_name": "Xã Mường Bang",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03958",
+   "name": "Tường Hạ",
+   "type": "xã",
+   "full_name": "Xã Tường Hạ",
+   "slug": "xa-tuong-ha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03949",
+     "name": "Tường Thượng",
+     "type": "xã",
+     "full_name": "Xã Tường Thượng",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03952",
+     "name": "Tường Tiến",
+     "type": "xã",
+     "full_name": "Xã Tường Tiến",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03955",
+     "name": "Tường Phong",
+     "type": "xã",
+     "full_name": "Xã Tường Phong",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03958",
+     "name": "Tường Hạ",
+     "type": "xã",
+     "full_name": "Xã Tường Hạ",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03961",
+   "name": "Kim Bon",
+   "type": "xã",
+   "full_name": "Xã Kim Bon",
+   "slug": "xa-kim-bon",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03961",
+     "name": "Kim Bon",
+     "type": "xã",
+     "full_name": "Xã Kim Bon",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03967",
+     "name": "Đá Đỏ",
+     "type": "xã",
+     "full_name": "Xã Đá Đỏ",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03970",
+   "name": "Tân Phong",
+   "type": "xã",
+   "full_name": "Xã Tân Phong",
+   "slug": "xa-tan-phong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03970",
+     "name": "Tân Phong",
+     "type": "xã",
+     "full_name": "Xã Tân Phong",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03973",
+     "name": "Nam Phong",
+     "type": "xã",
+     "full_name": "Xã Nam Phong",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03976",
+     "name": "Bắc Phong",
+     "type": "xã",
+     "full_name": "Xã Bắc Phong",
+     "district": "Huyện Phù Yên",
+     "district_id": "122",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03985",
+   "name": "Chiềng Sơn",
+   "type": "xã",
+   "full_name": "Xã Chiềng Sơn",
+   "slug": "xa-chieng-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03985",
+     "name": "Chiềng Sơn",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sơn",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04056",
+     "name": "Chiềng Xuân",
+     "type": "xã",
+     "full_name": "Xã Chiềng Xuân",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03997",
+   "name": "Tân Yên",
+   "type": "xã",
+   "full_name": "Xã Tân Yên",
+   "slug": "xa-tan-yen",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03997",
+     "name": "Tân Yên",
+     "type": "xã",
+     "full_name": "Xã Tân Yên",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04000",
+   "name": "Đoàn Kết",
+   "type": "xã",
+   "full_name": "Xã Đoàn Kết",
+   "slug": "xa-doan-ket",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04000",
+     "name": "Đoàn Kết",
+     "type": "xã",
+     "full_name": "Xã Đoàn Kết",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04015",
+     "name": "Chiềng Chung",
+     "type": "xã",
+     "full_name": "Xã Chiềng Chung",
+     "district": "Thị xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04006",
+   "name": "Song Khủa",
+   "type": "xã",
+   "full_name": "Xã Song Khủa",
+   "slug": "xa-song-khua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04006",
+     "name": "Song Khủa",
+     "type": "xã",
+     "full_name": "Xã Song Khủa",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04009",
+     "name": "Liên Hòa",
+     "type": "xã",
+     "full_name": "Xã Liên Hòa",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04021",
+     "name": "Mường Tè",
+     "type": "xã",
+     "full_name": "Xã Mường Tè",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04042",
+     "name": "Quang Minh",
+     "type": "xã",
+     "full_name": "Xã Quang Minh",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04018",
+   "name": "Tô Múa",
+   "type": "xã",
+   "full_name": "Xã Tô Múa",
+   "slug": "xa-to-mua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03994",
+     "name": "Suối Bàng",
+     "type": "xã",
+     "full_name": "Xã Suối Bàng",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04018",
+     "name": "Tô Múa",
+     "type": "xã",
+     "full_name": "Xã Tô Múa",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04036",
+     "name": "Chiềng Khoa",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khoa",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04045",
+   "name": "Lóng Sập",
+   "type": "xã",
+   "full_name": "Xã Lóng Sập",
+   "slug": "xa-long-sap",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04024",
+     "name": "Chiềng Khừa",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khừa",
+     "district": "Thị Xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04045",
+     "name": "Lóng Sập",
+     "type": "xã",
+     "full_name": "Xã Lóng Sập",
+     "district": "Thị xã Mộc Châu",
+     "district_id": "123",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04048",
+   "name": "Vân Hồ",
+   "type": "xã",
+   "full_name": "Xã Vân Hồ",
+   "slug": "xa-van-ho",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04039",
+     "name": "Mường Men",
+     "type": "xã",
+     "full_name": "Xã Mường Men",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04048",
+     "name": "Vân Hồ",
+     "type": "xã",
+     "full_name": "Xã Vân Hồ",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04051",
+     "name": "Lóng Luông",
+     "type": "xã",
+     "full_name": "Xã Lóng Luông",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04054",
+     "name": "Chiềng Yên",
+     "type": "xã",
+     "full_name": "Xã Chiềng Yên",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04057",
+   "name": "Xuân Nha",
+   "type": "xã",
+   "full_name": "Xã Xuân Nha",
+   "slug": "xa-xuan-nha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04057",
+     "name": "Xuân Nha",
+     "type": "xã",
+     "full_name": "Xã Xuân Nha",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04058",
+     "name": "Tân Xuân",
+     "type": "xã",
+     "full_name": "Xã Tân Xuân",
+     "district": "Huyện Vân Hồ",
+     "district_id": "128",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04075",
+   "name": "Yên Châu",
+   "type": "xã",
+   "full_name": "Xã Yên Châu",
+   "slug": "xa-yen-chau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04063",
+     "name": "Chiềng Đông",
+     "type": "xã",
+     "full_name": "Xã Chiềng Đông",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04066",
+     "name": "Sặp Vạt",
+     "type": "xã",
+     "full_name": "Xã Sặp Vạt",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04069",
+     "name": "Chiềng Sàng",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sàng",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04072",
+     "name": "Chiềng Pằn",
+     "type": "xã",
+     "full_name": "Xã Chiềng Pằn",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04075",
+     "name": "Yên Châu",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Yên Châu",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04090",
+     "name": "Chiềng Khoi",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khoi",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04078",
+   "name": "Chiềng Hặc",
+   "type": "xã",
+   "full_name": "Xã Chiềng Hặc",
+   "slug": "xa-chieng-hac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04078",
+     "name": "Chiềng Hặc",
+     "type": "xã",
+     "full_name": "Xã Chiềng Hặc",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04081",
+     "name": "Mường Lựm",
+     "type": "xã",
+     "full_name": "Xã Mường Lựm",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04093",
+     "name": "Tú Nang",
+     "type": "xã",
+     "full_name": "Xã Tú Nang",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04087",
+   "name": "Yên Sơn",
+   "type": "xã",
+   "full_name": "Xã Yên Sơn",
+   "slug": "xa-yen-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 41
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04084",
+     "name": "Chiềng On",
+     "type": "xã",
+     "full_name": "Xã Chiềng On",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04087",
+     "name": "Yên Sơn",
+     "type": "xã",
+     "full_name": "Xã Yên Sơn",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04096",
+   "name": "Lóng Phiêng",
+   "type": "xã",
+   "full_name": "Xã Lóng Phiêng",
+   "slug": "xa-long-phieng",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 40
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04096",
+     "name": "Lóng Phiêng",
+     "type": "xã",
+     "full_name": "Xã Lóng Phiêng",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04102",
+     "name": "Chiềng Tương",
+     "type": "xã",
+     "full_name": "Xã Chiềng Tương",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04099",
+   "name": "Phiêng Khoài",
+   "type": "xã",
+   "full_name": "Xã Phiêng Khoài",
+   "slug": "xa-phieng-khoai",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04099",
+     "name": "Phiêng Khoài",
+     "type": "xã",
+     "full_name": "Xã Phiêng Khoài",
+     "district": "Huyện Yên Châu",
+     "district_id": "124",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04105",
+   "name": "Mai Sơn",
+   "type": "xã",
+   "full_name": "Xã Mai Sơn",
+   "slug": "xa-mai-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 43
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04105",
+     "name": "Hát Lót",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Hát Lót",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04135",
+     "name": "Hát Lót",
+     "type": "xã",
+     "full_name": "Xã Hát Lót",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04138",
+     "name": "Cò Nòi",
+     "type": "xã",
+     "full_name": "Xã Cò Nòi",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04108",
+   "name": "Chiềng Sung",
+   "type": "xã",
+   "full_name": "Xã Chiềng Sung",
+   "slug": "xa-chieng-sung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 49
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04108",
+     "name": "Chiềng Sung",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sung",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04114",
+     "name": "Chiềng Chăn",
+     "type": "xã",
+     "full_name": "Xã Chiềng Chăn",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04117",
+   "name": "Mường Chanh",
+   "type": "xã",
+   "full_name": "Xã Mường Chanh",
+   "slug": "xa-muong-chanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 47
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04117",
+     "name": "Mường Chanh",
+     "type": "xã",
+     "full_name": "Xã Mường Chanh",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04129",
+     "name": "Chiềng Chung",
+     "type": "xã",
+     "full_name": "Xã Chiềng Chung",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04123",
+   "name": "Chiềng Mung",
+   "type": "xã",
+   "full_name": "Xã Chiềng Mung",
+   "slug": "xa-chieng-mung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 45
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04111",
+     "name": "Mường Bằng",
+     "type": "xã",
+     "full_name": "Xã Mường Bằng",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04123",
+     "name": "Chiềng Mung",
+     "type": "xã",
+     "full_name": "Xã Chiềng Mung",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04126",
+     "name": "Mường Bon",
+     "type": "xã",
+     "full_name": "Xã Mường Bon",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04132",
+   "name": "Chiềng Mai",
+   "type": "xã",
+   "full_name": "Xã Chiềng Mai",
+   "slug": "xa-chieng-mai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 42
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04120",
+     "name": "Chiềng Ban",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ban",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04132",
+     "name": "Chiềng Mai",
+     "type": "xã",
+     "full_name": "Xã Chiềng Mai",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04147",
+     "name": "Chiềng Dong",
+     "type": "xã",
+     "full_name": "Xã Chiềng Dong",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04150",
+     "name": "Chiềng Kheo",
+     "type": "xã",
+     "full_name": "Xã Chiềng Kheo",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04153",
+     "name": "Chiềng Ve",
+     "type": "xã",
+     "full_name": "Xã Chiềng Ve",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04136",
+   "name": "Tà Hộc",
+   "type": "xã",
+   "full_name": "Xã Tà Hộc",
+   "slug": "xa-ta-hoc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 48
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04136",
+     "name": "Nà Bó",
+     "type": "xã",
+     "full_name": "Xã Nà Bó",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04165",
+     "name": "Tà Hộc",
+     "type": "xã",
+     "full_name": "Xã Tà Hộc",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04144",
+   "name": "Phiêng Cằm",
+   "type": "xã",
+   "full_name": "Xã Phiêng Cằm",
+   "slug": "xa-phieng-cam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 46
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04141",
+     "name": "Chiềng Nơi",
+     "type": "xã",
+     "full_name": "Xã Chiềng Nơi",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04144",
+     "name": "Phiêng Cằm",
+     "type": "xã",
+     "full_name": "Xã Phiêng Cằm",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04159",
+   "name": "Phiêng Pằn",
+   "type": "xã",
+   "full_name": "Xã Phiêng Pằn",
+   "slug": "xa-phieng-pan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 44
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04156",
+     "name": "Chiềng Lương",
+     "type": "xã",
+     "full_name": "Xã Chiềng Lương",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04159",
+     "name": "Phiêng Pằn",
+     "type": "xã",
+     "full_name": "Xã Phiêng Pằn",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04162",
+     "name": "Nà Ớt",
+     "type": "xã",
+     "full_name": "Xã Nà Ớt",
+     "district": "Huyện Mai Sơn",
+     "district_id": "125",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Nà Ơt",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04168",
+   "name": "Sông Mã",
+   "type": "xã",
+   "full_name": "Xã Sông Mã",
+   "slug": "xa-song-ma",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 56
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04168",
+     "name": "Sông Mã",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Sông Mã",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04198",
+     "name": "Nà Nghịu",
+     "type": "xã",
+     "full_name": "Xã Nà Nghịu",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04171",
+   "name": "Bó Sinh",
+   "type": "xã",
+   "full_name": "Xã Bó Sinh",
+   "slug": "xa-bo-sinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 50
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04171",
+     "name": "Bó Sinh",
+     "type": "xã",
+     "full_name": "Xã Bó Sinh",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04174",
+     "name": "Pú Bẩu",
+     "type": "xã",
+     "full_name": "Xã Pú Bẩu",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Pú Pẩu",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04180",
+     "name": "Chiềng En",
+     "type": "xã",
+     "full_name": "Xã Chiềng En",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04183",
+   "name": "Mường Lầm",
+   "type": "xã",
+   "full_name": "Xã Mường Lầm",
+   "slug": "xa-muong-lam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 54
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04183",
+     "name": "Mường Lầm",
+     "type": "xã",
+     "full_name": "Xã Mường Lầm",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04189",
+     "name": "Đứa Mòn",
+     "type": "xã",
+     "full_name": "Xã Đứa Mòn",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04186",
+   "name": "Nậm Ty",
+   "type": "xã",
+   "full_name": "Xã Nậm Ty",
+   "slug": "xa-nam-ty",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 55
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04177",
+     "name": "Chiềng Phung",
+     "type": "xã",
+     "full_name": "Xã Chiềng Phung",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04186",
+     "name": "Nậm Ty",
+     "type": "xã",
+     "full_name": "Xã Nậm Ty",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04195",
+   "name": "Chiềng Sơ",
+   "type": "xã",
+   "full_name": "Xã Chiềng Sơ",
+   "slug": "xa-chieng-so",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 58
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04192",
+     "name": "Yên Hưng",
+     "type": "xã",
+     "full_name": "Xã Yên Hưng",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04195",
+     "name": "Chiềng Sơ",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sơ",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04204",
+   "name": "Chiềng Khoong",
+   "type": "xã",
+   "full_name": "Xã Chiềng Khoong",
+   "slug": "xa-chieng-khoong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 53
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04204",
+     "name": "Chiềng Khoong",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khoong",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04216",
+     "name": "Mường Cai",
+     "type": "xã",
+     "full_name": "Xã Mường Cai",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04210",
+   "name": "Huổi Một",
+   "type": "xã",
+   "full_name": "Xã Huổi Một",
+   "slug": "xa-huoi-mot",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 57
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04201",
+     "name": "Nậm Mằn",
+     "type": "xã",
+     "full_name": "Xã Nậm Mằn",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04210",
+     "name": "Huổi Một",
+     "type": "xã",
+     "full_name": "Xã Huổi Một",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04219",
+   "name": "Mường Hung",
+   "type": "xã",
+   "full_name": "Xã Mường Hung",
+   "slug": "xa-muong-hung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 52
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04207",
+     "name": "Chiềng Cang",
+     "type": "xã",
+     "full_name": "Xã Chiềng Cang",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04219",
+     "name": "Mường Hung",
+     "type": "xã",
+     "full_name": "Xã Mường Hung",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04222",
+   "name": "Chiềng Khương",
+   "type": "xã",
+   "full_name": "Xã Chiềng Khương",
+   "slug": "xa-chieng-khuong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 51
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04213",
+     "name": "Mường Sai",
+     "type": "xã",
+     "full_name": "Xã Mường Sai",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04222",
+     "name": "Chiềng Khương",
+     "type": "xã",
+     "full_name": "Xã Chiềng Khương",
+     "district": "Huyện Sông Mã",
+     "district_id": "126",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04228",
+   "name": "Púng Bánh",
+   "type": "xã",
+   "full_name": "Xã Púng Bánh",
+   "slug": "xa-pung-banh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 60
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04225",
+     "name": "Sam Kha",
+     "type": "xã",
+     "full_name": "Xã Sam Kha",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04228",
+     "name": "Púng Bánh",
+     "type": "xã",
+     "full_name": "Xã Púng Bánh",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04234",
+     "name": "Dồm Cang",
+     "type": "xã",
+     "full_name": "Xã Dồm Cang",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04231",
+   "name": "Sốp Cộp",
+   "type": "xã",
+   "full_name": "Xã Sốp Cộp",
+   "slug": "xa-sop-cop",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "clause": 59
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04231",
+     "name": "Sốp Cộp",
+     "type": "xã",
+     "full_name": "Xã Sốp Cộp",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04237",
+     "name": "Nậm Lạnh",
+     "type": "xã",
+     "full_name": "Xã Nậm Lạnh",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "04243",
+     "name": "Mường Và",
+     "type": "xã",
+     "full_name": "Xã Mường Và",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04240",
+   "name": "Mường Lèo",
+   "type": "xã",
+   "full_name": "Xã Mường Lèo",
+   "slug": "xa-muong-leo",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04240",
+     "name": "Mường Lèo",
+     "type": "xã",
+     "full_name": "Xã Mường Lèo",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "04246",
+   "name": "Mường Lạn",
+   "type": "xã",
+   "full_name": "Xã Mường Lạn",
+   "slug": "xa-muong-lan",
+   "formation": "giu-nguyen",
+   "source": {
+    "resolution": "1681/NQ-UBTVQH15",
+    "unchanged": true
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "04246",
+     "name": "Mường Lạn",
+     "type": "xã",
+     "full_name": "Xã Mường Lạn",
+     "district": "Huyện Sốp Cộp",
+     "district_id": "127",
+     "province": "Tỉnh Sơn La",
+     "province_id": "14",
+     "portion": "toan-bo",
+     "nso_note": "Giữ nguyên",
+     "source": "nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

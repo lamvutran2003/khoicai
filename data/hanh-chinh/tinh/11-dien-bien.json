@@ -1,0 +1,3088 @@
+{
+ "id": "11",
+ "name": "Điện Biên",
+ "full_name": "Tỉnh Điện Biên",
+ "type": "tỉnh",
+ "slug": "dien-bien",
+ "formed_from": [
+  {
+   "id": "11",
+   "name": "Tỉnh Điện Biên"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1661/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 45,
+   "xã": 42,
+   "phường": 3
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1661/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1661-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-dien-bien-nam-2025-11925061622024061.htm",
+    "copy": "sources/nghi-quyet/1661-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "03127",
+   "name": "Điện Biên Phủ",
+   "type": "phường",
+   "full_name": "Phường Điện Biên Phủ",
+   "slug": "phuong-dien-bien-phu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 44
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03127",
+     "name": "Him Lam",
+     "type": "phường",
+     "full_name": "Phường Him Lam",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03130",
+     "name": "Thanh Bình",
+     "type": "phường",
+     "full_name": "Phường Thanh Bình",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03133",
+     "name": "Tân Thanh",
+     "type": "phường",
+     "full_name": "Phường Tân Thanh",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03136",
+     "name": "Mường Thanh",
+     "type": "phường",
+     "full_name": "Phường Mường Thanh",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03142",
+     "name": "Thanh Trường",
+     "type": "phường",
+     "full_name": "Phường Thanh Trường",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03145",
+     "name": "Thanh Minh",
+     "type": "xã",
+     "full_name": "Xã Thanh Minh",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03151",
+   "name": "Mường Lay",
+   "type": "phường",
+   "full_name": "Phường Mường Lay",
+   "slug": "phuong-muong-lay",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 43
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03148",
+     "name": "Sông Đà",
+     "type": "phường",
+     "full_name": "Phường Sông Đà",
+     "district": "Thị Xã Mường Lay",
+     "district_id": "095",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03151",
+     "name": "Na Lay",
+     "type": "phường",
+     "full_name": "Phường Na Lay",
+     "district": "Thị Xã Mường Lay",
+     "district_id": "095",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03184",
+     "name": "Lay Nưa",
+     "type": "xã",
+     "full_name": "Xã Lay Nưa",
+     "district": "Thị Xã Mường Lay",
+     "district_id": "095",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03178",
+     "name": "Sá Tổng",
+     "type": "xã",
+     "full_name": "Xã Sá Tổng",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Xá Tổng",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03334",
+   "name": "Mường Thanh",
+   "type": "phường",
+   "full_name": "Phường Mường Thanh",
+   "slug": "phuong-muong-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 45
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03124",
+     "name": "Noong Bua",
+     "type": "phường",
+     "full_name": "Phường Noong Bua",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03139",
+     "name": "Nam Thanh",
+     "type": "phường",
+     "full_name": "Phường Nam Thanh",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03334",
+     "name": "Thanh Xương",
+     "type": "xã",
+     "full_name": "Xã Thanh Xương",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03158",
+   "name": "Sín Thầu",
+   "type": "xã",
+   "full_name": "Xã Sín Thầu",
+   "slug": "xa-sin-thau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03154",
+     "name": "Sín Thầu",
+     "type": "xã",
+     "full_name": "Xã Sín Thầu",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03155",
+     "name": "Sen Thượng",
+     "type": "xã",
+     "full_name": "Xã Sen Thượng",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03158",
+     "name": "Leng Su Sìn",
+     "type": "xã",
+     "full_name": "Xã Leng Su Sìn",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03160",
+   "name": "Mường Nhé",
+   "type": "xã",
+   "full_name": "Xã Mường Nhé",
+   "slug": "xa-muong-nhe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03157",
+     "name": "Chung Chải",
+     "type": "xã",
+     "full_name": "Xã Chung Chải",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03160",
+     "name": "Mường Nhé",
+     "type": "xã",
+     "full_name": "Xã Mường Nhé",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03161",
+     "name": "Nậm Vì",
+     "type": "xã",
+     "full_name": "Xã Nậm Vì",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03162",
+   "name": "Nậm Kè",
+   "type": "xã",
+   "full_name": "Xã Nậm Kè",
+   "slug": "xa-nam-ke",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03159",
+     "name": "Pá Mỳ",
+     "type": "xã",
+     "full_name": "Xã Pá Mỳ",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03162",
+     "name": "Nậm Kè",
+     "type": "xã",
+     "full_name": "Xã Nậm Kè",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03163",
+   "name": "Mường Toong",
+   "type": "xã",
+   "full_name": "Xã Mường Toong",
+   "slug": "xa-muong-toong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03163",
+     "name": "Mường Toong",
+     "type": "xã",
+     "full_name": "Xã Mường Toong",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03177",
+     "name": "Huổi Lếch",
+     "type": "xã",
+     "full_name": "Xã Huổi Lếch",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Huổi Lếnh",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03164",
+   "name": "Quảng Lâm",
+   "type": "xã",
+   "full_name": "Xã Quảng Lâm",
+   "slug": "xa-quang-lam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03167",
+     "name": "Na Cô Sa",
+     "type": "xã",
+     "full_name": "Xã Na Cô Sa",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03164",
+     "name": "Quảng Lâm",
+     "type": "xã",
+     "full_name": "Xã Quảng Lâm",
+     "district": "Huyện Mường Nhé",
+     "district_id": "096",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03166",
+   "name": "Mường Chà",
+   "type": "xã",
+   "full_name": "Xã Mường Chà",
+   "slug": "xa-muong-cha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03156",
+     "name": "Nậm Tin",
+     "type": "xã",
+     "full_name": "Xã Nậm Tin",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03165",
+     "name": "Pa Tần",
+     "type": "xã",
+     "full_name": "Xã Pa Tần",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03166",
+     "name": "Chà Cang",
+     "type": "xã",
+     "full_name": "Xã Chà Cang",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03187",
+     "name": "Chà Nưa",
+     "type": "xã",
+     "full_name": "Xã Chà Nưa",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03169",
+   "name": "Nà Hỳ",
+   "type": "xã",
+   "full_name": "Xã Nà Hỳ",
+   "slug": "xa-na-hy",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03168",
+     "name": "Nà Khoa",
+     "type": "xã",
+     "full_name": "Xã Nà Khoa",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03169",
+     "name": "Nà Hỳ",
+     "type": "xã",
+     "full_name": "Xã Nà Hỳ",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03171",
+     "name": "Nậm Nhừ",
+     "type": "xã",
+     "full_name": "Xã Nậm Nhừ",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03173",
+     "name": "Nậm Chua",
+     "type": "xã",
+     "full_name": "Xã Nậm Chua",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03172",
+   "name": "Na Sang",
+   "type": "xã",
+   "full_name": "Xã Na Sang",
+   "slug": "xa-na-sang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03172",
+     "name": "Mường Chà",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mường Chà",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03197",
+     "name": "Sa Lông",
+     "type": "xã",
+     "full_name": "Xã Sa Lông",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03200",
+     "name": "Ma Thì Hồ",
+     "type": "xã",
+     "full_name": "Xã Ma Thì Hồ",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03201",
+     "name": "Na Sang",
+     "type": "xã",
+     "full_name": "Xã Na Sang",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03175",
+   "name": "Chà Tở",
+   "type": "xã",
+   "full_name": "Xã Chà Tở",
+   "slug": "xa-cha-to",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03174",
+     "name": "Nậm Khăn",
+     "type": "xã",
+     "full_name": "Xã Nậm Khăn",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03175",
+     "name": "Chà Tở",
+     "type": "xã",
+     "full_name": "Xã Chà Tở",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03176",
+   "name": "Nà Bủng",
+   "type": "xã",
+   "full_name": "Xã Nà Bủng",
+   "slug": "xa-na-bung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03170",
+     "name": "Nà Bủng",
+     "type": "xã",
+     "full_name": "Xã Nà Bủng",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03176",
+     "name": "Vàng Đán",
+     "type": "xã",
+     "full_name": "Xã Vàng Đán",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03181",
+   "name": "Mường Tùng",
+   "type": "xã",
+   "full_name": "Xã Mường Tùng",
+   "slug": "xa-muong-tung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03181",
+     "name": "Mường Tùng",
+     "type": "xã",
+     "full_name": "Xã Mường Tùng",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03196",
+     "name": "Huổi Lèng",
+     "type": "xã",
+     "full_name": "Xã Huổi Lèng",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03193",
+   "name": "Pa Ham",
+   "type": "xã",
+   "full_name": "Xã Pa Ham",
+   "slug": "xa-pa-ham",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03190",
+     "name": "Hừa Ngài",
+     "type": "xã",
+     "full_name": "Xã Hừa Ngài",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03193",
+     "name": "Pa Ham",
+     "type": "xã",
+     "full_name": "Xã Pa Ham",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03194",
+   "name": "Nậm Nèn",
+   "type": "xã",
+   "full_name": "Xã Nậm Nèn",
+   "slug": "xa-nam-nen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03191",
+     "name": "Huổi Mí",
+     "type": "xã",
+     "full_name": "Xã Huổi Mí",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03194",
+     "name": "Nậm Nèn",
+     "type": "xã",
+     "full_name": "Xã Nậm Nèn",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03199",
+   "name": "Si Pa Phìn",
+   "type": "xã",
+   "full_name": "Xã Si Pa Phìn",
+   "slug": "xa-si-pa-phin",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03198",
+     "name": "Phìn Hồ",
+     "type": "xã",
+     "full_name": "Xã Phìn Hồ",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03199",
+     "name": "Si Pa Phìn",
+     "type": "xã",
+     "full_name": "Xã Si Pa Phìn",
+     "district": "Huyện Nậm Pồ",
+     "district_id": "103",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03202",
+   "name": "Mường Pồn",
+   "type": "xã",
+   "full_name": "Xã Mường Pồn",
+   "slug": "xa-muong-pon",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03319",
+     "name": "Mường Pồn",
+     "type": "xã",
+     "full_name": "Xã Mường Pồn",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03202",
+     "name": "Mường Mươn",
+     "type": "xã",
+     "full_name": "Xã Mường Mươn",
+     "district": "Huyện Mường Chà",
+     "district_id": "097",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03203",
+   "name": "Na Son",
+   "type": "xã",
+   "full_name": "Xã Na Son",
+   "slug": "xa-na-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03205",
+     "name": "Na Son",
+     "type": "xã",
+     "full_name": "Xã Na Son",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03376",
+     "name": "Keo Lôm",
+     "type": "xã",
+     "full_name": "Xã Keo Lôm",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03203",
+     "name": "Điện Biên Đông",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Điện Biên Đông",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03208",
+   "name": "Xa Dung",
+   "type": "xã",
+   "full_name": "Xã Xa Dung",
+   "slug": "xa-xa-dung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03208",
+     "name": "Phì Nhừ",
+     "type": "xã",
+     "full_name": "Xã Phì Nhừ",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03373",
+     "name": "Xa Dung",
+     "type": "xã",
+     "full_name": "Xã Xa Dung",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03214",
+   "name": "Mường Luân",
+   "type": "xã",
+   "full_name": "Xã Mường Luân",
+   "slug": "xa-muong-luan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 40
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03211",
+     "name": "Chiềng Sơ",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sơ",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03214",
+     "name": "Mường Luân",
+     "type": "xã",
+     "full_name": "Xã Mường Luân",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03379",
+     "name": "Luân Giói",
+     "type": "xã",
+     "full_name": "Xã Luân Giói",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Luân Giới",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03217",
+   "name": "Tủa Chùa",
+   "type": "xã",
+   "full_name": "Xã Tủa Chùa",
+   "slug": "xa-tua-chua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03217",
+     "name": "Tủa Chùa",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tủa Chùa",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03250",
+     "name": "Mường Báng",
+     "type": "xã",
+     "full_name": "Xã Mường Báng",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03263",
+     "name": "Nà Tòng",
+     "type": "xã",
+     "full_name": "Xã Nà Tòng",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03220",
+   "name": "Tủa Thàng",
+   "type": "xã",
+   "full_name": "Xã Tủa Thàng",
+   "slug": "xa-tua-thang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03220",
+     "name": "Huổi Só",
+     "type": "xã",
+     "full_name": "Xã Huổi Só",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03235",
+     "name": "Tủa Thàng",
+     "type": "xã",
+     "full_name": "Xã Tủa Thàng",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03226",
+   "name": "Sín Chải",
+   "type": "xã",
+   "full_name": "Xã Sín Chải",
+   "slug": "xa-sin-chai",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03223",
+     "name": "Sín Chải",
+     "type": "xã",
+     "full_name": "Xã Sín Chải",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Xín Chải",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03226",
+     "name": "Tả Sìn Thàng",
+     "type": "xã",
+     "full_name": "Xã Tả Sìn Thàng",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03229",
+     "name": "Lao Xả Phình",
+     "type": "xã",
+     "full_name": "Xã Lao Xả Phình",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03241",
+   "name": "Sính Phình",
+   "type": "xã",
+   "full_name": "Xã Sính Phình",
+   "slug": "xa-sinh-phinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03232",
+     "name": "Tả Phìn",
+     "type": "xã",
+     "full_name": "Xã Tả Phìn",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03238",
+     "name": "Trung Thu",
+     "type": "xã",
+     "full_name": "Xã Trung Thu",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03241",
+     "name": "Sính Phình",
+     "type": "xã",
+     "full_name": "Xã Sính Phình",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03244",
+   "name": "Sáng Nhè",
+   "type": "xã",
+   "full_name": "Xã Sáng Nhè",
+   "slug": "xa-sang-nhe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03244",
+     "name": "Xá Nhè",
+     "type": "xã",
+     "full_name": "Xã Xá Nhè",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "ten-khac-chua-xac-minh",
+     "name_in_list": "Xã Sáng Nhè",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03247",
+     "name": "Mường Đun",
+     "type": "xã",
+     "full_name": "Xã Mường Đun",
+     "district": "Huyện Tủa Chùa",
+     "district_id": "098",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03259",
+     "name": "Phình Sáng",
+     "type": "xã",
+     "full_name": "Xã Phình Sáng",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03253",
+   "name": "Tuần Giáo",
+   "type": "xã",
+   "full_name": "Xã Tuần Giáo",
+   "slug": "xa-tuan-giao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03253",
+     "name": "Tuần Giáo",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Tuần Giáo",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03274",
+     "name": "Quài Nưa",
+     "type": "xã",
+     "full_name": "Xã Quài Nưa",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03289",
+     "name": "Quài Cang",
+     "type": "xã",
+     "full_name": "Xã Quài Cang",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03256",
+   "name": "Mường Ảng",
+   "type": "xã",
+   "full_name": "Xã Mường Ảng",
+   "slug": "xa-muong-ang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03256",
+     "name": "Mường Ảng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Mường Ảng",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03307",
+     "name": "Ẳng Nưa",
+     "type": "xã",
+     "full_name": "Xã Ẳng Nưa",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03310",
+     "name": "Ẳng Cang",
+     "type": "xã",
+     "full_name": "Xã Ẳng Cang",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03260",
+   "name": "Pú Nhung",
+   "type": "xã",
+   "full_name": "Xã Pú Nhung",
+   "slug": "xa-pu-nhung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03260",
+     "name": "Rạng Đông",
+     "type": "xã",
+     "full_name": "Xã Rạng Đông",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03265",
+     "name": "Ta Ma",
+     "type": "xã",
+     "full_name": "Xã Ta Ma",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03271",
+     "name": "Pú Nhung",
+     "type": "xã",
+     "full_name": "Xã Pú Nhung",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03268",
+   "name": "Mường Mùn",
+   "type": "xã",
+   "full_name": "Xã Mường Mùn",
+   "slug": "xa-muong-mun",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03262",
+     "name": "Mùn Chung",
+     "type": "xã",
+     "full_name": "Xã Mùn Chung",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03268",
+     "name": "Mường Mùn",
+     "type": "xã",
+     "full_name": "Xã Mường Mùn",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03269",
+     "name": "Pú Xi",
+     "type": "xã",
+     "full_name": "Xã Pú Xi",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03283",
+   "name": "Chiềng Sinh",
+   "type": "xã",
+   "full_name": "Xã Chiềng Sinh",
+   "slug": "xa-chieng-sinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03277",
+     "name": "Mường Thín",
+     "type": "xã",
+     "full_name": "Xã Mường Thín",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03283",
+     "name": "Nà Sáy",
+     "type": "xã",
+     "full_name": "Xã Nà Sáy",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03284",
+     "name": "Mường Khong",
+     "type": "xã",
+     "full_name": "Xã Mường Khong",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03298",
+     "name": "Chiềng Sinh",
+     "type": "xã",
+     "full_name": "Xã Chiềng Sinh",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03295",
+   "name": "Quài Tở",
+   "type": "xã",
+   "full_name": "Xã Quài Tở",
+   "slug": "xa-quai-to",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03280",
+     "name": "Tỏa Tình",
+     "type": "xã",
+     "full_name": "Xã Tỏa Tình",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03295",
+     "name": "Quài Tở",
+     "type": "xã",
+     "full_name": "Xã Quài Tở",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03304",
+     "name": "Tênh Phông",
+     "type": "xã",
+     "full_name": "Xã Tênh Phông",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03301",
+   "name": "Búng Lao",
+   "type": "xã",
+   "full_name": "Xã Búng Lao",
+   "slug": "xa-bung-lao",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03292",
+     "name": "Ẳng Tở",
+     "type": "xã",
+     "full_name": "Xã Ẳng Tở",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03301",
+     "name": "Búng Lao",
+     "type": "xã",
+     "full_name": "Xã Búng Lao",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03299",
+     "name": "Chiềng Đông",
+     "type": "xã",
+     "full_name": "Xã Chiềng Đông",
+     "district": "Huyện Tuần Giáo",
+     "district_id": "099",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03313",
+   "name": "Mường Lạn",
+   "type": "xã",
+   "full_name": "Xã Mường Lạn",
+   "slug": "xa-muong-lan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03302",
+     "name": "Xuân Lao",
+     "type": "xã",
+     "full_name": "Xã Xuân Lao",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03312",
+     "name": "Nặm Lịch",
+     "type": "xã",
+     "full_name": "Xã Nặm Lịch",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03313",
+     "name": "Mường Lạn",
+     "type": "xã",
+     "full_name": "Xã Mường Lạn",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03316",
+   "name": "Nà Tấu",
+   "type": "xã",
+   "full_name": "Xã Nà Tấu",
+   "slug": "xa-na-tau",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03316",
+     "name": "Nà Tấu",
+     "type": "xã",
+     "full_name": "Xã Nà Tấu",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03286",
+     "name": "Mường Đăng",
+     "type": "xã",
+     "full_name": "Xã Mường Đăng",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03287",
+     "name": "Ngối Cáy",
+     "type": "xã",
+     "full_name": "Xã Ngối Cáy",
+     "district": "Huyện Mường Ảng",
+     "district_id": "102",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03325",
+   "name": "Mường Phăng",
+   "type": "xã",
+   "full_name": "Xã Mường Phăng",
+   "slug": "xa-muong-phang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "03317",
+     "name": "Nà Nhạn",
+     "type": "xã",
+     "full_name": "Xã Nà Nhạn",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03325",
+     "name": "Mường Phăng",
+     "type": "xã",
+     "full_name": "Xã Mường Phăng",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03326",
+     "name": "Pá Khoang",
+     "type": "xã",
+     "full_name": "Xã Pá Khoang",
+     "district": "Thành phố Điện Biên Phủ",
+     "district_id": "094",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03328",
+   "name": "Thanh Nưa",
+   "type": "xã",
+   "full_name": "Xã Thanh Nưa",
+   "slug": "xa-thanh-nua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03322",
+     "name": "Thanh Nưa",
+     "type": "xã",
+     "full_name": "Xã Thanh Nưa",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03323",
+     "name": "Hua Thanh",
+     "type": "xã",
+     "full_name": "Xã Hua Thanh",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03328",
+     "name": "Thanh Luông",
+     "type": "xã",
+     "full_name": "Xã Thanh Luông",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03331",
+     "name": "Thanh Hưng",
+     "type": "xã",
+     "full_name": "Xã Thanh Hưng",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03337",
+     "name": "Thanh Chăn",
+     "type": "xã",
+     "full_name": "Xã Thanh Chăn",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03349",
+   "name": "Thanh Yên",
+   "type": "xã",
+   "full_name": "Xã Thanh Yên",
+   "slug": "xa-thanh-yen",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03340",
+     "name": "Pa Thơm",
+     "type": "xã",
+     "full_name": "Xã Pa Thơm",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03346",
+     "name": "Thanh Yên",
+     "type": "xã",
+     "full_name": "Xã Thanh Yên",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03349",
+     "name": "Noong Luống",
+     "type": "xã",
+     "full_name": "Xã Noong Luống",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03352",
+   "name": "Thanh An",
+   "type": "xã",
+   "full_name": "Xã Thanh An",
+   "slug": "xa-thanh-an",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03343",
+     "name": "Thanh An",
+     "type": "xã",
+     "full_name": "Xã Thanh An",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03352",
+     "name": "Noong Hẹt",
+     "type": "xã",
+     "full_name": "Xã Noong Hẹt",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Noọng Hẹt",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03355",
+     "name": "Sam Mứn",
+     "type": "xã",
+     "full_name": "Xã Sam Mứn",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03356",
+   "name": "Sam Mứn",
+   "type": "xã",
+   "full_name": "Xã Sam Mứn",
+   "slug": "xa-sam-mun",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03356",
+     "name": "Pom Lót",
+     "type": "xã",
+     "full_name": "Xã Pom Lót",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03361",
+     "name": "Na Ư",
+     "type": "xã",
+     "full_name": "Xã Na Ư",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03358",
+   "name": "Núa Ngam",
+   "type": "xã",
+   "full_name": "Xã Núa Ngam",
+   "slug": "xa-nua-ngam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03358",
+     "name": "Núa Ngam",
+     "type": "xã",
+     "full_name": "Xã Núa Ngam",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03359",
+     "name": "Hẹ Muông",
+     "type": "xã",
+     "full_name": "Xã Hẹ Muông",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03365",
+     "name": "Na Tông",
+     "type": "xã",
+     "full_name": "Xã Na Tông",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03368",
+   "name": "Mường Nhà",
+   "type": "xã",
+   "full_name": "Xã Mường Nhà",
+   "slug": "xa-muong-nha",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03364",
+     "name": "Mường Nhà",
+     "type": "xã",
+     "full_name": "Xã Mường Nhà",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03367",
+     "name": "Mường Lói",
+     "type": "xã",
+     "full_name": "Xã Mường Lói",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03368",
+     "name": "Phu Luông",
+     "type": "xã",
+     "full_name": "Xã Phu Luông",
+     "district": "Huyện Điện Biên",
+     "district_id": "100",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03370",
+   "name": "Pu Nhi",
+   "type": "xã",
+   "full_name": "Xã Pu Nhi",
+   "slug": "xa-pu-nhi",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03370",
+     "name": "Pu Nhi",
+     "type": "xã",
+     "full_name": "Xã Pu Nhi",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop-ten-khac",
+     "name_in_list": "Xã Pú Nhi",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03371",
+     "name": "Nong U",
+     "type": "xã",
+     "full_name": "Xã Nong U",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03382",
+   "name": "Phình Giàng",
+   "type": "xã",
+   "full_name": "Xã Phình Giàng",
+   "slug": "xa-phinh-giang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 42
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03382",
+     "name": "Phình Giàng",
+     "type": "xã",
+     "full_name": "Xã Phình Giàng",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03383",
+     "name": "Pú Hồng",
+     "type": "xã",
+     "full_name": "Xã Pú Hồng",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "03385",
+   "name": "Tìa Dình",
+   "type": "xã",
+   "full_name": "Xã Tìa Dình",
+   "slug": "xa-tia-dinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1661/NQ-UBTVQH15",
+    "clause": 41
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "03384",
+     "name": "Tìa Dình",
+     "type": "xã",
+     "full_name": "Xã Tìa Dình",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "03385",
+     "name": "Háng Lìa",
+     "type": "xã",
+     "full_name": "Xã Háng Lìa",
+     "district": "Huyện Điện Biên Đông",
+     "district_id": "101",
+     "province": "Tỉnh Điện Biên",
+     "province_id": "11",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

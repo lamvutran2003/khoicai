@@ -1,0 +1,4581 @@
+{
+ "id": "20",
+ "name": "Lạng Sơn",
+ "full_name": "Tỉnh Lạng Sơn",
+ "type": "tỉnh",
+ "slug": "lang-son",
+ "formed_from": [
+  {
+   "id": "20",
+   "name": "Tỉnh Lạng Sơn"
+  }
+ ],
+ "sources": {
+  "province_resolution": "202/2025/QH15",
+  "commune_resolution": "1672/NQ-UBTVQH15",
+  "commune_resolution_date": "2025-06-16",
+  "effective": "2025-07-01",
+  "stated_count": {
+   "total": 65,
+   "xã": 61,
+   "phường": 4
+  },
+  "citations": [
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp xã (danh sách đơn vị mới, đơn vị cũ hợp thành, số đơn vị)",
+    "document": "1672/NQ-UBTVQH15",
+    "issued": "2025-06-16",
+    "effective": "2025-07-01",
+    "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1672-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-lang-son-nam-2025-119250616214533435.htm",
+    "copy": "sources/nghi-quyet/1672-NQ-UBTVQH15.txt"
+   },
+   {
+    "what": "Sắp xếp đơn vị hành chính cấp tỉnh",
+    "document": "202/2025/QH15",
+    "issued": "2025-06-12",
+    "effective": "2025-07-01",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/NghiDinh.aspx",
+    "copy": "sources/nso-van-ban-tu-2025-07.json"
+   },
+   {
+    "what": "Bảng chuyển đổi đơn vị hành chính mới - cũ (mã đơn vị cũ, huyện cũ, tỉnh cũ, nhập toàn bộ/một phần)",
+    "document": "Cục Thống kê",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "copy": "sources/nso-bang-chuyen-doi.csv"
+   },
+   {
+    "what": "Danh mục đơn vị hành chính hiện hành (mã, tên, loại)",
+    "document": "Cục Thống kê, ngày 18/11/2026",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/",
+    "copy": "sources/nso-danh-muc-xa-2026-11-18.csv"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2026 (Phụ lục)",
+    "document": "293/2025/NĐ-CP",
+    "issued": "2025-11-10",
+    "effective": "2026-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2025/11/10/293-2025-nd-cp-10112025-4-signed-17627702819891838494117.pdf",
+    "copy": "sources/nd-293-2025-phu-luc.txt"
+   },
+   {
+    "what": "Vùng lương tối thiểu 2027 (Phụ lục)",
+    "document": "399/2026/NĐ-CP",
+    "issued": "2026-11-02",
+    "effective": "2027-01-01",
+    "url": "https://xdcs.cdnchinhphu.vn/446259493575335936/2026/11/3/399-2026-nd-cp-02112026-7-signed-17936944277231626733610.pdf",
+    "copy": "sources/nd-399-2026-phu-luc.txt"
+   }
+  ]
+ },
+ "units": [
+  {
+   "id": "05977",
+   "name": "Đông Kinh",
+   "type": "phường",
+   "full_name": "Phường Đông Kinh",
+   "slug": "phuong-dong-kinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 65
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "05977",
+     "name": "Vĩnh Trại",
+     "type": "phường",
+     "full_name": "Phường Vĩnh Trại",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "05980",
+     "name": "Đông Kinh",
+     "type": "phường",
+     "full_name": "Phường Đông Kinh",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "05992",
+     "name": "Mai Pha",
+     "type": "xã",
+     "full_name": "Xã Mai Pha",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06247",
+     "name": "Yên Trạch",
+     "type": "xã",
+     "full_name": "Xã Yên Trạch",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "05983",
+   "name": "Lương Văn Tri",
+   "type": "phường",
+   "full_name": "Phường Lương Văn Tri",
+   "slug": "phuong-luong-van-tri",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 63
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "05983",
+     "name": "Chi Lăng",
+     "type": "phường",
+     "full_name": "Phường Chi Lăng",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "05989",
+     "name": "Quảng Lạc",
+     "type": "xã",
+     "full_name": "Xã Quảng Lạc",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "05986",
+   "name": "Tam Thanh",
+   "type": "phường",
+   "full_name": "Phường Tam Thanh",
+   "slug": "phuong-tam-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 62
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "05974",
+     "name": "Tam Thanh",
+     "type": "phường",
+     "full_name": "Phường Tam Thanh",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "05986",
+     "name": "Hoàng Đồng",
+     "type": "xã",
+     "full_name": "Xã Hoàng Đồng",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06187",
+   "name": "Kỳ Lừa",
+   "type": "phường",
+   "full_name": "Phường Kỳ Lừa",
+   "slug": "phuong-ky-lua",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 64
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "III",
+    "2027": "III"
+   },
+   "old_units": [
+    {
+     "id": "05971",
+     "name": "Hoàng Văn Thụ",
+     "type": "phường",
+     "full_name": "Phường Hoàng Văn Thụ",
+     "district": "Thành phố Lạng Sơn",
+     "district_id": "178",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06187",
+     "name": "Cao Lộc",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Cao Lộc",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06226",
+     "name": "Hợp Thành",
+     "type": "xã",
+     "full_name": "Xã Hợp Thành",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06235",
+     "name": "Gia Cát",
+     "type": "xã",
+     "full_name": "Xã Gia Cát",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06244",
+     "name": "Tân Liên",
+     "type": "xã",
+     "full_name": "Xã Tân Liên",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06001",
+   "name": "Đoàn Kết",
+   "type": "xã",
+   "full_name": "Xã Đoàn Kết",
+   "slug": "xa-doan-ket",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 2
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "05998",
+     "name": "Khánh Long",
+     "type": "xã",
+     "full_name": "Xã Khánh Long",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06001",
+     "name": "Đoàn Kết",
+     "type": "xã",
+     "full_name": "Xã Đoàn Kết",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06010",
+     "name": "Cao Minh",
+     "type": "xã",
+     "full_name": "Xã Cao Minh",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06004",
+   "name": "Quốc Khánh",
+   "type": "xã",
+   "full_name": "Xã Quốc Khánh",
+   "slug": "xa-quoc-khanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 5
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06004",
+     "name": "Quốc Khánh",
+     "type": "xã",
+     "full_name": "Xã Quốc Khánh",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06016",
+     "name": "Tri Phương",
+     "type": "xã",
+     "full_name": "Xã Tri Phương",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06025",
+     "name": "Đội Cấn",
+     "type": "xã",
+     "full_name": "Xã Đội Cấn",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06019",
+   "name": "Tân Tiến",
+   "type": "xã",
+   "full_name": "Xã Tân Tiến",
+   "slug": "xa-tan-tien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 3
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06019",
+     "name": "Tân Tiến",
+     "type": "xã",
+     "full_name": "Xã Tân Tiến",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06022",
+     "name": "Tân Yên",
+     "type": "xã",
+     "full_name": "Xã Tân Yên",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06031",
+     "name": "Kim Đồng",
+     "type": "xã",
+     "full_name": "Xã Kim Đồng",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06037",
+   "name": "Kháng Chiến",
+   "type": "xã",
+   "full_name": "Xã Kháng Chiến",
+   "slug": "xa-khang-chien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 6
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06028",
+     "name": "Tân Minh",
+     "type": "xã",
+     "full_name": "Xã Tân Minh",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06037",
+     "name": "Trung Thành",
+     "type": "xã",
+     "full_name": "Xã Trung Thành",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06049",
+     "name": "Kháng Chiến",
+     "type": "xã",
+     "full_name": "Xã Kháng Chiến",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06040",
+   "name": "Thất Khê",
+   "type": "xã",
+   "full_name": "Xã Thất Khê",
+   "slug": "xa-that-khe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 1
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06013",
+     "name": "Chí Minh",
+     "type": "xã",
+     "full_name": "Xã Chí Minh",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06034",
+     "name": "Chi Lăng",
+     "type": "xã",
+     "full_name": "Xã Chi Lăng",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06040",
+     "name": "Thất Khê",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Thất Khê",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06046",
+   "name": "Tràng Định",
+   "type": "xã",
+   "full_name": "Xã Tràng Định",
+   "slug": "xa-trang-dinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 4
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06046",
+     "name": "Đề Thám",
+     "type": "xã",
+     "full_name": "Xã Đề Thám",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06055",
+     "name": "Hùng Sơn",
+     "type": "xã",
+     "full_name": "Xã Hùng Sơn",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06061",
+     "name": "Hùng Việt",
+     "type": "xã",
+     "full_name": "Xã Hùng Việt",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06058",
+   "name": "Quốc Việt",
+   "type": "xã",
+   "full_name": "Xã Quốc Việt",
+   "slug": "xa-quoc-viet",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 7
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06043",
+     "name": "Đào Viên",
+     "type": "xã",
+     "full_name": "Xã Đào Viên",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06058",
+     "name": "Quốc Việt",
+     "type": "xã",
+     "full_name": "Xã Quốc Việt",
+     "district": "Huyện Tràng Định",
+     "district_id": "180",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06073",
+   "name": "Hoa Thám",
+   "type": "xã",
+   "full_name": "Xã Hoa Thám",
+   "slug": "xa-hoa-tham",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 11
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06067",
+     "name": "Hưng Đạo",
+     "type": "xã",
+     "full_name": "Xã Hưng Đạo",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06073",
+     "name": "Hoa Thám",
+     "type": "xã",
+     "full_name": "Xã Hoa Thám",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06076",
+   "name": "Quý Hòa",
+   "type": "xã",
+   "full_name": "Xã Quý Hòa",
+   "slug": "xa-quy-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 12
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06070",
+     "name": "Vĩnh Yên",
+     "type": "xã",
+     "full_name": "Xã Vĩnh Yên",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06076",
+     "name": "Quý Hòa",
+     "type": "xã",
+     "full_name": "Xã Quý Hòa",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06079",
+   "name": "Hồng Phong",
+   "type": "xã",
+   "full_name": "Xã Hồng Phong",
+   "slug": "xa-hong-phong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 10
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06079",
+     "name": "Hồng Phong",
+     "type": "xã",
+     "full_name": "Xã Hồng Phong",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06094",
+     "name": "Minh Khai",
+     "type": "xã",
+     "full_name": "Xã Minh Khai",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06085",
+   "name": "Thiện Hòa",
+   "type": "xã",
+   "full_name": "Xã Thiện Hòa",
+   "slug": "xa-thien-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 13
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06082",
+     "name": "Yên Lỗ",
+     "type": "xã",
+     "full_name": "Xã Yên Lỗ",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06085",
+     "name": "Thiện Hòa",
+     "type": "xã",
+     "full_name": "Xã Thiện Hòa",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06091",
+   "name": "Thiện Thuật",
+   "type": "xã",
+   "full_name": "Xã Thiện Thuật",
+   "slug": "xa-thien-thuat",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 14
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06088",
+     "name": "Quang Trung",
+     "type": "xã",
+     "full_name": "Xã Quang Trung",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06091",
+     "name": "Thiện Thuật",
+     "type": "xã",
+     "full_name": "Xã Thiện Thuật",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06103",
+   "name": "Thiện Long",
+   "type": "xã",
+   "full_name": "Xã Thiện Long",
+   "slug": "xa-thien-long",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 15
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06097",
+     "name": "Thiện Long",
+     "type": "xã",
+     "full_name": "Xã Thiện Long",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06103",
+     "name": "Hòa Bình",
+     "type": "xã",
+     "full_name": "Xã Hòa Bình",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06109",
+     "name": "Tân Hòa",
+     "type": "xã",
+     "full_name": "Xã Tân Hòa",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06112",
+   "name": "Bình Gia",
+   "type": "xã",
+   "full_name": "Xã Bình Gia",
+   "slug": "xa-binh-gia",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 8
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06100",
+     "name": "Hoàng Văn Thụ",
+     "type": "xã",
+     "full_name": "Xã Hoàng Văn Thụ",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06106",
+     "name": "Mông Ân",
+     "type": "xã",
+     "full_name": "Xã Mông Ân",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06112",
+     "name": "Bình Gia",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Bình Gia",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06115",
+   "name": "Tân Văn",
+   "type": "xã",
+   "full_name": "Xã Tân Văn",
+   "slug": "xa-tan-van",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 9
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06115",
+     "name": "Hồng Thái",
+     "type": "xã",
+     "full_name": "Xã Hồng Thái",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06118",
+     "name": "Bình La",
+     "type": "xã",
+     "full_name": "Xã Bình La",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06121",
+     "name": "Tân Văn",
+     "type": "xã",
+     "full_name": "Xã Tân Văn",
+     "district": "Huyện Bình Gia",
+     "district_id": "181",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06124",
+   "name": "Na Sầm",
+   "type": "xã",
+   "full_name": "Xã Na Sầm",
+   "slug": "xa-na-sam",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 28
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06124",
+     "name": "Na Sầm",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Na Sầm",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06139",
+     "name": "Bắc Hùng",
+     "type": "xã",
+     "full_name": "Xã Bắc Hùng",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06157",
+     "name": "Hoàng Việt",
+     "type": "xã",
+     "full_name": "Xã Hoàng Việt",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06148",
+   "name": "Thụy Hùng",
+   "type": "xã",
+   "full_name": "Xã Thụy Hùng",
+   "slug": "xa-thuy-hung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 30
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06127",
+     "name": "Trùng Khánh",
+     "type": "xã",
+     "full_name": "Xã Trùng Khánh",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06136",
+     "name": "Thụy Hùng",
+     "type": "xã",
+     "full_name": "Xã Thụy Hùng",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06148",
+     "name": "Thanh Long",
+     "type": "xã",
+     "full_name": "Xã Thanh Long",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06151",
+   "name": "Hội Hoan",
+   "type": "xã",
+   "full_name": "Xã Hội Hoan",
+   "slug": "xa-hoi-hoan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 32
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06151",
+     "name": "Hội Hoan",
+     "type": "xã",
+     "full_name": "Xã Hội Hoan",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06160",
+     "name": "Gia Miễn",
+     "type": "xã",
+     "full_name": "Xã Gia Miễn",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06154",
+   "name": "Văn Lãng",
+   "type": "xã",
+   "full_name": "Xã Văn Lãng",
+   "slug": "xa-van-lang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 31
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06133",
+     "name": "Bắc La",
+     "type": "xã",
+     "full_name": "Xã Bắc La",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06142",
+     "name": "Tân Tác",
+     "type": "xã",
+     "full_name": "Xã Tân Tác",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06154",
+     "name": "Bắc Việt",
+     "type": "xã",
+     "full_name": "Xã Bắc Việt",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06163",
+     "name": "Thành Hòa",
+     "type": "xã",
+     "full_name": "Xã Thành Hòa",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06172",
+   "name": "Hoàng Văn Thụ",
+   "type": "xã",
+   "full_name": "Xã Hoàng Văn Thụ",
+   "slug": "xa-hoang-van-thu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 29
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06166",
+     "name": "Tân Thanh",
+     "type": "xã",
+     "full_name": "Xã Tân Thanh",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06172",
+     "name": "Tân Mỹ",
+     "type": "xã",
+     "full_name": "Xã Tân Mỹ",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06175",
+     "name": "Hồng Thái",
+     "type": "xã",
+     "full_name": "Xã Hồng Thái",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06178",
+     "name": "Hoàng Văn Thụ",
+     "type": "xã",
+     "full_name": "Xã Hoàng Văn Thụ",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06181",
+     "name": "Nhạc Kỳ",
+     "type": "xã",
+     "full_name": "Xã Nhạc Kỳ",
+     "district": "Huyện Văn Lãng",
+     "district_id": "182",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06184",
+   "name": "Đồng Đăng",
+   "type": "xã",
+   "full_name": "Xã Đồng Đăng",
+   "slug": "xa-dong-dang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 58
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06184",
+     "name": "Đồng Đăng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Đồng Đăng",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06190",
+     "name": "Bảo Lâm",
+     "type": "xã",
+     "full_name": "Xã Bảo Lâm",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06205",
+     "name": "Hồng Phong",
+     "type": "xã",
+     "full_name": "Xã Hồng Phong",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06208",
+     "name": "Thụy Hùng",
+     "type": "xã",
+     "full_name": "Xã Thụy Hùng",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06214",
+     "name": "Phú Xá",
+     "type": "xã",
+     "full_name": "Xã Phú Xá",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06196",
+   "name": "Ba Sơn",
+   "type": "xã",
+   "full_name": "Xã Ba Sơn",
+   "slug": "xa-ba-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 61
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06196",
+     "name": "Cao Lâu",
+     "type": "xã",
+     "full_name": "Xã Cao Lâu",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06202",
+     "name": "Xuất Lễ",
+     "type": "xã",
+     "full_name": "Xã Xuất Lễ",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06238",
+     "name": "Mẫu Sơn",
+     "type": "xã",
+     "full_name": "Xã Mẫu Sơn",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06211",
+   "name": "Cao Lộc",
+   "type": "xã",
+   "full_name": "Xã Cao Lộc",
+   "slug": "xa-cao-loc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 59
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06193",
+     "name": "Thanh Lòa",
+     "type": "xã",
+     "full_name": "Xã Thanh Lòa",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06199",
+     "name": "Thạch Đạn",
+     "type": "xã",
+     "full_name": "Xã Thạch Đạn",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06211",
+     "name": "Lộc Yên",
+     "type": "xã",
+     "full_name": "Xã Lộc Yên",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06220",
+   "name": "Công Sơn",
+   "type": "xã",
+   "full_name": "Xã Công Sơn",
+   "slug": "xa-cong-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 60
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06220",
+     "name": "Hải Yến",
+     "type": "xã",
+     "full_name": "Xã Hải Yến",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06223",
+     "name": "Hòa Cư",
+     "type": "xã",
+     "full_name": "Xã Hòa Cư",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06232",
+     "name": "Công Sơn",
+     "type": "xã",
+     "full_name": "Xã Công Sơn",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06253",
+   "name": "Văn Quan",
+   "type": "xã",
+   "full_name": "Xã Văn Quan",
+   "slug": "xa-van-quan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 22
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06253",
+     "name": "Văn Quan",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Văn Quan",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06274",
+     "name": "Hòa Bình",
+     "type": "xã",
+     "full_name": "Xã Hòa Bình",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06277",
+     "name": "Tú Xuyên",
+     "type": "xã",
+     "full_name": "Xã Tú Xuyên",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06280",
+   "name": "Điềm He",
+   "type": "xã",
+   "full_name": "Xã Điềm He",
+   "slug": "xa-diem-he",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 23
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06256",
+     "name": "Trấn Ninh",
+     "type": "xã",
+     "full_name": "Xã Trấn Ninh",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06268",
+     "name": "Liên Hội",
+     "type": "xã",
+     "full_name": "Xã Liên Hội",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06280",
+     "name": "Điềm He",
+     "type": "xã",
+     "full_name": "Xã Điềm He",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06286",
+   "name": "Khánh Khê",
+   "type": "xã",
+   "full_name": "Xã Khánh Khê",
+   "slug": "xa-khanh-khe",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 27
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06286",
+     "name": "Khánh Khê",
+     "type": "xã",
+     "full_name": "Xã Khánh Khê",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06217",
+     "name": "Bình Trung",
+     "type": "xã",
+     "full_name": "Xã Bình Trung",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06241",
+     "name": "Xuân Long",
+     "type": "xã",
+     "full_name": "Xã Xuân Long",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06298",
+   "name": "Yên Phúc",
+   "type": "xã",
+   "full_name": "Xã Yên Phúc",
+   "slug": "xa-yen-phuc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 24
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06283",
+     "name": "An Sơn",
+     "type": "xã",
+     "full_name": "Xã An Sơn",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06298",
+     "name": "Bình Phúc",
+     "type": "xã",
+     "full_name": "Xã Bình Phúc",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06319",
+     "name": "Yên Phúc",
+     "type": "xã",
+     "full_name": "Xã Yên Phúc",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06313",
+   "name": "Tri Lễ",
+   "type": "xã",
+   "full_name": "Xã Tri Lễ",
+   "slug": "xa-tri-le",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 25
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06292",
+     "name": "Lương Năng",
+     "type": "xã",
+     "full_name": "Xã Lương Năng",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06313",
+     "name": "Tri Lễ",
+     "type": "xã",
+     "full_name": "Xã Tri Lễ",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06322",
+     "name": "Hữu Lễ",
+     "type": "xã",
+     "full_name": "Xã Hữu Lễ",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06316",
+   "name": "Tân Đoàn",
+   "type": "xã",
+   "full_name": "Xã Tân Đoàn",
+   "slug": "xa-tan-doan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 26
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06250",
+     "name": "Tân Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Thành",
+     "district": "Huyện Cao Lộc",
+     "district_id": "183",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06307",
+     "name": "Tân Đoàn",
+     "type": "xã",
+     "full_name": "Xã Tân Đoàn",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06316",
+     "name": "Tràng Phái",
+     "type": "xã",
+     "full_name": "Xã Tràng Phái",
+     "district": "Huyện Văn Quan",
+     "district_id": "184",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06325",
+   "name": "Bắc Sơn",
+   "type": "xã",
+   "full_name": "Xã Bắc Sơn",
+   "slug": "xa-bac-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 16
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06325",
+     "name": "Bắc Sơn",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Bắc Sơn",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06328",
+     "name": "Long Đống",
+     "type": "xã",
+     "full_name": "Xã Long Đống",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06343",
+     "name": "Bắc Quỳnh",
+     "type": "xã",
+     "full_name": "Xã Bắc Quỳnh",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06337",
+   "name": "Tân Tri",
+   "type": "xã",
+   "full_name": "Xã Tân Tri",
+   "slug": "xa-tan-tri",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 21
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06331",
+     "name": "Vạn Thủy",
+     "type": "xã",
+     "full_name": "Xã Vạn Thủy",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06337",
+     "name": "Đồng Ý",
+     "type": "xã",
+     "full_name": "Xã Đồng Ý",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06340",
+     "name": "Tân Tri",
+     "type": "xã",
+     "full_name": "Xã Tân Tri",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06349",
+   "name": "Hưng Vũ",
+   "type": "xã",
+   "full_name": "Xã Hưng Vũ",
+   "slug": "xa-hung-vu",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 17
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06349",
+     "name": "Hưng Vũ",
+     "type": "xã",
+     "full_name": "Xã Hưng Vũ",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06370",
+     "name": "Trấn Yên",
+     "type": "xã",
+     "full_name": "Xã Trấn Yên",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06364",
+   "name": "Vũ Lễ",
+   "type": "xã",
+   "full_name": "Xã Vũ Lễ",
+   "slug": "xa-vu-le",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 20
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06355",
+     "name": "Vũ Sơn",
+     "type": "xã",
+     "full_name": "Xã Vũ Sơn",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06364",
+     "name": "Chiến Thắng",
+     "type": "xã",
+     "full_name": "Xã Chiến Thắng",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06373",
+     "name": "Vũ Lễ",
+     "type": "xã",
+     "full_name": "Xã Vũ Lễ",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06367",
+   "name": "Vũ Lăng",
+   "type": "xã",
+   "full_name": "Xã Vũ Lăng",
+   "slug": "xa-vu-lang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 18
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06352",
+     "name": "Tân Lập",
+     "type": "xã",
+     "full_name": "Xã Tân Lập",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06358",
+     "name": "Chiêu Vũ",
+     "type": "xã",
+     "full_name": "Xã Chiêu Vũ",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06361",
+     "name": "Tân Hương",
+     "type": "xã",
+     "full_name": "Xã Tân Hương",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06367",
+     "name": "Vũ Lăng",
+     "type": "xã",
+     "full_name": "Xã Vũ Lăng",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06376",
+   "name": "Nhất Hòa",
+   "type": "xã",
+   "full_name": "Xã Nhất Hòa",
+   "slug": "xa-nhat-hoa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 19
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06376",
+     "name": "Nhất Hòa",
+     "type": "xã",
+     "full_name": "Xã Nhất Hòa",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06379",
+     "name": "Tân Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Thành",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06382",
+     "name": "Nhất Tiến",
+     "type": "xã",
+     "full_name": "Xã Nhất Tiến",
+     "district": "Huyện Bắc Sơn",
+     "district_id": "185",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06385",
+   "name": "Hữu Lũng",
+   "type": "xã",
+   "full_name": "Xã Hữu Lũng",
+   "slug": "xa-huu-lung",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 44
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06385",
+     "name": "Hữu Lũng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Hữu Lũng",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06424",
+     "name": "Đồng Tân",
+     "type": "xã",
+     "full_name": "Xã Đồng Tân",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06451",
+     "name": "Hồ Sơn",
+     "type": "xã",
+     "full_name": "Xã Hồ Sơn",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06391",
+   "name": "Yên Bình",
+   "type": "xã",
+   "full_name": "Xã Yên Bình",
+   "slug": "xa-yen-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 49
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06391",
+     "name": "Yên Bình",
+     "type": "xã",
+     "full_name": "Xã Yên Bình",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06394",
+     "name": "Quyết Thắng",
+     "type": "xã",
+     "full_name": "Xã Quyết Thắng",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06397",
+     "name": "Hòa Bình",
+     "type": "xã",
+     "full_name": "Xã Hòa Bình",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06400",
+   "name": "Hữu Liên",
+   "type": "xã",
+   "full_name": "Xã Hữu Liên",
+   "slug": "xa-huu-lien",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 50
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06388",
+     "name": "Hữu Liên",
+     "type": "xã",
+     "full_name": "Xã Hữu Liên",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06400",
+     "name": "Yên Thịnh",
+     "type": "xã",
+     "full_name": "Xã Yên Thịnh",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06415",
+   "name": "Vân Nham",
+   "type": "xã",
+   "full_name": "Xã Vân Nham",
+   "slug": "xa-van-nham",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 47
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06415",
+     "name": "Minh Tiến",
+     "type": "xã",
+     "full_name": "Xã Minh Tiến",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06418",
+     "name": "Nhật Tiến",
+     "type": "xã",
+     "full_name": "Xã Nhật Tiến",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06433",
+     "name": "Vân Nham",
+     "type": "xã",
+     "full_name": "Xã Vân Nham",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06427",
+   "name": "Cai Kinh",
+   "type": "xã",
+   "full_name": "Xã Cai Kinh",
+   "slug": "xa-cai-kinh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 51
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06403",
+     "name": "Yên Sơn",
+     "type": "xã",
+     "full_name": "Xã Yên Sơn",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06412",
+     "name": "Yên Vượng",
+     "type": "xã",
+     "full_name": "Xã Yên Vượng",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06427",
+     "name": "Cai Kinh",
+     "type": "xã",
+     "full_name": "Xã Cai Kinh",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06436",
+   "name": "Thiện Tân",
+   "type": "xã",
+   "full_name": "Xã Thiện Tân",
+   "slug": "xa-thien-tan",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 48
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06406",
+     "name": "Thiện Tân",
+     "type": "xã",
+     "full_name": "Xã Thiện Tân",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06421",
+     "name": "Thanh Sơn",
+     "type": "xã",
+     "full_name": "Xã Thanh Sơn",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06436",
+     "name": "Đồng Tiến",
+     "type": "xã",
+     "full_name": "Xã Đồng Tiến",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06445",
+   "name": "Tân Thành",
+   "type": "xã",
+   "full_name": "Xã Tân Thành",
+   "slug": "xa-tan-thanh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 46
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06430",
+     "name": "Hòa Lạc",
+     "type": "xã",
+     "full_name": "Xã Hòa Lạc",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06442",
+     "name": "Tân Thành",
+     "type": "xã",
+     "full_name": "Xã Tân Thành",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06445",
+     "name": "Hòa Sơn",
+     "type": "xã",
+     "full_name": "Xã Hòa Sơn",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06457",
+   "name": "Tuấn Sơn",
+   "type": "xã",
+   "full_name": "Xã Tuấn Sơn",
+   "slug": "xa-tuan-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 45
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06448",
+     "name": "Minh Sơn",
+     "type": "xã",
+     "full_name": "Xã Minh Sơn",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06457",
+     "name": "Minh Hòa",
+     "type": "xã",
+     "full_name": "Xã Minh Hòa",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06460",
+     "name": "Hòa Thắng",
+     "type": "xã",
+     "full_name": "Xã Hòa Thắng",
+     "district": "Huyện Hữu Lũng",
+     "district_id": "186",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06463",
+   "name": "Chi Lăng",
+   "type": "xã",
+   "full_name": "Xã Chi Lăng",
+   "slug": "xa-chi-lang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 52
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06463",
+     "name": "Đồng Mỏ",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Đồng Mỏ",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06466",
+     "name": "Chi Lăng",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Chi Lăng",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06523",
+     "name": "Chi Lăng",
+     "type": "xã",
+     "full_name": "Xã Chi Lăng",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06475",
+   "name": "Bằng Mạc",
+   "type": "xã",
+   "full_name": "Xã Bằng Mạc",
+   "slug": "xa-bang-mac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 56
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06475",
+     "name": "Gia Lộc",
+     "type": "xã",
+     "full_name": "Xã Gia Lộc",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06487",
+     "name": "Bằng Hữu",
+     "type": "xã",
+     "full_name": "Xã Bằng Hữu",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06490",
+     "name": "Thượng Cường",
+     "type": "xã",
+     "full_name": "Xã Thượng Cường",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06493",
+     "name": "Bằng Mạc",
+     "type": "xã",
+     "full_name": "Xã Bằng Mạc",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06481",
+   "name": "Chiến Thắng",
+   "type": "xã",
+   "full_name": "Xã Chiến Thắng",
+   "slug": "xa-chien-thang",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 54
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06469",
+     "name": "Vân An",
+     "type": "xã",
+     "full_name": "Xã Vân An",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06472",
+     "name": "Vân Thủy",
+     "type": "xã",
+     "full_name": "Xã Vân Thủy",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06481",
+     "name": "Chiến Thắng",
+     "type": "xã",
+     "full_name": "Xã Chiến Thắng",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06502",
+     "name": "Liên Sơn",
+     "type": "xã",
+     "full_name": "Xã Liên Sơn",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06496",
+   "name": "Nhân Lý",
+   "type": "xã",
+   "full_name": "Xã Nhân Lý",
+   "slug": "xa-nhan-ly",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 55
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06478",
+     "name": "Bắc Thủy",
+     "type": "xã",
+     "full_name": "Xã Bắc Thủy",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06484",
+     "name": "Mai Sao",
+     "type": "xã",
+     "full_name": "Xã Mai Sao",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06496",
+     "name": "Nhân Lý",
+     "type": "xã",
+     "full_name": "Xã Nhân Lý",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06499",
+     "name": "Lâm Sơn",
+     "type": "xã",
+     "full_name": "Xã Lâm Sơn",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06505",
+   "name": "Vạn Linh",
+   "type": "xã",
+   "full_name": "Xã Vạn Linh",
+   "slug": "xa-van-linh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 57
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06505",
+     "name": "Vạn Linh",
+     "type": "xã",
+     "full_name": "Xã Vạn Linh",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06508",
+     "name": "Hòa Bình",
+     "type": "xã",
+     "full_name": "Xã Hòa Bình",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06520",
+     "name": "Y Tịch",
+     "type": "xã",
+     "full_name": "Xã Y Tịch",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06517",
+   "name": "Quan Sơn",
+   "type": "xã",
+   "full_name": "Xã Quan Sơn",
+   "slug": "xa-quan-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 53
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06514",
+     "name": "Hữu Kiên",
+     "type": "xã",
+     "full_name": "Xã Hữu Kiên",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06517",
+     "name": "Quan Sơn",
+     "type": "xã",
+     "full_name": "Xã Quan Sơn",
+     "district": "Huyện Chi Lăng",
+     "district_id": "187",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06526",
+   "name": "Na Dương",
+   "type": "xã",
+   "full_name": "Xã Na Dương",
+   "slug": "xa-na-duong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 35
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06526",
+     "name": "Na Dương",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Na Dương",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06562",
+     "name": "Tú Đoạn",
+     "type": "xã",
+     "full_name": "Xã Tú Đoạn",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06592",
+     "name": "Đông Quan",
+     "type": "xã",
+     "full_name": "Xã Đông Quan",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06529",
+   "name": "Lộc Bình",
+   "type": "xã",
+   "full_name": "Xã Lộc Bình",
+   "slug": "xa-loc-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 33
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06529",
+     "name": "Lộc Bình",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Lộc Bình",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06544",
+     "name": "Khánh Xuân",
+     "type": "xã",
+     "full_name": "Xã Khánh Xuân",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06550",
+     "name": "Hữu Khánh",
+     "type": "xã",
+     "full_name": "Xã Hữu Khánh",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06553",
+     "name": "Đồng Bục",
+     "type": "xã",
+     "full_name": "Xã Đồng Bục",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06541",
+   "name": "Mẫu Sơn",
+   "type": "xã",
+   "full_name": "Xã Mẫu Sơn",
+   "slug": "xa-mau-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 34
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06532",
+     "name": "Mẫu Sơn",
+     "type": "xã",
+     "full_name": "Xã Mẫu Sơn",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06541",
+     "name": "Yên Khoái",
+     "type": "xã",
+     "full_name": "Xã Yên Khoái",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06547",
+     "name": "Tú Mịch",
+     "type": "xã",
+     "full_name": "Xã Tú Mịch",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06565",
+   "name": "Khuất Xá",
+   "type": "xã",
+   "full_name": "Xã Khuất Xá",
+   "slug": "xa-khuat-xa",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 39
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06559",
+     "name": "Tam Gia",
+     "type": "xã",
+     "full_name": "Xã Tam Gia",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06565",
+     "name": "Khuất Xá",
+     "type": "xã",
+     "full_name": "Xã Khuất Xá",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06577",
+   "name": "Thống Nhất",
+   "type": "xã",
+   "full_name": "Xã Thống Nhất",
+   "slug": "xa-thong-nhat",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 37
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06577",
+     "name": "Thống Nhất",
+     "type": "xã",
+     "full_name": "Xã Thống Nhất",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06595",
+     "name": "Minh Hiệp",
+     "type": "xã",
+     "full_name": "Xã Minh Hiệp",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06598",
+     "name": "Hữu Lân",
+     "type": "xã",
+     "full_name": "Xã Hữu Lân",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06601",
+   "name": "Lợi Bác",
+   "type": "xã",
+   "full_name": "Xã Lợi Bác",
+   "slug": "xa-loi-bac",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 36
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06589",
+     "name": "Sàn Viên",
+     "type": "xã",
+     "full_name": "Xã Sàn Viên",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06601",
+     "name": "Lợi Bác",
+     "type": "xã",
+     "full_name": "Xã Lợi Bác",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06607",
+   "name": "Xuân Dương",
+   "type": "xã",
+   "full_name": "Xã Xuân Dương",
+   "slug": "xa-xuan-duong",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 38
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06604",
+     "name": "Nam Quan",
+     "type": "xã",
+     "full_name": "Xã Nam Quan",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06607",
+     "name": "Xuân Dương",
+     "type": "xã",
+     "full_name": "Xã Xuân Dương",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06610",
+     "name": "Ái Quốc",
+     "type": "xã",
+     "full_name": "Xã Ái Quốc",
+     "district": "Huyện Lộc Bình",
+     "district_id": "188",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06613",
+   "name": "Đình Lập",
+   "type": "xã",
+   "full_name": "Xã Đình Lập",
+   "slug": "xa-dinh-lap",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 40
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06613",
+     "name": "Đình Lập",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Đình Lập",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06622",
+     "name": "Bính Xá",
+     "type": "xã",
+     "full_name": "Xã Bính Xá",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "06625"
+     ]
+    },
+    {
+     "id": "06628",
+     "name": "Đình Lập",
+     "type": "xã",
+     "full_name": "Xã Đình Lập",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06616",
+   "name": "Thái Bình",
+   "type": "xã",
+   "full_name": "Xã Thái Bình",
+   "slug": "xa-thai-binh",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 41
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06616",
+     "name": "Nông Trường Thái Bình",
+     "type": "thị trấn",
+     "full_name": "Thị trấn Nông Trường Thái Bình",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06631",
+     "name": "Thái Bình",
+     "type": "xã",
+     "full_name": "Xã Thái Bình",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06640",
+     "name": "Lâm Ca",
+     "type": "xã",
+     "full_name": "Xã Lâm Ca",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06625",
+   "name": "Kiên Mộc",
+   "type": "xã",
+   "full_name": "Xã Kiên Mộc",
+   "slug": "xa-kien-moc",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 43
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06619",
+     "name": "Bắc Xa",
+     "type": "xã",
+     "full_name": "Xã Bắc Xa",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06622",
+     "name": "Bính Xá",
+     "type": "xã",
+     "full_name": "Xã Bính Xá",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "06613"
+     ]
+    },
+    {
+     "id": "06625",
+     "name": "Kiên Mộc",
+     "type": "xã",
+     "full_name": "Xã Kiên Mộc",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "phan-con-lai",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "06637"
+     ]
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  },
+  {
+   "id": "06637",
+   "name": "Châu Sơn",
+   "type": "xã",
+   "full_name": "Xã Châu Sơn",
+   "slug": "xa-chau-son",
+   "formation": "sap-xep",
+   "source": {
+    "resolution": "1672/NQ-UBTVQH15",
+    "clause": 42
+   },
+   "type_changes": [],
+   "region": {
+    "2026": "IV",
+    "2027": "IV"
+   },
+   "old_units": [
+    {
+     "id": "06625",
+     "name": "Kiên Mộc",
+     "type": "xã",
+     "full_name": "Xã Kiên Mộc",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "mot-phan",
+     "nso_note": "Nhập một phần",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": true,
+     "also_in": [
+      "06625"
+     ]
+    },
+    {
+     "id": "06634",
+     "name": "Cường Lợi",
+     "type": "xã",
+     "full_name": "Xã Cường Lợi",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06637",
+     "name": "Châu Sơn",
+     "type": "xã",
+     "full_name": "Xã Châu Sơn",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06643",
+     "name": "Đồng Thắng",
+     "type": "xã",
+     "full_name": "Xã Đồng Thắng",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    },
+    {
+     "id": "06646",
+     "name": "Bắc Lãng",
+     "type": "xã",
+     "full_name": "Xã Bắc Lãng",
+     "district": "Huyện Đình Lập",
+     "district_id": "189",
+     "province": "Tỉnh Lạng Sơn",
+     "province_id": "20",
+     "portion": "toan-bo",
+     "nso_note": "Nhập toàn bộ",
+     "source": "nghi-quyet+nso",
+     "code_check": "khop",
+     "split": false,
+     "also_in": []
+    }
+   ],
+   "flags": [],
+   "name_2025": null
+  }
+ ]
+}

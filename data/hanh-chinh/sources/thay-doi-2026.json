@@ -1,0 +1,16 @@
+{
+ "ghi_chu": "Thay đổi sau 01/07/2025. Số hiệu, ngày ban hành, ngày hiệu lực theo danh mục văn bản của Cục Thống kê (nso-van-ban-tu-2025-07.json); danh sách xã thành lập phường đối chiếu với tin chính thức và với danh mục đơn vị hành chính của Cục Thống kê ngày 18/11/2026.",
+ "tinh_thanh_thanh_pho": [
+  {"so": "30/2026/QH16", "ma_tinh": "75", "ten_moi": "Thành phố Đồng Nai", "ban_hanh": "2026-04-24", "hieu_luc": "2026-04-30"},
+  {"so": "36/2026/QH16", "ma_tinh": "22", "ten_moi": "Thành phố Quảng Ninh", "ban_hanh": "2026-08-24", "hieu_luc": "2026-09-01"},
+  {"so": "39/2026/QH16", "ma_tinh": "24", "ten_moi": "Thành phố Bắc Ninh", "ban_hanh": "2026-08-24", "hieu_luc": "2026-09-20"}
+ ],
+ "xa_thanh_phuong": [
+  {"so": "237/NQ-UBTVQH16", "ma_tinh": "75", "ban_hanh": "2026-04-14", "hieu_luc": "2026-04-30",
+   "ten": ["Trảng Bom", "Long Thành", "Trị An", "Nhơn Trạch", "Tân Khai", "Xuân Lộc", "Tân Phú", "Lộc Ninh", "Dầu Giây", "Đồng Phú"],
+   "nguon": "https://daibieunhandan.vn/chu-tich-quoc-hoi-tran-thanh-man-ky-ban-hanh-nghi-quyet-ve-viec-thanh-lap-10-phuong-thuoc-tinh-dong-nai-10414306.html"},
+  {"so": "388/NQ-UBTVQH16", "ma_tinh": "24", "ban_hanh": "2026-08-04", "hieu_luc": "2026-09-20",
+   "ten": ["Yên Phong", "Tiên Du", "Chi Lăng", "Phù Lãng", "Lương Tài", "Gia Bình", "Nhân Thắng", "Hiệp Hòa", "Bố Hạ", "Lạng Giang", "Kép", "Lục Nam"],
+   "nguon": "https://baoquocte.vn/thanh-lap-12-phuong-thuoc-tinh-bac-ninh-tu-20-9-432965.html"}
+ ]
+}
