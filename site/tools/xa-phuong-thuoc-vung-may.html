@@ -1,0 +1,157 @@
+<!--
+title: Xã, phường thuộc vùng mấy? Tra vùng lương tối thiểu 2026 theo xã, phường mới | Tính Giùm
+h1: Xã, phường thuộc vùng lương mấy
+description: Tra xã, phường, đặc khu (tên mới sau sáp nhập hoặc tên cũ) thuộc vùng lương tối thiểu nào và mức lương tối thiểu tháng, giờ năm 2026 theo Nghị định 293/2025/NĐ-CP; xem trước vùng áp dụng từ 1/1/2027 theo Nghị định 399/2026/NĐ-CP.
+category: tien-hoa-don
+order: 24
+summary: Vùng lương tối thiểu và mức lương 2026 của từng xã, phường.
+intro: Gõ tên xã, phường mới hoặc cũ để biết thuộc vùng lương tối thiểu nào và mức lương tối thiểu theo tháng, theo giờ.
+keywords: vùng lương tối thiểu, lương tối thiểu vùng 2026, xã thuộc vùng mấy, phường thuộc vùng mấy, lương tối thiểu vùng 1, vùng 2, vùng 3, vùng 4, nghị định 293/2025, lương tối thiểu 2027, nghị định 399/2026
+rules: Nghị định 293/2025/NĐ-CP (từ 01/01/2026), Nghị định 399/2026/NĐ-CP (từ 01/01/2027)
+updated: 11/2026
+-->
+<form class="calc" id="f" data-result="out">
+  <label class="l" for="prov">Tỉnh, thành phố</label>
+  <div><select id="prov" class="in"><option value="">Cả 34 tỉnh, thành phố</option></select></div>
+  <label class="l" for="q">Xã, phường</label>
+  <div class="f"><input id="q" class="in w-xl" spellcheck="false" enterkeyhint="search" value="Phường Hoàn Kiếm"><span class="hint">tên mới hoặc tên trước sáp nhập; gõ vài chữ rồi chọn trong gợi ý</span></div>
+  <div class="btns"><button class="go" type="submit">Tra __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+</form>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body" id="res"></div>
+</section>
+
+<div class="article">
+  <h2>Mức lương tối thiểu theo vùng</h2>
+  <div class="scroll"><table class="t"><thead><tr><th>Vùng</th><th class="n">Tháng, năm 2026</th><th class="n">Giờ, 2026</th><th class="n">Tháng, từ 1/1/2027</th><th class="n">Giờ, 2027</th></tr></thead><tbody>
+    <tr><td>Vùng I</td><td class="n">5.310.000</td><td class="n">25.500</td><td class="n">5.700.000</td><td class="n">27.400</td></tr>
+    <tr><td>Vùng II</td><td class="n">4.730.000</td><td class="n">22.700</td><td class="n">5.080.000</td><td class="n">24.400</td></tr>
+    <tr><td>Vùng III</td><td class="n">4.140.000</td><td class="n">20.000</td><td class="n">4.450.000</td><td class="n">21.400</td></tr>
+    <tr><td>Vùng IV</td><td class="n">3.700.000</td><td class="n">17.800</td><td class="n">4.040.000</td><td class="n">19.400</td></tr>
+  </tbody></table></div>
+  <p class="note">Đơn vị: đồng. Năm 2026 theo Nghị định 293/2025/NĐ-CP; từ 01/01/2027 theo Nghị định 399/2026/NĐ-CP (thay thế Nghị định 293). Phụ lục của cả hai nghị định liệt kê vùng theo xã, phường, đặc khu sau sắp xếp.</p>
+  <h2>Áp dụng vùng nào</h2>
+  <ul>
+    <li>Vùng tính theo <b>nơi người sử dụng lao động hoạt động</b>, không theo nơi người lao động cư trú. Chi nhánh, đơn vị ở vùng nào áp dụng mức của vùng đó (Điều 3 khoản 3 Nghị định 293/2025/NĐ-CP).</li>
+    <li>Khu công nghiệp, khu chế xuất, khu công nghệ cao nằm trên nhiều vùng thì áp dụng vùng có mức cao nhất.</li>
+    <li>Lương tháng theo hợp đồng cho thời giờ làm việc bình thường không được thấp hơn mức tối thiểu tháng; trả theo giờ thì không thấp hơn mức tối thiểu giờ.</li>
+    <li>Từ 01/01/2027 có 129 xã, phường được lên một bậc vùng (ở Quảng Ninh, Hải Phòng, Hưng Yên, Đà Nẵng, Gia Lai, Đồng Nai, TP.HCM); kết quả tra cho thấy cả hai năm.</li>
+  </ul>
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Chỉ nhớ tên xã, phường cũ thì tra thế nào?</summary>
+    <p>Gõ tên cũ, chọn dòng có chữ "(cũ)" trong gợi ý. Nếu xã cũ bị chia cho nhiều xã, phường mới, kết quả liệt kê vùng của từng đơn vị mới. Muốn đổi cả địa chỉ, dùng <a href="/tra-cuu-dia-chi-moi/">Tra cứu địa chỉ mới sau sáp nhập</a>.</p></details>
+  <details class="qa"><summary>Lương tối thiểu vùng dùng để làm gì?</summary>
+    <p>Là mức sàn để thoả thuận và trả lương. Ngoài ra, mức đóng bảo hiểm thất nghiệp tối đa bằng 20 lần lương tối thiểu vùng, và trợ cấp thất nghiệp hằng tháng tối đa 5 lần lương tối thiểu vùng.</p></details>
+  <details class="qa"><summary>Công ty ở một tỉnh, tôi làm ở chi nhánh tỉnh khác thì sao?</summary>
+    <p>Áp dụng vùng của nơi chi nhánh hoạt động. Tra theo xã, phường nơi chi nhánh đặt trụ sở.</p></details>
+  <p>Công cụ liên quan: <a href="/tinh-luong-gross-net/">Tính lương Gross ↔ Net</a> · <a href="/bang-luong/">Lập bảng lương nhân viên</a> · <a href="/tinh-luong-tang-ca/">Tính lương tăng ca</a> · <a href="/tinh-tro-cap-that-nghiep/">Tính trợ cấp thất nghiệp</a>.</p>
+</div>
+
+<script src="/js/dia-chi-data.js"></script>
+<script src="/js/dia-chi.js"></script>
+<script src="/js/goi-y.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  const money = v => v.toLocaleString("vi-VN");
+  const NUM = { I: 1, II: 2, III: 3, IV: 4 };
+  const YEAR = new Date() >= new Date(2027, 0, 1) ? "2027" : "2026", NEXT = String(+YEAR + 1);
+  const W = DiaChi.wage;
+  let picked = null, loaded = false;
+
+  DiaChi.provinces().sort((a, b) => a.name.localeCompare(b.name, "vi"))
+    .forEach(p => $("prov").insertAdjacentHTML("beforeend", `<option value="${p.id}">${esc(p.fullName)}</option>`));
+
+  KCSuggest.attach($("q"), {
+    source: t => DiaChi.search(t, { province: $("prov").value || undefined, limit: 10 }),
+    pick: it => { picked = { text: it.kind === "new" ? it.unit.fullName : it.old.fullName, item: it }; $("q").value = picked.text;
+                  if (it.kind === "new") $("prov").value = it.unit.province.id; form.run(true); }
+  });
+  $("q").addEventListener("input", () => { if (picked && $("q").value !== picked.text) picked = null; });
+
+  const yearRow = (u, y) => {
+    const g = u.region[y], w = W[y];
+    if (!w) return "";
+    const prev = y !== "2026" && u.region[String(+y - 1)] !== g ? ` <span class="pill">lên từ vùng ${u.region[String(+y - 1)]}</span>` : "";
+    return `<tr><td>${y === "2026" ? "Năm 2026" : "Từ 1/1/" + y}</td><td style="white-space:nowrap">Vùng ${g}${prev}</td><td class="n">${money(w.monthly[g])}</td><td class="n">${money(w.hourly[g])}</td></tr>`;
+  };
+  const links = g => `<div class="actions"><a class="btn" href="/tinh-luong-gross-net/?vung=${NUM[g]}">Tính lương Gross ↔ Net, vùng ${g}</a>`
+    + `<a class="btn" href="/bang-luong/?vung=${NUM[g]}">Lập bảng lương, vùng ${g}</a></div>`;
+  function sameProvince(u){
+    const groups = {};
+    DiaChi.units(u.province.id).forEach(x => (groups[x.region[YEAR]] = groups[x.region[YEAR]] || []).push(x.fullName));
+    return `<details><summary>Vùng của ${DiaChi.units(u.province.id).length} xã, phường, đặc khu ở ${esc(u.province.fullName)} (${YEAR})</summary>`
+      + ["I", "II", "III", "IV"].filter(g => groups[g]).map(g => `<p><b>Vùng ${g}</b> (${groups[g].length}): ${groups[g].map(esc).join(", ")}.</p>`).join("") + `</details>`;
+  }
+  function one(u, via){
+    const g = u.region[YEAR];
+    return `<p class="big"><b>${esc(u.fullName)}</b>, ${esc(u.province.fullName)} thuộc <b>vùng ${g}</b>: lương tối thiểu <b>${money(W[YEAR].monthly[g])} đ</b>/tháng, ${money(W[YEAR].hourly[g])} đ/giờ (${YEAR}).</p>`
+      + (via ? `<p class="note">${esc(via)}</p>` : "")
+      + `<div class="scroll"><table class="t"><thead><tr><th>Áp dụng</th><th>Vùng</th><th class="n">Đ/tháng</th><th class="n">Đ/giờ</th></tr></thead><tbody>`
+      + yearRow(u, YEAR) + yearRow(u, NEXT) + `</tbody></table></div>`
+      + `<p class="note">Căn cứ: ${[YEAR, NEXT].filter(y => W[y]).map(y => `Nghị định ${esc(W[y].decree)} (${y === "2026" ? "năm 2026" : "từ 1/1/" + y})`).join(", ")}, Phụ lục.</p>`
+      + links(g)
+      + `<p class="note"><a href="/tra-cuu-dia-chi-moi/?moi=${encodeURIComponent(u.fullName)}&tinh=${u.province.id}">Xem ${esc(u.fullName)} được lập từ những xã, phường cũ nào</a></p>`
+      + sameProvince(u);
+  }
+  function many(units, via){
+    const rows = units.map(u => `<tr><td>${esc(u.fullName)}<br><span class="hint">${esc(u.province.fullName)}</span></td><td class="n">Vùng ${u.region[YEAR]}</td><td class="n">${money(W[YEAR].monthly[u.region[YEAR]])}</td>`
+      + `<td class="n">Vùng ${u.region[NEXT] || "-"}</td></tr>`).join("");
+    const regs = [...new Set(units.map(u => u.region[YEAR]))];
+    return `<p class="big">${esc(via)}</p>`
+      + `<div class="scroll"><table class="t"><thead><tr><th>Đơn vị mới</th><th>Vùng ${YEAR}</th><th class="n">Đ/tháng</th><th>Từ 1/1/${NEXT}</th></tr></thead><tbody>${rows}</tbody></table></div>`
+      + regs.map(links).join("");
+  }
+  const picks = (list, label, sub, onPick) => {
+    setTimeout(() => $("res").querySelectorAll("[data-pick]").forEach(b => b.addEventListener("click", () => onPick(list[+b.dataset.pick]))));
+    return `<ul class="picks">${list.map((x, i) => `<li><button type="button" data-pick="${i}">${esc(label(x))}<span>${esc(sub(x))}</span></button></li>`).join("")}</ul>`;
+  };
+  const choose = u => { picked = { text: u.fullName, item: { kind: "new", unit: u } }; $("q").value = u.fullName; $("prov").value = u.province.id; form.run(true); };
+
+  function lookup(text){
+    const p = $("prov").value, pf = p && DiaChi.provinces().find(x => x.id === p);
+    if (picked && picked.text === text) {
+      const it = picked.item;
+      if (it.kind === "new") return one(it.unit);
+      return it.units.length === 1 ? one(it.units[0], `${it.old.fullName} (${it.old.district || ""}, ${it.old.province}) nay thuộc ${it.units[0].fullName}.`)
+        : many(it.units, `${it.old.fullName} cũ (${it.old.district}, ${it.old.province}) được chia cho ${it.units.length} đơn vị mới:`);
+    }
+    const q = pf && !DiaChi.normalise(text).province ? text + ", " + pf.fullName : text;
+    const r = DiaChi.region(q);
+    if (r && r.status === "found") return one(r.unit);
+    if (r && r.status === "ambiguous") return `<p class="big">Có <b>${r.candidates.length}</b> đơn vị tên như vậy. Chọn đúng nơi:</p>` + picks(r.candidates, u => u.fullName, u => u.province.fullName, choose);
+    // tên cũ
+    const o = DiaChi.oldToNew(q);
+    if (o.status === "found") {
+      const units = o.results.map(x => x.unit);
+      return units.length === 1 ? one(units[0], `${o.old.label} (cũ) nay thuộc ${units[0].fullName}.`)
+        : many(units, `${o.old.label} (cũ) được chia cho ${units.length} đơn vị mới:`);
+    }
+    if (o.status === "ambiguous") return `<p class="big">Có <b>${o.candidates.length}</b> đơn vị cũ tên như vậy. Chọn đúng nơi:</p>`
+      + picks(o.candidates, c => c.old.label + " (cũ)", c => "→ " + c.results.map(x => x.unit.fullName).join(", "),
+              c => { const us = c.results.map(x => x.unit); picked = { text: c.old.fullName, item: { kind: "old", old: c.old, units: us } }; $("q").value = c.old.fullName; form.run(true); });
+    if (pf) {   // không có trong tỉnh đã chọn: tìm cả nước
+      const saved = $("prov").value; $("prov").value = "";
+      const all = lookup(text);
+      if (!/class="err"/.test(all)) return `<p class="note">Không có ở ${esc(pf.fullName)}; kết quả tìm trên cả nước:</p>` + all;
+      $("prov").value = saved;
+    }
+    return `<p class="err">Không tìm thấy xã, phường "${esc(text)}"${pf ? " ở " + esc(pf.fullName) : ""}.</p><p class="note">Gõ vài chữ đầu của tên rồi chọn trong danh sách gợi ý${pf ? ", hoặc chọn \"Cả 34 tỉnh, thành phố\"" : ""}.</p>`;
+  }
+
+  const form = KC.form($("f"), { calc(){
+    const text = $("q").value.trim();
+    if (!text) { $("q").focus(); return false; }
+    $("res").innerHTML = lookup(text);
+    if (loaded) try { history.replaceState(null, "", "?" + new URLSearchParams({ q: text, ...($("prov").value ? { tinh: $("prov").value } : {}) })); } catch (e) {}
+  }, clear(){ picked = null; $("prov").value = ""; } });
+
+  // ?q=<tên>&tinh=<mã tỉnh>
+  const qs = new URLSearchParams(location.search);
+  if (qs.get("q")) { $("q").value = qs.get("q"); $("prov").value = qs.get("tinh") || ""; }
+  form.run(false); loaded = true;
+})();
+</script>

@@ -232,3 +232,16 @@ ul.yrs small{color:var(--muted)}
 .thumbs figure{margin:0;border:1px solid var(--panel-line);background:#fff;padding:6px;text-align:center;font-size:14px}
 .thumbs img{width:100%;height:auto;display:block;margin-bottom:4px}
 .privacy{font-size:14px;color:var(--muted)}
+/* Ô nhập có gợi ý (goi-y.js), địa chỉ */
+.in.w-xl{width:100%}
+.sugw{position:relative;flex:1 1 260px;min-width:0;max-width:560px}
+.sugw .in{width:100%}
+.sug{position:relative;margin-top:2px!important;max-height:300px;overflow:auto;margin:0;padding:0;list-style:none;background:#fff;border:1px solid var(--input-line);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.sug li{padding:8px 10px;cursor:pointer;display:grid;gap:1px;border-top:1px solid #eee;line-height:1.35}
+.sug li:first-child{border-top:0}
+.sug li span{font-size:14px;color:var(--muted)}
+.sug li[aria-selected="true"],.sug li:hover{background:#eef4fb}
+.picks{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.picks button{font:16px var(--font);text-align:left;width:100%;padding:8px 10px;border:1px solid var(--blue);background:#fff;color:var(--link);cursor:pointer}
+.picks button:hover{background:#eef3f9}
+.picks button span{display:block;font-size:14px;color:var(--muted)}

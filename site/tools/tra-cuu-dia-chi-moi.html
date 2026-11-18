@@ -1,0 +1,172 @@
+<!--
+title: Tra cứu địa chỉ mới sau sáp nhập: đổi địa chỉ cũ sang mới, xã phường mới gồm những đâu | Tính Giùm
+h1: Tra cứu địa chỉ mới sau sáp nhập
+description: Đổi địa chỉ cũ (xã, phường, quận, huyện, tỉnh trước 1/7/2025) sang địa chỉ mới theo 34 nghị quyết sắp xếp đơn vị hành chính, kể cả xã, phường bị chia cho nhiều nơi. Xem xã, phường mới được lập từ những đơn vị cũ nào. Gõ có dấu hay không dấu, viết tắt đều được.
+category: khac
+order: 2
+summary: Đổi địa chỉ cũ sang mới, xem xã phường mới gồm những đâu.
+intro: Gõ địa chỉ cũ để có địa chỉ mới theo 34 tỉnh, thành phố và 3.321 xã, phường, đặc khu; hoặc gõ tên xã, phường mới để xem được lập từ những đơn vị cũ nào.
+keywords: địa chỉ mới, tra cứu địa chỉ mới, đổi địa chỉ cũ sang mới, sáp nhập xã phường, phường mới, xã mới, sáp nhập tỉnh, 34 tỉnh thành, địa chỉ sau sáp nhập, phường cũ, xã cũ
+rules: 34 nghị quyết 1654–1687/NQ-UBTVQH15 (hiệu lực 01/07/2025), Nghị quyết 202/2025/QH15, các thay đổi năm 2026
+updated: 11/2026
+-->
+<div>
+  <div class="tabs" role="group" aria-label="Chiều tra cứu">
+    <button type="button" data-mode="o2n" aria-pressed="true">Cũ → mới</button><button type="button" data-mode="n2o" aria-pressed="false">Mới → cũ</button>
+  </div>
+  <form class="calc" id="f" data-result="out">
+    <label class="l" for="q" id="qLabel">Địa chỉ cũ</label>
+    <div class="f"><textarea id="q" class="in w-xl" rows="2" spellcheck="false" enterkeyhint="go" style="min-height:0">Số 12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</textarea><span class="hint" id="qHint">số nhà, đường, xã/phường, quận/huyện, tỉnh; có dấu hay không dấu, viết tắt P., Q., TP đều được</span></div>
+    <label class="l" for="prov" data-n2o hidden>Tỉnh, thành phố</label>
+    <div data-n2o hidden><select id="prov" class="in"><option value="">Cả 34 tỉnh, thành phố</option></select></div>
+    <div class="btns"><button class="go" type="submit" id="go">Đổi __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+  </form>
+</div>
+
+<section class="result" id="out" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body" id="res"></div>
+</section>
+
+<div class="article">
+  <h2>Cách đọc kết quả</h2>
+  <ul>
+    <li><b>Địa chỉ mới</b> chỉ còn ba cấp: số nhà, đường (giữ nguyên như bạn gõ), xã/phường/đặc khu, tỉnh/thành phố. Không còn quận, huyện, thị xã.</li>
+    <li><b>Một phần, phần còn lại</b>: nhiều xã, phường cũ bị chia cho hai, ba đơn vị mới. Khi đó công cụ liệt kê đủ các đơn vị mới nhận phần; phần nào thuộc đơn vị nào tuỳ vị trí thực tế (thôn, tổ dân phố, đoạn đường), nên hỏi UBND xã, phường hoặc xem nghị quyết được dẫn kèm kết quả.</li>
+    <li><b>Độ tin cậy</b>: <i>cao</i> khi tên xã/phường khớp và khớp với quận/huyện, tỉnh đã ghi; <i>trung bình</i> khi phải đoán (gõ nhầm, thiếu quận/huyện và tỉnh, đơn vị cũ bị chia); <i>thấp</i> khi nhiều nơi cùng tên hoặc quận/huyện ghi không khớp.</li>
+    <li>Nhiều xã, phường cùng tên ở các tỉnh khác nhau (ví dụ có hơn 20 xã Tân Lập). Ghi thêm quận/huyện và tỉnh cũ để có kết quả đúng.</li>
+  </ul>
+  <h2>Sau sắp xếp thay đổi những gì</h2>
+  <ul>
+    <li>Từ 01/07/2025: 63 tỉnh, thành phố còn 34 (Nghị quyết 202/2025/QH15); 10.035 xã, phường, thị trấn còn 3.321 xã, phường, đặc khu (34 nghị quyết của Ủy ban Thường vụ Quốc hội, mỗi tỉnh một nghị quyết); bỏ cấp quận, huyện.</li>
+    <li>Năm 2026: Đồng Nai, Quảng Ninh, Bắc Ninh thành thành phố trực thuộc trung ương; 10 xã của Đồng Nai và 12 xã của Bắc Ninh thành phường. Kết quả dùng tên và loại đơn vị hiện nay.</li>
+    <li>Trước 01/07/2025 cũng có những lần sắp xếp khác (ví dụ Quận 2, Quận 9, quận Thủ Đức thành thành phố Thủ Đức năm 2021). Công cụ tra từ danh mục ngày 30/06/2025; địa chỉ cũ hơn có thể phải đổi qua tên đơn vị trung gian.</li>
+  </ul>
+  <h2>Câu hỏi thường gặp</h2>
+  <details class="qa" open><summary>Xã cũ của tôi bị chia làm hai, biết nhà mình thuộc bên nào?</summary>
+    <p>Nghị quyết chỉ ghi "một phần diện tích tự nhiên, quy mô dân số" của xã cũ nhập vào đơn vị mới, không ghi đến từng thôn, tổ. Bấm vào số nghị quyết trong kết quả để xem toàn văn, hoặc hỏi công an, UBND xã, phường nơi bạn ở: họ có danh sách thôn, tổ dân phố thuộc từng đơn vị mới.</p></details>
+  <details class="qa"><summary>Gõ địa chỉ mới vào ô "địa chỉ cũ" thì sao?</summary>
+    <p>Nếu không có đơn vị cũ nào tên như vậy nhưng có đơn vị mới trùng tên, công cụ báo đây có thể đã là địa chỉ mới. Chọn tab "Mới → cũ" để xem đơn vị đó được lập từ đâu.</p></details>
+  <details class="qa"><summary>Dữ liệu lấy từ đâu, cập nhật đến khi nào?</summary>
+    <p>Từ toàn văn 34 nghị quyết sắp xếp đơn vị hành chính cấp xã (đăng trên Cổng thông tin Chính phủ), đối chiếu với bảng chuyển đổi và danh mục đơn vị hành chính của Cục Thống kê; cập nhật các nghị quyết năm 2026 đến ngày 18/11/2026. Chỗ các nguồn ghi khác nhau, dữ liệu theo nghị quyết.</p></details>
+  <p>Công cụ liên quan: <a href="/xa-phuong-thuoc-vung-may/">Xã, phường thuộc vùng lương mấy</a> · <a href="/tinh-luong-gross-net/">Tính lương Gross ↔ Net</a>.</p>
+  <p class="note">Kết quả để tham khảo. Địa chỉ ghi trên giấy tờ do cơ quan cấp giấy tờ xác nhận.</p>
+</div>
+
+<script src="/js/dia-chi-data.js"></script>
+<script src="/js/dia-chi.js"></script>
+<script src="/js/goi-y.js"></script>
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  const PORTION = { "toan-bo": "toàn bộ", "mot-phan": "một phần", "phan-con-lai": "phần còn lại" };
+  const CONF = { high: ["cao", ""], medium: ["trung bình", " warn"], low: ["thấp", " warn"] };
+  const money = v => v.toLocaleString("vi-VN");
+  const SAMPLE = { o2n: "Số 12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh", n2o: "Phường Sài Gòn" };
+  let mode = "o2n", loaded = false;
+
+  DiaChi.provinces().sort((a, b) => a.name.localeCompare(b.name, "vi"))
+    .forEach(p => $("prov").insertAdjacentHTML("beforeend", `<option value="${p.id}">${esc(p.fullName)}</option>`));
+
+  KCSuggest.attach($("q"), {
+    source: t => mode === "n2o" ? DiaChi.search(t, { old: false, province: $("prov").value || undefined, limit: 8 }).map(x => ({ label: x.label, sub: x.sub, unit: x.unit })) : [],
+    pick: it => { $("q").value = it.unit.fullName; $("prov").value = it.unit.province.id; form.run(true); }
+  });
+  // (sau gợi ý, để Enter chọn gợi ý trước)
+  // ô nhiều dòng để thấy hết địa chỉ trên điện thoại; Enter vẫn là bấm Đổi
+  $("q").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.defaultPrevented) { e.preventDefault(); $("f").requestSubmit ? $("f").requestSubmit() : $("go").click(); } });
+
+  function setMode(m, keep){
+    mode = m;
+    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === m));
+    document.querySelectorAll("[data-n2o]").forEach(el => el.hidden = m !== "n2o");
+    $("qLabel").textContent = m === "o2n" ? "Địa chỉ cũ" : "Xã, phường mới";
+    $("qHint").textContent = m === "o2n" ? "số nhà, đường, xã/phường, quận/huyện, tỉnh; có dấu hay không dấu, viết tắt P., Q., TP đều được" : "gõ vài chữ của tên mới rồi chọn trong danh sách gợi ý";
+    $("go").firstChild.textContent = m === "o2n" ? "Đổi " : "Tra ";
+    if (!keep) { $("q").value = SAMPLE[m]; $("prov").value = ""; }
+  }
+  document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => { setMode(b.dataset.mode); form.run(false); }));
+
+  const unitLink = u => `<a href="/xa-phuong-thuoc-vung-may/?q=${encodeURIComponent(u.fullName + ", " + u.province.fullName)}">vùng ${u.region[2026]}</a>`;
+  const basis = u => `Căn cứ: <a href="${esc(u.url)}" rel="noopener" target="_blank">Nghị quyết ${esc(u.resolution)}</a>`
+    + (u.clause ? `, khoản ${u.clause} Điều 1` : u.formation === "giu-nguyen" ? " (không sắp xếp, giữ nguyên)" : "")
+    + (u.typeChange ? `; thành ${esc(u.type)} năm 2026 theo Nghị quyết ${esc(u.typeChange)}` : "") + ".";
+
+  // bảng các đơn vị cũ hợp thành một đơn vị mới
+  function madeOf(u, highlight){
+    const r = DiaChi.newToOld(u.id);
+    const rows = r.old.map(o => `<tr${highlight && o.code === highlight ? ' class="tot"' : ""}><td>${esc(o.fullName)}${o.otherSpelling ? ` <span class="hint">(${esc(o.otherSpelling)})</span>` : ""}</td>`
+      + `<td>${esc([o.type === "huyện" ? "" : o.district, o.province].filter(Boolean).join(", "))}</td>`
+      + `<td>${PORTION[o.portion]}${o.split ? `<br><span class="hint">phần khác thuộc ${o.alsoIn.map(x => esc(x.fullName)).join(", ")}</span>` : ""}</td></tr>`).join("");
+    return `<p><b>${esc(u.fullName)}</b> (${esc(u.province.fullName)}, ${unitLink(u)}) được lập từ ${r.old.length} đơn vị cũ:</p>`
+      + `<div class="scroll"><table class="t"><thead><tr><th>Đơn vị cũ</th><th>Thuộc (cũ)</th><th>Phạm vi</th></tr></thead><tbody>${rows}</tbody></table></div>`
+      + `<p class="note">${basis(u)}</p>`;
+  }
+  const picks = (list, label, sub, onPick) => {
+    const ul = `<ul class="picks">${list.map((x, i) => `<li><button type="button" data-pick="${i}">${esc(label(x))}<span>${esc(sub(x))}</span></button></li>`).join("")}</ul>`;
+    setTimeout(() => $("res").querySelectorAll("[data-pick]").forEach(b => b.addEventListener("click", () => onPick(list[+b.dataset.pick]))));
+    return ul;
+  };
+  const notes = r => r.notes.length ? `<ul class="note" style="padding-left:18px;margin:0">${r.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : "";
+
+  function oldToNew(text){
+    const r = DiaChi.oldToNew(text);
+    if (r.status === "not-found") {
+      return `<p class="err">Không tìm thấy xã, phường cũ nào trong địa chỉ này.</p><p class="note">Kiểm tra tên xã, phường; ghi thêm quận/huyện và tỉnh cũ, ngăn cách bằng dấu phẩy. Ví dụ: <i>Xã Tân Lập, Huyện Đan Phượng, Hà Nội</i>.</p>` + notes(r);
+    }
+    if (r.status === "already-new") {
+      return `<p class="big">Có vẻ đây đã là địa chỉ mới: <b>${esc(r.results[0].address)}</b></p>` + notes(r) + madeOf(r.results[0].unit);
+    }
+    if (r.status === "ambiguous") {
+      return `<p class="big">Có <b>${r.candidates.length}</b> đơn vị cũ khớp. Chọn đúng nơi:</p>`
+        + picks(r.candidates, c => c.old.label, c => "→ " + c.results.map(x => x.unit.fullName + ", " + x.unit.province.fullName).join("; "),
+                c => { $("q").value = [r.street, c.old.label].filter(Boolean).join(", "); form.run(true); })
+        + notes(r);
+    }
+    const [cl, cc] = CONF[r.confidence];
+    let h;
+    if (r.results.length === 1) {
+      h = `<p class="big">Địa chỉ mới: <b id="addrNew">${esc(r.results[0].address)}</b></p>`
+        + `<div class="actions"><button class="btn" type="button" data-copy-from="addrNew">Sao chép</button></div>`;
+    } else {
+      h = `<p class="big">${esc(r.old.fullName)} cũ được chia cho <b>${r.results.length}</b> đơn vị mới. Địa chỉ mới là một trong:</p>`
+        + `<div class="scroll"><table class="t"><thead><tr><th>Địa chỉ mới</th><th>Nhận</th><th></th></tr></thead><tbody>`
+        + r.results.map((x, i) => `<tr><td id="addrNew${i}">${esc(x.address)}</td><td>${PORTION[x.portion]}</td><td><button class="btn" type="button" data-copy-from="addrNew${i}">Sao chép</button></td></tr>`).join("")
+        + `</tbody></table></div>`;
+    }
+    h += `<p>Độ tin cậy: <span class="pill${cc}">${cl}</span> · Đơn vị cũ: ${esc(r.old.label)}${r.old.code ? ` (mã ${esc(r.old.code)})` : ""}</p>` + notes(r);
+    h += r.results.map(x => madeOf(x.unit, r.old.code)).join("");
+    return h;
+  }
+
+  function newToOld(text){
+    const p = $("prov").value, pf = p && DiaChi.provinces().find(x => x.id === p);
+    const r = DiaChi.newToOld(pf && DiaChi.normalise(text).province == null ? text + ", " + pf.fullName : text);
+    if (!r) return `<p class="err">Không tìm thấy xã, phường, đặc khu mới tên "${esc(text)}".</p><p class="note">Gõ vài chữ đầu của tên rồi chọn trong danh sách gợi ý. Nếu là tên cũ, chọn tab "Cũ → mới".</p>`;
+    if (r.status === "ambiguous") {
+      return `<p class="big">Có <b>${r.candidates.length}</b> đơn vị mới tên như vậy. Chọn tỉnh, thành phố:</p>`
+        + picks(r.candidates, u => u.fullName, u => u.province.fullName, u => { $("q").value = u.fullName; $("prov").value = u.province.id; form.run(true); });
+    }
+    const u = r.unit;
+    const how = u.formation === "giu-nguyen" ? "Đơn vị này không sắp xếp với đơn vị khác (giữ nguyên địa giới)."
+      : u.formation === "dac-khu-tu-huyen" ? "Đặc khu được lập từ toàn bộ huyện đảo cũ." : "";
+    return `<p class="big"><b>${esc(u.fullName)}</b>, ${esc(u.province.fullName)} được lập từ <b>${r.old.length}</b> đơn vị cũ</p>`
+      + (how ? `<p class="note">${how}</p>` : "") + madeOf(u)
+      + `<p>Vùng lương tối thiểu 2026: <b>vùng ${u.region[2026]}</b> (${money(DiaChi.wage[2026].monthly[u.region[2026]])} đ/tháng) · <a href="/xa-phuong-thuoc-vung-may/?q=${encodeURIComponent(u.fullName + ", " + u.province.fullName)}">xem chi tiết</a></p>`;
+  }
+
+  const form = KC.form($("f"), { calc(){
+    const text = $("q").value.trim();
+    if (!text) { $("q").focus(); return false; }
+    $("res").innerHTML = mode === "o2n" ? oldToNew(text) : newToOld(text);
+    if (loaded) try { history.replaceState(null, "", "?" + new URLSearchParams(mode === "o2n" ? { q: text } : { moi: text, ...( $("prov").value ? { tinh: $("prov").value } : {}) })); } catch (e) {}
+  }, clear(){ $("prov").value = ""; } });
+
+  // ?q=<địa chỉ cũ> hoặc ?moi=<xã, phường mới>&tinh=<mã tỉnh>
+  const qs = new URLSearchParams(location.search);
+  if (qs.get("moi")) { setMode("n2o"); $("q").value = qs.get("moi"); $("prov").value = qs.get("tinh") || ""; }
+  else if (qs.get("q")) $("q").value = qs.get("q");
+  form.run(false); loaded = true;
+})();
+</script>

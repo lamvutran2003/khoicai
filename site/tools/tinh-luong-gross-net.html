@@ -75,6 +75,8 @@ updated: 11/2026
   const $ = id => document.getElementById(id);
   let mode = "g2n", last = null;
   try { const s = JSON.parse(localStorage.getItem("kc-luong") || "{}"); if (s.dep != null) $("dep").value = s.dep; if (s.region) $("region").value = s.region; } catch (e) {}
+  const vung = +new URLSearchParams(location.search).get("vung");   // ?vung=1..4 từ trang tra vùng lương
+  if (vung >= 1 && vung <= 4) $("region").value = vung;
   const money = v => Math.round(v).toLocaleString("vi-VN");
   const num = id => +$(id).value.replace(/\D/g, "") || 0;
   KCNum.attach($("amt"), { decimals: 0 }); KCNum.attach($("base"), { decimals: 0 });

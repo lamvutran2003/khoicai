@@ -128,6 +128,9 @@ updated: 11/2026
     const d0 = new Date(); $("title").value = `Tháng ${d0.getMonth() + 1}/${d0.getFullYear()}`;
   }
   load();
+  // ?vung=1..4 (liên kết từ trang tra vùng lương của xã, phường)
+  const vung = +new URLSearchParams(location.search).get("vung");
+  if (vung >= 1 && vung <= 4) $("region").value = vung;
   ["region", "std", "union", "title"].forEach(id => $(id).addEventListener("change", save));
   $("add").addEventListener("click", () => { addRow(); $("rows").lastChild.querySelector("input").focus(); });
   $("pasteBtn").addEventListener("click", () => { $("pasteBox").hidden = !$("pasteBox").hidden; if (!$("pasteBox").hidden) $("paste").focus(); });

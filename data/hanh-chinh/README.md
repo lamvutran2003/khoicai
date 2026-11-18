@@ -22,6 +22,7 @@ Không sửa tay các tệp trong `index.json`, `tinh/`, `bao-cao-doi-chieu.json
 python3 tools/hanh_chinh/build.py      # sources/ -> index.json, tinh/*.json, bao-cao-doi-chieu.json, BAO-CAO.md
 python3 tools/hanh_chinh/validate.py   # thoát với mã 1 nếu có lỗi
 node --test tests/hanh-chinh.test.js
+python3 tools/hanh_chinh/export_web.py   # -> site/static/js/dia-chi-data.js cho trang tra cứu (chạy lại sau mỗi lần dựng dữ liệu)
 ```
 
 `build.py` dừng hẳn (không bỏ qua) khi gặp một mục không đọc được trong nghị quyết hoặc phụ lục nghị định. Mọi chỉnh sửa so với nguồn đều được liệt kê có lý do trong mã (`WAGE_ERRATA`, sửa mã đơn vị cũ, sửa tỉnh cũ) và trong báo cáo.
