@@ -1,18 +1,18 @@
 <!--
 title: Tra cứu địa chỉ mới sau sáp nhập: đổi địa chỉ cũ sang mới, xã phường mới gồm những đâu | Tính Giùm
 h1: Tra cứu địa chỉ mới sau sáp nhập
-description: Đổi địa chỉ cũ (xã, phường, quận, huyện, tỉnh trước 1/7/2025) sang địa chỉ mới theo 34 nghị quyết sắp xếp đơn vị hành chính, kể cả xã, phường bị chia cho nhiều nơi. Xem xã, phường mới được lập từ những đơn vị cũ nào. Gõ có dấu hay không dấu, viết tắt đều được.
+description: Đổi địa chỉ cũ (xã, phường, quận, huyện, tỉnh trước 1/7/2025) sang địa chỉ mới theo 34 nghị quyết sắp xếp đơn vị hành chính, kể cả xã, phường bị chia cho nhiều nơi. Đổi hàng loạt từ Excel, CSV, tải về file .xlsx. Xem xã, phường mới được lập từ những đơn vị cũ nào.
 category: khac
 order: 2
 summary: Đổi địa chỉ cũ sang mới, xem xã phường mới gồm những đâu.
-intro: Gõ địa chỉ cũ để có địa chỉ mới theo 34 tỉnh, thành phố và 3.321 xã, phường, đặc khu; hoặc gõ tên xã, phường mới để xem được lập từ những đơn vị cũ nào.
-keywords: địa chỉ mới, tra cứu địa chỉ mới, đổi địa chỉ cũ sang mới, sáp nhập xã phường, phường mới, xã mới, sáp nhập tỉnh, 34 tỉnh thành, địa chỉ sau sáp nhập, phường cũ, xã cũ
+intro: Gõ địa chỉ cũ để có địa chỉ mới theo 34 tỉnh, thành phố và 3.321 xã, phường, đặc khu; đổi cả danh sách từ Excel; hoặc gõ tên xã, phường mới để xem được lập từ những đơn vị cũ nào.
+keywords: địa chỉ mới, tra cứu địa chỉ mới, đổi địa chỉ cũ sang mới, đổi địa chỉ hàng loạt, chuyển đổi địa chỉ excel, sáp nhập xã phường, phường mới, xã mới, sáp nhập tỉnh, 34 tỉnh thành, địa chỉ sau sáp nhập, phường cũ, xã cũ
 rules: 34 nghị quyết 1654–1687/NQ-UBTVQH15 (hiệu lực 01/07/2025), Nghị quyết 202/2025/QH15, các thay đổi năm 2026
 updated: 11/2026
 -->
 <div>
   <div class="tabs" role="group" aria-label="Chiều tra cứu">
-    <button type="button" data-mode="o2n" aria-pressed="true">Cũ → mới</button><button type="button" data-mode="n2o" aria-pressed="false">Mới → cũ</button>
+    <button type="button" data-mode="o2n" aria-pressed="true">Cũ → mới</button><button type="button" data-mode="n2o" aria-pressed="false">Mới → cũ</button><button type="button" data-mode="bulk" aria-pressed="false">Nhiều địa chỉ</button>
   </div>
   <form class="calc" id="f" data-result="out">
     <label class="l" for="q" id="qLabel">Địa chỉ cũ</label>
@@ -21,11 +21,25 @@ updated: 11/2026
     <div data-n2o hidden><select id="prov" class="in"><option value="">Cả 34 tỉnh, thành phố</option></select></div>
     <div class="btns"><button class="go" type="submit" id="go">Đổi __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
   </form>
+  <form class="calc" id="fb" data-result="outb" hidden>
+    <label class="l" for="file">Tệp Excel, CSV</label>
+    <div class="f"><input type="file" id="file" class="in" accept=".xlsx,.csv,.txt,.tsv,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-no-stale><span class="hint" id="fileInfo">.xlsx hoặc .csv; hoặc dán vào ô dưới</span></div>
+    <label class="l top-l" for="paste">Dán từ bảng tính</label>
+    <div><textarea id="paste" class="in w-xl" rows="6" style="min-height:0" spellcheck="false" placeholder="Chọn cột địa chỉ (hoặc cả bảng) trong Excel, Google Sheets, sao chép rồi dán vào đây. Mỗi dòng một địa chỉ."></textarea></div>
+    <label class="l" for="col">Cột địa chỉ</label>
+    <div class="f"><select id="col" class="in" style="max-width:100%"><option value="0">Cột A</option></select><label class="chk"><input type="checkbox" id="hdr"> Dòng đầu là tiêu đề</label></div>
+    <div class="btns"><button class="go" type="submit" id="gob">Đổi tất cả __PLAY__</button><button class="clr" type="button" data-clear>Xoá</button></div>
+    <p class="privacy full">Mọi dòng được đổi ngay trên máy bạn; tệp và địa chỉ không gửi lên máy chủ.</p>
+  </form>
 </div>
 
 <section class="result" id="out" hidden aria-live="polite">
   <h2>Kết quả</h2>
   <div class="body" id="res"></div>
+</section>
+<section class="result" id="outb" hidden aria-live="polite">
+  <h2>Kết quả</h2>
+  <div class="body" id="resb"></div>
 </section>
 
 <div class="article">
@@ -35,6 +49,7 @@ updated: 11/2026
     <li><b>Một phần, phần còn lại</b>: nhiều xã, phường cũ bị chia cho hai, ba đơn vị mới. Khi đó công cụ liệt kê đủ các đơn vị mới nhận phần; phần nào thuộc đơn vị nào tuỳ vị trí thực tế (thôn, tổ dân phố, đoạn đường), nên hỏi UBND xã, phường hoặc xem nghị quyết được dẫn kèm kết quả.</li>
     <li><b>Độ tin cậy</b>: <i>cao</i> khi tên xã/phường khớp và khớp với quận/huyện, tỉnh đã ghi; <i>trung bình</i> khi phải đoán (gõ nhầm, thiếu quận/huyện và tỉnh, đơn vị cũ bị chia); <i>thấp</i> khi nhiều nơi cùng tên hoặc quận/huyện ghi không khớp.</li>
     <li>Nhiều xã, phường cùng tên ở các tỉnh khác nhau (ví dụ có hơn 20 xã Tân Lập). Ghi thêm quận/huyện và tỉnh cũ để có kết quả đúng.</li>
+    <li><b>Nhiều địa chỉ</b>: tệp tải về có 4 cột Địa chỉ cũ, Địa chỉ mới, Trạng thái, Ghi chú. Dòng bị chia, trùng tên hoặc không tìm thấy để trống địa chỉ mới, các khả năng ghi ở cột Ghi chú; lọc cột Trạng thái để xử lý riêng.</li>
   </ul>
   <h2>Sau sắp xếp thay đổi những gì</h2>
   <ul>
@@ -56,6 +71,7 @@ updated: 11/2026
 <script src="/js/dia-chi-data.js"></script>
 <script src="/js/dia-chi.js"></script>
 <script src="/js/goi-y.js"></script>
+<script src="/js/dia-chi-bang.js"></script>
 <script>
 (function(){
   const $ = id => document.getElementById(id);
@@ -80,13 +96,16 @@ updated: 11/2026
   function setMode(m, keep){
     mode = m;
     document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === m));
+    $("f").hidden = m === "bulk"; $("fb").hidden = m !== "bulk";
+    if (m === "bulk") { $("out").hidden = true; return; }
+    $("outb").hidden = true;
     document.querySelectorAll("[data-n2o]").forEach(el => el.hidden = m !== "n2o");
     $("qLabel").textContent = m === "o2n" ? "Địa chỉ cũ" : "Xã, phường mới";
     $("qHint").textContent = m === "o2n" ? "số nhà, đường, xã/phường, quận/huyện, tỉnh; có dấu hay không dấu, viết tắt P., Q., TP đều được" : "gõ vài chữ của tên mới rồi chọn trong danh sách gợi ý";
     $("go").firstChild.textContent = m === "o2n" ? "Đổi " : "Tra ";
     if (!keep) { $("q").value = SAMPLE[m]; $("prov").value = ""; }
   }
-  document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => { setMode(b.dataset.mode); form.run(false); }));
+  document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => { setMode(b.dataset.mode); if (mode !== "bulk") form.run(false); }));
 
   const unitLink = u => `<a href="/xa-phuong-thuoc-vung-may/?q=${encodeURIComponent(u.fullName + ", " + u.province.fullName)}">vùng ${u.region[2026]}</a>`;
   const basis = u => `Căn cứ: <a href="${esc(u.url)}" rel="noopener" target="_blank">Nghị quyết ${esc(u.resolution)}</a>`
@@ -156,6 +175,87 @@ updated: 11/2026
       + `<p>Vùng lương tối thiểu 2026: <b>vùng ${u.region[2026]}</b> (${money(DiaChi.wage[2026].monthly[u.region[2026]])} đ/tháng) · <a href="/xa-phuong-thuoc-vung-may/?q=${encodeURIComponent(u.fullName + ", " + u.province.fullName)}">xem chi tiết</a></p>`;
   }
 
+
+  // ---------- nhiều địa chỉ ----------
+  const STAT_CLS = { ok: "", check: " warn", split: " warn", ambiguous: " warn", "already-new": " warn", "not-found": " bad", empty: " warn" };
+  let table = [], fileName = "", lastBulk = null;
+  function loadZip(){ return window.JSZip ? Promise.resolve(window.JSZip) : new Promise((ok, no) => {
+    const s = document.createElement("script"); s.src = "/js/jszip.min.js"; s.onload = () => ok(window.JSZip); s.onerror = no; document.head.appendChild(s); }); }
+  const colName = i => { let s = "", n = i + 1; while (n) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = (n - m - 1) / 26; } return s; };
+  function setTable(rows, info){
+    table = rows;
+    const n = rows.reduce((m, r) => Math.max(m, r.length), 0), g = DiaChiBang.guessColumn(rows);
+    $("col").innerHTML = Array.from({ length: Math.max(n, 1) }, (_, i) => {
+      const v = String((rows[0] || [])[i] || "").trim();
+      return `<option value="${i}">Cột ${colName(i)}${v ? ": " + esc(v.length > 40 ? v.slice(0, 40) + "…" : v) : ""}</option>`;
+    }).join("");
+    $("col").value = g.col; $("hdr").checked = g.header;
+    $("fileInfo").textContent = info || (rows.length ? `${rows.length.toLocaleString("vi-VN")} dòng, ${n} cột` : ".xlsx hoặc .csv; hoặc dán vào ô dưới");
+  }
+  let pasteTimer;
+  $("paste").addEventListener("input", () => { clearTimeout(pasteTimer); pasteTimer = setTimeout(() => { fileName = ""; $("file").value = ""; setTable(DiaChiBang.parsePaste($("paste").value)); }, 250); });
+  async function readText(file){
+    const buf = await file.arrayBuffer(), utf8 = new TextDecoder("utf-8").decode(buf);
+    if (!/�/.test(utf8)) return utf8;
+    try { return new TextDecoder("windows-1258").decode(buf); } catch (e) { return utf8; }   // CSV lưu bằng Excel tiếng Việt cũ
+  }
+  $("file").addEventListener("change", async () => {
+    const f = $("file").files[0]; if (!f) return;
+    $("fileInfo").textContent = "Đang đọc tệp…";
+    try {
+      const rows = /\.xlsx$/i.test(f.name) ? await DiaChiBang.readXlsx(await loadZip(), await f.arrayBuffer()) : DiaChiBang.parseCsv(await readText(f));
+      fileName = f.name.replace(/\.[^.]+$/, ""); $("paste").value = "";
+      setTable(rows, `${f.name}: ${rows.length.toLocaleString("vi-VN")} dòng`);
+      if (!rows.length) $("fileInfo").textContent = `${f.name}: không có dòng nào`;
+    } catch (e) { $("fileInfo").textContent = "Không đọc được tệp này. Hãy lưu lại dạng .xlsx hoặc .csv (UTF-8)."; }
+  });
+
+  function bulkView(out, total){
+    const c = out.counts, done = c.ok + c.check;
+    const rowNo = i => i + 1 + ($("hdr").checked ? 1 : 0);
+    const flagged = out.results.map((r, i) => [r, i]).filter(([r]) => r.status !== "ok" && r.status !== "empty");
+    const order = { split: 0, ambiguous: 1, "not-found": 2, check: 3, "already-new": 4 };
+    flagged.sort((a, b) => order[a[0].status] - order[b[0].status] || a[1] - b[1]);
+    const shown = flagged.slice(0, 100);
+    const sumRows = ["ok", "check", "split", "ambiguous", "already-new", "not-found", "empty"].filter(k => c[k])
+      .map(k => `<tr><td><span class="pill${STAT_CLS[k]}">${DiaChiBang.STATUS[k]}</span></td><td class="n">${c[k].toLocaleString("vi-VN")}</td></tr>`).join("");
+    return `<p class="big">Đã đổi <b>${done.toLocaleString("vi-VN")}</b> / ${total.toLocaleString("vi-VN")} địa chỉ, trong ${(out.ms / 1000).toLocaleString("vi-VN", { maximumFractionDigits: 1 })} giây.</p>`
+      + `<div class="actions"><button class="btn solid" type="button" id="dl">Tải file Excel (.xlsx)</button></div>`
+      + `<div class="scroll"><table class="t" style="max-width:360px"><tbody>${sumRows}</tbody></table></div>`
+      + (flagged.length ? `<h3 style="margin:6px 0 0;font-size:18px">Dòng cần xem lại (${flagged.length.toLocaleString("vi-VN")})</h3>`
+        + `<div class="scroll"><table class="t"><thead><tr><th class="n">Dòng</th><th>Địa chỉ cũ</th><th>Trạng thái, khả năng</th></tr></thead><tbody>`
+        + shown.map(([r, i]) => `<tr><td class="n">${rowNo(i)}</td><td>${esc(r.old)}${r.newAddress ? `<br><span class="hint">→ ${esc(r.newAddress)}</span>` : ""}</td>`
+          + `<td><span class="pill${STAT_CLS[r.status]}">${DiaChiBang.STATUS[r.status]}</span>`
+          + (r.candidates.length && r.status !== "already-new" ? `<ul style="margin:4px 0 0;padding-left:18px">${(r.options || r.candidates).slice(0, 5).map(x => `<li>${esc(x)}</li>`).join("")}${r.candidates.length > 5 ? `<li>và ${r.candidates.length - 5} nơi khác</li>` : ""}</ul>`
+            : `<br><span class="hint">${esc(r.note)}</span>`) + `</td></tr>`).join("")
+        + `</tbody></table></div>` + (flagged.length > shown.length ? `<p class="note">Còn ${(flagged.length - shown.length).toLocaleString("vi-VN")} dòng khác trong file Excel (lọc cột Trạng thái).</p>` : "")
+        : `<p>Mọi địa chỉ đều đổi được với độ tin cậy cao.</p>`);
+  }
+  async function download(){
+    if (!lastBulk) return;
+    try {
+      const JSZip = await loadZip(), z = new JSZip(), parts = DiaChiBang.toXlsx(lastBulk.results);
+      for (const k in parts) z.file(k, parts[k]);
+      const blob = await z.generateAsync({ type: "blob", compression: "DEFLATE", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = (fileName ? fileName + "-" : "") + "dia-chi-moi.xlsx";
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    } catch (e) { KC.toast("Không tạo được file, hãy thử lại"); }
+  }
+  const formB = KC.form($("fb"), { calc(){
+    if (!table.length && $("paste").value.trim()) setTable(DiaChiBang.parsePaste($("paste").value));
+    const col = +$("col").value, rows = $("hdr").checked ? table.slice(1) : table;
+    if (!rows.length) { $("paste").focus(); return false; }
+    const values = rows.map(r => r[col] == null ? "" : String(r[col]));
+    $("resb").innerHTML = `<p class="big">Đang đổi… <b id="prog">0</b> / ${values.length.toLocaleString("vi-VN")}</p>`;
+    $("gob").disabled = true;
+    DiaChiBang.convertRows(values, { chunk: 100, onProgress: (d) => { const p = $("prog"); if (p) p.textContent = d.toLocaleString("vi-VN"); } }).then(out => {
+      lastBulk = out; window.__bulk = { ms: out.ms, counts: out.counts, total: values.length };
+      $("resb").innerHTML = bulkView(out, values.length);
+      $("dl").addEventListener("click", download);
+      $("gob").disabled = false;
+    });
+  }, clear(){ table = []; fileName = ""; lastBulk = null; $("file").value = ""; setTable([]); } });
+
   const form = KC.form($("f"), { calc(){
     const text = $("q").value.trim();
     if (!text) { $("q").focus(); return false; }
@@ -166,7 +266,8 @@ updated: 11/2026
   // ?q=<địa chỉ cũ> hoặc ?moi=<xã, phường mới>&tinh=<mã tỉnh>
   const qs = new URLSearchParams(location.search);
   if (qs.get("moi")) { setMode("n2o"); $("q").value = qs.get("moi"); $("prov").value = qs.get("tinh") || ""; }
+  else if (qs.has("nhieu")) setMode("bulk");
   else if (qs.get("q")) $("q").value = qs.get("q");
-  form.run(false); loaded = true;
+  if (mode !== "bulk") form.run(false); loaded = true;
 })();
 </script>

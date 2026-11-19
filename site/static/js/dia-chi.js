@@ -130,6 +130,8 @@
   function prep(s) {
     s = nfc(s).replace(/[\s ]+/g, " ").trim();
     s = s.replace(/b[aà]\s+r[iị]a\s*[-–]\s*v[uũ]ng\s+t[aà]u/gi, function (m) { return m.replace(/\s*[-–]\s*/, " - ").replace(" - ", " "); });
+    s = s.replace(/(^|[\s,;(])(phường|xã|thị trấn|quận|huyện|thị xã|thành phố|tỉnh)(?=\p{Lu})/giu, "$1$2 ");   // "xãMỹ Bình" -> "xã Mỹ Bình"
+    s = s.replace(/(^|[\s,;(])(TT|TX|TP)(?=\p{Lu}\p{Ll})/gu, "$1$2 ");                     // "TTTân Lạc" -> "TT Tân Lạc" (không đụng "TPHCM")
     s = s.replace(/(^|[\s,;(])(p|ph|q|h|x|tx|tt|tp|đk)\.(?=[^\s.])/gi, "$1$2. ");        // "P.Bến Nghé" -> "P. Bến Nghé"
     s = s.replace(/(^|[\s,;(])([pqf])\.?\s*0*(\d{1,2})(?=$|[\s,;.)])/gi, "$1$2 $3");      // "P5", "P.05", "Q.1" -> "P 5", "Q 1"
     s = s.replace(/(^|[\s,;(])t\.p\.?\s*/gi, "$1TP. ");
@@ -273,7 +275,7 @@
         if (o.type === "huyện") return;
         if (scope.q && !scope.q[o.q]) return;
         if (scope.d && !scope.d[o.d]) return;
-        if (!scope.q && !scope.d && f.length < 6) return;
+        if (!scope.q && !scope.d && (f.length < 6 || !ptype)) return;     // cả nước: chỉ sửa lỗi gõ khi tên có ghi "xã", "phường"…
         var x = dist(f, o.f, lim);
         if (x <= lim) push(o.i, "typo", x === 1 ? 1.5 : 1);
       });
@@ -349,6 +351,17 @@
     var sig = function (c) { return c.o.links.map(function (l) { return D.U[l.u].id; }).sort().join(","); };
     var groups = {}; top.forEach(function (c) { groups[sig(c)] = true; });
     res.candidates = (top.length > 12 ? top : cands.slice(0, 12)).map(function (c) { return { old: oldObj(c.o), match: c.how, score: c.s, results: resultsFor(c.o, used.street) }; });
+    // chỉ khớp được tên cũ khi coi là gõ nhầm, trong khi tên mới khớp đúng: đây là địa chỉ mới, không phải lỗi gõ
+    if (top[0].how === "typo" && used.name) {
+      var nf = fkey(used.name), exactNew = (D.uF[nf] || []).map(function (i) { return D.U[i]; })
+        .filter(function (u) { return !prov || prov.p.some(function (pp) { return pp.i === u.p; }); });
+      if (exactNew.length) {
+        res.status = "already-new"; res.confidence = exactNew.length === 1 ? "medium" : "low"; res.candidates = [];
+        res.results = exactNew.map(function (u) { return { unit: unitObj(u), portion: null, address: newAddress(used.street, u) }; });
+        notes.length = 0; notes.push("Không có đơn vị cũ nào tên như vậy, nhưng có đơn vị mới trùng tên: có thể đây đã là địa chỉ mới.");
+        return res;
+      }
+    }
     if (Object.keys(groups).length > 1) {
       res.status = "ambiguous"; res.confidence = "low";
       notes.push("Có " + top.length + " đơn vị cũ khớp với '" + (used.name || used.dist.name) + "'. Ghi thêm quận, huyện" + (prov ? "" : " và tỉnh") + " cũ để chọn đúng.");

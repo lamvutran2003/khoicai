@@ -245,3 +245,4 @@ ul.yrs small{color:var(--muted)}
 .picks button{font:16px var(--font);text-align:left;width:100%;padding:8px 10px;border:1px solid var(--blue);background:#fff;color:var(--link);cursor:pointer}
 .picks button:hover{background:#eef3f9}
 .picks button span{display:block;font-size:14px;color:var(--muted)}
+.pill.bad{background:#fde8e8;color:var(--red);border-color:#f3c2c2}
