@@ -22,6 +22,8 @@ updated: 11/2026
 <form class="calc" id="f" data-result="out">
   <label class="l" for="title">Kỳ lương</label>
   <div><input id="title" class="in" autocomplete="off" placeholder="Tháng 11/2026"></div>
+  <label class="l" for="xa">Nơi làm việc</label>
+  <div class="f"><input id="xa" class="in w-l" autocomplete="off" spellcheck="false" placeholder="Xã, phường (mới hoặc cũ)" data-data="/js/dia-chi-data.js" data-engine="/js/dia-chi.js" data-no-stale><span class="hint" id="xaNote">không bắt buộc; không ghi thì chọn vùng ở ô dưới</span></div>
   <label class="l" for="region">Vùng lương tối thiểu</label>
   <div><select id="region" class="in">
     <option value="1">Vùng I: 5.310.000 đ</option>
@@ -85,6 +87,8 @@ updated: 11/2026
 <script src="/js/so-nhap.js"></script>
 <script src="/js/luong.js"></script>
 <script src="/js/bang-luong.js"></script>
+<script src="/js/goi-y.js"></script>
+<script src="/js/chon-vung.js"></script>
 <script>
 (function(){
   const $ = id => document.getElementById(id), money = v => Math.round(v).toLocaleString("vi-VN");
@@ -131,6 +135,7 @@ updated: 11/2026
   // ?vung=1..4 (liên kết từ trang tra vùng lương của xã, phường)
   const vung = +new URLSearchParams(location.search).get("vung");
   if (vung >= 1 && vung <= 4) $("region").value = vung;
+  KCVung.attach($("xa"), $("region"), $("xaNote"), { restore: !(vung >= 1 && vung <= 4) });   // vùng theo xã, phường; không ghi thì dùng ô chọn vùng
   ["region", "std", "union", "title"].forEach(id => $(id).addEventListener("change", save));
   $("add").addEventListener("click", () => { addRow(); $("rows").lastChild.querySelector("input").focus(); });
   $("pasteBtn").addEventListener("click", () => { $("pasteBox").hidden = !$("pasteBox").hidden; if (!$("pasteBox").hidden) $("paste").focus(); });

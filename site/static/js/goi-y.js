@@ -35,6 +35,8 @@
         else if (e.key === "Enter" && act >= 0) { e.preventDefault(); choose(act); }
         else if (e.key === "Escape") close();
       });
+      // Esc trước khi gợi ý kịp hiện: huỷ luôn lần cập nhật đang chờ
+      input.addEventListener("keydown", function (e) { if (e.key === "Escape") { clearTimeout(timer); close(); } });
       list.addEventListener("mousedown", function (e) { var li = e.target.closest("li"); if (li) { e.preventDefault(); choose(+li.getAttribute("data-i")); } });
       input.addEventListener("blur", function () { setTimeout(close, 150); });
       if (input.form) input.form.addEventListener("submit", function () { clearTimeout(timer); close(); });
