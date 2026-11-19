@@ -12,7 +12,8 @@ Layout (arrays keep the file small; dia-chi.js turns them back into objects):
   D  old districts    [id, full_name, Q index]
   O  old units        [code or "", type, name, D index or -1, Q index, other spelling or ""]
   U  new units        [id, P index, type, name, region 2026, region 2027, formation, clause, type on 01/07/2025 or -1,
-                       type-change resolution or "", [O index, portion, O index, portion, ...]]
+                       type-change resolution or "", [O index, portion, O index, portion, ...], slug]
+                     page: /dia-chi-moi/<P slug>/<U slug>/ (dia_chi_pages.py)
   types: new 0 xã 1 phường 2 đặc khu; old 0 xã 1 phường 2 thị trấn 3 huyện 4 khu vực
   formation: 0 sắp xếp 1 giữ nguyên 2 đổi tên 3 đặc khu từ cả huyện; portion: 0 toàn bộ 1 một phần 2 phần còn lại
 """
@@ -67,7 +68,7 @@ def main():
                 links += [oi[key], PORT[o["portion"]]]
             tc = u["type_changes"][0] if u["type_changes"] else None
             U.append([u["id"], pi, NEW_T[u["type"]], u["name"], u["region"]["2026"], u["region"]["2027"], FORM[u["formation"]],
-                      u["source"].get("clause", 0), NEW_T[tc["from"]] if tc else -1, tc["resolution"] if tc else "", links])
+                      u["source"].get("clause", 0), NEW_T[tc["from"]] if tc else -1, tc["resolution"] if tc else "", links, u["slug"]])
     data = {"v": index["as_of"], "W": W, "P": P, "Q": Q, "D": D, "O": O, "U": U}
     body = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     OUT.write_text("/* Sinh tự động bởi tools/hanh_chinh/export_web.py từ data/hanh-chinh/ — không sửa tay. Nguồn: xem data/hanh-chinh/README.md */\n"

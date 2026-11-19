@@ -94,7 +94,7 @@ updated: 11/2026
       + yearRow(u, YEAR) + yearRow(u, NEXT) + `</tbody></table></div>`
       + `<p class="note">Căn cứ: ${[YEAR, NEXT].filter(y => W[y]).map(y => `Nghị định ${esc(W[y].decree)} (${y === "2026" ? "năm 2026" : "từ 1/1/" + y})`).join(", ")}, Phụ lục.</p>`
       + links(g)
-      + `<p class="note"><a href="/tra-cuu-dia-chi-moi/?moi=${encodeURIComponent(u.fullName)}&tinh=${u.province.id}">Xem ${esc(u.fullName)} được lập từ những xã, phường cũ nào</a></p>`
+      + `<p class="note"><a href="${u.url}">Trang ${esc(u.fullName)}, ${esc(u.province.fullName)}</a>: đơn vị cũ hợp thành, xã phường cùng huyện cũ, nghị quyết căn cứ</p>`
       + sameProvince(u);
   }
   function many(units, via){

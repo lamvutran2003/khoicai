@@ -21,6 +21,7 @@ from pathlib import Path
 import lunar_pages
 import van_su_pages
 import thue_hkd_pages
+import dia_chi_pages
 
 ROOT = Path(__file__).resolve().parent
 SITE, DIST = ROOT / "site", ROOT / "dist"
@@ -148,6 +149,29 @@ def sidebar(tools, cat: str | None, current: str | None = None) -> str:
     return f'<aside class="side">{"".join(out)}</aside>'
 
 
+SITEMAP_MAX = 40000          # giới hạn của giao thức: 50.000 URL và 50 MB mỗi tệp; chừa khoảng trống
+
+
+def write_sitemaps(urls: list[str], group: dict, today: str) -> None:
+    """sitemap.xml là chỉ mục trỏ tới các tệp con theo nhóm (sitemap-trang.xml, sitemap-dia-chi.xml…),
+    mỗi tệp tối đa SITEMAP_MAX URL (quá thì tách -2, -3…)."""
+    groups: dict[str, list[str]] = {}
+    for u in urls:
+        groups.setdefault(group.get(u, "trang"), []).append(u)
+    files = []
+    for g, us in groups.items():
+        for i in range(0, len(us), SITEMAP_MAX):
+            name = f"sitemap-{g}" + (f"-{i // SITEMAP_MAX + 1}" if i else "") + ".xml"
+            xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                   + "".join(f"<url><loc>{SITE_URL}{E(u)}</loc><lastmod>{today}</lastmod></url>" for u in us[i:i + SITEMAP_MAX]) + "</urlset>\n")
+            assert len(xml.encode()) < 45_000_000, name
+            (DIST / name).write_text(xml, encoding="utf-8")
+            files.append(name)
+    (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                                      + "".join(f"<sitemap><loc>{SITE_URL}/{f}</loc><lastmod>{today}</lastmod></sitemap>" for f in files)
+                                      + "</sitemapindex>\n", encoding="utf-8")
+
+
 def build() -> None:
     tools = sorted(load("tools"), key=lambda t: (t.get("order", "99"), t["slug"]))
     pages = load("pages")
@@ -162,8 +186,10 @@ def build() -> None:
     vs_pages, vs_listing, lunar_pages.DAY_LINKS, lunar_pages.GOOD_LINKS = van_su_pages.build_all(date.today(), years)
     # Thuế hộ kinh doanh theo ngành (thue_hkd_pages.py)
     tax_pages, tax_listing = thue_hkd_pages.build_all(2026)
+    # Đơn vị hành chính sau sắp xếp: 34 tỉnh và từng xã, phường (dia_chi_pages.py, dữ liệu data/hanh-chinh/)
+    dc_pages, dc_listing = dia_chi_pages.build_all(SITE_URL)
     # Trang lịch âm năm hiện tại xuất hiện như một công cụ trong danh sách (trang chủ, cột phải)
-    listing = sorted(tools + vs_listing + tax_listing + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
+    listing = sorted(tools + vs_listing + tax_listing + dc_listing + [{"slug": lunar_pages.year_slug(this_year), "h1": f"Lịch âm năm {this_year}", "category": "ngay-lich",
                                "order": "4", "summary": "Lịch vạn niên cả năm: ngày rằm, mùng một, ngày lễ, Tết.",
                                "keywords": "lịch âm, lịch vạn niên, lịch âm năm, ngày rằm, mùng một, lịch tết"}],
                      key=lambda t: (t.get("order", "99"), t["slug"]))
@@ -178,7 +204,7 @@ def build() -> None:
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(SITE / "static", DIST, dirs_exist_ok=True)
-    urls = []
+    urls, sitemap_group = [], {}
     cat_name = {cid: name for cid, name, _ in CATEGORIES}
 
     def render(main_html, active=None, url=SITE_URL + "/"):
@@ -230,18 +256,20 @@ def build() -> None:
     data = lunar_pages.load(years[0], years[-1])
     gen = [lunar_pages.year_page(data, y, years) for y in years]
     gen += [lunar_pages.month_page(data, y, m, years) for y in years for m in range(1, 13)]
-    gen += vs_pages + tax_pages
+    gen += vs_pages + tax_pages + dc_pages
     for meta, body in gen:
         url = f"{SITE_URL}/{meta['slug']}/"
         cat = meta.get("category") or "ngay-lich"
+        crumb = meta.get("crumbs") or (f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(meta["h1"].lower())}</span></nav>')
         main = (f'<div class="wrap layout"><main class="content {meta.get("cls", "lunar")}">'
-                f'<nav class="crumbs" aria-label="Đường dẫn"><a href="/">trang chủ</a> / <a href="/#c-{cat}">{E(cat_name.get(cat, "").lower())}</a> / <span>{E(meta["h1"].lower())}</span></nav>'
-                f'<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, cat, meta["slug"])}</div>')
+                f'{crumb}<h1>{E(meta["h1"])}</h1>{body}</main>{sidebar(listing, cat, meta["slug"])}</div>')
         out = DIST / meta["slug"]
-        out.mkdir()
-        img = og_image("lich-am") if cat == "ngay-lich" else og_image("tinh-thue-ho-kinh-doanh")
-        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, cat, url), css, image=img), encoding="utf-8")
+        out.mkdir(parents=True)
+        img = og_image(meta["image"]) if meta.get("image") else og_image("lich-am") if cat == "ngay-lich" else og_image("tinh-thue-ho-kinh-doanh")
+        (out / "index.html").write_text(page(meta["title"], meta["description"], url, render(main, cat, url), css, extra_head=meta.get("ld", ""), image=img), encoding="utf-8")
         urls.append(f"/{meta['slug']}/")
+        if meta.get("sitemap"):
+            sitemap_group[f"/{meta['slug']}/"] = meta["sitemap"]
 
     # Plain pages
     for pg in pages:
@@ -258,9 +286,7 @@ def build() -> None:
     nf = '<div class="wrap layout"><main class="content article"><h1>Không tìm thấy trang</h1><p><a href="/">Về trang chủ</a> để xem các công cụ.</p></main></div>'
     (DIST / "404.html").write_text(page(f"Không tìm thấy trang | {SITE_NAME}", "", SITE_URL + "/404.html", render(nf), css), encoding="utf-8")
     today = date.today().isoformat()
-    (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-                                      + "".join(f"<url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
-                                      + "</urlset>\n", encoding="utf-8")
+    write_sitemaps(urls, sitemap_group, today)
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /img/hello.jpg\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
     print(f"built {len(urls)} pages ({len(tools)} tools) -> {DIST}")
 

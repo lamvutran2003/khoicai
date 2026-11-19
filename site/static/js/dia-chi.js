@@ -87,7 +87,7 @@
     });
     D.U = raw.U.map(function (u, i) {
       var t = NEW_T[u[2]], x = { i: i, id: u[0], p: u[1], type: t, name: u[3], fullName: cap(t) + " " + u[3], r: { 2026: u[4], 2027: u[5] },
-        formation: FORMATION[u[6]], clause: u[7] || null, typeBefore: u[8] >= 0 ? NEW_T[u[8]] : null, typeChange: u[9] || null, links: [] };
+        formation: FORMATION[u[6]], clause: u[7] || null, typeBefore: u[8] >= 0 ? NEW_T[u[8]] : null, typeChange: u[9] || null, slug: u[11], links: [] };
       for (var k = 0; k < u[10].length; k += 2) {
         var o = D.O[u[10][k]];
         x.links.push({ o: o.i, portion: PORTION[u[10][k + 1]] });
@@ -225,7 +225,7 @@
     var p = D.P[u.p];
     return { id: u.id, name: u.name, type: u.type, fullName: u.fullName, province: provObj(p), formation: u.formation,
       resolution: p.resolution, clause: u.clause, url: p.url, typeBefore: u.typeBefore, typeChange: u.typeChange,
-      region: { 2026: u.r[2026], 2027: u.r[2027] } };
+      region: { 2026: u.r[2026], 2027: u.r[2027] }, url: "/dia-chi-moi/" + p.slug + "/" + u.slug + "/" };
   }
   function oldObj(o) {
     var d = o.d >= 0 ? D.D[o.d] : null, q = D.Q[o.q];

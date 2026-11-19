@@ -1,6 +1,6 @@
 # Báo cáo đối chiếu dữ liệu đơn vị hành chính sau sắp xếp
 
-Dữ liệu tại ngày **2026-11-18**, dựng lại ngày 2026-11-18 bằng `python3 tools/hanh_chinh/build.py`; kiểm tra bằng `python3 tools/hanh_chinh/validate.py` (0 lỗi).
+Dữ liệu tại ngày **2026-11-18**, dựng lại ngày 2026-11-19 bằng `python3 tools/hanh_chinh/build.py`; kiểm tra bằng `python3 tools/hanh_chinh/validate.py` (0 lỗi).
 
 ## Tổng quan
 

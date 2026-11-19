@@ -211,7 +211,7 @@ def main():
                 elif clause and formation == "sap-xep":
                     flags.append("Đơn vị cũ '%s' có trong bảng chuyển đổi nhưng không nêu trong khoản %d của nghị quyết." % (r["old_name"], clause["k"]))
                     issues.append({"issue": "old unit only in NSO table", "province": pmeta["TenTinh"], "unit": full(tnow, nnow), "old": r["old_name"]})
-                old_units.append({"id": r["old_code"] or None, "name": on, "type": ot, "full_name": clean(r["old_name"]),
+                old_units.append({"id": r["old_code"] or None, "name": on, "type": ot, "full_name": full(ot, on) if ot in ("xã", "phường", "thị trấn") else clean(r["old_name"]),   # một số dòng ghi "xã X" chữ thường
                                   "district": r["old_dist"], "district_id": r["old_dist_code"], "province": r["old_prov"], "province_id": r["old_prov_code"],
                                   "portion": portion, "nso_note": r["note"], "source": src})
             # parts named only in the resolution

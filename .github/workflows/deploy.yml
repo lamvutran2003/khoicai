@@ -16,8 +16,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      urls: ${{ steps.indexnow.outputs.urls }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,12 +32,23 @@ jobs:
           # Địa chỉ bộ đếm lượt xem, ví dụ https://luot-xem.<tên>.workers.dev (Variables > COUNTER_URL)
           COUNTER_URL: ${{ vars.COUNTER_URL }}
         run: python3 build.py
+      - name: Check every commune page against the dataset and source documents
+        # trang /dia-chi-moi/<tỉnh>/<xã>/ khớp data/hanh-chinh, toàn văn nghị quyết và phụ lục vùng lương (khoảng 30 giây)
+        run: python3 tools/hanh_chinh/spot_check_pages.py 100000 > page-check.txt || { grep -B3 '!!' page-check.txt; exit 1; }; tail -1 page-check.txt
       - name: IndexNow (find changed pages)
         id: indexnow
         continue-on-error: true
         env:
           SITE_URL: ${{ vars.SITE_URL || 'https://tinhgium.vn' }}
-        run: echo "urls=$(python3 tools/indexnow.py prepare dist "$SITE_URL")" >> "$GITHUB_OUTPUT"
+        # Danh sách URL đã đổi (có thể vài nghìn) đi qua tệp, không qua biến: biến môi trường tối đa 128 KB
+        run: python3 tools/indexnow.py prepare dist "$SITE_URL" indexnow-urls.json
+      - name: Keep the changed-URL list for the IndexNow job
+        if: steps.indexnow.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-urls
+          path: indexnow-urls.json
+          retention-days: 1
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -58,9 +67,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: indexnow-urls
       - name: Tell Bing which pages changed (IndexNow)
         continue-on-error: true
         env:
           SITE_URL: ${{ vars.SITE_URL || 'https://tinhgium.vn' }}
-          URLS: ${{ needs.build.outputs.urls }}
-        run: python3 tools/indexnow.py submit "$SITE_URL" "$URLS" site/static
+        run: python3 tools/indexnow.py submit "$SITE_URL" @indexnow-urls.json site/static

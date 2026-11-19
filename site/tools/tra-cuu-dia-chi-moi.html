@@ -99,7 +99,7 @@ updated: 11/2026
     const rows = r.old.map(o => `<tr${highlight && o.code === highlight ? ' class="tot"' : ""}><td>${esc(o.fullName)}${o.otherSpelling ? ` <span class="hint">(${esc(o.otherSpelling)})</span>` : ""}</td>`
       + `<td>${esc([o.type === "huyện" ? "" : o.district, o.province].filter(Boolean).join(", "))}</td>`
       + `<td>${PORTION[o.portion]}${o.split ? `<br><span class="hint">phần khác thuộc ${o.alsoIn.map(x => esc(x.fullName)).join(", ")}</span>` : ""}</td></tr>`).join("");
-    return `<p><b>${esc(u.fullName)}</b> (${esc(u.province.fullName)}, ${unitLink(u)}) được lập từ ${r.old.length} đơn vị cũ:</p>`
+    return `<p><b><a href="${u.url}">${esc(u.fullName)}</a></b> (${esc(u.province.fullName)}, ${unitLink(u)}) được lập từ ${r.old.length} đơn vị cũ:</p>`
       + `<div class="scroll"><table class="t"><thead><tr><th>Đơn vị cũ</th><th>Thuộc (cũ)</th><th>Phạm vi</th></tr></thead><tbody>${rows}</tbody></table></div>`
       + `<p class="note">${basis(u)}</p>`;
   }
